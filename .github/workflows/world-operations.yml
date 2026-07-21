@@ -108,9 +108,15 @@ jobs:
           name: state-input-${{ github.run_id }}
           path: state_input
 
-      - name: Run regional shard
+      - name: Acquire renewable Earthdata token
         env:
-          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+          EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
+          EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+          EARTHDATA_SHARD_INDEX: ${{ matrix.shard }}
+          SISMOAI_MODE: ${{ needs.prepare.outputs.mode }}
+        run: python scripts/earthdata_runtime_token.py
+
+      - name: Run regional shard
         run: |
           python -m sismoai_world.cli run-shard \
             --regions config/world_regions.json \
