@@ -31,8 +31,8 @@ def main() -> int:
         print("Earthdata: omitido en modo fast; InSAR se ejecuta en daily/weekly/bootstrap.")
         return 0
 
-    username = os.environ.get("EARTHDATA_USERNAME", "").strip()
-    password = os.environ.get("EARTHDATA_PASSWORD", "")
+    username = os.environ.get("EARTHDATA_USERNAME", "").lstrip("\ufeff").strip()
+    password = os.environ.get("EARTHDATA_PASSWORD", "").lstrip("\ufeff").rstrip("\r\n")
     if not username or not password:
         _set_status("NOT_CONFIGURED")
         print("::warning::Earthdata no configurado; las demás fuentes continuarán.")
