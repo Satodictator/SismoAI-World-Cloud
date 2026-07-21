@@ -1,0 +1,45 @@
+name: SismoAI Earthdata Auth Check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-earthdata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Verify Earthdata credentials and renewable token
+        env:
+          EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
+          EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+          EARTHDATA_STRICT: "1"
+          EARTHDATA_SHARD_INDEX: "0"
+          SISMOAI_MODE: daily
+        run: python scripts/earthdata_runtime_token.py
+
+      - name: Confirm active status
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${EARTHDATA_AUTH_STATUS:-}" != "ACTIVE" ]]; then
+            echo "Earthdata no quedó ACTIVE: ${EARTHDATA_AUTH_STATUS:-UNKNOWN}" >&2
+            exit 1
+          fi
+          echo "Earthdata ACTIVE; token renovable verificado."
+          echo "Vencimiento informado: ${EARTHDATA_TOKEN_EXPIRATION:-no disponible}"
