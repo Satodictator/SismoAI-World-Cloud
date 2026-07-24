@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:17:34Z",
+  "started_at": "2026-07-24T14:17:29Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "new_zealand",
+    "name": "Nueva Zelanda",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      -48,
+      -33,
+      165,
+      180
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:17:34Z",
+    "day": "2026-07-24",
+    "region_id": "new_zealand",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.3277777777777778,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:16:08Z",
+        "last_success": "2026-07-24T06:16:08Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:17:30Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/new_zealand/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:16:05Z",
+        "last_success": "2026-07-24T06:16:05Z",
+        "records": 1824,
+        "freshness_hours": 480.0,
+        "coverage": 0.75,
+        "quality": 0.66,
+        "message": "3/4 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-07-24T14:17:30Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:17:30Z",
+        "last_success": "2026-07-24T14:17:30Z",
+        "records": 5,
+        "freshness_hours": 98.03521986027779,
+        "coverage": 0.06666666666666667,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-12\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-20T12:15:23.590000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:16:08Z",
+      "last_success": "2026-07-24T06:16:08Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:17:30Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/new_zealand/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:16:05Z",
+      "last_success": "2026-07-24T06:16:05Z",
+      "records": 1824,
+      "freshness_hours": 480.0,
+      "coverage": 0.75,
+      "quality": 0.66,
+      "message": "3/4 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-07-24T14:17:30Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:17:30Z",
+      "last_success": "2026-07-24T14:17:30Z",
+      "records": 5,
+      "freshness_hours": 98.03521986027779,
+      "coverage": 0.06666666666666667,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-12\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-20T12:15:23.590000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 252,
+    "dtrg_r_gnss_stations": 4,
+    "dtrg_r_gnss_obs": 1833,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 2292,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 1816,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "93f4187c-24e8-4eae-8c92-5d7adce39ef1",
+      "created_at": "2026-07-21T21:13:04Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 45,
+      "negatives": 321,
+      "tp": 0,
+      "fp": 1,
+      "tn": 320,
+      "fn": 45,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9968847352024922,
+      "f1": null,
+      "auc": 0.43153340256143996,
+      "brier": 0.12558549470027322,
+      "base_brier": 0.1078339156140821,
+      "false_alarms_per_100_days": 0.273224043715847,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":45,\"negatives\":321,\"tp\":0,\"fp\":1,\"tn\":320,\"fn\":45,\"precision\":0.0,\"recall\":0.0,\"specificity\":0.9968847352024922,\"f1\":null,\"auc\":0.43153340256143996,\"brier\":0.12558549470027322,\"base_brier\":0.1078339156140821,\"false_alarms_per_100_days\":0.273224043715847,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t1xi",
+      "event_time": "2026-07-20T12:15:23.590000Z",
+      "magnitude": 4.1,
+      "depth_km": 155.192,
+      "latitude": -36.8846,
+      "longitude": 178.2859,
+      "place": "79 km N of Hicks Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1xi"
+    },
+    {
+      "event_id": "us7000t1sr",
+      "event_time": "2026-07-19T14:08:16.800000Z",
+      "magnitude": 4.4,
+      "depth_km": 65.634,
+      "latitude": -45.0593,
+      "longitude": 167.5145,
+      "place": "42 km NNW of Te Anau, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1sr"
+    },
+    {
+      "event_id": "us7000t0xb",
+      "event_time": "2026-07-16T09:14:54.293000Z",
+      "magnitude": 5.9,
+      "depth_km": 76.397,
+      "latitude": -45.0434,
+      "longitude": 167.6107,
+      "place": "42 km NNW of Te Anau, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xb"
+    },
+    {
+      "event_id": "us7000t0x8",
+      "event_time": "2026-07-16T08:57:58.825000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -37.3276,
+      "longitude": 179.8608,
+      "place": "141 km ENE of Hicks Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0x8"
+    },
+    {
+      "event_id": "us7000szwc",
+      "event_time": "2026-07-12T16:31:07.960000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -42.4746,
+      "longitude": 173.1301,
+      "place": "26 km E of Hanmer Springs, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szwc"
+    },
+    {
+      "event_id": "us6000tasa",
+      "event_time": "2026-07-07T20:33:15.693000Z",
+      "magnitude": 4.9,
+      "depth_km": 121.882,
+      "latitude": -37.205,
+      "longitude": 177.4397,
+      "place": "87 km WNW of Hicks Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tasa"
+    },
+    {
+      "event_id": "us6000t8t3",
+      "event_time": "2026-06-28T11:04:12.779000Z",
+      "magnitude": 4.4,
+      "depth_km": 76.518,
+      "latitude": -40.3485,
+      "longitude": 174.4582,
+      "place": "65 km S of Patea, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8t3"
+    },
+    {
+      "event_id": "us6000t87d",
+      "event_time": "2026-06-20T00:47:17.222000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -33.7654,
+      "longitude": 179.527,
+      "place": "south of the Kermadec Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t87d"
+    },
+    {
+      "event_id": "us6000t83l",
+      "event_time": "2026-06-19T23:11:47.900000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -33.8774,
+      "longitude": 179.5383,
+      "place": "south of the Kermadec Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t83l"
+    },
+    {
+      "event_id": "us7000stmc",
+      "event_time": "2026-06-17T11:41:29.831000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -41.0488,
+      "longitude": 176.7241,
+      "place": "45 km ESE of Castlepoint, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stmc"
+    },
+    {
+      "event_id": "us7000stea",
+      "event_time": "2026-06-16T14:33:08.777000Z",
+      "magnitude": 4.4,
+      "depth_km": 68.588,
+      "latitude": -41.0808,
+      "longitude": 174.4728,
+      "place": "30 km W of Titahi Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stea"
+    },
+    {
+      "event_id": "us7000ssg3",
+      "event_time": "2026-06-12T11:01:44.918000Z",
+      "magnitude": 4.2,
+      "depth_km": 85.727,
+      "latitude": -41.2114,
+      "longitude": 173.6066,
+      "place": "23 km E of Marybank, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssg3"
+    },
+    {
+      "event_id": "us7000ssdy",
+      "event_time": "2026-06-12T01:54:21.832000Z",
+      "magnitude": 4.2,
+      "depth_km": 65.131,
+      "latitude": -41.4242,
+      "longitude": 173.7781,
+      "place": "9 km NNW of Renwick, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssdy"
+    },
+    {
+      "event_id": "us7000srgm",
+      "event_time": "2026-06-08T13:19:05.757000Z",
+      "magnitude": 4.5,
+      "depth_km": 6.055,
+      "latitude": -43.1545,
+      "longitude": 170.9528,
+      "place": "48 km S of Hokitika, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000srgm"
+    },
+    {
+      "event_id": "us7000sr60",
+      "event_time": "2026-06-07T02:21:53.916000Z",
+      "magnitude": 4.0,
+      "depth_km": 228.419,
+      "latitude": -36.2634,
+      "longitude": 177.6864,
+      "place": "158 km NNW of Hicks Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sr60"
+    },
+    {
+      "event_id": "us7000sqzn",
+      "event_time": "2026-06-05T20:20:04.964000Z",
+      "magnitude": 4.0,
+      "depth_km": 13.324,
+      "latitude": -46.0932,
+      "longitude": 165.6607,
+      "place": "176 km WSW of Te Anau, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sqzn"
+    },
+    {
+      "event_id": "us7000sq0j",
+      "event_time": "2026-06-02T06:38:08.095000Z",
+      "magnitude": 4.5,
+      "depth_km": 68.451,
+      "latitude": -41.0617,
+      "longitude": 174.4921,
+      "place": "28 km W of Titahi Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sq0j"
+    },
+    {
+      "event_id": "us7000spft",
+      "event_time": "2026-05-29T22:56:30.773000Z",
+      "magnitude": 4.5,
+      "depth_km": 14.591,
+      "latitude": -41.7486,
+      "longitude": 174.3718,
+      "place": "42 km SE of Witherlea, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000spft"
+    },
+    {
+      "event_id": "us7000snxz",
+      "event_time": "2026-05-27T20:46:55.259000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -43.0796,
+      "longitude": 176.6655,
+      "place": "208 km SSE of Waipawa, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000snxz"
+    },
+    {
+      "event_id": "us6000szr3",
+      "event_time": "2026-05-23T15:25:37.634000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -38.0293,
+      "longitude": 179.2797,
+      "place": "98 km ESE of Hicks Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000szr3"
+    },
+    {
+      "event_id": "us6000sybb",
+      "event_time": "2026-05-17T03:20:37.152000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -39.7086,
+      "longitude": 179.0195,
+      "place": "139 km SE of Wainui, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sybb"
+    },
+    {
+      "event_id": "us6000sy8w",
+      "event_time": "2026-05-16T15:48:22.564000Z",
+      "magnitude": 4.2,
+      "depth_km": 289.988,
+      "latitude": -36.9438,
+      "longitude": 176.9668,
+      "place": "98 km E of Pauanui, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy8w"
+    },
+    {
+      "event_id": "us6000sy5t",
+      "event_time": "2026-05-16T06:34:12.969000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": -41.7898,
+      "longitude": 174.2248,
+      "place": "36 km SE of Witherlea, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy5t"
+    },
+    {
+      "event_id": "us6000sx4s",
+      "event_time": "2026-05-12T12:42:16.770000Z",
+      "magnitude": 4.1,
+      "depth_km": 205.258,
+      "latitude": -39.507,
+      "longitude": 174.2688,
+      "place": "3 km NNW of Normanby, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sx4s"
+    },
+    {
+      "event_id": "us6000sx3w",
+      "event_time": "2026-05-12T09:02:58.121000Z",
+      "magnitude": 4.4,
+      "depth_km": 28.839,
+      "latitude": -41.4666,
+      "longitude": 174.5306,
+      "place": "23 km SW of Owhiro Bay, New Zealand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sx3w"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 5,
+      "oldest_before": "2024-07-27",
+      "newest_before": "2026-07-20",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-12",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 5,
+            "newest": "2026-07-20T12:15:23.590000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/new_zealand/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "new_zealand",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.3278,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

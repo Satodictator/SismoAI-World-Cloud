@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:16:34Z",
+  "started_at": "2026-07-24T14:16:30Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "alaska_aleutians",
+    "name": "Alaska–Aleutianas",
+    "group": "Americas",
+    "bbox": [
+      45,
+      72,
+      -180,
+      -130
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:16:34Z",
+    "day": "2026-07-24",
+    "region_id": "alaska_aleutians",
+    "iedc_raw": 19.51,
+    "iedc_provisional": 19.51,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 1.0,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 19.5101
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:13:56Z",
+        "last_success": "2026-07-24T06:13:56Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:16:32Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/alaska_aleutians/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:13:49Z",
+        "last_success": "2026-07-24T06:13:49Z",
+        "records": 9729,
+        "freshness_hours": 480.0,
+        "coverage": 0.8333333333333334,
+        "quality": 0.7333333333333334,
+        "message": "15/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:32Z",
+        "last_success": "2026-07-24T14:16:32Z",
+        "records": 17,
+        "freshness_hours": 0.0003826563888888889,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:31Z",
+        "last_success": "2026-07-24T14:16:31Z",
+        "records": 36,
+        "freshness_hours": 13.220870579722222,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-16\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-24T01:03:16.097000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:13:56Z",
+      "last_success": "2026-07-24T06:13:56Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:16:32Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/alaska_aleutians/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:13:49Z",
+      "last_success": "2026-07-24T06:13:49Z",
+      "records": 9729,
+      "freshness_hours": 480.0,
+      "coverage": 0.8333333333333334,
+      "quality": 0.7333333333333334,
+      "message": "15/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:32Z",
+      "last_success": "2026-07-24T14:16:32Z",
+      "records": 17,
+      "freshness_hours": 0.0003826563888888889,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:31Z",
+      "last_success": "2026-07-24T14:16:31Z",
+      "records": 36,
+      "freshness_hours": 13.220870579722222,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-16\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-24T01:03:16.097000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 5159,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 9774,
+    "dtrg_r_goes_files": 179,
+    "dtrg_r_goes_daily": 5,
+    "dtrg_r_insar_scenes": 2884,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 2724,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "9d7e8f54-d301-47a7-ad7f-217183893f64",
+      "created_at": "2026-07-21T21:07:09Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 71,
+      "negatives": 295,
+      "tp": 0,
+      "fp": 0,
+      "tn": 295,
+      "fn": 71,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5335163523513965,
+      "brier": 0.17158965335163945,
+      "base_brier": 0.15635731135596795,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":71,\"negatives\":295,\"tp\":0,\"fp\":0,\"tn\":295,\"fn\":71,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5335163523513965,\"brier\":0.17158965335163945,\"base_brier\":0.15635731135596795,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t2wx",
+      "event_time": "2026-07-24T01:03:16.097000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 51.1015,
+      "longitude": -176.0652,
+      "place": "94 km SSE of Adak, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2wx"
+    },
+    {
+      "event_id": "aka2026ompdjf",
+      "event_time": "2026-07-23T21:20:00.153000Z",
+      "magnitude": 3.4,
+      "depth_km": 67.1,
+      "latitude": 56.265,
+      "longitude": -156.428,
+      "place": "122 km E of Chignik, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ompdjf"
+    },
+    {
+      "event_id": "aka2026omcaop",
+      "event_time": "2026-07-23T14:46:49.719000Z",
+      "magnitude": 3.2,
+      "depth_km": 30.0,
+      "latitude": 51.957,
+      "longitude": -171.722,
+      "place": "171 km E of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026omcaop"
+    },
+    {
+      "event_id": "us7000t2n5",
+      "event_time": "2026-07-23T09:30:18.969000Z",
+      "magnitude": 5.1,
+      "depth_km": 35.0,
+      "latitude": 51.604,
+      "longitude": -173.2484,
+      "place": "92 km SE of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2n5"
+    },
+    {
+      "event_id": "us7000t2mc",
+      "event_time": "2026-07-23T06:51:08.005000Z",
+      "magnitude": 4.6,
+      "depth_km": 40.716,
+      "latitude": 51.6051,
+      "longitude": -173.1921,
+      "place": "95 km SE of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2mc"
+    },
+    {
+      "event_id": "aka2026okoeco",
+      "event_time": "2026-07-22T18:51:31.884000Z",
+      "magnitude": 3.2,
+      "depth_km": 6.1,
+      "latitude": 56.127,
+      "longitude": -153.322,
+      "place": "105 km SSE of Akhiok, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026okoeco"
+    },
+    {
+      "event_id": "aka2026okmwzn",
+      "event_time": "2026-07-22T18:13:23.544000Z",
+      "magnitude": 4.9,
+      "depth_km": 16.2,
+      "latitude": 56.199,
+      "longitude": -153.375,
+      "place": "96 km SSE of Akhiok, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026okmwzn"
+    },
+    {
+      "event_id": "us7000t2h5",
+      "event_time": "2026-07-22T17:15:29.796000Z",
+      "magnitude": 3.3,
+      "depth_km": 10.0,
+      "latitude": 56.1244,
+      "longitude": -149.6493,
+      "place": "230 km SE of Chiniak, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2h5"
+    },
+    {
+      "event_id": "aka2026oirmza",
+      "event_time": "2026-07-21T18:32:41.669000Z",
+      "magnitude": 3.1,
+      "depth_km": 104.6,
+      "latitude": 59.996,
+      "longitude": -152.639,
+      "place": "50 km W of Happy Valley, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026oirmza"
+    },
+    {
+      "event_id": "aka2026ohoxcb",
+      "event_time": "2026-07-21T04:14:43.462000Z",
+      "magnitude": 3.1,
+      "depth_km": 50.3,
+      "latitude": 60.664,
+      "longitude": -150.272,
+      "place": "30 km ENE of Sterling, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ohoxcb"
+    },
+    {
+      "event_id": "aka2026ohntcy",
+      "event_time": "2026-07-21T03:40:10.970000Z",
+      "magnitude": 3.0,
+      "depth_km": 27.4,
+      "latitude": 52.052,
+      "longitude": -170.394,
+      "place": "143 km SW of Nikolski, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ohntcy"
+    },
+    {
+      "event_id": "aka2026ohfseh",
+      "event_time": "2026-07-20T23:39:13.566000Z",
+      "magnitude": 3.5,
+      "depth_km": 20.6,
+      "latitude": 51.55,
+      "longitude": -175.191,
+      "place": "99 km SW of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ohfseh"
+    },
+    {
+      "event_id": "us7000t22h",
+      "event_time": "2026-07-20T17:11:06.862000Z",
+      "magnitude": 3.7,
+      "depth_km": 8.166,
+      "latitude": 51.8889,
+      "longitude": -175.0127,
+      "place": "65 km WSW of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t22h"
+    },
+    {
+      "event_id": "aka2026ogpyyr",
+      "event_time": "2026-07-20T15:47:11.596000Z",
+      "magnitude": 3.5,
+      "depth_km": 8.7,
+      "latitude": 51.007,
+      "longitude": -179.141,
+      "place": "199 km WSW of Adak, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ogpyyr"
+    },
+    {
+      "event_id": "aka2026ognqvj",
+      "event_time": "2026-07-20T14:37:50.629000Z",
+      "magnitude": 4.0,
+      "depth_km": 19.8,
+      "latitude": 51.602,
+      "longitude": -174.625,
+      "place": "72 km SSW of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ognqvj"
+    },
+    {
+      "event_id": "aka2026ofzozi",
+      "event_time": "2026-07-20T07:35:55.377000Z",
+      "magnitude": 3.0,
+      "depth_km": 91.8,
+      "latitude": 55.163,
+      "longitude": -160.929,
+      "place": "33 km SW of Sand Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ofzozi"
+    },
+    {
+      "event_id": "aka2026ofsgvh",
+      "event_time": "2026-07-20T03:56:37.612000Z",
+      "magnitude": 3.2,
+      "depth_km": 65.2,
+      "latitude": 61.652,
+      "longitude": -150.746,
+      "place": "17 km NW of Susitna, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ofsgvh"
+    },
+    {
+      "event_id": "aka2026ofrbma",
+      "event_time": "2026-07-20T03:20:20.201000Z",
+      "magnitude": 3.1,
+      "depth_km": 66.1,
+      "latitude": 52.637,
+      "longitude": -163.566,
+      "place": "222 km SE of Akutan, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ofrbma"
+    },
+    {
+      "event_id": "aka2026ofjhgb",
+      "event_time": "2026-07-19T23:26:48.573000Z",
+      "magnitude": 3.0,
+      "depth_km": 20.0,
+      "latitude": 56.067,
+      "longitude": -150.009,
+      "place": "220 km SE of Chiniak, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ofjhgb"
+    },
+    {
+      "event_id": "aka2026oewraw",
+      "event_time": "2026-07-19T17:08:40.732000Z",
+      "magnitude": 3.0,
+      "depth_km": 25.2,
+      "latitude": 52.009,
+      "longitude": -170.71,
+      "place": "162 km SW of Nikolski, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026oewraw"
+    },
+    {
+      "event_id": "aka2026oelgbm",
+      "event_time": "2026-07-19T11:26:09.763000Z",
+      "magnitude": 3.1,
+      "depth_km": 131.0,
+      "latitude": 53.001,
+      "longitude": -169.648,
+      "place": "53 km W of Nikolski, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026oelgbm"
+    },
+    {
+      "event_id": "aka2026oejjya",
+      "event_time": "2026-07-19T10:30:40.813000Z",
+      "magnitude": 3.0,
+      "depth_km": 5.0,
+      "latitude": 58.318,
+      "longitude": -154.671,
+      "place": "84 km N of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026oejjya"
+    },
+    {
+      "event_id": "aka2026odrrxb",
+      "event_time": "2026-07-19T01:40:17.671000Z",
+      "magnitude": 3.2,
+      "depth_km": 12.9,
+      "latitude": 51.085,
+      "longitude": -178.499,
+      "place": "156 km SW of Adak, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026odrrxb"
+    },
+    {
+      "event_id": "aka2026odqfqk",
+      "event_time": "2026-07-19T00:55:47.226000Z",
+      "magnitude": 3.0,
+      "depth_km": 168.0,
+      "latitude": 53.533,
+      "longitude": -173.465,
+      "place": "156 km NNE of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026odqfqk"
+    },
+    {
+      "event_id": "us7000t1tz",
+      "event_time": "2026-07-19T00:55:46.519000Z",
+      "magnitude": 3.0,
+      "depth_km": 211.082,
+      "latitude": 53.0392,
+      "longitude": -173.313,
+      "place": "111 km NNE of Atka, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1tz"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 36,
+      "oldest_before": "2024-07-21",
+      "newest_before": "2026-07-24",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-16",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 36,
+            "newest": "2026-07-24T01:03:16.097000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 0,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/alaska_aleutians/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "alaska_aleutians",
+        "iedc_raw": 19.51,
+        "iedc_provisional": 19.51,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 1.0,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 19.5101
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

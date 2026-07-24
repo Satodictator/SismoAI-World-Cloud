@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:17:20Z",
+  "started_at": "2026-07-24T14:17:15Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "central_america",
+    "name": "Centroamérica",
+    "group": "Americas",
+    "bbox": [
+      5,
+      19,
+      -93,
+      -77
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:17:20Z",
+    "day": "2026-07-24",
+    "region_id": "central_america",
+    "iedc_raw": 50.881,
+    "iedc_provisional": 50.881,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "ELEVATED",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.5833333333333334,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [
+      {
+        "family": "seismic",
+        "feature": "seismic_count",
+        "score": 61.29,
+        "reason": "Incremento robusto de la tasa sísmica",
+        "z": 2.088
+      },
+      {
+        "family": "seismic",
+        "feature": "seismic_max_mag",
+        "score": 53.53,
+        "reason": "Magnitud máxima atípica en la ventana",
+        "z": 1.686
+      }
+    ],
+    "family_scores": {
+      "seismic": 50.8812
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:16:16Z",
+        "last_success": "2026-07-24T06:16:16Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:17:18Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/central_america/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:16:07Z",
+        "last_success": "2026-07-24T06:16:07Z",
+        "records": 3110,
+        "freshness_hours": 480.0,
+        "coverage": 0.2777777777777778,
+        "quality": 0.24444444444444446,
+        "message": "5/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:17:18Z",
+        "last_success": "2026-07-24T14:17:18Z",
+        "records": 17,
+        "freshness_hours": 0.0008049444444444445,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 549 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:17:15Z",
+        "last_success": "2026-07-24T14:17:15Z",
+        "records": 51,
+        "freshness_hours": 25.053459928333336,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-15\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-23T13:14:03.195000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:16:16Z",
+      "last_success": "2026-07-24T06:16:16Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:17:18Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/central_america/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:16:07Z",
+      "last_success": "2026-07-24T06:16:07Z",
+      "records": 3110,
+      "freshness_hours": 480.0,
+      "coverage": 0.2777777777777778,
+      "quality": 0.24444444444444446,
+      "message": "5/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:17:18Z",
+      "last_success": "2026-07-24T14:17:18Z",
+      "records": 17,
+      "freshness_hours": 0.0008049444444444445,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 549 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:17:15Z",
+      "last_success": "2026-07-24T14:17:15Z",
+      "records": 51,
+      "freshness_hours": 25.053459928333336,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-15\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-23T13:14:03.195000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 760,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 3124,
+    "dtrg_r_goes_files": 178,
+    "dtrg_r_goes_daily": 5,
+    "dtrg_r_insar_scenes": 2460,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 2724,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "04aacd29-861a-45ef-8c08-3866f6f52242",
+      "created_at": "2026-07-21T21:13:09Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 171,
+      "negatives": 195,
+      "tp": 0,
+      "fp": 0,
+      "tn": 195,
+      "fn": 171,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.41421502474134053,
+      "brier": 0.44034573310737674,
+      "base_brier": 0.2489250201558724,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":171,\"negatives\":195,\"tp\":0,\"fp\":0,\"tn\":195,\"fn\":171,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.41421502474134053,\"brier\":0.44034573310737674,\"base_brier\":0.2489250201558724,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t2p7",
+      "event_time": "2026-07-23T13:14:03.195000Z",
+      "magnitude": 4.9,
+      "depth_km": 35.0,
+      "latitude": 13.876,
+      "longitude": -92.2338,
+      "place": "57 km SW of Champerico, Guatemala",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2p7"
+    },
+    {
+      "event_id": "us7000t2nz",
+      "event_time": "2026-07-23T12:04:46.113000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 13.8303,
+      "longitude": -92.4514,
+      "place": "77 km SW of Champerico, Guatemala",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2nz"
+    },
+    {
+      "event_id": "us7000t2h4",
+      "event_time": "2026-07-22T17:03:30.001000Z",
+      "magnitude": 4.3,
+      "depth_km": 35.0,
+      "latitude": 14.2118,
+      "longitude": -92.7555,
+      "place": "66 km SSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2h4"
+    },
+    {
+      "event_id": "us7000t2fq",
+      "event_time": "2026-07-22T10:24:53.831000Z",
+      "magnitude": 4.5,
+      "depth_km": 35.0,
+      "latitude": 14.3451,
+      "longitude": -92.9016,
+      "place": "66 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2fq"
+    },
+    {
+      "event_id": "us7000t2fk",
+      "event_time": "2026-07-22T09:53:05.939000Z",
+      "magnitude": 4.2,
+      "depth_km": 35.0,
+      "latitude": 14.1936,
+      "longitude": -92.7778,
+      "place": "69 km SSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2fk"
+    },
+    {
+      "event_id": "us7000t2dw",
+      "event_time": "2026-07-22T03:48:30.298000Z",
+      "magnitude": 4.0,
+      "depth_km": 35.0,
+      "latitude": 14.3993,
+      "longitude": -92.8732,
+      "place": "60 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2dw"
+    },
+    {
+      "event_id": "us7000t2a3",
+      "event_time": "2026-07-21T18:27:02.836000Z",
+      "magnitude": 4.3,
+      "depth_km": 32.95,
+      "latitude": 14.5315,
+      "longitude": -92.7798,
+      "place": "43 km WSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2a3"
+    },
+    {
+      "event_id": "us7000t256",
+      "event_time": "2026-07-21T09:10:00.606000Z",
+      "magnitude": 4.1,
+      "depth_km": 35.0,
+      "latitude": 14.1651,
+      "longitude": -92.5609,
+      "place": "54 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t256"
+    },
+    {
+      "event_id": "us7000t23g",
+      "event_time": "2026-07-21T00:48:27.902000Z",
+      "magnitude": 4.2,
+      "depth_km": 35.0,
+      "latitude": 14.3713,
+      "longitude": -92.9581,
+      "place": "69 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t23g"
+    },
+    {
+      "event_id": "us7000t1x8",
+      "event_time": "2026-07-20T11:10:48.518000Z",
+      "magnitude": 4.5,
+      "depth_km": 35.0,
+      "latitude": 14.2217,
+      "longitude": -92.8306,
+      "place": "70 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1x8"
+    },
+    {
+      "event_id": "us7000t1x3",
+      "event_time": "2026-07-20T10:53:50.628000Z",
+      "magnitude": 4.9,
+      "depth_km": 39.894,
+      "latitude": 14.3235,
+      "longitude": -92.6156,
+      "place": "48 km WSW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1x3"
+    },
+    {
+      "event_id": "us7000t1wa",
+      "event_time": "2026-07-20T07:19:44Z",
+      "magnitude": 4.1,
+      "depth_km": 35.0,
+      "latitude": 14.3688,
+      "longitude": -92.872,
+      "place": "62 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1wa"
+    },
+    {
+      "event_id": "us7000t1tp",
+      "event_time": "2026-07-19T17:45:16.923000Z",
+      "magnitude": 5.5,
+      "depth_km": 35.0,
+      "latitude": 14.1592,
+      "longitude": -92.9052,
+      "place": "81 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1tp"
+    },
+    {
+      "event_id": "us7000t1ta",
+      "event_time": "2026-07-19T15:44:18.305000Z",
+      "magnitude": 4.5,
+      "depth_km": 46.014,
+      "latitude": 14.1641,
+      "longitude": -92.7074,
+      "place": "66 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1ta"
+    },
+    {
+      "event_id": "us7000t1t5",
+      "event_time": "2026-07-19T15:20:39.514000Z",
+      "magnitude": 4.2,
+      "depth_km": 34.155,
+      "latitude": 14.1947,
+      "longitude": -92.7186,
+      "place": "65 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1t5"
+    },
+    {
+      "event_id": "us7000t1qr",
+      "event_time": "2026-07-19T04:38:55.545000Z",
+      "magnitude": 4.4,
+      "depth_km": 35.0,
+      "latitude": 13.9552,
+      "longitude": -92.9971,
+      "place": "105 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1qr"
+    },
+    {
+      "event_id": "us7000t1qp",
+      "event_time": "2026-07-19T04:35:27.161000Z",
+      "magnitude": 4.2,
+      "depth_km": 30.682,
+      "latitude": 14.2815,
+      "longitude": -92.7545,
+      "place": "60 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1qp"
+    },
+    {
+      "event_id": "us7000t1qk",
+      "event_time": "2026-07-19T04:15:26.680000Z",
+      "magnitude": 4.4,
+      "depth_km": 35.0,
+      "latitude": 14.0191,
+      "longitude": -92.8824,
+      "place": "91 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1qk"
+    },
+    {
+      "event_id": "us7000t1qd",
+      "event_time": "2026-07-19T03:27:20.074000Z",
+      "magnitude": 4.2,
+      "depth_km": 35.0,
+      "latitude": 14.5135,
+      "longitude": -92.8652,
+      "place": "53 km WSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1qd"
+    },
+    {
+      "event_id": "us7000t1q6",
+      "event_time": "2026-07-19T02:18:54.767000Z",
+      "magnitude": 5.3,
+      "depth_km": 19.593,
+      "latitude": 14.292,
+      "longitude": -92.7591,
+      "place": "59 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1q6"
+    },
+    {
+      "event_id": "us7000t1q5",
+      "event_time": "2026-07-19T02:01:33.461000Z",
+      "magnitude": 4.6,
+      "depth_km": 35.0,
+      "latitude": 14.3608,
+      "longitude": -92.7735,
+      "place": "55 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1q5"
+    },
+    {
+      "event_id": "us7000t1q3",
+      "event_time": "2026-07-19T01:47:24.332000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": 14.1155,
+      "longitude": -92.9167,
+      "place": "85 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1q3"
+    },
+    {
+      "event_id": "us7000t1pu",
+      "event_time": "2026-07-19T00:33:50.972000Z",
+      "magnitude": 4.4,
+      "depth_km": 35.0,
+      "latitude": 14.5808,
+      "longitude": -92.9917,
+      "place": "63 km WSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1pu"
+    },
+    {
+      "event_id": "us7000t1pk",
+      "event_time": "2026-07-18T23:38:01.171000Z",
+      "magnitude": 4.5,
+      "depth_km": 35.0,
+      "latitude": 14.3539,
+      "longitude": -92.5399,
+      "place": "39 km WSW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1pk"
+    },
+    {
+      "event_id": "us7000t1ph",
+      "event_time": "2026-07-18T23:31:20.036000Z",
+      "magnitude": 4.7,
+      "depth_km": 25.777,
+      "latitude": 11.3596,
+      "longitude": -87.1133,
+      "place": "80 km SW of Masachapa, Nicaragua",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1ph"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 51,
+      "oldest_before": "2024-07-21",
+      "newest_before": "2026-07-23",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-15",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 51,
+            "newest": "2026-07-23T13:14:03.195000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 549,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/central_america/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "central_america",
+        "iedc_raw": 50.881,
+        "iedc_provisional": 50.881,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "ELEVATED",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.5833,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 50.8812
+        },
+        "reasons": [
+          {
+            "family": "seismic",
+            "feature": "seismic_count",
+            "score": 61.29,
+            "reason": "Incremento robusto de la tasa sísmica",
+            "z": 2.088
+          },
+          {
+            "family": "seismic",
+            "feature": "seismic_max_mag",
+            "score": 53.53,
+            "reason": "Magnitud máxima atípica en la ventana",
+            "z": 1.686
+          }
+        ],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

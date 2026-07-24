@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:16:41Z",
+  "started_at": "2026-07-24T14:16:38Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "venezuela_caribbean",
+    "name": "Venezuela–Caribe Sur",
+    "group": "Americas",
+    "bbox": [
+      0,
+      15,
+      -76,
+      -57
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:16:41Z",
+    "day": "2026-07-24",
+    "region_id": "venezuela_caribbean",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.22777777777777777,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:07Z",
+        "last_success": "2026-07-24T06:14:07Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:16:39Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/venezuela_caribbean/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:01Z",
+        "last_success": "2026-07-24T06:14:01Z",
+        "records": 3150,
+        "freshness_hours": 4920.0,
+        "coverage": 0.72,
+        "quality": 0.6335999999999999,
+        "message": "18/25 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:39Z",
+        "last_success": "2026-07-24T14:16:39Z",
+        "records": 17,
+        "freshness_hours": 0.0002574302777777778,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 86 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:38Z",
+        "last_success": "2026-07-24T14:16:38Z",
+        "records": 5,
+        "freshness_hours": 20.436033245277777,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-15\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-23T17:50:29.177000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:07Z",
+      "last_success": "2026-07-24T06:14:07Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:16:39Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/venezuela_caribbean/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:01Z",
+      "last_success": "2026-07-24T06:14:01Z",
+      "records": 3150,
+      "freshness_hours": 4920.0,
+      "coverage": 0.72,
+      "quality": 0.6335999999999999,
+      "message": "18/25 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:39Z",
+      "last_success": "2026-07-24T14:16:39Z",
+      "records": 17,
+      "freshness_hours": 0.0002574302777777778,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 86 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:38Z",
+      "last_success": "2026-07-24T14:16:38Z",
+      "records": 5,
+      "freshness_hours": 20.436033245277777,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-15\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-23T17:50:29.177000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 221,
+    "dtrg_r_gnss_stations": 25,
+    "dtrg_r_gnss_obs": 3178,
+    "dtrg_r_goes_files": 179,
+    "dtrg_r_goes_daily": 5,
+    "dtrg_r_insar_scenes": 2645,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 2724,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "fb606975-db2e-40a9-b5f2-25d0e89cd0a5",
+      "created_at": "2026-07-21T21:07:56Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 43,
+      "negatives": 323,
+      "tp": 0,
+      "fp": 2,
+      "tn": 321,
+      "fn": 43,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9938080495356038,
+      "f1": null,
+      "auc": 0.5935272517819857,
+      "brier": 0.11847335754808745,
+      "base_brier": 0.1036832989936987,
+      "false_alarms_per_100_days": 0.546448087431694,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":43,\"negatives\":323,\"tp\":0,\"fp\":2,\"tn\":321,\"fn\":43,\"precision\":0.0,\"recall\":0.0,\"specificity\":0.9938080495356038,\"f1\":null,\"auc\":0.5935272517819857,\"brier\":0.11847335754808745,\"base_brier\":0.1036832989936987,\"false_alarms_per_100_days\":0.546448087431694,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t2u4",
+      "event_time": "2026-07-23T17:50:29.177000Z",
+      "magnitude": 4.6,
+      "depth_km": 147.537,
+      "latitude": 6.8042,
+      "longitude": -73.1257,
+      "place": "8 km NNW of Jordán, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2u4"
+    },
+    {
+      "event_id": "us7000t1x5",
+      "event_time": "2026-07-20T10:55:00.820000Z",
+      "magnitude": 4.8,
+      "depth_km": 66.041,
+      "latitude": 10.6707,
+      "longitude": -62.2023,
+      "place": "14 km NE of Güiria, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1x5"
+    },
+    {
+      "event_id": "us7000t1wn",
+      "event_time": "2026-07-20T09:45:10.282000Z",
+      "magnitude": 5.2,
+      "depth_km": 83.51,
+      "latitude": 11.3742,
+      "longitude": -60.8041,
+      "place": "22 km NNW of Scarborough, Trinidad and Tobago",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1wn"
+    },
+    {
+      "event_id": "us7000t1vc",
+      "event_time": "2026-07-20T01:44:14.908000Z",
+      "magnitude": 4.6,
+      "depth_km": 152.012,
+      "latitude": 6.7581,
+      "longitude": -73.0723,
+      "place": "3 km NE of Jordán, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1vc"
+    },
+    {
+      "event_id": "us7000t0ss",
+      "event_time": "2026-07-15T20:13:38.516000Z",
+      "magnitude": 4.3,
+      "depth_km": 156.992,
+      "latitude": 6.6435,
+      "longitude": -73.0664,
+      "place": "4 km N of Curití, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0ss"
+    },
+    {
+      "event_id": "us7000t06y",
+      "event_time": "2026-07-13T19:59:52.678000Z",
+      "magnitude": 4.5,
+      "depth_km": 82.95,
+      "latitude": 10.6041,
+      "longitude": -62.6782,
+      "place": "16 km ENE of Yaguaraparo, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t06y"
+    },
+    {
+      "event_id": "us7000t0qk",
+      "event_time": "2026-07-08T23:56:00.177000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 10.5193,
+      "longitude": -68.558,
+      "place": "15 km SE of Yumare, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0qk"
+    },
+    {
+      "event_id": "us6000talr",
+      "event_time": "2026-07-07T08:41:37.390000Z",
+      "magnitude": 4.5,
+      "depth_km": 126.81,
+      "latitude": 10.7321,
+      "longitude": -62.58,
+      "place": "32 km NE of Yaguaraparo, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000talr"
+    },
+    {
+      "event_id": "us6000t8yf",
+      "event_time": "2026-06-29T11:01:02.693000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 10.7743,
+      "longitude": -66.7938,
+      "place": "19 km NNE of Caraballeda, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8yf"
+    },
+    {
+      "event_id": "us6000t8sx",
+      "event_time": "2026-06-28T09:33:59.554000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 10.4907,
+      "longitude": -68.4852,
+      "place": "23 km ESE of Yumare, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8sx"
+    },
+    {
+      "event_id": "us6000t8su",
+      "event_time": "2026-06-28T08:46:09.312000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 10.6091,
+      "longitude": -68.3699,
+      "place": "11 km SW of Boca de Aroa, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8su"
+    },
+    {
+      "event_id": "us6000t8q8",
+      "event_time": "2026-06-27T19:20:37.253000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 10.6767,
+      "longitude": -67.6133,
+      "place": "41 km N of El Limón, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8q8"
+    },
+    {
+      "event_id": "us6000taer",
+      "event_time": "2026-06-27T14:23:39.723000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 10.6072,
+      "longitude": -67.1426,
+      "place": "12 km W of Catia La Mar, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000taer"
+    },
+    {
+      "event_id": "us6000t8k6",
+      "event_time": "2026-06-26T22:16:11.872000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 10.7968,
+      "longitude": -67.6011,
+      "place": "54 km N of El Limón, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8k6"
+    },
+    {
+      "event_id": "us6000t8d1",
+      "event_time": "2026-06-26T04:19:30.378000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 10.4537,
+      "longitude": -68.3607,
+      "place": "17 km WSW of Morón, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8d1"
+    },
+    {
+      "event_id": "us6000t828",
+      "event_time": "2026-06-25T07:48:51.850000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 10.6014,
+      "longitude": -67.4507,
+      "place": "38 km NNE of El Limón, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t828"
+    },
+    {
+      "event_id": "us6000t81p",
+      "event_time": "2026-06-25T05:48:25.842000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 10.7063,
+      "longitude": -66.7831,
+      "place": "12 km NE of Caraballeda, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t81p"
+    },
+    {
+      "event_id": "us6000t9w3",
+      "event_time": "2026-06-24T22:54:00.175000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 10.885,
+      "longitude": -66.973,
+      "place": "31 km NNE of Catia La Mar, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9w3"
+    },
+    {
+      "event_id": "us6000t80d",
+      "event_time": "2026-06-24T22:23:55.528000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 10.5333,
+      "longitude": -67.2093,
+      "place": "20 km WSW of Catia La Mar, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t80d"
+    },
+    {
+      "event_id": "us6000t7zp",
+      "event_time": "2026-06-24T22:05:11.743000Z",
+      "magnitude": 7.5,
+      "depth_km": 10.0,
+      "latitude": 10.5086,
+      "longitude": -68.5036,
+      "place": "20 km ESE of Yumare, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zp"
+    },
+    {
+      "event_id": "us6000t7zc",
+      "event_time": "2026-06-24T22:04:34.363000Z",
+      "magnitude": 7.2,
+      "depth_km": 27.588,
+      "latitude": 10.4085,
+      "longitude": -68.5571,
+      "place": "21 km ENE of San Felipe, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc"
+    },
+    {
+      "event_id": "us7000su81",
+      "event_time": "2026-06-18T01:23:29.204000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 9.2935,
+      "longitude": -69.93,
+      "place": "34 km NW of Guanare, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000su81"
+    },
+    {
+      "event_id": "us7000stm0",
+      "event_time": "2026-06-17T10:51:00.495000Z",
+      "magnitude": 4.7,
+      "depth_km": 167.229,
+      "latitude": 6.7412,
+      "longitude": -72.9674,
+      "place": "1 km SSE of Cepitá, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stm0"
+    },
+    {
+      "event_id": "us7000stkj",
+      "event_time": "2026-06-17T04:11:39.173000Z",
+      "magnitude": 4.2,
+      "depth_km": 168.64,
+      "latitude": 6.7457,
+      "longitude": -73.0298,
+      "place": "5 km NNW of Aratoca, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stkj"
+    },
+    {
+      "event_id": "us7000ssrw",
+      "event_time": "2026-06-14T00:39:48.528000Z",
+      "magnitude": 4.3,
+      "depth_km": 27.145,
+      "latitude": 9.2573,
+      "longitude": -69.677,
+      "place": "24 km W of Ospino, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssrw"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 5,
+      "oldest_before": "2024-07-25",
+      "newest_before": "2026-07-23",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-15",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 5,
+            "newest": "2026-07-23T17:50:29.177000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 86,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/venezuela_caribbean/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "venezuela_caribbean",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.2278,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

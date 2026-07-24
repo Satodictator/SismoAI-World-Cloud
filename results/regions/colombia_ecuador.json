@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:17:02Z",
+  "started_at": "2026-07-24T14:16:53Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "colombia_ecuador",
+    "name": "Colombia–Ecuador",
+    "group": "Americas",
+    "bbox": [
+      -5,
+      13,
+      -83,
+      -69
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:17:02Z",
+    "day": "2026-07-24",
+    "region_id": "colombia_ecuador",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.36666666666666664,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:30Z",
+        "last_success": "2026-07-24T06:14:30Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:16:57Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/colombia_ecuador/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:26Z",
+        "last_success": "2026-07-24T06:14:26Z",
+        "records": 2780,
+        "freshness_hours": 480.0,
+        "coverage": 0.65,
+        "quality": 0.5720000000000001,
+        "message": "13/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:56Z",
+        "last_success": "2026-07-24T14:16:56Z",
+        "records": 17,
+        "freshness_hours": 0.0008283827777777778,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 211 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:54Z",
+        "last_success": "2026-07-24T14:16:54Z",
+        "records": 4,
+        "freshness_hours": 20.44029093888889,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-15\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-23T17:50:29.177000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:30Z",
+      "last_success": "2026-07-24T06:14:30Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:16:57Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/colombia_ecuador/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:26Z",
+      "last_success": "2026-07-24T06:14:26Z",
+      "records": 2780,
+      "freshness_hours": 480.0,
+      "coverage": 0.65,
+      "quality": 0.5720000000000001,
+      "message": "13/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:56Z",
+      "last_success": "2026-07-24T14:16:56Z",
+      "records": 17,
+      "freshness_hours": 0.0008283827777777778,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 211 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:54Z",
+      "last_success": "2026-07-24T14:16:54Z",
+      "records": 4,
+      "freshness_hours": 20.44029093888889,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-15\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-23T17:50:29.177000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 422,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 2800,
+    "dtrg_r_goes_files": 179,
+    "dtrg_r_goes_daily": 5,
+    "dtrg_r_insar_scenes": 2890,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 2724,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "c0108f72-7ef0-4be6-a06f-87871c1dbb95",
+      "created_at": "2026-07-21T21:08:37Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 107,
+      "negatives": 259,
+      "tp": 0,
+      "fp": 0,
+      "tn": 259,
+      "fn": 107,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5760834265507163,
+      "brier": 0.23465087913224064,
+      "base_brier": 0.2068813640299799,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":107,\"negatives\":259,\"tp\":0,\"fp\":0,\"tn\":259,\"fn\":107,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5760834265507163,\"brier\":0.23465087913224064,\"base_brier\":0.2068813640299799,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t2u4",
+      "event_time": "2026-07-23T17:50:29.177000Z",
+      "magnitude": 4.6,
+      "depth_km": 147.537,
+      "latitude": 6.8042,
+      "longitude": -73.1257,
+      "place": "8 km NNW of Jordán, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2u4"
+    },
+    {
+      "event_id": "us7000t1vc",
+      "event_time": "2026-07-20T01:44:14.908000Z",
+      "magnitude": 4.6,
+      "depth_km": 152.012,
+      "latitude": 6.7581,
+      "longitude": -73.0723,
+      "place": "3 km NE of Jordán, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1vc"
+    },
+    {
+      "event_id": "us7000t1kk",
+      "event_time": "2026-07-18T08:40:27.357000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 3.3274,
+      "longitude": -79.3719,
+      "place": "136 km NW of Mosquera, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1kk"
+    },
+    {
+      "event_id": "us7000t0ss",
+      "event_time": "2026-07-15T20:13:38.516000Z",
+      "magnitude": 4.3,
+      "depth_km": 156.992,
+      "latitude": 6.6435,
+      "longitude": -73.0664,
+      "place": "4 km N of Curití, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0ss"
+    },
+    {
+      "event_id": "us7000szbp",
+      "event_time": "2026-07-09T23:42:59.846000Z",
+      "magnitude": 4.6,
+      "depth_km": 39.312,
+      "latitude": -2.7409,
+      "longitude": -80.8398,
+      "place": "51 km WSW of Playas, Ecuador",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szbp"
+    },
+    {
+      "event_id": "us6000t8sr",
+      "event_time": "2026-06-28T08:39:25.720000Z",
+      "magnitude": 4.4,
+      "depth_km": 96.893,
+      "latitude": 5.1217,
+      "longitude": -76.2727,
+      "place": "25 km N of San José del Palmar, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8sr"
+    },
+    {
+      "event_id": "us6000t9y4",
+      "event_time": "2026-06-26T08:31:45.349000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 4.0074,
+      "longitude": -76.5596,
+      "place": "11 km NW of Darien, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9y4"
+    },
+    {
+      "event_id": "us7000supu",
+      "event_time": "2026-06-19T19:51:44.457000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 4.5923,
+      "longitude": -82.609,
+      "place": "south of Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000supu"
+    },
+    {
+      "event_id": "us7000sugs",
+      "event_time": "2026-06-19T00:07:07.452000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 3.4243,
+      "longitude": -82.7563,
+      "place": "south of Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sugs"
+    },
+    {
+      "event_id": "us7000su81",
+      "event_time": "2026-06-18T01:23:29.204000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 9.2935,
+      "longitude": -69.93,
+      "place": "34 km NW of Guanare, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000su81"
+    },
+    {
+      "event_id": "us7000stm0",
+      "event_time": "2026-06-17T10:51:00.495000Z",
+      "magnitude": 4.7,
+      "depth_km": 167.229,
+      "latitude": 6.7412,
+      "longitude": -72.9674,
+      "place": "1 km SSE of Cepitá, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stm0"
+    },
+    {
+      "event_id": "us7000stkj",
+      "event_time": "2026-06-17T04:11:39.173000Z",
+      "magnitude": 4.2,
+      "depth_km": 168.64,
+      "latitude": 6.7457,
+      "longitude": -73.0298,
+      "place": "5 km NNW of Aratoca, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stkj"
+    },
+    {
+      "event_id": "us7000stei",
+      "event_time": "2026-06-16T14:56:02.790000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 0.5419,
+      "longitude": -80.2888,
+      "place": "31 km WSW of Muisne, Ecuador",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000stei"
+    },
+    {
+      "event_id": "us7000ssrw",
+      "event_time": "2026-06-14T00:39:48.528000Z",
+      "magnitude": 4.3,
+      "depth_km": 27.145,
+      "latitude": 9.2573,
+      "longitude": -69.677,
+      "place": "24 km W of Ospino, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssrw"
+    },
+    {
+      "event_id": "us7000ssms",
+      "event_time": "2026-06-13T06:35:39.995000Z",
+      "magnitude": 5.1,
+      "depth_km": 80.617,
+      "latitude": -4.5468,
+      "longitude": -80.0698,
+      "place": "8 km WSW of Suyo, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssms"
+    },
+    {
+      "event_id": "us7000sqrk",
+      "event_time": "2026-06-04T23:41:15.280000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 9.6411,
+      "longitude": -70.0077,
+      "place": "28 km SW of El Tocuyo, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sqrk"
+    },
+    {
+      "event_id": "us7000sq6f",
+      "event_time": "2026-06-03T00:41:41.589000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 7.5249,
+      "longitude": -80.677,
+      "place": "11 km NNW of El Cortezo, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sq6f"
+    },
+    {
+      "event_id": "us7000sntq",
+      "event_time": "2026-05-27T06:27:36.900000Z",
+      "magnitude": 4.4,
+      "depth_km": 170.238,
+      "latitude": -1.6736,
+      "longitude": -77.8628,
+      "place": "11 km ENE of Palora, Ecuador",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sntq"
+    },
+    {
+      "event_id": "us6000szsz",
+      "event_time": "2026-05-23T21:26:05.164000Z",
+      "magnitude": 4.4,
+      "depth_km": 162.261,
+      "latitude": 6.776,
+      "longitude": -72.9668,
+      "place": "2 km NNE of Cepitá, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000szsz"
+    },
+    {
+      "event_id": "us6000szp0",
+      "event_time": "2026-05-23T08:44:52.458000Z",
+      "magnitude": 4.5,
+      "depth_km": 118.742,
+      "latitude": -2.6463,
+      "longitude": -77.5168,
+      "place": "75 km ESE of Sucúa, Ecuador",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000szp0"
+    },
+    {
+      "event_id": "us6000t076",
+      "event_time": "2026-05-19T02:23:33.602000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 9.0311,
+      "longitude": -82.9156,
+      "place": "24 km NNE of San Vito, Costa Rica",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t076"
+    },
+    {
+      "event_id": "us6000sy4k",
+      "event_time": "2026-05-15T23:21:36.848000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 10.5399,
+      "longitude": -72.4762,
+      "place": "29 km NW of La Villa del Rosario, Venezuela",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy4k"
+    },
+    {
+      "event_id": "us6000sxn9",
+      "event_time": "2026-05-14T12:48:21.593000Z",
+      "magnitude": 5.3,
+      "depth_km": 112.725,
+      "latitude": 4.1341,
+      "longitude": -76.6659,
+      "place": "30 km NW of Darien, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sxn9"
+    },
+    {
+      "event_id": "us6000swhx",
+      "event_time": "2026-05-09T20:26:10.588000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 8.8156,
+      "longitude": -82.5942,
+      "place": "4 km SSW of Cerro Punta, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000swhx"
+    },
+    {
+      "event_id": "us6000swaq",
+      "event_time": "2026-05-08T17:50:10.736000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": -4.6273,
+      "longitude": -77.8472,
+      "place": "122 km N of Yambrasbamba, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000swaq"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 4,
+      "oldest_before": "2024-07-21",
+      "newest_before": "2026-07-23",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-15",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 4,
+            "newest": "2026-07-23T17:50:29.177000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 211,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/colombia_ecuador/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "colombia_ecuador",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.3667,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

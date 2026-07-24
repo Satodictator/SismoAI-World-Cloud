@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:16:44Z",
+  "started_at": "2026-07-24T14:16:41Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "scotia_sandwich",
+    "name": "Scotia–Sandwich del Sur",
+    "group": "Americas",
+    "bbox": [
+      -63,
+      -48,
+      -65,
+      -15
+    ],
+    "min_magnitude": 3.5,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:16:44Z",
+    "day": "2026-07-24",
+    "region_id": "scotia_sandwich",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.4888888888888889,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:17Z",
+        "last_success": "2026-07-24T06:14:17Z",
+        "records": 512,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "512 escenas/productos SAR; 12 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":12,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:16:42Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/scotia_sandwich/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:13Z",
+        "last_success": "2026-07-24T06:14:13Z",
+        "records": 4477,
+        "freshness_hours": 480.0,
+        "coverage": 0.75,
+        "quality": 0.66,
+        "message": "9/12 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:42Z",
+        "last_success": "2026-07-24T14:16:42Z",
+        "records": 17,
+        "freshness_hours": 0.0003065413888888889,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:41Z",
+        "last_success": "2026-07-24T14:16:41Z",
+        "records": 3,
+        "freshness_hours": 13.660672026666667,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-16\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-24T00:37:03.421000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:17Z",
+      "last_success": "2026-07-24T06:14:17Z",
+      "records": 512,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "512 escenas/productos SAR; 12 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":12,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:16:42Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/scotia_sandwich/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:13Z",
+      "last_success": "2026-07-24T06:14:13Z",
+      "records": 4477,
+      "freshness_hours": 480.0,
+      "coverage": 0.75,
+      "quality": 0.66,
+      "message": "9/12 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:42Z",
+      "last_success": "2026-07-24T14:16:42Z",
+      "records": 17,
+      "freshness_hours": 0.0003065413888888889,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:41Z",
+      "last_success": "2026-07-24T14:16:41Z",
+      "records": 3,
+      "freshness_hours": 13.660672026666667,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-16\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-24T00:37:03.421000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 682,
+    "dtrg_r_gnss_stations": 12,
+    "dtrg_r_gnss_obs": 4500,
+    "dtrg_r_goes_files": 179,
+    "dtrg_r_goes_daily": 5,
+    "dtrg_r_insar_scenes": 866,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 2724,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "1b2cee35-da5c-47c9-a15c-fd651d0dffd0",
+      "created_at": "2026-07-21T21:08:24Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 101,
+      "negatives": 265,
+      "tp": 0,
+      "fp": 0,
+      "tn": 265,
+      "fn": 101,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5639454511488885,
+      "brier": 0.25537991476693983,
+      "base_brier": 0.19980441338947025,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":101,\"negatives\":265,\"tp\":0,\"fp\":0,\"tn\":265,\"fn\":101,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5639454511488885,\"brier\":0.25537991476693983,\"base_brier\":0.19980441338947025,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t2ws",
+      "event_time": "2026-07-24T00:37:03.421000Z",
+      "magnitude": 4.9,
+      "depth_km": 35.0,
+      "latitude": -58.7946,
+      "longitude": -25.2979,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2ws"
+    },
+    {
+      "event_id": "us7000t1ng",
+      "event_time": "2026-07-18T19:50:36.395000Z",
+      "magnitude": 5.5,
+      "depth_km": 10.0,
+      "latitude": -60.6982,
+      "longitude": -50.9727,
+      "place": "Scotia Sea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1ng"
+    },
+    {
+      "event_id": "us7000t1n0",
+      "event_time": "2026-07-18T16:57:34.133000Z",
+      "magnitude": 4.8,
+      "depth_km": 122.006,
+      "latitude": -59.4387,
+      "longitude": -26.2427,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1n0"
+    },
+    {
+      "event_id": "us7000t0nx",
+      "event_time": "2026-07-15T15:36:06.155000Z",
+      "magnitude": 4.8,
+      "depth_km": 135.602,
+      "latitude": -59.4525,
+      "longitude": -26.3364,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0nx"
+    },
+    {
+      "event_id": "us7000t0ng",
+      "event_time": "2026-07-15T14:51:37.824000Z",
+      "magnitude": 5.7,
+      "depth_km": 13.061,
+      "latitude": -59.9671,
+      "longitude": -19.003,
+      "place": "east of the South Sandwich Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0ng"
+    },
+    {
+      "event_id": "us7000t0ia",
+      "event_time": "2026-07-15T00:35:28.891000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -58.7712,
+      "longitude": -29.4723,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0ia"
+    },
+    {
+      "event_id": "us7000t0la",
+      "event_time": "2026-07-14T15:25:03.216000Z",
+      "magnitude": 4.8,
+      "depth_km": 29.742,
+      "latitude": -57.117,
+      "longitude": -24.8016,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0la"
+    },
+    {
+      "event_id": "us7000t04b",
+      "event_time": "2026-07-13T17:45:19.903000Z",
+      "magnitude": 4.9,
+      "depth_km": 35.0,
+      "latitude": -58.601,
+      "longitude": -25.0342,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t04b"
+    },
+    {
+      "event_id": "us7000szw8",
+      "event_time": "2026-07-12T15:15:51.520000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -55.8328,
+      "longitude": -26.8896,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szw8"
+    },
+    {
+      "event_id": "us7000szpb",
+      "event_time": "2026-07-11T10:26:42.691000Z",
+      "magnitude": 6.4,
+      "depth_km": 26.0,
+      "latitude": -55.5424,
+      "longitude": -28.8526,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szpb"
+    },
+    {
+      "event_id": "us7000sznc",
+      "event_time": "2026-07-11T06:52:27.197000Z",
+      "magnitude": 5.4,
+      "depth_km": 104.888,
+      "latitude": -59.6331,
+      "longitude": -26.2943,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sznc"
+    },
+    {
+      "event_id": "us7000szbn",
+      "event_time": "2026-07-09T23:31:17.623000Z",
+      "magnitude": 4.9,
+      "depth_km": 37.685,
+      "latitude": -58.5851,
+      "longitude": -24.9866,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szbn"
+    },
+    {
+      "event_id": "us6000t9qz",
+      "event_time": "2026-07-03T01:49:56.752000Z",
+      "magnitude": 4.6,
+      "depth_km": 44.666,
+      "latitude": -55.9005,
+      "longitude": -27.2923,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9qz"
+    },
+    {
+      "event_id": "us6000t9kl",
+      "event_time": "2026-07-02T05:23:17.928000Z",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "latitude": -61.0213,
+      "longitude": -23.6266,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9kl"
+    },
+    {
+      "event_id": "us6000t9jv",
+      "event_time": "2026-07-02T02:57:42.207000Z",
+      "magnitude": 5.2,
+      "depth_km": 183.485,
+      "latitude": -58.4797,
+      "longitude": -26.5923,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9jv"
+    },
+    {
+      "event_id": "us6000t9jm",
+      "event_time": "2026-07-02T02:17:58.065000Z",
+      "magnitude": 4.9,
+      "depth_km": 110.432,
+      "latitude": -59.4795,
+      "longitude": -26.1998,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9jm"
+    },
+    {
+      "event_id": "us6000t97h",
+      "event_time": "2026-06-30T15:15:17.435000Z",
+      "magnitude": 4.9,
+      "depth_km": 57.943,
+      "latitude": -56.0388,
+      "longitude": -26.949,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t97h"
+    },
+    {
+      "event_id": "us6000t93x",
+      "event_time": "2026-06-30T00:15:12.436000Z",
+      "magnitude": 5.1,
+      "depth_km": 35.0,
+      "latitude": -55.5091,
+      "longitude": -27.219,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t93x"
+    },
+    {
+      "event_id": "us6000tah6",
+      "event_time": "2026-06-28T22:14:23.262000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -55.1997,
+      "longitude": -25.6449,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tah6"
+    },
+    {
+      "event_id": "us6000t9vx",
+      "event_time": "2026-06-24T21:49:26.715000Z",
+      "magnitude": 4.7,
+      "depth_km": 35.0,
+      "latitude": -60.1185,
+      "longitude": -26.5093,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9vx"
+    },
+    {
+      "event_id": "us6000t9vj",
+      "event_time": "2026-06-24T10:17:09.683000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -57.5006,
+      "longitude": -24.604,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9vj"
+    },
+    {
+      "event_id": "us6000t7ng",
+      "event_time": "2026-06-23T17:08:54.968000Z",
+      "magnitude": 4.6,
+      "depth_km": 221.18,
+      "latitude": -59.4503,
+      "longitude": -27.5589,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7ng"
+    },
+    {
+      "event_id": "us6000t8i7",
+      "event_time": "2026-06-22T12:45:13.992000Z",
+      "magnitude": 4.6,
+      "depth_km": 38.418,
+      "latitude": -55.7302,
+      "longitude": -27.2157,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8i7"
+    },
+    {
+      "event_id": "us7000sv17",
+      "event_time": "2026-06-21T20:05:26.301000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -60.0696,
+      "longitude": -62.3195,
+      "place": "Drake Passage",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sv17"
+    },
+    {
+      "event_id": "us6000t88g",
+      "event_time": "2026-06-20T22:23:36.236000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -56.1707,
+      "longitude": -31.0037,
+      "place": "South Georgia Island region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t88g"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 3,
+      "oldest_before": "2024-07-22",
+      "newest_before": "2026-07-24",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-16",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 3,
+            "newest": "2026-07-24T00:37:03.421000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 0,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/scotia_sandwich/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "scotia_sandwich",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.4889,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

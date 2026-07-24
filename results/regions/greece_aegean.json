@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:17:27Z",
+  "started_at": "2026-07-24T14:17:25Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "greece_aegean",
+    "name": "Grecia–Egeo",
+    "group": "Europa–África",
+    "bbox": [
+      33,
+      43,
+      18,
+      31
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:17:27Z",
+    "day": "2026-07-24",
+    "region_id": "greece_aegean",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.5777777777777777,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:16:36Z",
+        "last_success": "2026-07-24T06:16:36Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:17:25Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/greece_aegean/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:16:32Z",
+        "last_success": "2026-07-24T06:16:32Z",
+        "records": 9572,
+        "freshness_hours": 480.0,
+        "coverage": 0.8333333333333334,
+        "quality": 0.7333333333333334,
+        "message": "15/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-07-24T14:17:25Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:17:25Z",
+        "last_success": "2026-07-24T14:17:25Z",
+        "records": 2,
+        "freshness_hours": 149.22116947166666,
+        "coverage": 0.07777777777777778,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-10\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-18T09:04:09.589000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:16:36Z",
+      "last_success": "2026-07-24T06:16:36Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:17:25Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/greece_aegean/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:16:32Z",
+      "last_success": "2026-07-24T06:16:32Z",
+      "records": 9572,
+      "freshness_hours": 480.0,
+      "coverage": 0.8333333333333334,
+      "quality": 0.7333333333333334,
+      "message": "15/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-07-24T14:17:25Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:17:25Z",
+      "last_success": "2026-07-24T14:17:25Z",
+      "records": 2,
+      "freshness_hours": 149.22116947166666,
+      "coverage": 0.07777777777777778,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-10\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-18T09:04:09.589000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 907,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 9617,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 3139,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 1816,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "fb4a356b-8859-4ac1-8065-1ce129157d15",
+      "created_at": "2026-07-21T21:14:44Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 102,
+      "negatives": 264,
+      "tp": 2,
+      "fp": 17,
+      "tn": 247,
+      "fn": 100,
+      "precision": 0.10526315789473684,
+      "recall": 0.0196078431372549,
+      "specificity": 0.9356060606060606,
+      "f1": 0.03305785123966942,
+      "auc": 0.4575720439691028,
+      "brier": 0.24941667904152967,
+      "base_brier": 0.20102123085192214,
+      "false_alarms_per_100_days": 4.644808743169399,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":102,\"negatives\":264,\"tp\":2,\"fp\":17,\"tn\":247,\"fn\":100,\"precision\":0.10526315789473684,\"recall\":0.0196078431372549,\"specificity\":0.9356060606060606,\"f1\":0.03305785123966942,\"auc\":0.4575720439691028,\"brier\":0.24941667904152967,\"base_brier\":0.20102123085192214,\"false_alarms_per_100_days\":4.644808743169399,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t1kn",
+      "event_time": "2026-07-18T09:04:09.589000Z",
+      "magnitude": 4.3,
+      "depth_km": 18.491,
+      "latitude": 35.5522,
+      "longitude": 25.029,
+      "place": "25 km N of Gázi, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1kn"
+    },
+    {
+      "event_id": "us7000szyg",
+      "event_time": "2026-07-12T23:46:00.181000Z",
+      "magnitude": 4.1,
+      "depth_km": 149.786,
+      "latitude": 36.5703,
+      "longitude": 26.9756,
+      "place": "14 km WSW of Mandráki, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szyg"
+    },
+    {
+      "event_id": "us7000sz39",
+      "event_time": "2026-07-08T21:11:49.440000Z",
+      "magnitude": 3.9,
+      "depth_km": 31.054,
+      "latitude": 34.7161,
+      "longitude": 28.9429,
+      "place": "174 km SSE of Lárdos, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sz39"
+    },
+    {
+      "event_id": "us6000tatk",
+      "event_time": "2026-07-07T22:18:03.961000Z",
+      "magnitude": 4.4,
+      "depth_km": 39.943,
+      "latitude": 35.3425,
+      "longitude": 23.4538,
+      "place": "24 km WNW of Palaióchora, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tatk"
+    },
+    {
+      "event_id": "us6000taze",
+      "event_time": "2026-07-02T15:50:50.312000Z",
+      "magnitude": 4.1,
+      "depth_km": 52.123,
+      "latitude": 35.0671,
+      "longitude": 24.7651,
+      "place": "0 km SSW of Tympáki, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000taze"
+    },
+    {
+      "event_id": "us6000t9lz",
+      "event_time": "2026-07-02T11:06:21.727000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 35.3034,
+      "longitude": 27.2953,
+      "place": "23 km SSE of Karpathos, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9lz"
+    },
+    {
+      "event_id": "us6000t9eh",
+      "event_time": "2026-07-01T12:03:03.779000Z",
+      "magnitude": 4.6,
+      "depth_km": 50.039,
+      "latitude": 35.7452,
+      "longitude": 22.4987,
+      "place": "63 km SW of Kýthira, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9eh"
+    },
+    {
+      "event_id": "us6000t9dv",
+      "event_time": "2026-07-01T09:54:15.932000Z",
+      "magnitude": 4.2,
+      "depth_km": 95.231,
+      "latitude": 39.1618,
+      "longitude": 22.1695,
+      "place": "7 km ESE of Anávra, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9dv"
+    },
+    {
+      "event_id": "us6000t94i",
+      "event_time": "2026-06-30T04:13:51.229000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 36.6457,
+      "longitude": 22.6858,
+      "place": "16 km SE of Gýtheio, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t94i"
+    },
+    {
+      "event_id": "us6000t8vp",
+      "event_time": "2026-06-28T22:08:28.582000Z",
+      "magnitude": 4.3,
+      "depth_km": 72.486,
+      "latitude": 37.0121,
+      "longitude": 22.8995,
+      "place": "17 km E of Geráki, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8vp"
+    },
+    {
+      "event_id": "us6000t8na",
+      "event_time": "2026-06-27T10:27:38.940000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 39.4068,
+      "longitude": 26.2747,
+      "place": "9 km ENE of Míthymna, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8na"
+    },
+    {
+      "event_id": "us6000t8kr",
+      "event_time": "2026-06-27T00:43:26.983000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 35.1472,
+      "longitude": 25.2829,
+      "place": "1 km E of Arkalochóri, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8kr"
+    },
+    {
+      "event_id": "us6000t7tc",
+      "event_time": "2026-06-24T08:25:54.428000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 35.2677,
+      "longitude": 27.2665,
+      "place": "26 km S of Karpathos, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7tc"
+    },
+    {
+      "event_id": "us6000t7kj",
+      "event_time": "2026-06-23T11:04:36.649000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 37.8742,
+      "longitude": 27.5055,
+      "place": "8 km W of Germencik, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7kj"
+    },
+    {
+      "event_id": "us6000t7ja",
+      "event_time": "2026-06-23T03:55:29.625000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 38.7703,
+      "longitude": 23.3925,
+      "place": "6 km E of Límni, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7ja"
+    },
+    {
+      "event_id": "us7000sv2i",
+      "event_time": "2026-06-22T03:30:20.596000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 37.2085,
+      "longitude": 20.4778,
+      "place": "64 km SSW of Lithakiá, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sv2i"
+    },
+    {
+      "event_id": "us7000sutj",
+      "event_time": "2026-06-20T09:37:24.186000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 34.6999,
+      "longitude": 24.1141,
+      "place": "15 km S of Kastrí, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sutj"
+    },
+    {
+      "event_id": "us7000suti",
+      "event_time": "2026-06-20T09:31:08.196000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 34.7236,
+      "longitude": 24.1051,
+      "place": "12 km S of Kastrí, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000suti"
+    },
+    {
+      "event_id": "us7000sus8",
+      "event_time": "2026-06-20T03:37:12.147000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 39.6918,
+      "longitude": 20.553,
+      "place": "14 km W of Rodotópi, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sus8"
+    },
+    {
+      "event_id": "us6000t866",
+      "event_time": "2026-06-19T13:18:58.369000Z",
+      "magnitude": 4.3,
+      "depth_km": 38.072,
+      "latitude": 34.8055,
+      "longitude": 23.2523,
+      "place": "61 km SW of Palaióchora, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t866"
+    },
+    {
+      "event_id": "us7000ssw0",
+      "event_time": "2026-06-14T18:17:25.197000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 36.6492,
+      "longitude": 21.6409,
+      "place": "19 km SSW of Methóni, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssw0"
+    },
+    {
+      "event_id": "us7000su2w",
+      "event_time": "2026-06-12T13:00:01.526000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 36.4348,
+      "longitude": 22.4255,
+      "place": "37 km SSW of Gýtheio, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000su2w"
+    },
+    {
+      "event_id": "us7000sseh",
+      "event_time": "2026-06-12T04:42:07.984000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 40.072,
+      "longitude": 19.8758,
+      "place": "11 km ESE of Himarë, Albania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sseh"
+    },
+    {
+      "event_id": "us7000ssbd",
+      "event_time": "2026-06-11T19:30:07.898000Z",
+      "magnitude": 4.5,
+      "depth_km": 22.754,
+      "latitude": 34.2912,
+      "longitude": 25.1067,
+      "place": "79 km S of Pýrgos, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssbd"
+    },
+    {
+      "event_id": "us7000su54",
+      "event_time": "2026-06-10T22:45:34.431000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 38.7272,
+      "longitude": 23.4466,
+      "place": "3 km W of Prokópi, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000su54"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 2,
+      "oldest_before": "2024-07-21",
+      "newest_before": "2026-07-18",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-10",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 2,
+            "newest": "2026-07-18T09:04:09.589000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/greece_aegean/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "greece_aegean",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.5778,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

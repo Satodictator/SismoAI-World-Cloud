@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-07-24T14:16:48Z",
+  "started_at": "2026-07-24T14:16:46Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "myanmar_andaman",
+    "name": "Myanmar–Andamán",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      5,
+      29,
+      90,
+      102
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-07-24T14:16:48Z",
+    "day": "2026-07-24",
+    "region_id": "myanmar_andaman",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.43333333333333335,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:33Z",
+        "last_success": "2026-07-24T06:14:33Z",
+        "records": 613,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "613 escenas/productos SAR; 113 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":113,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-07-24T14:16:46Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/myanmar_andaman/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-07-24T06:14:31Z",
+        "last_success": "2026-07-24T06:14:31Z",
+        "records": 9516,
+        "freshness_hours": 480.0,
+        "coverage": 0.875,
+        "quality": 0.77,
+        "message": "14/16 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-07-24T14:16:46Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-07-24T14:16:46Z",
+        "last_success": "2026-07-24T14:16:46Z",
+        "records": 4,
+        "freshness_hours": 67.34698270916667,
+        "coverage": 0.06111111111111111,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-13\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-21T18:55:57.603000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:33Z",
+      "last_success": "2026-07-24T06:14:33Z",
+      "records": 613,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "613 escenas/productos SAR; 113 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":113,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-07-24T14:16:46Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/myanmar_andaman/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-07-24T06:14:31Z",
+      "last_success": "2026-07-24T06:14:31Z",
+      "records": 9516,
+      "freshness_hours": 480.0,
+      "coverage": 0.875,
+      "quality": 0.77,
+      "message": "14/16 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-07-24T14:16:46Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-07-24T14:16:46Z",
+      "last_success": "2026-07-24T14:16:46Z",
+      "records": 4,
+      "freshness_hours": 67.34698270916667,
+      "coverage": 0.06111111111111111,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-13\",\"end\":\"2026-07-24\",\"newest\":\"2026-07-21T18:55:57.603000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 504,
+    "dtrg_r_gnss_stations": 16,
+    "dtrg_r_gnss_obs": 9558,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 2048,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 1816,
+    "dtrg_r_scores": 454,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "799a39e1-788b-4d13-861c-ca960e2ed824",
+      "created_at": "2026-07-21T21:10:06Z",
+      "start_day": "2025-07-21",
+      "end_day": "2026-07-21",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 101,
+      "negatives": 265,
+      "tp": 3,
+      "fp": 1,
+      "tn": 264,
+      "fn": 98,
+      "precision": 0.75,
+      "recall": 0.0297029702970297,
+      "specificity": 0.9962264150943396,
+      "f1": 0.05714285714285714,
+      "auc": 0.7224360171866243,
+      "brier": 0.20015744479781405,
+      "base_brier": 0.19980441338947116,
+      "false_alarms_per_100_days": 0.273224043715847,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":366,\"positives\":101,\"negatives\":265,\"tp\":3,\"fp\":1,\"tn\":264,\"fn\":98,\"precision\":0.75,\"recall\":0.0297029702970297,\"specificity\":0.9962264150943396,\"f1\":0.05714285714285714,\"auc\":0.7224360171866243,\"brier\":0.20015744479781405,\"base_brier\":0.19980441338947116,\"false_alarms_per_100_days\":0.273224043715847,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000t2ak",
+      "event_time": "2026-07-21T18:55:57.603000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 28.1265,
+      "longitude": 92.5658,
+      "place": "87 km NE of Tawang, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2ak"
+    },
+    {
+      "event_id": "us7000t25s",
+      "event_time": "2026-07-21T11:43:08.411000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 23.2707,
+      "longitude": 101.5395,
+      "place": "78 km NE of Simao, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t25s"
+    },
+    {
+      "event_id": "us7000t20r",
+      "event_time": "2026-07-20T19:37:38.198000Z",
+      "magnitude": 4.4,
+      "depth_km": 37.676,
+      "latitude": 11.7875,
+      "longitude": 93.0879,
+      "place": "39 km ENE of Port Blair, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t20r"
+    },
+    {
+      "event_id": "us7000t173",
+      "event_time": "2026-07-17T01:26:06.555000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 22.8587,
+      "longitude": 95.9644,
+      "place": "42 km NE of Shwebo, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t173"
+    },
+    {
+      "event_id": "us7000sztw",
+      "event_time": "2026-07-12T06:30:39.013000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 25.5695,
+      "longitude": 90.7428,
+      "place": "52 km W of Nongstoin, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sztw"
+    },
+    {
+      "event_id": "us7000szsk",
+      "event_time": "2026-07-11T22:39:23.872000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 22.639,
+      "longitude": 95.9524,
+      "place": "27 km ENE of Shwebo, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szsk"
+    },
+    {
+      "event_id": "us7000t10q",
+      "event_time": "2026-07-10T13:29:44.726000Z",
+      "magnitude": 4.3,
+      "depth_km": 118.196,
+      "latitude": 23.5239,
+      "longitude": 94.927,
+      "place": "54 km ESE of Mawlaik, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t10q"
+    },
+    {
+      "event_id": "us6000ta3g",
+      "event_time": "2026-07-04T10:28:54.002000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 25.9834,
+      "longitude": 100.7432,
+      "place": "16 km ESE of Pianjiao, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ta3g"
+    },
+    {
+      "event_id": "us6000ta3d",
+      "event_time": "2026-07-04T10:07:37.416000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 25.994,
+      "longitude": 100.713,
+      "place": "13 km E of Pianjiao, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ta3d"
+    },
+    {
+      "event_id": "us6000ta1y",
+      "event_time": "2026-07-04T00:21:06.565000Z",
+      "magnitude": 3.5,
+      "depth_km": 10.0,
+      "latitude": 16.6943,
+      "longitude": 96.1159,
+      "place": "12 km E of Kanbe, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ta1y"
+    },
+    {
+      "event_id": "us7000sz7d",
+      "event_time": "2026-07-03T22:23:42.349000Z",
+      "magnitude": 4.5,
+      "depth_km": 68.343,
+      "latitude": 6.2927,
+      "longitude": 94.2825,
+      "place": "122 km WNW of Sabang, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sz7d"
+    },
+    {
+      "event_id": "us6000t9cp",
+      "event_time": "2026-06-30T17:12:17.760000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 25.3549,
+      "longitude": 96.585,
+      "place": "81 km W of Myitkyina, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9cp"
+    },
+    {
+      "event_id": "us6000tagw",
+      "event_time": "2026-06-28T15:51:09.984000Z",
+      "magnitude": 4.2,
+      "depth_km": 99.885,
+      "latitude": 12.1405,
+      "longitude": 93.5465,
+      "place": "101 km ENE of Port Blair, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tagw"
+    },
+    {
+      "event_id": "us7000sv7t",
+      "event_time": "2026-06-22T15:28:52.406000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 23.8698,
+      "longitude": 90.6223,
+      "place": "11 km WSW of Narsingdi, Bangladesh",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sv7t"
+    },
+    {
+      "event_id": "us6000t8gl",
+      "event_time": "2026-06-21T02:24:55.135000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 27.4893,
+      "longitude": 92.2066,
+      "place": "29 km ESE of Tawang, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8gl"
+    },
+    {
+      "event_id": "us6000t8gh",
+      "event_time": "2026-06-21T00:53:20.927000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 27.5051,
+      "longitude": 92.1524,
+      "place": "23 km ESE of Tawang, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8gh"
+    },
+    {
+      "event_id": "us6000t8gi",
+      "event_time": "2026-06-21T00:52:54.610000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 27.4598,
+      "longitude": 92.0424,
+      "place": "17 km SE of Tawang, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8gi"
+    },
+    {
+      "event_id": "us7000suse",
+      "event_time": "2026-06-20T04:33:10.698000Z",
+      "magnitude": 4.5,
+      "depth_km": 109.992,
+      "latitude": 24.6492,
+      "longitude": 94.7654,
+      "place": "71 km E of Wāngjing, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000suse"
+    },
+    {
+      "event_id": "us7000suc2",
+      "event_time": "2026-06-18T15:29:24.907000Z",
+      "magnitude": 4.5,
+      "depth_km": 52.125,
+      "latitude": 24.3478,
+      "longitude": 94.0847,
+      "place": "19 km SSE of Kakching, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000suc2"
+    },
+    {
+      "event_id": "us6000t7mh",
+      "event_time": "2026-06-17T09:44:41.724000Z",
+      "magnitude": 4.5,
+      "depth_km": 31.697,
+      "latitude": 5.0085,
+      "longitude": 94.3395,
+      "place": "124 km WSW of Banda Aceh, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7mh"
+    },
+    {
+      "event_id": "us7000sswu",
+      "event_time": "2026-06-14T20:07:58.070000Z",
+      "magnitude": 4.3,
+      "depth_km": 13.962,
+      "latitude": 20.0107,
+      "longitude": 97.8827,
+      "place": "79 km N of Mae Hong Son, Thailand",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sswu"
+    },
+    {
+      "event_id": "us7000ssem",
+      "event_time": "2026-06-11T15:40:35.593000Z",
+      "magnitude": 4.4,
+      "depth_km": 48.154,
+      "latitude": 24.9682,
+      "longitude": 93.0641,
+      "place": "20 km NNE of Lakhipur, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssem"
+    },
+    {
+      "event_id": "us7000srnl",
+      "event_time": "2026-06-09T02:52:49.039000Z",
+      "magnitude": 4.2,
+      "depth_km": 133.672,
+      "latitude": 24.6389,
+      "longitude": 95.3182,
+      "place": "127 km E of Wāngjing, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000srnl"
+    },
+    {
+      "event_id": "us7000sr6r",
+      "event_time": "2026-06-07T05:12:27.831000Z",
+      "magnitude": 4.3,
+      "depth_km": 115.244,
+      "latitude": 23.9117,
+      "longitude": 94.7307,
+      "place": "44 km NE of Mawlaik, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sr6r"
+    },
+    {
+      "event_id": "us7000sqkf",
+      "event_time": "2026-06-04T15:39:26.163000Z",
+      "magnitude": 4.3,
+      "depth_km": 118.092,
+      "latitude": 22.4251,
+      "longitude": 94.7024,
+      "place": "56 km NW of Monywa, Burma (Myanmar)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sqkf"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 4,
+      "oldest_before": "2024-07-21",
+      "newest_before": "2026-07-21",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-13",
+          "end": "2026-07-24",
+          "result": {
+            "status": "OK",
+            "records_received": 4,
+            "newest": "2026-07-21T18:55:57.603000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/myanmar_andaman/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-07-24",
+        "region_id": "myanmar_andaman",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.4333,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
