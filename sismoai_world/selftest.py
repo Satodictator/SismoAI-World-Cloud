@@ -24,14 +24,35 @@ def main() -> int:
                             "baseline_progress": 1, "available_families": 1, "family_scores": {"seismic": i}, "reasons": []},
                 "sources": [], "counts": {}, "latest_backtest": [], "latest_events": [], "errors": [],
             }), encoding="utf-8")
+        historical = root / "historical_summary.json"
+        historical.write_text(json.dumps({
+            "schema_version": 1,
+            "generated_at": "2026-01-01T00:00:00Z",
+            "run_status": "OK",
+            "state": "BUILDING_HISTORY",
+            "catalog": {
+                "target_start": "1973-01-01", "cursor": "1980-01-01",
+                "events": 1000, "months_complete": 84, "months_total": 600,
+                "progress": 0.14,
+            },
+            "sources": [], "context_controls": [], "patterns": [],
+            "pattern_policy": {
+                "research_only": True, "modifies_iedc": False, "activates_alerts": False,
+            },
+            "scientific_notice": "Prueba histórica aislada.",
+        }), encoding="utf-8")
         docs = root / "docs"
         world = build_world(regions_path=repo / "config" / "world_regions.json",
-                            collected_results_dir=rr, docs_dir=docs, mode="selftest")
+                            collected_results_dir=rr,
+                            historical_summary_path=historical,
+                            docs_dir=docs, mode="selftest")
         checks = {
             "region_catalog": len(regions) >= 30,
             "unique_regions": len({r.id for r in regions}) == len(regions),
             "world_json": (docs / "data" / "world.json").exists(),
             "dashboard": (docs / "index.html").exists(),
+            "historical_json": (docs / "data" / "historical.json").exists(),
+            "historical_panel": "Laboratorio histórico" in (docs / "index.html").read_text(encoding="utf-8"),
             "manifest": (docs / "data" / "manifest.json").exists(),
             "ranking": len(world["ranking"]) == len(regions),
         }

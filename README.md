@@ -34,6 +34,9 @@ GitHub Pages publica:
 - últimos eventos;
 - backtest más reciente;
 - manifiesto de integridad.
+- progreso de la reconstrucción histórica global desde 1973;
+- inventario de cobertura real por fuente;
+- patrones candidatos con entrenamiento y prueba cronológica posterior separados.
 
 ## Fuentes
 
@@ -42,6 +45,22 @@ GitHub Pages publica:
 - NOAA GOES-GLM en las macroregiones configuradas dentro de su cobertura.
 - ASF/Sentinel-1 y OPERA-S1 como catálogo; las descargas autenticadas requieren `EARTHDATA_TOKEN`.
 - Productos InSAR locales o descargados cuando están disponibles.
+
+### NASA y fuentes contextuales
+
+- NASA Earthdata autentica el acceso utilizado por ASF para productos Sentinel-1/OPERA-S1.
+- NASA/JPL Fireball, NOAA SWPC, EMSC, CelesTrak y OpenSky pertenecen a la capa MAM
+  local. World Cloud los identifica como controles o fuentes contextuales separadas,
+  pero no permite que activen alertas ni alteren automáticamente el IEDC.
+
+## Laboratorio histórico separado
+
+El workflow conserva una base histórica compacta y aislada en la rama `state`.
+Reconstruye por bloques el catálogo mundial USGS M≥4.5 desde 1973 y examina tanto
+reglas sísmicas como combinaciones acotadas de las familias regionales disponibles.
+Cada candidato se ajusta con el 70 % inicial del tiempo y se mide en el 30 % posterior.
+Las etiquetas futuras se excluyen de las variables de entrada. Ningún resultado de este
+laboratorio cambia V11, V12, MAM, DTRG, el IEDC operativo ni el gate público.
 
 ## Limitaciones científicas
 

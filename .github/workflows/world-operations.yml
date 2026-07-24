@@ -163,12 +163,30 @@ jobs:
           path: collected
           merge-multiple: true
 
+      - name: Verify historical laboratory isolation
+        run: |
+          python -m sismoai_world.historical selftest
+          python -m sismoai_world.selftest
+
+      - name: Advance isolated historical replay and pattern research
+        run: |
+          python -m sismoai_world.historical run \
+            --input-archive state_input/research/historical.sqlite.gz \
+            --work-dir historical_runtime \
+            --output-dir collected/research \
+            --region-archives collected/state/regions \
+            --region-archives state_input/state/regions \
+            --result-dir collected/results/regions \
+            --result-dir state_input/results/regions \
+            --mode "${{ needs.prepare.outputs.mode }}"
+
       - name: Build worldwide ranking and static dashboard
         run: |
           python -m sismoai_world.cli aggregate \
             --regions config/world_regions.json \
             --collected-results collected/results/regions \
             --state-results state_input/results/regions \
+            --historical-summary collected/research/historical_summary.json \
             --docs docs \
             --mode "${{ needs.prepare.outputs.mode }}"
 

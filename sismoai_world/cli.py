@@ -35,6 +35,7 @@ def main(argv=None):
     a.add_argument("--regions", default="config/world_regions.json")
     a.add_argument("--collected-results", required=True)
     a.add_argument("--state-results")
+    a.add_argument("--historical-summary")
     a.add_argument("--docs", required=True)
     a.add_argument("--mode", default="unknown")
 
@@ -61,6 +62,7 @@ def main(argv=None):
             regions_path=Path(args.regions),
             collected_results_dir=Path(args.collected_results),
             state_results_dir=Path(args.state_results) if args.state_results else None,
+            historical_summary_path=Path(args.historical_summary) if args.historical_summary else None,
             docs_dir=Path(args.docs), mode=args.mode,
         )
         emit({k: world[k] for k in ("generated_at", "operation_mode", "regions_configured", "regions_operational", "regions_public_valid")})
