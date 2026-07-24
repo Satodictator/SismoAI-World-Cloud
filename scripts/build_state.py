@@ -24,6 +24,7 @@ def main() -> int:
     p.add_argument("--previous", required=True)
     p.add_argument("--collected", required=True)
     p.add_argument("--world", required=True)
+    p.add_argument("--bulletin")
     p.add_argument("--output", required=True)
     p.add_argument("--retention-days", type=int, default=180)
     a = p.parse_args()
@@ -37,15 +38,29 @@ def main() -> int:
     hist = output / "history" / "world" / f"{stamp}.json"
     hist.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(a.world, hist)
+    bulletin_hist = None
+    if a.bulletin and Path(a.bulletin).exists():
+        bulletin_hist = output / "history" / "bulletins" / f"{stamp}.json"
+        bulletin_hist.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(a.bulletin, bulletin_hist)
     cutoff = datetime.now(timezone.utc) - timedelta(days=max(7, a.retention_days))
-    for path in (output / "history" / "world").glob("*.json"):
-        try:
-            when = datetime.fromisoformat(path.stem.replace("Z", "+00:00").replace("-00-", ":00:"))
-        except Exception:
-            when = datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
-        if when < cutoff:
-            path.unlink(missing_ok=True)
-    print(json.dumps({"status": "OK", "output": str(output), "history": str(hist)}, indent=2))
+    for folder in (output / "history" / "world", output / "history" / "bulletins"):
+        for path in folder.glob("*.json"):
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+                when = datetime.fromisoformat(
+                    str(payload["generated_at"]).replace("Z", "+00:00")
+                )
+            except Exception:
+                when = datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
+            if when < cutoff:
+                path.unlink(missing_ok=True)
+    print(json.dumps({
+        "status": "OK",
+        "output": str(output),
+        "history": str(hist),
+        "bulletin_history": str(bulletin_hist) if bulletin_hist else None,
+    }, indent=2))
     return 0
 
 

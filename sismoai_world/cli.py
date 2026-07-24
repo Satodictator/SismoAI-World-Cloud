@@ -36,6 +36,8 @@ def main(argv=None):
     a.add_argument("--collected-results", required=True)
     a.add_argument("--state-results")
     a.add_argument("--historical-summary")
+    a.add_argument("--previous-world-dir")
+    a.add_argument("--previous-bulletins-dir")
     a.add_argument("--docs", required=True)
     a.add_argument("--mode", default="unknown")
 
@@ -63,6 +65,8 @@ def main(argv=None):
             collected_results_dir=Path(args.collected_results),
             state_results_dir=Path(args.state_results) if args.state_results else None,
             historical_summary_path=Path(args.historical_summary) if args.historical_summary else None,
+            previous_world_dir=Path(args.previous_world_dir) if args.previous_world_dir else None,
+            previous_bulletins_dir=Path(args.previous_bulletins_dir) if args.previous_bulletins_dir else None,
             docs_dir=Path(args.docs), mode=args.mode,
         )
         emit({k: world[k] for k in ("generated_at", "operation_mode", "regions_configured", "regions_operational", "regions_public_valid")})

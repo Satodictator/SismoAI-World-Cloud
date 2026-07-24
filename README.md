@@ -37,6 +37,30 @@ GitHub Pages publica:
 - progreso de la reconstrucción histórica global desde 1973;
 - inventario de cobertura real por fuente;
 - patrones candidatos con entrenamiento y prueba cronológica posterior separados.
+- un boletín determinista en cada actualización que explica qué cambió, qué regiones
+  se apartan de su referencia y cuáles son las limitaciones;
+- texto y lectura por voz en español, inglés, portugués, francés, italiano, alemán,
+  japonés, turco, griego e indonesio, seleccionados por el idioma del navegador y
+  con selección manual;
+- archivo público de boletines recientes para conservar la explicación de cada ejecución.
+
+## Boletín explicativo y voz
+
+El boletín se construye exclusivamente con los resultados verificados de cada ejecución y
+los compara con el estado mundial anterior. No utiliza texto libre generado por IA ni
+inventa causas. Distingue actividad observada, anomalía estadística, patrón candidato y
+señal experimental.
+
+La reproducción usa las voces disponibles en el navegador o dispositivo del visitante.
+Nunca comienza automáticamente: el visitante debe pulsar **Escuchar boletín**. Si el
+dispositivo no tiene una voz para el idioma seleccionado, el texto traducido permanece
+disponible.
+
+Una señal experimental solo puede mostrarse si están simultáneamente aprobados el gate
+público, la línea base completa, tres familias independientes, confianza mínima del 75 %,
+validación prospectiva, probabilidad calibrada, tasa de falsas alarmas aceptable y todos
+los campos científicos de la señal. Incluso entonces se presenta como
+**SEÑAL EXPERIMENTAL PRIORITARIA — NO ES ALERTA OFICIAL**.
 
 ## Fuentes
 

@@ -187,6 +187,8 @@ jobs:
             --collected-results collected/results/regions \
             --state-results state_input/results/regions \
             --historical-summary collected/research/historical_summary.json \
+            --previous-world-dir state_input/history/world \
+            --previous-bulletins-dir state_input/history/bulletins \
             --docs docs \
             --mode "${{ needs.prepare.outputs.mode }}"
 
@@ -196,6 +198,7 @@ jobs:
             --previous state_input \
             --collected collected \
             --world docs/data/world.json \
+            --bulletin docs/data/bulletin.json \
             --output state_publish \
             --retention-days 180
 
