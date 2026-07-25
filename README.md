@@ -134,21 +134,21 @@ Calendario responsable:
 
 Los patrones candidatos actuales son preliminares. No justifican fechas exactas, avisos de peligro ni evacuaciones.
 
-## Avisos privados gratuitos
+## Avisos automáticos gratuitos mediante GitHub
 
-SismoAI incluye una infraestructura opcional de avisos privados por Telegram. Se instala desactivada y no publica números telefónicos, tokens ni identificadores privados.
+SismoAI utiliza GitHub Issues como canal automático sin proveedor externo. Cuando una ejecución detecta novedades incluidas en la política, crea un Issue público, lo asigna a `Satodictator` y menciona esa cuenta.
 
-La política inicial genera candidatos cuando:
+El aviso aparece en las notificaciones de GitHub. La entrega por correo depende de la configuración de notificaciones de la cuenta de GitHub.
+
+La política genera candidatos cuando:
 
 - una región cambia a `WATCH`, `ELEVATED` o `HIGHLY_ATYPICAL`;
 - el IEDC aumenta al menos 10 puntos mientras la región permanece en observación;
 - aparece un evento nuevo observado de magnitud 5,0 o superior;
 - una futura ventana de modo sombra incluye `notification_eligible=true`.
 
-La primera ejecución es silenciosa para crear una línea base y evitar mensajes sobre estados antiguos. Los candidatos se deduplican.
+La primera ejecución es silenciosa para evitar avisos antiguos. Las novedades se deduplican y varias novedades de una misma ejecución se agrupan en un solo Issue.
 
-Telegram puede utilizarse sin pagar cuando existe un bot configurado. Cada destinatario debe abrir el bot y enviar `/start` antes de que el bot pueda escribirle. Los secretos se guardan como `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_IDS` en GitHub Actions.
-
-WhatsApp y llamadas permanecen desactivados porque no existe una vía oficial, automática y completamente gratuita para esos canales.
+Los Issues son públicos porque el repositorio es público. Nunca incluyen números telefónicos, tokens, contraseñas ni identificadores privados. Telegram queda opcional; WhatsApp y llamadas permanecen desactivados porque no existe una vía oficial automática completamente gratuita.
 
 Todo aviso mantiene esta advertencia: **no es una predicción, una alerta oficial ni una orden de evacuación**.

@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "enabled": false,
+  "schema_version": 2,
+  "enabled": true,
   "owner_label": "Steven Josué Medina",
   "messages_24_hours": true,
   "suppress_first_run": true,
@@ -15,7 +15,17 @@
     "shadow_window_requires_notification_eligible": true
   },
   "delivery": {
-    "telegram": "free_when_bot_is_configured",
+    "github_issue": {
+      "enabled": true,
+      "assignee": "Satodictator",
+      "labels": [
+        "sismoai-aviso",
+        "experimental"
+      ],
+      "digest_per_run": true,
+      "public_issue": true
+    },
+    "telegram": "optional_not_configured",
     "whatsapp": "disabled_no_official_free_automation",
     "voice_call": "disabled_no_free_provider",
     "deduplicate": true,
@@ -25,9 +35,7 @@
     "store_phone_numbers_in_repository": false,
     "publish_phone_numbers": false,
     "store_tokens_in_repository": false,
-    "github_secrets": [
-      "TELEGRAM_BOT_TOKEN",
-      "TELEGRAM_CHAT_IDS"
-    ]
+    "github_issues_are_public": true,
+    "github_email_depends_on_user_settings": true
   }
 }

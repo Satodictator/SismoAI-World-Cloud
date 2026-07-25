@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
   actions: read
   pages: write
   id-token: write
@@ -193,8 +194,12 @@ jobs:
             --mode "${{ needs.prepare.outputs.mode }}"
 
 
-      - name: Evaluate private Telegram notifications
+      - name: Evaluate automatic GitHub and optional Telegram notifications
         env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_ACTOR: Satodictator
+          SISMOAI_RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
         run: |

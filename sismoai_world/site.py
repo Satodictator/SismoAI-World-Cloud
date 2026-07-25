@@ -345,33 +345,38 @@ No es una predicción ni una alerta oficial.</div>
 
 
 <section class="section" id="privateNotificationCenter">
-  <h2>Avisos privados de actividad SismoAI</h2>
+  <h2>Avisos automáticos por GitHub y correo</h2>
   <div class="researchnotice" id="notificationNotice">Cargando estado de notificaciones…</div>
   <div class="cards" id="notificationSummary"></div>
   <div class="notificationgrid">
     <div class="notificationitem">
-      <h3>Telegram gratuito</h3>
-      <p>Canal preparado para mensajes privados las 24 horas. Requiere crear un bot con BotFather, enviar <code>/start</code> desde cada cuenta destinataria y guardar el token y los chat_id como secretos de GitHub.</p>
-      <p>Los números telefónicos no se publican ni se necesitan para entregar mensajes del bot.</p>
+      <h3>GitHub Issues · canal gratuito activo</h3>
+      <p>Cuando aparezca una condición nueva incluida en la política, SismoAI crea un Issue, lo asigna a <code>Satodictator</code> y menciona esa cuenta.</p>
+      <p>El aviso aparece en las notificaciones de GitHub. El correo depende de que la cuenta tenga habilitadas las notificaciones por email.</p>
+      <div class="roadmapwarning">Los Issues son públicos porque este repositorio es público. No contienen teléfonos, tokens ni credenciales.</div>
     </div>
     <div class="notificationitem">
-      <h3>Cuándo enviará un mensaje</h3>
+      <h3>Cuándo genera un aviso</h3>
       <ul>
         <li>cambio regional a WATCH, ELEVATED o HIGHLY_ATYPICAL;</li>
         <li>aumento del IEDC de al menos 10 puntos mientras la región siga en observación;</li>
         <li>nuevo evento observado M≥5 en una macroregión;</li>
-        <li>una futura ventana en modo sombra marcada como <code>notification_eligible=true</code>.</li>
+        <li>futura ventana en modo sombra con <code>notification_eligible=true</code>.</li>
       </ul>
-      <p>No repite continuamente el mismo aviso y la primera ejecución es silenciosa para crear la línea base.</p>
+      <p>La primera ejecución es silenciosa y cada novedad queda deduplicada. Varias novedades de la misma ejecución se agrupan en un solo Issue.</p>
     </div>
     <div class="notificationitem">
-      <h3>WhatsApp y llamadas</h3>
-      <p>Se mantienen desactivados. GitHub no puede enviar WhatsApp oficial ni realizar llamadas telefónicas normales de forma automática y completamente gratuita.</p>
-      <p>Si en el futuro se contrata un proveedor, las llamadas quedarían limitadas al horario de oficina de Caracas.</p>
+      <h3>Frecuencia y contenido</h3>
+      <p>La evaluación se realiza en cada ejecución mundial de SismoAI, normalmente cada seis horas.</p>
+      <p>El Issue informa región, hora evaluada, actividad observada, lugar reportado o ventana experimental, según el tipo de novedad.</p>
+    </div>
+    <div class="notificationitem">
+      <h3>Otros canales</h3>
+      <p>Telegram queda opcional y desactivado mientras no exista un bot. WhatsApp y llamadas continúan desactivados porque no existe una vía oficial automática completamente gratuita.</p>
     </div>
     <div class="notificationitem">
       <h3>Alcance científico</h3>
-      <p>Un mensaje puede informar actividad observada, cambios del IEDC o una ventana probabilística experimental. No afirmará fecha, lugar y magnitud exactos.</p>
+      <p>Un aviso puede informar actividad ya observada, cambios del IEDC o una ventana probabilística experimental. No afirmará una fecha, localidad y magnitud exactas como hecho futuro.</p>
       <div class="roadmapwarning">No es una predicción, una alerta oficial ni una orden de evacuación.</div>
     </div>
   </div>
@@ -415,16 +420,17 @@ function renderScientificRoadmap(){
 
 
 function renderPrivateNotifications(){
-  let n=WORLD?.private_notifications||{},channels=n.channels||{},telegram=channels.telegram||{},last=n.last_run||{},policy=n.activation_policy||{};
-  let status=n.status||'PREPARADO, PENDIENTE DE CONFIGURACIÓN';
-  let telegramClass=telegram.enabled?'ok':'warn';
-  $('#notificationNotice').textContent=(n.scientific_notice||'Avisos privados experimentales.')+' Privacidad: '+(n.privacy||'No se publican destinatarios.');
+  let n=WORLD?.private_notifications||{},channels=n.channels||{},github=channels.github_issue||{},telegram=channels.telegram||{},last=n.last_run||{},policy=n.activation_policy||{};
+  let status=n.status||'PREPARANDO';
+  let generalClass=status==='ACTIVE'?'ok':'warn';
+  let githubClass=github.enabled?'ok':'warn';
+  $('#notificationNotice').textContent=(n.scientific_notice||'Avisos experimentales.')+' '+(n.privacy||'');
   $('#notificationSummary').innerHTML=
-    `<div class=card><div class=label>Estado general</div><div class="value ${cls(status)}" style="font-size:17px">${esc(status)}</div></div>`+
-    `<div class=card><div class=label>Telegram</div><div class="value ${telegramClass}" style="font-size:18px">${esc(telegram.status||'PENDIENTE')}</div><div class=muted>${Number(telegram.recipients_count||0)} destinatarios · mensajes 24 h</div></div>`+
-    `<div class=card><div class=label>WhatsApp</div><div class="value warn" style="font-size:17px">DESACTIVADO</div><div class=muted>No existe automatización oficial gratuita</div></div>`+
-    `<div class=card><div class=label>Llamadas</div><div class="value warn" style="font-size:17px">DESACTIVADAS</div><div class=muted>Requieren proveedor telefónico</div></div>`+
-    `<div class=card><div class=label>Última evaluación</div><div class=value>${Number(last.sent||0)}</div><div class=muted>enviados · ${Number(last.candidates||0)} candidatos · ${Number(last.errors||0)} errores</div></div>`+
+    `<div class=card><div class=label>Estado general</div><div class="value ${generalClass}" style="font-size:17px">${esc(status)}</div></div>`+
+    `<div class=card><div class=label>GitHub Issues</div><div class="value ${githubClass}" style="font-size:18px">${esc(github.status||'PENDIENTE')}</div><div class=muted>Asignado a ${esc(github.assignee||'Satodictator')} · Issue público</div></div>`+
+    `<div class=card><div class=label>Correo</div><div class="value ${githubClass}" style="font-size:17px">${github.enabled?'DISPONIBLE':'PENDIENTE'}</div><div class=muted>Depende de la configuración de notificaciones de GitHub</div></div>`+
+    `<div class=card><div class=label>Telegram</div><div class="value warn" style="font-size:17px">${esc(telegram.status||'OPTIONAL_DISABLED')}</div><div class=muted>Opcional · no requerido</div></div>`+
+    `<div class=card><div class=label>Última evaluación</div><div class=value>${Number(last.issues_created||0)}</div><div class=muted>Issues creados · ${Number(last.candidates||0)} candidatos · ${Number(last.errors||0)} errores</div></div>`+
     `<div class=card><div class=label>Política</div><div class=value style="font-size:16px">${esc((policy.states||[]).join(' · ')||'WATCH · ELEVATED · HIGHLY_ATYPICAL')}</div><div class=muted>Nuevo M≥${Number(policy.observed_event_min_magnitude||5).toFixed(1)} · aumento IEDC ${Number(policy.iedc_increase_points||10).toFixed(0)} puntos</div></div>`;
 }
 
