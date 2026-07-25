@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "owner_label": "Steven Josué Medina",
+  "messages_24_hours": true,
+  "suppress_first_run": true,
+  "activation": {
+    "states": [
+      "WATCH",
+      "ELEVATED",
+      "HIGHLY_ATYPICAL"
+    ],
+    "iedc_increase_points": 10.0,
+    "observed_event_min_magnitude": 5.0,
+    "shadow_window_requires_notification_eligible": true
+  },
+  "delivery": {
+    "telegram": "free_when_bot_is_configured",
+    "whatsapp": "disabled_no_official_free_automation",
+    "voice_call": "disabled_no_free_provider",
+    "deduplicate": true,
+    "maximum_same_candidate_messages": 1
+  },
+  "privacy": {
+    "store_phone_numbers_in_repository": false,
+    "publish_phone_numbers": false,
+    "store_tokens_in_repository": false,
+    "github_secrets": [
+      "TELEGRAM_BOT_TOKEN",
+      "TELEGRAM_CHAT_IDS"
+    ]
+  }
+}

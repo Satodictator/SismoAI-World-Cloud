@@ -70,6 +70,7 @@ def main() -> int:
             "dashboard": (docs / "index.html").exists(),
             "historical_json": (docs / "data" / "historical.json").exists(),
             "historical_panel": "Laboratorio histórico" in dashboard_text,
+            "notification_panel": "Avisos privados" in dashboard_text,
             "bulletin_json": (docs / "data" / "bulletin.json").exists(),
             "bulletin_archive": (docs / "data" / "bulletins" / "index.json").exists(),
             "bulletin_panel": "Boletín SismoAI" in dashboard_text,

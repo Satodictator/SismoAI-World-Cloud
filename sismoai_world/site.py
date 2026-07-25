@@ -229,6 +229,12 @@ INDEX_HTML = r'''<!doctype html>
 .roadmaplinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .roadmaplinks a{display:inline-block;padding:7px 9px;border:1px solid #31547e;border-radius:8px;background:#102540;text-decoration:none}
 
+
+.notificationgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:10px}
+.notificationitem{background:#101f34;border:1px solid var(--line);border-radius:12px;padding:13px;line-height:1.5}
+.notificationitem h3{margin:0 0 7px;font-size:14px;color:#c7dcf7}
+.notificationstatus{display:inline-block;padding:4px 8px;border-radius:999px;background:#18385e;font-weight:700;font-size:11px}
+
 </style></head><body>
 <header><h1>SismoAI World Cloud · Vigilancia experimental mundial por macroregiones</h1><div class="notice" id="notice">Cargando aviso científico…</div></header>
 <main class="wrap"><section class="bulletin" id="bulletin"><div class="bulletinhead"><div><h2 id="bulletinTitle">Boletín SismoAI</h2><span class="classification" id="bulletinClass">Cargando…</span><div class="muted" id="bulletinTime"></div></div><div class="bulletintools"><select id="bulletinLanguage" aria-label="Idioma del boletín"></select><button id="listenButton" type="button">▶ Escuchar boletín</button><button class="secondary" id="pauseButton" type="button" disabled>⏸ Pausar</button><button class="secondary" id="stopButton" type="button" disabled>■ Detener</button></div></div><div class="bulletinbody"><p id="bulletinSummary">Generando explicación de esta actualización…</p><h3 id="changesTitle">Qué cambió</h3><p id="bulletinChanges"></p><h3 id="situationTitle">Situación actual</h3><div id="bulletinRegions"></div><h3 id="historyTitle">Memoria y patrones</h3><p id="bulletinHistory"></p><h3 id="limitationsTitle">Alcance y limitaciones</h3><p id="bulletinLimitations"></p><div class="official" id="officialLabel">No es una alerta oficial</div><div class="voicehint" id="voiceHint"></div><div class="voicehint"><a id="bulletinArchive" href="data/bulletins/index.json">Archivo de boletines</a></div></div></section><section class="cards" id="summary"></section>
@@ -337,6 +343,40 @@ No es una predicción ni una alerta oficial.</div>
   <div class="roadmapwarning" style="margin-top:12px">Los patrones históricos actuales son candidatos preliminares. No justifican fechas exactas, avisos de peligro, evacuaciones ni la apertura del gate público.</div>
 </section>
 
+
+<section class="section" id="privateNotificationCenter">
+  <h2>Avisos privados de actividad SismoAI</h2>
+  <div class="researchnotice" id="notificationNotice">Cargando estado de notificaciones…</div>
+  <div class="cards" id="notificationSummary"></div>
+  <div class="notificationgrid">
+    <div class="notificationitem">
+      <h3>Telegram gratuito</h3>
+      <p>Canal preparado para mensajes privados las 24 horas. Requiere crear un bot con BotFather, enviar <code>/start</code> desde cada cuenta destinataria y guardar el token y los chat_id como secretos de GitHub.</p>
+      <p>Los números telefónicos no se publican ni se necesitan para entregar mensajes del bot.</p>
+    </div>
+    <div class="notificationitem">
+      <h3>Cuándo enviará un mensaje</h3>
+      <ul>
+        <li>cambio regional a WATCH, ELEVATED o HIGHLY_ATYPICAL;</li>
+        <li>aumento del IEDC de al menos 10 puntos mientras la región siga en observación;</li>
+        <li>nuevo evento observado M≥5 en una macroregión;</li>
+        <li>una futura ventana en modo sombra marcada como <code>notification_eligible=true</code>.</li>
+      </ul>
+      <p>No repite continuamente el mismo aviso y la primera ejecución es silenciosa para crear la línea base.</p>
+    </div>
+    <div class="notificationitem">
+      <h3>WhatsApp y llamadas</h3>
+      <p>Se mantienen desactivados. GitHub no puede enviar WhatsApp oficial ni realizar llamadas telefónicas normales de forma automática y completamente gratuita.</p>
+      <p>Si en el futuro se contrata un proveedor, las llamadas quedarían limitadas al horario de oficina de Caracas.</p>
+    </div>
+    <div class="notificationitem">
+      <h3>Alcance científico</h3>
+      <p>Un mensaje puede informar actividad observada, cambios del IEDC o una ventana probabilística experimental. No afirmará fecha, lugar y magnitud exactos.</p>
+      <div class="roadmapwarning">No es una predicción, una alerta oficial ni una orden de evacuación.</div>
+    </div>
+  </div>
+</section>
+
 <footer>Resultados provisionales para investigación. Consulte organismos oficiales para información de seguridad y emergencia. Integridad: <a href="data/manifest.json">manifest.json</a>.</footer></main>
 <dialog id="detail"><div class="modalhead"><strong id="detailTitle"></strong><button class="close" onclick="detail.close()">Cerrar</button></div><div class="modalbody" id="detailBody"></div></dialog>
 <script>
@@ -351,7 +391,7 @@ function setSpeechButtons(speaking=false){$('#pauseButton').disabled=!speaking;$
 function playBulletin(){if(!('speechSynthesis'in window))return;let synth=window.speechSynthesis,m=bulletinMessage();if(synth.paused){synth.resume();renderBulletin();return}synth.cancel();let utterance=new SpeechSynthesisUtterance(m.spoken||'');utterance.lang=m.voice_prefix||selectedLanguage();let voices=synth.getVoices(),prefix=String(m.voice_prefix||selectedLanguage()).toLowerCase();let voice=voices.find(x=>x.lang.toLowerCase()===prefix)||voices.find(x=>x.lang.toLowerCase().startsWith(prefix+'-'));if(voice){utterance.voice=voice;$('#voiceHint').textContent=''}else{$('#voiceHint').textContent=m.no_voice||''}utterance.rate=0.98;utterance.onstart=()=>setSpeechButtons(true);utterance.onend=()=>{currentUtterance=null;setSpeechButtons(false);renderBulletin()};utterance.onerror=()=>{currentUtterance=null;setSpeechButtons(false);renderBulletin()};currentUtterance=utterance;synth.speak(utterance)}
 function pauseBulletin(){if(!('speechSynthesis'in window))return;let synth=window.speechSynthesis;if(synth.paused)synth.resume();else if(synth.speaking)synth.pause();renderBulletin()}
 function stopBulletin(){if('speechSynthesis'in window)window.speechSynthesis.cancel();currentUtterance=null;setSpeechButtons(false);renderBulletin()}
-async function load(){let [wr,hr,br]=await Promise.all([fetch('data/world.json?'+Date.now()),fetch('data/historical.json?'+Date.now()),fetch('data/bulletin.json?'+Date.now())]);WORLD=await wr.json();HISTORICAL=await hr.json();BULLETIN=await br.json();$('#notice').textContent=WORLD.scientific_notice;$('#summary').innerHTML=`<div class=card><div class=label>Generado</div><div class=value style="font-size:17px">${esc(WORLD.generated_at)}</div></div><div class=card><div class=label>Regiones configuradas</div><div class=value>${WORLD.regions_configured}</div></div><div class=card><div class=label>Regiones operativas</div><div class=value>${WORLD.regions_operational}</div></div><div class=card><div class=label>Gate público aprobado</div><div class=value>${WORLD.regions_public_valid}</div></div><div class=card><div class=label>Modo de ejecución</div><div class=value style="font-size:20px">${esc(WORLD.operation_mode)}</div></div>`;let groups=[...new Set(WORLD.ranking.map(x=>x.group))].sort();$('#group').innerHTML='<option value="">Todos los grupos</option>'+groups.map(x=>`<option>${esc(x)}</option>`).join('');setupBulletinLanguages();renderBulletin();render();renderHistorical();renderScientificRoadmap();if(!('speechSynthesis'in window)){let m=bulletinMessage();$('#listenButton').disabled=true;$('#voiceHint').textContent=m.no_voice||'Audio no disponible.'}}
+async function load(){let [wr,hr,br]=await Promise.all([fetch('data/world.json?'+Date.now()),fetch('data/historical.json?'+Date.now()),fetch('data/bulletin.json?'+Date.now())]);WORLD=await wr.json();HISTORICAL=await hr.json();BULLETIN=await br.json();$('#notice').textContent=WORLD.scientific_notice;$('#summary').innerHTML=`<div class=card><div class=label>Generado</div><div class=value style="font-size:17px">${esc(WORLD.generated_at)}</div></div><div class=card><div class=label>Regiones configuradas</div><div class=value>${WORLD.regions_configured}</div></div><div class=card><div class=label>Regiones operativas</div><div class=value>${WORLD.regions_operational}</div></div><div class=card><div class=label>Gate público aprobado</div><div class=value>${WORLD.regions_public_valid}</div></div><div class=card><div class=label>Modo de ejecución</div><div class=value style="font-size:20px">${esc(WORLD.operation_mode)}</div></div>`;let groups=[...new Set(WORLD.ranking.map(x=>x.group))].sort();$('#group').innerHTML='<option value="">Todos los grupos</option>'+groups.map(x=>`<option>${esc(x)}</option>`).join('');setupBulletinLanguages();renderBulletin();render();renderHistorical();renderScientificRoadmap();renderPrivateNotifications();if(!('speechSynthesis'in window)){let m=bulletinMessage();$('#listenButton').disabled=true;$('#voiceHint').textContent=m.no_voice||'Audio no disponible.'}}
 function render(){let q=$('#search').value.toLowerCase(),g=$('#group').value,s=$('#state').value;let rows=WORLD.ranking.filter(x=>(!q||(x.region_name+' '+x.region_id).toLowerCase().includes(q))&&(!g||x.group===g)&&(!s||x.state===s));$('#rows').innerHTML=rows.map(x=>`<tr onclick="openRegion('${esc(x.region_id)}')"><td>${x.rank}</td><td><b>${esc(x.region_name)}</b><br><span class=muted>${esc(x.region_id)}</span></td><td>${esc(x.group)}</td><td><b>${num(x.iedc_provisional)}</b></td><td class=${cls(x.state)}>${esc(x.state)}</td><td>${pct(x.confidence)}<div class=bar><span style="width:${pct(x.confidence)}"></span></div></td><td>${pct(x.coverage)}</td><td>${pct(x.data_quality)}</td><td>${x.available_families}</td><td>${x.latest_event?.magnitude?('M '+num(x.latest_event.magnitude,1)+' · '+esc(x.latest_event.event_time).slice(0,10)):'—'}</td><td>${esc(x.generated_at||'—')}</td></tr>`).join('')}
 function renderHistorical(){let h=HISTORICAL||{},c=h.catalog||{},patterns=h.patterns||[],sources=h.sources||[],controls=h.context_controls||[];$('#historicalNotice').textContent=h.scientific_notice||'Laboratorio separado del IEDC.';$('#historicalSummary').innerHTML=`<div class=card><div class=label>Estado histórico</div><div class="value ${cls(h.run_status)}" style="font-size:18px">${esc(h.state||'INICIANDO')}</div></div><div class=card><div class=label>Progreso desde 1973</div><div class=value>${pct(c.progress)}</div><div class=muted>${Number(c.months_complete||0)} / ${Number(c.months_total||0)} meses</div></div><div class=card><div class=label>Eventos USGS M≥4.5</div><div class=value>${Number(c.events||0).toLocaleString()}</div><div class=muted>${esc(c.earliest_event||'cargando')}</div></div><div class=card><div class=label>Patrones candidatos</div><div class=value>${patterns.length}</div><div class=muted>Investigación; gate público 0</div></div>`;$('#historicalSources').innerHTML=sources.length?`<table><thead><tr><th>Fuente</th><th>Familia</th><th>Regiones</th><th>Registros</th><th>Estado</th><th>Función</th></tr></thead><tbody>${sources.map(x=>`<tr><td>${esc(x.source)}</td><td>${esc(x.family)}</td><td>${Number(x.regions||0)}</td><td>${Number(x.records||0).toLocaleString()}</td><td class=${cls(x.status)}>${esc(x.status)}</td><td>${esc(x.role)}${x.affects_iedc?' · IEDC':' · separado'}</td></tr>`).join('')}</tbody></table>`:'<div class=card>El inventario de fuentes se está construyendo.</div>';$('#historicalPatterns').innerHTML=patterns.length?`<table><thead><tr><th>Estado</th><th>Objetivo</th><th>Regla</th><th>Prueba posterior</th></tr></thead><tbody>${patterns.map(x=>{let m=x.test_metrics||{};return `<tr><td>${esc(x.status)}<br><span class=muted>SOLO INVESTIGACIÓN</span></td><td>${esc(x.target)}<br><span class=muted>${esc(x.scope)}</span></td><td>${esc(x.expression)}</td><td>Precisión ${m.precision==null?'—':pct(m.precision)}<br>Recall ${m.recall==null?'—':pct(m.recall)}<br>Lift ${m.lift==null?'—':num(m.lift,2)}<br>TP ${Number(m.tp||0)} / FP ${Number(m.fp||0)}</td></tr>`}).join('')}</tbody></table>`:'<div class=card>Aún no hay candidatos con suficientes datos y prueba temporal posterior.</div>';$('#contextControls').innerHTML=controls.map(x=>`<span class=tag title="${esc(x.note)}">${esc(x.source)} · ${esc(x.status)} · NO ACTIVA ALERTAS</span>`).join('')}
 
@@ -371,6 +411,21 @@ function renderScientificRoadmap(){
     `<div class=card><div class=label>InSAR procesado</div><div class=value>${insarRecords.toLocaleString()}</div><div class=muted>Productos de desplazamiento utilizables</div></div>`+
     `<div class=card><div class=label>Gate público aprobado</div><div class=value>${gate}</div><div class=muted>Debe permanecer cerrado sin validación prospectiva</div></div>`+
     `<div class=card><div class=label>Ventanas previstas</div><div class=value style="font-size:18px">24 h · 72 h · 7 d · 30 d</div><div class=muted>Modo sombra</div></div>`;
+}
+
+
+function renderPrivateNotifications(){
+  let n=WORLD?.private_notifications||{},channels=n.channels||{},telegram=channels.telegram||{},last=n.last_run||{},policy=n.activation_policy||{};
+  let status=n.status||'PREPARADO, PENDIENTE DE CONFIGURACIÓN';
+  let telegramClass=telegram.enabled?'ok':'warn';
+  $('#notificationNotice').textContent=(n.scientific_notice||'Avisos privados experimentales.')+' Privacidad: '+(n.privacy||'No se publican destinatarios.');
+  $('#notificationSummary').innerHTML=
+    `<div class=card><div class=label>Estado general</div><div class="value ${cls(status)}" style="font-size:17px">${esc(status)}</div></div>`+
+    `<div class=card><div class=label>Telegram</div><div class="value ${telegramClass}" style="font-size:18px">${esc(telegram.status||'PENDIENTE')}</div><div class=muted>${Number(telegram.recipients_count||0)} destinatarios · mensajes 24 h</div></div>`+
+    `<div class=card><div class=label>WhatsApp</div><div class="value warn" style="font-size:17px">DESACTIVADO</div><div class=muted>No existe automatización oficial gratuita</div></div>`+
+    `<div class=card><div class=label>Llamadas</div><div class="value warn" style="font-size:17px">DESACTIVADAS</div><div class=muted>Requieren proveedor telefónico</div></div>`+
+    `<div class=card><div class=label>Última evaluación</div><div class=value>${Number(last.sent||0)}</div><div class=muted>enviados · ${Number(last.candidates||0)} candidatos · ${Number(last.errors||0)} errores</div></div>`+
+    `<div class=card><div class=label>Política</div><div class=value style="font-size:16px">${esc((policy.states||[]).join(' · ')||'WATCH · ELEVATED · HIGHLY_ATYPICAL')}</div><div class=muted>Nuevo M≥${Number(policy.observed_event_min_magnitude||5).toFixed(1)} · aumento IEDC ${Number(policy.iedc_increase_points||10).toFixed(0)} puntos</div></div>`;
 }
 
 async function openRegion(id){let r=await fetch('data/regions/'+id+'.json?'+Date.now()),x=await r.json(),c=x.current||{};$('#detailTitle').textContent=(x.region?.name||id)+' · IEDC '+num(c.iedc_provisional);let reasons=c.reasons||[],sources=x.sources||[];$('#detailBody').innerHTML=`<div class=grid2><div class=card><div class=label>Estado</div><div class="value ${cls(c.state)}">${esc(c.state||'NO_DATA')}</div></div><div class=card><div class=label>Confianza / Cobertura / Calidad</div><div class=value style="font-size:19px">${pct(c.confidence)} · ${pct(c.coverage)} · ${pct(c.data_quality)}</div></div><div class=card><div class=label>Valor público</div><div class="value ${c.public_valid?'ok':'warn'}" style="font-size:19px">${c.public_valid?num(c.iedc_public):'NO VALIDADO'}</div></div><div class=card><div class=label>Familias</div><div class=value>${c.available_families||0}</div></div></div><h3>Razones del cambio</h3><pre>${esc(JSON.stringify(reasons,null,2))}</pre><h3>Puntuación por familia</h3><pre>${esc(JSON.stringify(c.family_scores||{},null,2))}</pre><h3>Estado de fuentes</h3><pre>${esc(JSON.stringify(sources,null,2))}</pre><h3>Backtest más reciente</h3><pre>${esc(JSON.stringify((x.latest_backtest||[])[0]||{},null,2))}</pre><h3>Conteos</h3><pre>${esc(JSON.stringify(x.counts||{},null,2))}</pre><h3>Errores operacionales</h3><pre>${esc(JSON.stringify(x.errors||[],null,2))}</pre>`;detail.showModal()}

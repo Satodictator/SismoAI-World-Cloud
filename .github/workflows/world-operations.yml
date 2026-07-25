@@ -192,6 +192,21 @@ jobs:
             --docs docs \
             --mode "${{ needs.prepare.outputs.mode }}"
 
+
+      - name: Evaluate private Telegram notifications
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+        run: |
+          python -m sismoai_world.notifications run \
+            --world docs/data/world.json \
+            --policy config/notification_policy.json \
+            --previous-state state_input/notifications/state.json \
+            --output-state collected/notifications/state.json \
+            --shadow docs/data/shadow.json \
+            --manifest docs/data/manifest.json \
+            --manifest-sha docs/data/manifest.sha256
+
       - name: Assemble compact persistent state
         run: |
           python scripts/build_state.py \
