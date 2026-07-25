@@ -89,3 +89,47 @@ laboratorio cambia V11, V12, MAM, DTRG, el IEDC operativo ni el gate público.
 ## Limitaciones científicas
 
 La operación técnica no demuestra predicción sísmica. Los resultados deben evaluarse prospectivamente y compararse con modelos base. Un índice alto representa desviación estadística respecto a la línea base regional, no la confirmación de un terremoto futuro.
+
+
+## Próxima etapa científica: ventanas probabilísticas en modo sombra
+
+La memoria histórica mundial se reconstruye progresivamente desde 1973. El estado registrado el 24 de julio de 2026 era de **24 de 643 meses (3,7 %)**. En ese momento se estimó que, si las ejecuciones continuaban sin errores y con velocidad similar, el catálogo podría completarse aproximadamente entre el **30 de julio y el 2 de agosto de 2026**. Esta estimación debe recalcularse con el estado real y no es una garantía.
+
+Después de completar y verificar el histórico, el siguiente paso previsto es iniciar ventanas experimentales de **24 horas, 72 horas, 7 días y 30 días**, exclusivamente en **modo sombra**. Las ventanas deberán:
+
+- registrarse antes de conocer el futuro;
+- compararse con la frecuencia sísmica normal de cada región;
+- conservar versión, variables, fecha, fuentes y SHA-256;
+- evaluarse al cierre sin reescribir el pronóstico original;
+- mostrar aciertos, fallos, falsas alarmas, omisiones y calibración;
+- compararse con modelos base sencillos;
+- permanecer separadas de V11, V12, MAM, IMCP, DTRG operativo e IEDC público;
+- no activar alertas ni órdenes de evacuación.
+
+Ejemplo de presentación, con cifras únicamente ilustrativas:
+
+```text
+Ventana experimental: 3–10 de agosto de 2026.
+Posibilidad calculada de un evento M≥5 en Centroamérica: 8 %.
+Nivel habitual de referencia: 2 %.
+Confianza o calidad estimada: 76 %.
+No es una predicción ni una alerta oficial.
+```
+
+El USGS distingue entre predicción exacta, pronóstico probabilístico y alerta temprana. La alerta temprana detecta un terremoto que ya comenzó; no predice un evento días antes. CSEP desarrolla evaluación rigurosa y prospectiva de modelos de pronóstico.
+
+Referencias:
+
+- USGS, predicción sísmica: https://www.usgs.gov/faqs/can-you-predict-earthquakes
+- USGS, diferencias entre alerta temprana, pronóstico, probabilidad y predicción: https://www.usgs.gov/faqs/what-difference-between-earthquake-early-warning-earthquake-forecasts-earthquake-probabilities
+- USGS, alerta temprana: https://www.usgs.gov/programs/earthquake-hazards/science/earthquake-early-warning-overview
+- CSEP Testing: https://cseptesting.org/
+
+Calendario responsable:
+
+- **Al completar el histórico:** iniciar ventanas internas en modo sombra.
+- **Después de 3–6 meses:** considerar una sección experimental separada solamente si existen muestras y pruebas suficientes.
+- **Después de 12–24 meses:** realizar una evaluación prospectiva más seria.
+- **Alerta pública:** únicamente si se supera un gate estricto; puede que nunca se supere.
+
+Los patrones candidatos actuales son preliminares. No justifican fechas exactas, avisos de peligro ni evacuaciones.
