@@ -167,6 +167,7 @@ jobs:
       - name: Verify historical laboratory isolation
         run: |
           python -m sismoai_world.historical selftest
+          python -m sismoai_world.shadow selftest
           python -m sismoai_world.selftest
 
       - name: Advance isolated historical replay and pattern research
@@ -193,6 +194,22 @@ jobs:
             --docs docs \
             --mode "${{ needs.prepare.outputs.mode }}"
 
+
+      - name: Generate multiple prospective shadow windows
+        run: |
+          python -m sismoai_world.shadow run \
+            --world docs/data/world.json \
+            --historical docs/data/historical.json \
+            --historical-db historical_runtime/historical.sqlite \
+            --regions config/world_regions.json \
+            --policy config/shadow_policy.json \
+            --region-archives collected/state/regions \
+            --region-archives state_input/state/regions \
+            --previous-state state_input/research/shadow_state.json \
+            --output docs/data/shadow.json \
+            --output-state collected/research/shadow_state.json \
+            --manifest docs/data/manifest.json \
+            --manifest-sha docs/data/manifest.sha256
 
       - name: Evaluate automatic GitHub and optional Telegram notifications
         env:

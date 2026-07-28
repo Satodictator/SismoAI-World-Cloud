@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "research_only": true,
+  "require_historical_complete": true,
+  "scope": "WORLD_REGIONAL_MULTISOURCE",
+  "target": "REGIONAL_THRESHOLD_EVENT_WITHIN_7D",
+  "window_hours": 168,
+  "allowed_states": [
+    "ELEVATED",
+    "HIGHLY_ATYPICAL"
+  ],
+  "min_iedc": 50.0,
+  "min_current_confidence": 0.45,
+  "min_coverage": 0.5,
+  "min_data_quality": 0.8,
+  "min_baseline_progress": 1.0,
+  "min_available_families": 1,
+  "min_active_patterns": 3,
+  "min_promising_patterns": 1,
+  "min_test_true_positives": 3,
+  "min_test_lift": 1.5,
+  "min_combined_lift": 1.5,
+  "min_probability_gain": 0.03,
+  "min_forecast_confidence": 0.4,
+  "retain_pattern_signal": 0.5,
+  "maximum_probability": 0.5,
+  "full_support_patterns": 5,
+  "full_support_true_positives": 20,
+  "cooldown_hours": 24,
+  "max_new_windows_per_run": 10,
+  "max_open_windows": 20
+}

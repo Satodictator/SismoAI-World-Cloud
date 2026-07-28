@@ -369,6 +369,13 @@ def github_digest_title(candidates: list[dict[str, Any]]) -> str:
             f"[SismoAI] {item.get('label', 'Cambio de actividad')} "
             f"— {region}"
         )[:240]
+    if candidates and all(
+        item.get("kind") == "SHADOW_WINDOW" for item in candidates
+    ):
+        return (
+            f"[SismoAI] {len(candidates)} ventanas experimentales futuras — "
+            f"{utcnow()}"
+        )[:240]
     return f"[SismoAI] {len(candidates)} novedades de actividad — {utcnow()}"[:240]
 
 
