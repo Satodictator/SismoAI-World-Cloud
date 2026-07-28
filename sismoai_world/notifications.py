@@ -245,6 +245,31 @@ def evaluate_candidates(
                 candidate
             )
 
+    # SISMOAI_NOTIFICATION_KIND_FILTER_BEGIN
+    # Permite que la pol?tica determine exactamente qu? tipos de candidatos
+    # pueden convertirse en avisos. La configuraci?n p?blica utiliza solamente
+    # SHADOW_WINDOW: ventanas probabil?sticas futuras en modo sombra.
+    allowed_kinds = {
+        str(value)
+        for value in policy.get("activation", {}).get(
+            "allowed_candidate_kinds",
+            ["STATE_CHANGE", "OBSERVED_EVENT", "SHADOW_WINDOW"],
+        )
+    }
+
+    candidates = [
+        candidate
+        for candidate in candidates
+        if str(candidate.get("kind")) in allowed_kinds
+    ]
+
+    suppressed = [
+        candidate
+        for candidate in suppressed
+        if str(candidate.get("kind")) in allowed_kinds
+    ]
+    # SISMOAI_NOTIFICATION_KIND_FILTER_END
+
     new_state = {
         "schema_version": 2,
         "initialized": True,

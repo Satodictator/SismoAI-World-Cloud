@@ -5,14 +5,13 @@
   "messages_24_hours": true,
   "suppress_first_run": true,
   "activation": {
-    "states": [
-      "WATCH",
-      "ELEVATED",
-      "HIGHLY_ATYPICAL"
-    ],
+    "states": [],
     "iedc_increase_points": 10.0,
-    "observed_event_min_magnitude": 5.0,
-    "shadow_window_requires_notification_eligible": true
+    "observed_event_min_magnitude": 99.0,
+    "shadow_window_requires_notification_eligible": true,
+    "allowed_candidate_kinds": [
+      "SHADOW_WINDOW"
+    ]
   },
   "delivery": {
     "github_issue": {
