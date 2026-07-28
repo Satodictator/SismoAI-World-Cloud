@@ -226,29 +226,63 @@ def historical_ready(historical: dict[str, Any], policy: dict[str, Any]) -> bool
 
 
 def load_historical_patterns(database: Path) -> list[dict[str, Any]]:
+    """Carga solamente los candidatos del análisis más reciente por objetivo."""
     if not database.exists():
         return []
     connection = sqlite3.connect(f"file:{database.as_posix()}?mode=ro", uri=True)
     connection.row_factory = sqlite3.Row
     try:
-        rows = connection.execute(
-            "SELECT pattern_id,scope,target,expression,status,"
-            "train_metrics_json,test_metrics_json,created_at "
-            "FROM h_patterns ORDER BY created_at DESC LIMIT 2000"
-        ).fetchall()
+        latest_run_ids = [
+            str(row["run_id"])
+            for row in connection.execute(
+                """
+                SELECT run_id
+                FROM (
+                  SELECT run_id,scope,target,created_at,
+                         ROW_NUMBER() OVER (
+                           PARTITION BY scope,target
+                           ORDER BY created_at DESC,run_id DESC
+                         ) AS position
+                  FROM h_pattern_runs
+                )
+                WHERE position=1
+                """
+            )
+        ]
+        if not latest_run_ids:
+            return []
+        placeholders = ",".join("?" for _ in latest_run_ids)
+        query = (
+            "SELECT p.pattern_id,p.run_id,p.scope,p.target,p.expression,p.status,"
+            "p.features_json,p.train_metrics_json,p.test_metrics_json,p.created_at,"
+            "r.train_start,r.train_end,r.test_start,r.test_end,r.samples,r.positives "
+            "FROM h_patterns p JOIN h_pattern_runs r ON r.run_id=p.run_id "
+            f"WHERE p.run_id IN ({placeholders})"
+        )
+        rows = connection.execute(query, latest_run_ids).fetchall()
     finally:
         connection.close()
     patterns: list[dict[str, Any]] = []
     for row in rows:
         item = dict(row)
         try:
+            item["features"] = json.loads(item.pop("features_json"))
             item["train_metrics"] = json.loads(item.pop("train_metrics_json"))
             item["test_metrics"] = json.loads(item.pop("test_metrics_json"))
         except Exception:
             continue
         item["research_only"] = True
         item["public_gate_pass"] = False
+        item["current_scan"] = True
         patterns.append(item)
+    patterns.sort(
+        key=lambda item: (
+            as_float((item.get("test_metrics") or {}).get("lift"), 0.0),
+            as_float((item.get("test_metrics") or {}).get("precision"), 0.0),
+            str(item.get("created_at") or ""),
+        ),
+        reverse=True,
+    )
     return patterns
 
 

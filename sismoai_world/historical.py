@@ -1084,18 +1084,42 @@ def summary(path: Path, *, mode: str, run_status: str = "OK") -> dict[str, Any]:
                 "ORDER BY affects_iedc DESC,records DESC,source"
             )
         ]
+        latest_run_ids = [
+            str(row["run_id"])
+            for row in conn.execute(
+                """
+                SELECT run_id
+                FROM (
+                  SELECT run_id,scope,target,created_at,
+                         ROW_NUMBER() OVER (
+                           PARTITION BY scope,target
+                           ORDER BY created_at DESC,run_id DESC
+                         ) AS position
+                  FROM h_pattern_runs
+                )
+                WHERE position=1
+                """
+            )
+        ]
         pattern_rows = []
-        for row in conn.execute(
-            "SELECT pattern_id,scope,target,expression,status,"
-            "train_metrics_json,test_metrics_json,created_at "
-            "FROM h_patterns ORDER BY created_at DESC LIMIT 300"
-        ):
-            item = dict(row)
-            item["train_metrics"] = json.loads(item.pop("train_metrics_json"))
-            item["test_metrics"] = json.loads(item.pop("test_metrics_json"))
-            item["research_only"] = True
-            item["public_gate_pass"] = False
-            pattern_rows.append(item)
+        if latest_run_ids:
+            placeholders = ",".join("?" for _ in latest_run_ids)
+            pattern_query = (
+                "SELECT p.pattern_id,p.run_id,p.scope,p.target,p.expression,p.status,"
+                "p.features_json,p.train_metrics_json,p.test_metrics_json,p.created_at,"
+                "r.train_start,r.train_end,r.test_start,r.test_end,r.samples,r.positives "
+                "FROM h_patterns p JOIN h_pattern_runs r ON r.run_id=p.run_id "
+                f"WHERE p.run_id IN ({placeholders})"
+            )
+            for row in conn.execute(pattern_query, latest_run_ids):
+                item = dict(row)
+                item["features"] = json.loads(item.pop("features_json"))
+                item["train_metrics"] = json.loads(item.pop("train_metrics_json"))
+                item["test_metrics"] = json.loads(item.pop("test_metrics_json"))
+                item["research_only"] = True
+                item["public_gate_pass"] = False
+                item["current_scan"] = True
+                pattern_rows.append(item)
         pattern_rows.sort(
             key=lambda item: (
                 float(item["test_metrics"].get("lift") or 0),
@@ -1133,9 +1157,10 @@ def summary(path: Path, *, mode: str, run_status: str = "OK") -> dict[str, Any]:
             },
             "sources": source_rows,
             "context_controls": CONTEXT_CONTROLS,
-            "patterns": pattern_rows[:30],
+            "patterns": pattern_rows,
             "pattern_policy": {
                 "search_mode": "bounded_univariate_and_pair_candidates",
+                "current_scan_only": True,
                 "chronological_split": "70_percent_train_30_percent_later_test",
                 "target_leakage_blocked": True,
                 "research_only": True,
