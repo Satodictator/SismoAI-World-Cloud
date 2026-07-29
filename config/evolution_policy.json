@@ -1,0 +1,41 @@
+{
+  "activates_alerts": false,
+  "challengers_per_target": 20,
+  "champions_per_target": 1,
+  "enabled": true,
+  "exploratory_per_target": 80,
+  "feeds_shadow_windows": false,
+  "max_conditions": 4,
+  "max_total_patterns": 250000,
+  "min_validation_activations": 25,
+  "min_validation_lift": 1.2,
+  "min_validation_true_positives": 4,
+  "min_vault_activations": 25,
+  "min_vault_lift": 1.1,
+  "min_vault_true_positives": 4,
+  "minimum_challenger_score": 0.12,
+  "minimum_champion_score": 0.18,
+  "minimum_exploratory_score": 0.06,
+  "modifies_iedc": false,
+  "new_candidates_per_run": 80,
+  "notes": [
+    "Los patrones se conservan en una base SQLite comprimida en la rama state.",
+    "Los retirados se reevalúan por turnos y pueden reactivarse.",
+    "Los trasplantes solo se realizan entre patrones del mismo ámbito y objetivo.",
+    "El motor evolutivo no modifica IEDC, alertas ni ventanas prospectivas."
+  ],
+  "quantiles": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "random_seed_salt": "SismoAI-Evolutionary-1.0",
+  "reevaluate_active_per_run": 240,
+  "reevaluate_background_per_run": 180,
+  "research_only": true,
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2,
+  "vault_fraction": 0.2
+}

@@ -31,6 +31,7 @@ button{cursor:pointer;background:#1b4f86;border-color:#4c83bf}button.secondary{b
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.metric{background:#0b192b;border-radius:8px;padding:7px;text-align:center}.metric b{display:block;font-size:16px}
 .actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.actions button{flex:1;min-width:135px}
 .empty{padding:30px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.evohead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}.evogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}.evotable{overflow:auto;max-height:420px;border:1px solid var(--line);border-radius:10px}.evolive{display:inline-block;padding:4px 8px;border-radius:999px;background:#153d2c;color:var(--ok);font-size:11px;font-weight:800}.evostatus{font-size:11px;color:var(--muted)}.record{color:var(--ok);font-weight:750}.retired{color:var(--warn)}
 dialog{width:min(1000px,96vw);max-height:92vh;overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:0}
 dialog::backdrop{background:rgba(0,0,0,.72)}.modalhead{position:sticky;top:0;z-index:2;background:#12243b;padding:13px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}
 .modalbody{padding:15px}.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.sectionbox{background:#0b192b;border:1px solid var(--line);border-radius:10px;padding:12px}
@@ -65,6 +66,40 @@ footer{padding:30px 0;color:var(--muted);font-size:11px}
     <div class="warning">Los patrones son de investigación. No constituyen predicciones deterministas, alertas oficiales ni órdenes de evacuación.</div>
   </section>
 
+  <section class="explain" id="evolutionaryLab">
+    <div class="evohead">
+      <div>
+        <h2>Motor evolutivo de patrones 24/7</h2>
+        <div class="notice" id="evolutionStatus">Cargando memoria evolutiva…</div>
+      </div>
+      <div>
+        <span class="evolive" id="evolutionLive">INVESTIGACIÓN CONTINUA</span>
+        <a href="data/evolutionary.json" style="margin-left:8px">Datos evolutivos JSON</a>
+      </div>
+    </div>
+    <p>Este motor conserva los patrones activos, retirados y rechazados. Cada ciclo crea retadores, muta umbrales, cruza patrones compatibles y trasplanta componentes que mostraron utilidad. Los retirados permanecen en observación y pueden volver a subir cuando mejoran con datos nuevos.</p>
+    <div class="warning">La evolución estadística permanece aislada del IEDC, las alertas y las ventanas públicas. Un récord histórico no garantiza un terremoto futuro.</div>
+    <div class="cards" id="evolutionSummary"></div>
+    <div class="evogrid">
+      <div>
+        <h3>Campeones y retadores robustos</h3>
+        <div class="evotable" id="evolutionChampions"></div>
+      </div>
+      <div>
+        <h3>Retirados en observación</h3>
+        <div class="evotable" id="evolutionRetired"></div>
+      </div>
+      <div>
+        <h3>Trasplantes de componentes exitosos</h3>
+        <div class="evotable" id="evolutionTransplants"></div>
+      </div>
+      <div>
+        <h3>Cambios recientes de estado</h3>
+        <div class="evotable" id="evolutionTransitions"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="toolbar">
     <input id="search" type="search" placeholder="Buscar regla, variable, objetivo o región">
     <select id="statusFilter"><option value="">Todos los estados</option><option value="PROMISING_CANDIDATE">Prometedores</option><option value="EXPLORATORY_CANDIDATE">Exploratorios</option></select>
@@ -92,7 +127,7 @@ footer{padding:30px 0;color:var(--muted);font-size:11px}
 </dialog>
 
 <script>
-let HISTORICAL={},SHADOW={},PATTERNS=[],CURRENT_SPEECH=null,CURRENT_SPOKEN='';
+let HISTORICAL={},SHADOW={},EVOLUTION={},PATTERNS=[],CURRENT_SPEECH=null,CURRENT_SPOKEN='';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const pct=v=>v===null||v===undefined?'—':(Number(v)*100).toFixed(1)+' %';
@@ -191,6 +226,53 @@ function spokenText(p,windows){
     'Este patrón muestra una asociación estadística preliminar. No demuestra causalidad, no garantiza un terremoto y no constituye una alerta oficial.'
   ].join(' ');
 }
+function evolutionStatusName(value){
+  const names={CHAMPION:'CAMPEÓN',CHALLENGER:'RETADOR',EXPLORATORY:'EXPLORATORIO',RETIRED_OBSERVATION:'RETIRADO EN OBSERVACIÓN',REJECTED_BACKGROUND:'RECHAZADO EN SEGUNDO PLANO',DISCOVERED:'DESCUBIERTO',REACTIVATED:'REACTIVADO'};
+  return names[value]||String(value||'—');
+}
+function evoMetric(pattern,name){
+  const values=pattern?.vault_metrics||pattern?.validation_metrics||{};
+  return values[name];
+}
+function evoPatternRow(pattern,label){
+  const precision=evoMetric(pattern,'precision'),recall=evoMetric(pattern,'recall'),lift=evoMetric(pattern,'lift'),tp=evoMetric(pattern,'tp'),activations=evoMetric(pattern,'activations');
+  return `<tr><td><b>${esc(label||evolutionStatusName(pattern.status))}</b><br><span class=muted>${esc(targetName(pattern.target))}</span></td><td><span class=rule>${esc(pattern.expression)}</span></td><td>Precisión ${pct(precision)}<br>Recall ${pct(recall)}<br>Lift ${num(lift,2)}<br>TP ${Number(tp||0)} / activaciones ${Number(activations||0)}</td><td>Gen. ${Number(pattern.generation||0)}<br>Evaluaciones ${Number(pattern.evaluation_count||0)}<br>Récord ${pct(pattern.best_precision)}</td></tr>`;
+}
+function renderEvolution(){
+  const e=EVOLUTION||{},memory=e.memory||{},counts=memory.status_counts||{},run=e.last_run||{},totals=e.totals||{};
+  const status=e.status||'ESPERANDO_PRIMER_CICLO';
+  $('#evolutionStatus').textContent=`Estado: ${status} · última publicación ${e.generated_at||'—'} · ciclo horario por lotes · generación ${Number(e.generation||0)}`;
+  $('#evolutionLive').textContent=status==='ACTIVE_24_7'?'ACTIVO 24/7':'PREPARANDO';
+  $('#evolutionSummary').innerHTML=
+    `<div class=card><div class=label>Generación</div><div class=value>${Number(e.generation||0)}</div><div class=muted>Último ciclo ${esc(run.status||'—')}</div></div>`+
+    `<div class=card><div class=label>Memoria total</div><div class=value>${Number(memory.patterns_total||0).toLocaleString('es-ES')}</div><div class=muted>No se borran patrones</div></div>`+
+    `<div class=card><div class=label>Evaluaciones acumuladas</div><div class=value>${Number(totals.evaluations||0).toLocaleString('es-ES')}</div><div class=muted>${Number(run.evaluated||0)} en el último ciclo</div></div>`+
+    `<div class=card><div class=label>Nuevos en el ciclo</div><div class=value>${Number(run.discovered||0)}</div><div class=muted>${Number(totals.discovered||0).toLocaleString('es-ES')} acumulados</div></div>`+
+    `<div class=card><div class=label>Campeones / retadores</div><div class=value>${Number(counts.CHAMPION||0)} / ${Number(counts.CHALLENGER||0)}</div><div class=muted>Competencia por objetivo</div></div>`+
+    `<div class=card><div class=label>Retirados observados</div><div class=value>${Number(counts.RETIRED_OBSERVATION||0)}</div><div class=muted>Pueden reactivarse</div></div>`+
+    `<div class=card><div class=label>Trasplantes</div><div class=value>${Number(totals.transplants||0).toLocaleString('es-ES')}</div><div class=muted>${Number(run.transplants||0)} en el último ciclo</div></div>`+
+    `<div class=card><div class=label>Reactivaciones</div><div class=value>${Number(totals.reactivations||0).toLocaleString('es-ES')}</div><div class=muted>${Number(run.reactivated||0)} en el último ciclo</div></div>`;
+
+  const championRows=[];
+  (e.targets||[]).forEach(group=>{
+    (group.champions||[]).forEach(p=>championRows.push(evoPatternRow(p,'CAMPEÓN')));
+    (group.challengers||[]).slice(0,5).forEach(p=>championRows.push(evoPatternRow(p,'RETADOR')));
+  });
+  $('#evolutionChampions').innerHTML=championRows.length?`<table><thead><tr><th>Estado y objetivo</th><th>Regla</th><th>Prueba bloqueada</th><th>Memoria</th></tr></thead><tbody>${championRows.join('')}</tbody></table>`:'<div class=empty>Aún no hay campeones con evidencia mínima suficiente.</div>';
+
+  const retired=(e.retired_observation||[]).slice(0,30);
+  $('#evolutionRetired').innerHTML=retired.length?`<table><thead><tr><th>Estado y objetivo</th><th>Regla</th><th>Prueba bloqueada</th><th>Memoria</th></tr></thead><tbody>${retired.map(p=>evoPatternRow(p,'RETIRADO')).join('')}</tbody></table>`:'<div class=empty>Aún no hay retirados en observación.</div>';
+
+  const transplants=(e.recent_transplants||[]).slice(0,30);
+  $('#evolutionTransplants').innerHTML=transplants.length?`<table><thead><tr><th>Generación</th><th>Componente trasplantado</th><th>Resultado</th></tr></thead><tbody>${transplants.map(x=>`<tr><td>${Number(x.generation||0)}<br><span class=muted>${esc(x.created_at||'—')}</span></td><td><span class=rule>${esc(JSON.stringify(x.component||{}))}</span><br><span class=muted>Donante ${esc(String(x.donor_fingerprint||'—').slice(0,12))} → receptor ${esc(String(x.recipient_fingerprint||'—').slice(0,12))}</span></td><td>${esc(x.result||'—')}</td></tr>`).join('')}</tbody></table>`:'<div class=empty>Los trasplantes comenzarán cuando existan padres evaluados y retirados compatibles.</div>';
+
+  const transitions=(e.recent_transitions||[]).slice(0,35);
+  $('#evolutionTransitions').innerHTML=transitions.length?`<table><thead><tr><th>Hora</th><th>Cambio</th><th>Motivo</th></tr></thead><tbody>${transitions.map(x=>`<tr><td>${esc(x.changed_at||'—')}</td><td>${esc(evolutionStatusName(x.old_status))} → <b>${esc(evolutionStatusName(x.new_status))}</b><br><span class=muted>${esc(String(x.fingerprint||'').slice(0,16))}</span></td><td>${esc(String(x.reason||'').replaceAll('_',' '))}</td></tr>`).join('')}</tbody></table>`:'<div class=empty>Aún no se registran cambios de estado.</div>';
+}
+async function refreshEvolution(){
+  EVOLUTION=await getJson('data/evolutionary.json',EVOLUTION||{});
+  renderEvolution();
+}
 function renderSummary(){
   const c=HISTORICAL.catalog||{},activeIds=new Set((SHADOW.windows||[]).flatMap(w=>w.pattern_ids||[]));
   const promising=PATTERNS.filter(p=>p.status==='PROMISING_CANDIDATE').length;
@@ -281,10 +363,11 @@ function playPattern(){
 function pausePattern(){if(!('speechSynthesis'in window))return;const s=window.speechSynthesis;if(s.paused){s.resume();$('#pausePattern').textContent='⏸ Pausar'}else if(s.speaking){s.pause();$('#pausePattern').textContent='▶ Continuar'}}
 function stopPattern(){if('speechSynthesis'in window)window.speechSynthesis.cancel();CURRENT_SPEECH=null;speechButtons(false);$('#pausePattern').textContent='⏸ Pausar'}
 async function load(){
-  [HISTORICAL,SHADOW]=await Promise.all([getJson('data/historical.json',{}),getJson('data/shadow.json',{windows:[],status:'NO_DISPONIBLE'})]);
+  [HISTORICAL,SHADOW,EVOLUTION]=await Promise.all([getJson('data/historical.json',{}),getJson('data/shadow.json',{windows:[],status:'NO_DISPONIBLE'}),getJson('data/evolutionary.json',{status:'ESPERANDO_PRIMER_CICLO',memory:{status_counts:{}},last_run:{}})]);
   PATTERNS=Array.isArray(HISTORICAL.patterns)?HISTORICAL.patterns:[];
-  renderSummary();setupTargets();renderPatterns();
+  renderSummary();renderEvolution();setupTargets();renderPatterns();
   if(!('speechSynthesis'in window)){$('#listenPattern').disabled=true;$('#pausePattern').disabled=true;$('#stopPattern').disabled=true}
+  setInterval(refreshEvolution,300000);
 }
 ['search','statusFilter','targetFilter','activityFilter'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',renderPatterns));
 $('#closeDialog').addEventListener('click',()=>$('#detail').close());

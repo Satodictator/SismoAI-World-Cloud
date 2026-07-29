@@ -167,6 +167,7 @@ jobs:
       - name: Verify historical laboratory isolation
         run: |
           python -m sismoai_world.historical selftest
+          python -m sismoai_world.evolutionary selftest
           python -m sismoai_world.shadow selftest
           python -m sismoai_world.selftest
 
@@ -193,6 +194,20 @@ jobs:
             --previous-bulletins-dir state_input/history/bulletins \
             --docs docs \
             --mode "${{ needs.prepare.outputs.mode }}"
+
+      - name: Advance persistent evolutionary pattern memory
+        continue-on-error: true
+        run: |
+          python -m sismoai_world.evolutionary run \
+            --historical-db historical_runtime/historical.sqlite \
+            --region-archives collected/state/regions \
+            --region-archives state_input/state/regions \
+            --input-state-archive state_input/research/evolutionary.sqlite.gz \
+            --output-state-archive collected/research/evolutionary.sqlite.gz \
+            --output-json docs/data/evolutionary.json \
+            --policy config/evolution_policy.json \
+            --manifest docs/data/manifest.json \
+            --manifest-sha docs/data/manifest.sha256
 
 
       - name: Generate multiple prospective shadow windows
@@ -228,6 +243,19 @@ jobs:
             --shadow docs/data/shadow.json \
             --manifest docs/data/manifest.json \
             --manifest-sha docs/data/manifest.sha256
+
+
+      - name: Preserve public site snapshot for hourly evolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f docs/data/evolutionary.json && -f state_input/public_site/data/evolutionary.json ]]; then
+            mkdir -p docs/data
+            cp state_input/public_site/data/evolutionary.json docs/data/evolutionary.json
+          fi
+          rm -rf collected/public_site
+          mkdir -p collected/public_site
+          cp -a docs/. collected/public_site/
 
       - name: Assemble compact persistent state
         run: |

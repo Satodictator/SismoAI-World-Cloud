@@ -1,0 +1,177 @@
+name: SismoAI Evolutionary Pattern Lab
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidates:
+        description: "Nuevos candidatos por ciclo"
+        required: true
+        default: "80"
+        type: choice
+        options:
+          - "40"
+          - "80"
+          - "120"
+  schedule:
+    - cron: "11 * * * *"
+
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sismoai-world-state
+  cancel-in-progress: false
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+  CANDIDATE_BUDGET: ${{ inputs.candidates || '80' }}
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Restore persistent state branch
+        run: bash scripts/prepare_state.sh state_input
+
+      - name: Restore last public site snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf docs
+          if [[ -d state_input/public_site ]]; then
+            mkdir -p docs
+            cp -a state_input/public_site/. docs/
+          else
+            python -m sismoai_world.cli aggregate \
+              --regions config/world_regions.json \
+              --collected-results state_input/results/regions \
+              --state-results state_input/results/regions \
+              --historical-summary state_input/research/historical_summary.json \
+              --previous-world-dir state_input/history/world \
+              --previous-bulletins-dir state_input/history/bulletins \
+              --docs docs \
+              --mode evolution
+          fi
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          from sismoai_world.patterns_page import PATTERNS_HTML
+
+          docs = Path("docs")
+          (docs / "patterns.html").write_text(PATTERNS_HTML, encoding="utf-8")
+          shadow = docs / "data" / "shadow.json"
+          if not shadow.exists():
+              state_path = Path("state_input/research/shadow_state.json")
+              state = {}
+              if state_path.exists():
+                  state = json.loads(state_path.read_text(encoding="utf-8"))
+              shadow.parent.mkdir(parents=True, exist_ok=True)
+              shadow.write_text(
+                  json.dumps(
+                      {
+                          "schema_version": 1,
+                          "status": "STATE_SNAPSHOT",
+                          "windows": state.get("windows", []),
+                          "research_only": True,
+                          "scientific_notice": (
+                              "Ventanas experimentales restauradas desde el estado "
+                              "persistente; no constituyen alerta oficial."
+                          ),
+                      },
+                      ensure_ascii=False,
+                      indent=2,
+                  )
+                  + "\n",
+                  encoding="utf-8",
+              )
+          PY
+
+      - name: Prepare isolated historical and evolutionary policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f state_input/research/historical.sqlite.gz
+          mkdir -p runtime collected/research
+          gzip -cd state_input/research/historical.sqlite.gz > runtime/historical.sqlite
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          source = Path("config/evolution_policy.json")
+          policy = json.loads(source.read_text(encoding="utf-8"))
+          policy["new_candidates_per_run"] = int(os.environ.get("CANDIDATE_BUDGET", "80"))
+          Path("runtime/evolution_policy.json").write_text(
+              json.dumps(policy, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Verify evolutionary isolation
+        run: |
+          python -m sismoai_world.evolutionary selftest
+          python -m sismoai_world.historical selftest
+          python -m sismoai_world.shadow selftest
+
+      - name: Run persistent evolutionary search
+        run: |
+          python -m sismoai_world.evolutionary run \
+            --historical-db runtime/historical.sqlite \
+            --region-archives state_input/state/regions \
+            --input-state-archive state_input/research/evolutionary.sqlite.gz \
+            --output-state-archive collected/research/evolutionary.sqlite.gz \
+            --output-json docs/data/evolutionary.json \
+            --policy runtime/evolution_policy.json \
+            --manifest docs/data/manifest.json \
+            --manifest-sha docs/data/manifest.sha256
+
+      - name: Preserve updated site and persistent memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf collected/public_site state_publish
+          mkdir -p collected/public_site
+          cp -a docs/. collected/public_site/
+          cp -a state_input state_publish
+          cp -a collected/. state_publish/
+
+      - name: Publish one-commit state branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SISMOAI_MODE: evolution
+        run: bash scripts/publish_state.sh state_publish
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    needs: evolve
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
