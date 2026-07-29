@@ -1,0 +1,135 @@
+name: SismoAI Universal Sensor Gateway
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 * * * *"
+
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sismoai-world-state
+  cancel-in-progress: false
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+  ONC_API_TOKEN: ${{ secrets.ONC_API_TOKEN }}
+  EARTHSCOPE_NTRIP_USERNAME: ${{ secrets.EARTHSCOPE_NTRIP_USERNAME }}
+  EARTHSCOPE_NTRIP_PASSWORD: ${{ secrets.EARTHSCOPE_NTRIP_PASSWORD }}
+  NIED_USERNAME: ${{ secrets.NIED_USERNAME }}
+  NIED_PASSWORD: ${{ secrets.NIED_PASSWORD }}
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Restore persistent state branch
+        run: bash scripts/prepare_state.sh state_input
+
+      - name: Restore last public site snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf docs
+          if [[ -d state_input/public_site ]]; then
+            mkdir -p docs
+            cp -a state_input/public_site/. docs/
+          else
+            python -m sismoai_world.cli aggregate \
+              --regions config/world_regions.json \
+              --collected-results state_input/results/regions \
+              --state-results state_input/results/regions \
+              --historical-summary state_input/research/historical_summary.json \
+              --previous-world-dir state_input/history/world \
+              --previous-bulletins-dir state_input/history/bulletins \
+              --docs docs \
+              --mode sensors
+          fi
+          python - <<'PY'
+          from pathlib import Path
+          from sismoai_world.patterns_page import PATTERNS_HTML
+          from sismoai_world.sensors_page import SENSORS_HTML
+          from sismoai_world.site import INDEX_HTML
+
+          docs = Path("docs")
+          docs.mkdir(parents=True, exist_ok=True)
+          (docs / "index.html").write_text(INDEX_HTML, encoding="utf-8")
+          (docs / "404.html").write_text(INDEX_HTML, encoding="utf-8")
+          (docs / "patterns.html").write_text(PATTERNS_HTML, encoding="utf-8")
+          (docs / "sensors.html").write_text(SENSORS_HTML, encoding="utf-8")
+          (docs / ".nojekyll").write_text("", encoding="utf-8")
+          (docs / "data").mkdir(parents=True, exist_ok=True)
+          PY
+
+      - name: Verify universal sensor isolation
+        run: |
+          python -m sismoai_world.sensor_gateway selftest
+          python -m sismoai_world.sensor_evolution selftest
+          python -m sismoai_world.sensor_edge_agent selftest
+          python -m sismoai_world.evolutionary selftest
+          python -m sismoai_world.shadow selftest
+
+      - name: Collect open and authorized sensor sources
+        run: |
+          mkdir -p collected/research state_input/research/sensor_inbox
+          python -m sismoai_world.sensor_gateway run \
+            --regions config/world_regions.json \
+            --config config/sensor_gateway.json \
+            --input-state-archive state_input/research/sensor_gateway.sqlite.gz \
+            --output-state-archive collected/research/sensor_gateway.sqlite.gz \
+            --output-json docs/data/sensors.json \
+            --inbox-dir state_input/research/sensor_inbox \
+            --manifest docs/data/manifest.json \
+            --manifest-sha docs/data/manifest.sha256
+
+      - name: Preserve updated site and persistent sensor memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf collected/public_site state_publish
+          mkdir -p collected/public_site
+          cp -a docs/. collected/public_site/
+          cp -a state_input state_publish
+          cp -a collected/. state_publish/
+
+      - name: Publish one-commit state branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SISMOAI_MODE: sensors
+        run: bash scripts/publish_state.sh state_publish
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

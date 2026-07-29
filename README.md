@@ -152,3 +152,17 @@ La primera ejecución es silenciosa para evitar avisos antiguos. Las novedades s
 Los Issues son públicos porque el repositorio es público. Nunca incluyen números telefónicos, tokens, contraseñas ni identificadores privados. Telegram queda opcional; WhatsApp y llamadas permanecen desactivados porque no existe una vía oficial automática completamente gratuita.
 
 Todo aviso mantiene esta advertencia: **no es una predicción, una alerta oficial ni una orden de evacuación**.
+
+
+## Gateway universal de sensores
+
+SismoAI registra estaciones y observaciones abiertas o expresamente autorizadas,
+normaliza tiempos a UTC, deduplica, calcula calidad y latencia, asigna macroregiones
+y conserva procedencia y licencia. Incluye inventarios FDSN, nivel del mar NOAA
+CO-OPS, DART/NDBC y un inbox autenticado para nodos propios o autorizados.
+
+Las corrientes SeedLink, NTRIP, MQTT, WebSocket, teléfonos, cámaras, DAS,
+hidrófonos y cables submarinos requieren un agente persistente y permiso del
+propietario. Estas familias no modifican el IEDC, no activan alertas y no abren
+ventanas prospectivas. Solo las familias preevento y de control contextual pueden
+incorporarse al laboratorio evolutivo después del mínimo histórico configurado.

@@ -17,6 +17,7 @@ from typing import Any, Iterable
 
 from .historical import global_samples, initialize as initialize_historical
 from .historical import regional_multisource_samples
+from .sensor_evolution import augment_regional_samples
 
 
 VERSION = "1.0.0"
@@ -1081,6 +1082,7 @@ def dataset_specs(
     historical_database: Path,
     region_archive_dirs: list[Path],
     policy: dict[str, Any],
+    sensor_database: Path | None = None,
 ) -> list[dict[str, Any]]:
     initialize_historical(historical_database)
     historical_connection = sqlite3.connect(
@@ -1093,6 +1095,19 @@ def dataset_specs(
     finally:
         historical_connection.close()
     regional_rows = regional_multisource_samples(region_archive_dirs)
+    sensor_augmentation: dict[str, Any] = {
+        "status": "NO_SENSOR_DATABASE",
+        "history_days": 0,
+        "features_added": 0,
+    }
+    if sensor_database is not None and sensor_database.exists():
+        regional_rows, sensor_augmentation = augment_regional_samples(
+            regional_rows,
+            sensor_database,
+            minimum_history_days=int(
+                policy.get("minimum_sensor_history_days") or 30
+            ),
+        )
     raw_specs = [
         {
             "scope": "GLOBAL_SEISMIC_HISTORY",
@@ -1123,6 +1138,11 @@ def dataset_specs(
                 **item,
                 "split": split,
                 "quantiles": feature_quantiles(split["train"], policy),
+                "sensor_augmentation": (
+                    sensor_augmentation
+                    if item["scope"] == "WORLD_REGIONAL_MULTISOURCE"
+                    else {"status": "NOT_APPLICABLE"}
+                ),
             }
         )
     return output
@@ -1570,6 +1590,7 @@ def run_engine(
     *,
     historical_database: Path,
     region_archive_dirs: list[Path],
+    sensor_database: Path | None,
     input_state_archive: Path | None,
     output_state_archive: Path,
     output_json: Path,
@@ -1613,6 +1634,7 @@ def run_engine(
                     historical_database,
                     region_archive_dirs,
                     policy,
+                    sensor_database=sensor_database,
                 )
                 discovered += seed_from_historical(
                     connection,
@@ -1706,6 +1728,7 @@ def run_engine(
                         "validation": len(item["split"]["validation"]),
                         "vault": len(item["split"]["vault"]),
                         "features": len(item["quantiles"]),
+                        "sensor_augmentation": item.get("sensor_augmentation"),
                     }
                     for item in specs
                 ],
@@ -1880,6 +1903,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     run_parser = subparsers.add_parser("run")
     run_parser.add_argument("--historical-db", required=True)
     run_parser.add_argument("--region-archives", action="append", default=[])
+    run_parser.add_argument("--sensor-db")
     run_parser.add_argument("--input-state-archive")
     run_parser.add_argument("--output-state-archive", required=True)
     run_parser.add_argument("--output-json", required=True)
@@ -1896,6 +1920,9 @@ def main(argv: Iterable[str] | None = None) -> int:
         region_archive_dirs=[
             Path(value) for value in arguments.region_archives
         ],
+        sensor_database=(
+            Path(arguments.sensor_db) if arguments.sensor_db else None
+        ),
         input_state_archive=(
             Path(arguments.input_state_archive)
             if arguments.input_state_archive

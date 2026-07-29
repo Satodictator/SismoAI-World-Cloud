@@ -16,6 +16,7 @@
   "minimum_challenger_score": 0.12,
   "minimum_champion_score": 0.18,
   "minimum_exploratory_score": 0.06,
+  "minimum_sensor_history_days": 30,
   "modifies_iedc": false,
   "new_candidates_per_run": 80,
   "notes": [
@@ -35,6 +36,15 @@
   "reevaluate_active_per_run": 240,
   "reevaluate_background_per_run": 180,
   "research_only": true,
+  "sensor_features_enabled": true,
+  "sensor_roles_allowed": [
+    "PRE_EVENT_RESEARCH",
+    "CONTEXT_CONTROL"
+  ],
+  "sensor_roles_blocked_for_leakage": [
+    "EVENT_DETECTION",
+    "TSUNAMI_CONFIRMATION"
+  ],
   "train_fraction": 0.6,
   "validation_fraction": 0.2,
   "vault_fraction": 0.2

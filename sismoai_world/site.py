@@ -11,6 +11,7 @@ from . import SCIENTIFIC_NOTICE, __version__
 from .bulletin import build_bulletin
 from .regions import load_regions
 from .patterns_page import PATTERNS_HTML
+from .sensors_page import SENSORS_HTML
 
 
 def utcnow() -> str:
@@ -210,6 +211,7 @@ def build_world(*, regions_path: Path, collected_results_dir: Path, docs_dir: Pa
     (docs_dir / "index.html").write_text(INDEX_HTML, encoding="utf-8")
     (docs_dir / "404.html").write_text(INDEX_HTML, encoding="utf-8")
     (docs_dir / "patterns.html").write_text(PATTERNS_HTML, encoding="utf-8")
+    (docs_dir / "sensors.html").write_text(SENSORS_HTML, encoding="utf-8")
     return world
 
 
@@ -242,7 +244,7 @@ INDEX_HTML = r'''<!doctype html>
 <main class="wrap"><section class="bulletin" id="bulletin"><div class="bulletinhead"><div><h2 id="bulletinTitle">Boletín SismoAI</h2><span class="classification" id="bulletinClass">Cargando…</span><div class="muted" id="bulletinTime"></div></div><div class="bulletintools"><select id="bulletinLanguage" aria-label="Idioma del boletín"></select><button id="listenButton" type="button">▶ Escuchar boletín</button><button class="secondary" id="pauseButton" type="button" disabled>⏸ Pausar</button><button class="secondary" id="stopButton" type="button" disabled>■ Detener</button></div></div><div class="bulletinbody"><p id="bulletinSummary">Generando explicación de esta actualización…</p><h3 id="changesTitle">Qué cambió</h3><p id="bulletinChanges"></p><h3 id="situationTitle">Situación actual</h3><div id="bulletinRegions"></div><h3 id="historyTitle">Memoria y patrones</h3><p id="bulletinHistory"></p><h3 id="limitationsTitle">Alcance y limitaciones</h3><p id="bulletinLimitations"></p><div class="official" id="officialLabel">No es una alerta oficial</div><div class="voicehint" id="voiceHint"></div><div class="voicehint"><a id="bulletinArchive" href="data/bulletins/index.json">Archivo de boletines</a></div></div></section><section class="cards" id="summary"></section>
 <div class="toolbar"><input id="search" placeholder="Buscar región"><select id="group"><option value="">Todos los grupos</option></select><select id="state"><option value="">Todos los estados</option><option>NORMAL</option><option>WATCH</option><option>ELEVATED</option><option>HIGHLY_ATYPICAL</option><option>NO_DATA</option></select></div>
 <div class="tablewrap"><table><thead><tr><th>#</th><th>Región</th><th>Grupo</th><th>IEDC</th><th>Estado</th><th>Confianza</th><th>Cobertura</th><th>Calidad</th><th>Familias</th><th>Último evento</th><th>Actualizado</th></tr></thead><tbody id="rows"></tbody></table></div>
-<section class="section"><h2>Laboratorio histórico y búsqueda de patrones</h2><div class="roadmaplinks" style="margin-bottom:12px"><a id="patternsCatalogLink" href="patterns.html">Abrir catálogo explicativo de patrones →</a></div><div class="researchnotice" id="historicalNotice">Cargando reconstrucción histórica…</div><div class="cards" id="historicalSummary"></div><div class="researchgrid"><div><h3>Cobertura real de fuentes</h3><div class="scroll" id="historicalSources"></div></div><div><h3>Patrones candidatos</h3><div class="scroll" id="historicalPatterns"></div></div></div><h3>Fuentes contextuales separadas</h3><div id="contextControls"></div></section>
+<section class="section"><h2>Laboratorio histórico y búsqueda de patrones</h2><div class="roadmaplinks" style="margin-bottom:12px"><a id="patternsCatalogLink" href="patterns.html">Abrir catálogo explicativo de patrones →</a><a id="sensorsGatewayLink" href="sensors.html">Abrir gateway universal de sensores →</a></div><div class="researchnotice" id="historicalNotice">Cargando reconstrucción histórica…</div><div class="cards" id="historicalSummary"></div><div class="researchgrid"><div><h3>Cobertura real de fuentes</h3><div class="scroll" id="historicalSources"></div></div><div><h3>Patrones candidatos</h3><div class="scroll" id="historicalPatterns"></div></div></div><h3>Fuentes contextuales separadas</h3><div id="contextControls"></div></section>
 
 <section class="section" id="scientificRoadmap">
   <h2>Próxima etapa científica: ventanas probabilísticas en modo sombra</h2>

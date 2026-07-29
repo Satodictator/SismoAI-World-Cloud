@@ -52,7 +52,7 @@ footer{padding:30px 0;color:var(--muted);font-size:11px}
         <h1>Catálogo explicativo de patrones de SismoAI</h1>
         <div class="notice" id="statusLine">Cargando la lista actual de patrones…</div>
       </div>
-      <a href="data/historical.json">Ver datos históricos JSON</a>
+      <div><a href="sensors.html">Gateway de sensores</a> · <a href="data/historical.json">Ver datos históricos JSON</a></div>
     </div>
   </div>
 </header>

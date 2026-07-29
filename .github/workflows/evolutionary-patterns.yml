@@ -108,6 +108,9 @@ jobs:
           test -f state_input/research/historical.sqlite.gz
           mkdir -p runtime collected/research
           gzip -cd state_input/research/historical.sqlite.gz > runtime/historical.sqlite
+          if [[ -f state_input/research/sensor_gateway.sqlite.gz ]]; then
+            gzip -cd state_input/research/sensor_gateway.sqlite.gz > runtime/sensor_gateway.sqlite
+          fi
           python - <<'PY'
           import json
           import os
@@ -125,14 +128,23 @@ jobs:
       - name: Verify evolutionary isolation
         run: |
           python -m sismoai_world.evolutionary selftest
+          python -m sismoai_world.sensor_gateway selftest
+          python -m sismoai_world.sensor_evolution selftest
           python -m sismoai_world.historical selftest
           python -m sismoai_world.shadow selftest
 
       - name: Run persistent evolutionary search
+        shell: bash
         run: |
+          set -euo pipefail
+          SENSOR_ARGS=()
+          if [[ -f runtime/sensor_gateway.sqlite ]]; then
+            SENSOR_ARGS=(--sensor-db runtime/sensor_gateway.sqlite)
+          fi
           python -m sismoai_world.evolutionary run \
             --historical-db runtime/historical.sqlite \
             --region-archives state_input/state/regions \
+            "${SENSOR_ARGS[@]}" \
             --input-state-archive state_input/research/evolutionary.sqlite.gz \
             --output-state-archive collected/research/evolutionary.sqlite.gz \
             --output-json docs/data/evolutionary.json \
