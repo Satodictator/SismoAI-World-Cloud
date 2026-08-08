@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-08-08T19:01:58Z",
+  "started_at": "2026-08-08T19:01:57Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "kuril_kamchatka",
+    "name": "Kuriles–Kamchatka",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      43,
+      62,
+      145,
+      180
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-08-08T19:01:58Z",
+    "day": "2026-08-08",
+    "region_id": "kuril_kamchatka",
+    "iedc_raw": 15.526,
+    "iedc_provisional": 15.526,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.9666666666666667,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 15.5262
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:41:55Z",
+        "last_success": "2026-08-08T04:41:55Z",
+        "records": 984,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "984 escenas/productos SAR; 484 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":484,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-08-08T19:01:57Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/kuril_kamchatka/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:41:51Z",
+        "last_success": "2026-08-08T04:41:51Z",
+        "records": 3167,
+        "freshness_hours": 840.0,
+        "coverage": 0.42857142857142855,
+        "quality": 0.3771428571428571,
+        "message": "6/14 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-08-08T19:01:57Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:01:57Z",
+        "last_success": "2026-08-08T19:01:57Z",
+        "records": 72,
+        "freshness_hours": 2.8746310044444443,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-31\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-08T16:09:28.969000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:41:55Z",
+      "last_success": "2026-08-08T04:41:55Z",
+      "records": 984,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "984 escenas/productos SAR; 484 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":484,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-08-08T19:01:57Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/kuril_kamchatka/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:41:51Z",
+      "last_success": "2026-08-08T04:41:51Z",
+      "records": 3167,
+      "freshness_hours": 840.0,
+      "coverage": 0.42857142857142855,
+      "quality": 0.3771428571428571,
+      "message": "6/14 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-08-08T19:01:57Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:01:57Z",
+      "last_success": "2026-08-08T19:01:57Z",
+      "records": 72,
+      "freshness_hours": 2.8746310044444443,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-31\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-08T16:09:28.969000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 8149,
+    "dtrg_r_gnss_stations": 14,
+    "dtrg_r_gnss_obs": 6674,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 8179,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4436,
+    "dtrg_r_scores": 1109,
+    "dtrg_r_backtests": 3
+  },
+  "latest_backtest": [
+    {
+      "run_id": "53466e38-f40b-4c6c-9b5c-250ce3fd85af",
+      "created_at": "2026-08-02T07:10:37Z",
+      "start_day": "2023-08-03",
+      "end_day": "2026-08-02",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 372,
+      "negatives": 724,
+      "tp": 23,
+      "fp": 0,
+      "tn": 724,
+      "fn": 349,
+      "precision": 1.0,
+      "recall": 0.06182795698924731,
+      "specificity": 1.0,
+      "f1": 0.11645569620253166,
+      "auc": 0.5823289817620151,
+      "brier": 0.27099162081058387,
+      "base_brier": 0.2242127976983321,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":372,\"negatives\":724,\"tp\":23,\"fp\":0,\"tn\":724,\"fn\":349,\"precision\":1.0,\"recall\":0.06182795698924731,\"specificity\":1.0,\"f1\":0.11645569620253166,\"auc\":0.5823289817620151,\"brier\":0.27099162081058387,\"base_brier\":0.2242127976983321,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "aka2026pptdbo",
+      "event_time": "2026-08-08T16:09:28.969000Z",
+      "magnitude": 3.2,
+      "depth_km": 20.0,
+      "latitude": 51.809,
+      "longitude": 176.184,
+      "place": "234 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pptdbo"
+    },
+    {
+      "event_id": "aka2026ppszms",
+      "event_time": "2026-08-08T16:05:07.936000Z",
+      "magnitude": 3.1,
+      "depth_km": 1.8,
+      "latitude": 52.007,
+      "longitude": 176.244,
+      "place": "227 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppszms"
+    },
+    {
+      "event_id": "aka2026ppptuy",
+      "event_time": "2026-08-08T14:28:50.351000Z",
+      "magnitude": 3.0,
+      "depth_km": 20.0,
+      "latitude": 51.906,
+      "longitude": 176.225,
+      "place": "231 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppptuy"
+    },
+    {
+      "event_id": "aka2026pppbru",
+      "event_time": "2026-08-08T14:07:53.039000Z",
+      "magnitude": 3.0,
+      "depth_km": 20.0,
+      "latitude": 51.909,
+      "longitude": 176.244,
+      "place": "232 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pppbru"
+    },
+    {
+      "event_id": "aka2026ppozmr",
+      "event_time": "2026-08-08T14:05:22.197000Z",
+      "magnitude": 3.0,
+      "depth_km": 20.0,
+      "latitude": 51.725,
+      "longitude": 176.15,
+      "place": "237 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppozmr"
+    },
+    {
+      "event_id": "aka2026ppgkak",
+      "event_time": "2026-08-08T09:47:40.497000Z",
+      "magnitude": 3.3,
+      "depth_km": 20.0,
+      "latitude": 51.716,
+      "longitude": 176.114,
+      "place": "236 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppgkak"
+    },
+    {
+      "event_id": "aka2026ppagtx",
+      "event_time": "2026-08-08T06:43:52.921000Z",
+      "magnitude": 3.4,
+      "depth_km": 20.0,
+      "latitude": 51.778,
+      "longitude": 176.147,
+      "place": "234 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppagtx"
+    },
+    {
+      "event_id": "us6000tj70",
+      "event_time": "2026-08-08T05:39:39.927000Z",
+      "magnitude": 4.8,
+      "depth_km": 82.521,
+      "latitude": 49.8507,
+      "longitude": 155.753,
+      "place": "95 km SSW of Severo-Kuril’sk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj70"
+    },
+    {
+      "event_id": "aka2026powxco",
+      "event_time": "2026-08-08T05:02:12.446000Z",
+      "magnitude": 3.4,
+      "depth_km": 20.0,
+      "latitude": 51.821,
+      "longitude": 176.072,
+      "place": "227 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026powxco"
+    },
+    {
+      "event_id": "aka2026poulyd",
+      "event_time": "2026-08-08T03:50:04.563000Z",
+      "magnitude": 3.3,
+      "depth_km": 20.0,
+      "latitude": 51.757,
+      "longitude": 176.153,
+      "place": "235 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026poulyd"
+    },
+    {
+      "event_id": "aka2026posany",
+      "event_time": "2026-08-08T02:36:47.749000Z",
+      "magnitude": 3.4,
+      "depth_km": 20.0,
+      "latitude": 51.82,
+      "longitude": 176.183,
+      "place": "234 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026posany"
+    },
+    {
+      "event_id": "aka2026pomall",
+      "event_time": "2026-08-07T23:36:56.916000Z",
+      "magnitude": 3.0,
+      "depth_km": 20.0,
+      "latitude": 51.794,
+      "longitude": 176.155,
+      "place": "233 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pomall"
+    },
+    {
+      "event_id": "us6000tixr",
+      "event_time": "2026-08-07T14:21:30.314000Z",
+      "magnitude": 5.0,
+      "depth_km": 83.854,
+      "latitude": 50.4235,
+      "longitude": 156.7027,
+      "place": "49 km SE of Severo-Kuril’sk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tixr"
+    },
+    {
+      "event_id": "aka2026pnhjux",
+      "event_time": "2026-08-07T08:18:08.299000Z",
+      "magnitude": 3.3,
+      "depth_km": 20.0,
+      "latitude": 51.766,
+      "longitude": 176.156,
+      "place": "235 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pnhjux"
+    },
+    {
+      "event_id": "us6000tizi",
+      "event_time": "2026-08-07T08:18:07.243000Z",
+      "magnitude": 3.1,
+      "depth_km": 10.0,
+      "latitude": 51.8879,
+      "longitude": 176.2636,
+      "place": "235 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tizi"
+    },
+    {
+      "event_id": "us6000tipv",
+      "event_time": "2026-08-06T20:07:24.549000Z",
+      "magnitude": 4.6,
+      "depth_km": 40.732,
+      "latitude": 52.0723,
+      "longitude": 160.1111,
+      "place": "149 km SE of Petropavlovsk-Kamchatsky, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tipv"
+    },
+    {
+      "event_id": "us6000til7",
+      "event_time": "2026-08-06T15:49:15.039000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 51.925,
+      "longitude": 176.259,
+      "place": "232 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000til7"
+    },
+    {
+      "event_id": "aka2026plhhfj",
+      "event_time": "2026-08-06T06:15:32.929000Z",
+      "magnitude": 3.4,
+      "depth_km": 13.8,
+      "latitude": 51.996,
+      "longitude": 176.294,
+      "place": "231 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026plhhfj"
+    },
+    {
+      "event_id": "aka2026pleizn",
+      "event_time": "2026-08-06T04:47:59.363000Z",
+      "magnitude": 3.2,
+      "depth_km": 20.0,
+      "latitude": 51.77,
+      "longitude": 176.138,
+      "place": "234 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pleizn"
+    },
+    {
+      "event_id": "aka2026pkytjx",
+      "event_time": "2026-08-06T02:00:03.423000Z",
+      "magnitude": 3.3,
+      "depth_km": 14.4,
+      "latitude": 51.825,
+      "longitude": 176.232,
+      "place": "236 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pkytjx"
+    },
+    {
+      "event_id": "us6000tieq",
+      "event_time": "2026-08-05T20:27:04.989000Z",
+      "magnitude": 4.1,
+      "depth_km": 94.091,
+      "latitude": 53.5685,
+      "longitude": 159.2327,
+      "place": "69 km NE of Petropavlovsk-Kamchatsky, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tieq"
+    },
+    {
+      "event_id": "aka2026pkiyzb",
+      "event_time": "2026-08-05T18:06:43.645000Z",
+      "magnitude": 3.4,
+      "depth_km": 65.0,
+      "latitude": 51.57,
+      "longitude": 178.549,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pkiyzb"
+    },
+    {
+      "event_id": "aka2026pkcotm",
+      "event_time": "2026-08-05T14:54:52.645000Z",
+      "magnitude": 3.4,
+      "depth_km": 12.5,
+      "latitude": 51.834,
+      "longitude": 176.211,
+      "place": "234 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pkcotm"
+    },
+    {
+      "event_id": "aka2026pjtzyz",
+      "event_time": "2026-08-05T10:37:41.513000Z",
+      "magnitude": 3.3,
+      "depth_km": 20.0,
+      "latitude": 51.817,
+      "longitude": 176.138,
+      "place": "231 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pjtzyz"
+    },
+    {
+      "event_id": "aka2026pjqoqs",
+      "event_time": "2026-08-05T08:55:00.746000Z",
+      "magnitude": 3.6,
+      "depth_km": 20.0,
+      "latitude": 50.243,
+      "longitude": 178.38,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pjqoqs"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 72,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-08-08",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-31",
+          "end": "2026-08-08",
+          "result": {
+            "status": "OK",
+            "records_received": 72,
+            "newest": "2026-08-08T16:09:28.969000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/kuril_kamchatka/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-08-08",
+        "region_id": "kuril_kamchatka",
+        "iedc_raw": 15.526,
+        "iedc_provisional": 15.526,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.9667,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 15.5262
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

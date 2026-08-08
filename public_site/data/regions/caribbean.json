@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-08-08T19:01:52Z",
+  "started_at": "2026-08-08T19:01:49Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "caribbean",
+    "name": "Caribe–La Española–Puerto Rico",
+    "group": "Americas",
+    "bbox": [
+      15,
+      23,
+      -76,
+      -59
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-08-08T19:01:52Z",
+    "day": "2026-08-08",
+    "region_id": "caribbean",
+    "iedc_raw": 1.097,
+    "iedc_provisional": 1.097,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.9555555555555556,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 1.0971
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:40:03Z",
+        "last_success": "2026-08-08T04:40:03Z",
+        "records": 823,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "823 escenas/productos SAR; 323 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":323,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-08-08T19:01:51Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/caribbean/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:39:56Z",
+        "last_success": "2026-08-08T04:39:56Z",
+        "records": 6828,
+        "freshness_hours": 840.0,
+        "coverage": 0.7777777777777778,
+        "quality": 0.6844444444444444,
+        "message": "14/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:01:51Z",
+        "last_success": "2026-08-08T19:01:51Z",
+        "records": 17,
+        "freshness_hours": 0.0005748730555555555,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 46 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:01:49Z",
+        "last_success": "2026-08-08T19:01:49Z",
+        "records": 49,
+        "freshness_hours": 3.5928868986111113,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-31\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-08T15:26:15.410000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:40:03Z",
+      "last_success": "2026-08-08T04:40:03Z",
+      "records": 823,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "823 escenas/productos SAR; 323 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":323,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-08-08T19:01:51Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/caribbean/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:39:56Z",
+      "last_success": "2026-08-08T04:39:56Z",
+      "records": 6828,
+      "freshness_hours": 840.0,
+      "coverage": 0.7777777777777778,
+      "quality": 0.6844444444444444,
+      "message": "14/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:01:51Z",
+      "last_success": "2026-08-08T19:01:51Z",
+      "records": 17,
+      "freshness_hours": 0.0005748730555555555,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 46 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:01:49Z",
+      "last_success": "2026-08-08T19:01:49Z",
+      "records": 49,
+      "freshness_hours": 3.5928868986111113,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-31\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-08T15:26:15.410000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 9562,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 17662,
+    "dtrg_r_goes_files": 1024,
+    "dtrg_r_goes_daily": 21,
+    "dtrg_r_insar_scenes": 6668,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6654,
+    "dtrg_r_scores": 1109,
+    "dtrg_r_backtests": 3
+  },
+  "latest_backtest": [
+    {
+      "run_id": "b47d4ec3-55a2-4a9c-b3da-5236da93d1e5",
+      "created_at": "2026-08-02T07:08:30Z",
+      "start_day": "2023-08-03",
+      "end_day": "2026-08-02",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 148,
+      "negatives": 948,
+      "tp": 0,
+      "fp": 0,
+      "tn": 948,
+      "fn": 148,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5209651898734177,
+      "brier": 0.12397009976395995,
+      "base_brier": 0.11680164100378257,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":148,\"negatives\":948,\"tp\":0,\"fp\":0,\"tn\":948,\"fn\":148,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5209651898734177,\"brier\":0.12397009976395995,\"base_brier\":0.11680164100378257,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "pr71527893",
+      "event_time": "2026-08-08T15:26:15.410000Z",
+      "magnitude": 2.62,
+      "depth_km": 16.72,
+      "latitude": 18.0918333333333,
+      "longitude": -67.4288333333333,
+      "place": "25 km W of Puerto Real, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527893"
+    },
+    {
+      "event_id": "pr71527868",
+      "event_time": "2026-08-08T09:45:12.610000Z",
+      "magnitude": 3.23,
+      "depth_km": 10.28,
+      "latitude": 18.0623333333333,
+      "longitude": -65.7201666666667,
+      "place": "11 km SSE of Punta Santiago, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527868"
+    },
+    {
+      "event_id": "pr71527838",
+      "event_time": "2026-08-07T17:29:08.730000Z",
+      "magnitude": 2.72,
+      "depth_km": 57.68,
+      "latitude": 18.3235,
+      "longitude": -66.1525,
+      "place": "5 km SW of Guaynabo, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527838"
+    },
+    {
+      "event_id": "pr71527803",
+      "event_time": "2026-08-07T10:46:48.730000Z",
+      "magnitude": 3.38,
+      "depth_km": 78.65,
+      "latitude": 18.8396666666667,
+      "longitude": -68.2131666666667,
+      "place": "34 km NE of Punta Cana, Dominican Republic",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527803"
+    },
+    {
+      "event_id": "pr2026219001",
+      "event_time": "2026-08-07T07:05:35.830000Z",
+      "magnitude": 3.68,
+      "depth_km": 32.0,
+      "latitude": 19.196,
+      "longitude": -68.5036,
+      "place": "61 km ENE of Miches, Dominican Republic",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026219001"
+    },
+    {
+      "event_id": "pr2026219000",
+      "event_time": "2026-08-07T04:48:01.170000Z",
+      "magnitude": 3.56,
+      "depth_km": 10.0,
+      "latitude": 17.9575,
+      "longitude": -66.9438,
+      "place": "4 km WSW of Guánica, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026219000"
+    },
+    {
+      "event_id": "us6000tivs",
+      "event_time": "2026-08-07T04:47:59.875000Z",
+      "magnitude": 3.6,
+      "depth_km": 16.366,
+      "latitude": 17.9024,
+      "longitude": -66.9414,
+      "place": "8 km SSW of Guánica, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tivs"
+    },
+    {
+      "event_id": "pr71527753",
+      "event_time": "2026-08-07T04:42:41.920000Z",
+      "magnitude": 2.82,
+      "depth_km": 9.75,
+      "latitude": 18.3748333333333,
+      "longitude": -67.5943333333333,
+      "place": "36 km W of Rincón, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527753"
+    },
+    {
+      "event_id": "pr71527738",
+      "event_time": "2026-08-07T01:32:22.250000Z",
+      "magnitude": 3.16,
+      "depth_km": 26.96,
+      "latitude": 18.6988333333333,
+      "longitude": -65.7631666666667,
+      "place": "31 km NNE of Vieques, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527738"
+    },
+    {
+      "event_id": "pr71527713",
+      "event_time": "2026-08-06T18:06:30.860000Z",
+      "magnitude": 3.32,
+      "depth_km": 136.47,
+      "latitude": 18.209,
+      "longitude": -67.8033333333333,
+      "place": "60 km WSW of Stella, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527713"
+    },
+    {
+      "event_id": "pr71527703",
+      "event_time": "2026-08-06T15:23:30.120000Z",
+      "magnitude": 3.07,
+      "depth_km": 10.29,
+      "latitude": 18.6965,
+      "longitude": -67.4411666666667,
+      "place": "42 km NW of Aguadilla, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527703"
+    },
+    {
+      "event_id": "pr71527678",
+      "event_time": "2026-08-06T09:13:03.220000Z",
+      "magnitude": 3.15,
+      "depth_km": 20.02,
+      "latitude": 19.4021666666667,
+      "longitude": -64.4821666666667,
+      "place": "122 km NNE of Cruz Bay, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527678"
+    },
+    {
+      "event_id": "pr71527698",
+      "event_time": "2026-08-06T07:07:20.490000Z",
+      "magnitude": 3.17,
+      "depth_km": 7.15,
+      "latitude": 18.839,
+      "longitude": -67.5663333333333,
+      "place": "62 km NW of San Antonio, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527698"
+    },
+    {
+      "event_id": "pr71527663",
+      "event_time": "2026-08-06T02:26:49.820000Z",
+      "magnitude": 2.73,
+      "depth_km": 17.63,
+      "latitude": 18.6166666666667,
+      "longitude": -66.7825,
+      "place": "14 km N of Carrizales, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527663"
+    },
+    {
+      "event_id": "pr71527658",
+      "event_time": "2026-08-05T23:46:35.950000Z",
+      "magnitude": 3.14,
+      "depth_km": 17.07,
+      "latitude": 18.9086666666667,
+      "longitude": -67.6348333333333,
+      "place": "72 km NW of San Antonio, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527658"
+    },
+    {
+      "event_id": "pr71527638",
+      "event_time": "2026-08-05T17:25:23.010000Z",
+      "magnitude": 3.09,
+      "depth_km": 7.23,
+      "latitude": 18.8531666666667,
+      "longitude": -67.565,
+      "place": "63 km NW of San Antonio, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527638"
+    },
+    {
+      "event_id": "pr71527613",
+      "event_time": "2026-08-05T09:18:25.540000Z",
+      "magnitude": 3.34,
+      "depth_km": 48.24,
+      "latitude": 18.8836666666667,
+      "longitude": -65.1036666666667,
+      "place": "62 km NNW of Charlotte Amalie, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527613"
+    },
+    {
+      "event_id": "pr2026217000",
+      "event_time": "2026-08-05T01:03:55.990000Z",
+      "magnitude": 3.67,
+      "depth_km": 30.0,
+      "latitude": 19.5603,
+      "longitude": -64.7715,
+      "place": "135 km N of Charlotte Amalie, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026217000"
+    },
+    {
+      "event_id": "pr71527538",
+      "event_time": "2026-08-04T15:38:56.030000Z",
+      "magnitude": 3.41,
+      "depth_km": 15.85,
+      "latitude": 18.9686666666667,
+      "longitude": -64.594,
+      "place": "73 km NNE of Cruz Bay, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527538"
+    },
+    {
+      "event_id": "pr2026216003",
+      "event_time": "2026-08-04T14:51:47.350000Z",
+      "magnitude": 3.82,
+      "depth_km": 108.0,
+      "latitude": 18.8206,
+      "longitude": -64.1143,
+      "place": "89 km NE of Cruz Bay, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026216003"
+    },
+    {
+      "event_id": "pr2026216002",
+      "event_time": "2026-08-04T14:24:42.950000Z",
+      "magnitude": 3.49,
+      "depth_km": 7.0,
+      "latitude": 18.9141,
+      "longitude": -67.5828,
+      "place": "69 km NW of San Antonio, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026216002"
+    },
+    {
+      "event_id": "pr71527448",
+      "event_time": "2026-08-04T10:19:26.850000Z",
+      "magnitude": 3.07,
+      "depth_km": 19.09,
+      "latitude": 19.1236666666667,
+      "longitude": -65.5076666666667,
+      "place": "84 km NNE of Vieques, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527448"
+    },
+    {
+      "event_id": "pr71527648",
+      "event_time": "2026-08-04T08:44:30.520000Z",
+      "magnitude": 3.33,
+      "depth_km": 18.27,
+      "latitude": 18.7355,
+      "longitude": -64.9206666666667,
+      "place": "43 km N of Charlotte Amalie, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527648"
+    },
+    {
+      "event_id": "pr2026216000",
+      "event_time": "2026-08-04T08:41:12.920000Z",
+      "magnitude": 3.65,
+      "depth_km": 77.0,
+      "latitude": 19.5315,
+      "longitude": -68.2045,
+      "place": "107 km NNE of Punta Cana, Dominican Republic",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026216000"
+    },
+    {
+      "event_id": "pr71527433",
+      "event_time": "2026-08-04T08:02:09.250000Z",
+      "magnitude": 2.92,
+      "depth_km": 19.96,
+      "latitude": 18.7468333333333,
+      "longitude": -64.9313333333333,
+      "place": "44 km N of Charlotte Amalie, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527433"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 49,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-08-08",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-31",
+          "end": "2026-08-08",
+          "result": {
+            "status": "OK",
+            "records_received": 49,
+            "newest": "2026-08-08T15:26:15.410000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 46,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/caribbean/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-08-08",
+        "region_id": "caribbean",
+        "iedc_raw": 1.097,
+        "iedc_provisional": 1.097,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.9556,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 1.0971
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

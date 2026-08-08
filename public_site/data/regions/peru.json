@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-08-08T19:02:35Z",
+  "started_at": "2026-08-08T19:02:32Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "peru",
+    "name": "Perú",
+    "group": "Americas",
+    "bbox": [
+      -20,
+      -3,
+      -82,
+      -68
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-08-08T19:02:35Z",
+    "day": "2026-08-08",
+    "region_id": "peru",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.5388888888888889,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:41:48Z",
+        "last_success": "2026-08-08T04:41:48Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-08-08T19:02:33Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/peru/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:41:44Z",
+        "last_success": "2026-08-08T04:41:44Z",
+        "records": 3965,
+        "freshness_hours": 840.0,
+        "coverage": 0.4,
+        "quality": 0.35200000000000004,
+        "message": "8/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:02:33Z",
+        "last_success": "2026-08-08T19:02:33Z",
+        "records": 17,
+        "freshness_hours": 0.0002930486111111111,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 12 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:02:32Z",
+        "last_success": "2026-08-08T19:02:32Z",
+        "records": 7,
+        "freshness_hours": 19.85251171888889,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-30\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-07T23:11:23.416000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:41:48Z",
+      "last_success": "2026-08-08T04:41:48Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-08-08T19:02:33Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/peru/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:41:44Z",
+      "last_success": "2026-08-08T04:41:44Z",
+      "records": 3965,
+      "freshness_hours": 840.0,
+      "coverage": 0.4,
+      "quality": 0.35200000000000004,
+      "message": "8/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:02:33Z",
+      "last_success": "2026-08-08T19:02:33Z",
+      "records": 17,
+      "freshness_hours": 0.0002930486111111111,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 12 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:02:32Z",
+      "last_success": "2026-08-08T19:02:32Z",
+      "records": 7,
+      "freshness_hours": 19.85251171888889,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-30\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-07T23:11:23.416000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1550,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 13334,
+    "dtrg_r_goes_files": 1024,
+    "dtrg_r_goes_daily": 21,
+    "dtrg_r_insar_scenes": 13084,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6654,
+    "dtrg_r_scores": 1109,
+    "dtrg_r_backtests": 3
+  },
+  "latest_backtest": [
+    {
+      "run_id": "2b558d09-d3ce-41e7-a4ae-c6fe1a8ccd3f",
+      "created_at": "2026-08-02T07:11:17Z",
+      "start_day": "2023-08-03",
+      "end_day": "2026-08-02",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 418,
+      "negatives": 678,
+      "tp": 0,
+      "fp": 0,
+      "tn": 678,
+      "fn": 418,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5340926733567628,
+      "brier": 0.3228235159699818,
+      "base_brier": 0.23593092333102214,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":418,\"negatives\":678,\"tp\":0,\"fp\":0,\"tn\":678,\"fn\":418,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5340926733567628,\"brier\":0.3228235159699818,\"base_brier\":0.23593092333102214,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tj4s",
+      "event_time": "2026-08-07T23:11:23.416000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -12.1235,
+      "longitude": -75.5241,
+      "place": "17 km WNW of Yanacancha, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj4s"
+    },
+    {
+      "event_id": "us6000tizf",
+      "event_time": "2026-08-07T15:42:24.743000Z",
+      "magnitude": 4.4,
+      "depth_km": 95.512,
+      "latitude": -18.7433,
+      "longitude": -69.6381,
+      "place": "66 km NNW of Camiña, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tizf"
+    },
+    {
+      "event_id": "us6000tip9",
+      "event_time": "2026-08-06T18:57:21.831000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": -12.1948,
+      "longitude": -75.2574,
+      "place": "7 km SSW of Huayucachi, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tip9"
+    },
+    {
+      "event_id": "us6000ti6l",
+      "event_time": "2026-08-05T03:40:42.929000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": -6.6463,
+      "longitude": -76.9303,
+      "place": "26 km W of San Jose De Sisa, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti6l"
+    },
+    {
+      "event_id": "us6000thpt",
+      "event_time": "2026-08-03T01:42:24.662000Z",
+      "magnitude": 5.2,
+      "depth_km": 125.256,
+      "latitude": -8.5724,
+      "longitude": -75.7603,
+      "place": "66 km WNW of San Alejandro, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thpt"
+    },
+    {
+      "event_id": "us6000thmt",
+      "event_time": "2026-08-02T17:09:44.131000Z",
+      "magnitude": 4.3,
+      "depth_km": 139.291,
+      "latitude": -3.1098,
+      "longitude": -75.7698,
+      "place": "84 km ENE of Alianza Cristiana, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thmt"
+    },
+    {
+      "event_id": "us6000th4k",
+      "event_time": "2026-07-31T00:58:44.364000Z",
+      "magnitude": 5.6,
+      "depth_km": 154.355,
+      "latitude": -8.3349,
+      "longitude": -74.4353,
+      "place": "13 km ENE of San Fernando, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th4k"
+    },
+    {
+      "event_id": "us6000tgcx",
+      "event_time": "2026-07-28T13:24:33.262000Z",
+      "magnitude": 5.3,
+      "depth_km": 13.804,
+      "latitude": -9.7052,
+      "longitude": -79.8217,
+      "place": "151 km WSW of Puerto Santa, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgcx"
+    },
+    {
+      "event_id": "us6000tg8x",
+      "event_time": "2026-07-27T22:36:40.575000Z",
+      "magnitude": 4.4,
+      "depth_km": 125.569,
+      "latitude": -8.6588,
+      "longitude": -74.7218,
+      "place": "12 km N of Honoria, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tg8x"
+    },
+    {
+      "event_id": "us7000t2xk",
+      "event_time": "2026-07-24T07:41:41.641000Z",
+      "magnitude": 4.3,
+      "depth_km": 145.105,
+      "latitude": -17.62,
+      "longitude": -69.6875,
+      "place": "33 km ENE of Palca, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2xk"
+    },
+    {
+      "event_id": "us7000t2l3",
+      "event_time": "2026-07-23T02:55:40.344000Z",
+      "magnitude": 4.6,
+      "depth_km": 62.203,
+      "latitude": -9.6602,
+      "longitude": -79.0735,
+      "place": "78 km WSW of Puerto Casma, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2l3"
+    },
+    {
+      "event_id": "us7000t2ku",
+      "event_time": "2026-07-23T02:38:25.218000Z",
+      "magnitude": 4.8,
+      "depth_km": 96.293,
+      "latitude": -16.3095,
+      "longitude": -72.8016,
+      "place": "33 km NNW of El Cardo, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2ku"
+    },
+    {
+      "event_id": "us7000t2dg",
+      "event_time": "2026-07-22T02:03:50.484000Z",
+      "magnitude": 4.7,
+      "depth_km": 61.498,
+      "latitude": -19.2243,
+      "longitude": -70.0393,
+      "place": "16 km ESE of Cuya, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2dg"
+    },
+    {
+      "event_id": "us7000t29t",
+      "event_time": "2026-07-21T17:43:01.094000Z",
+      "magnitude": 4.7,
+      "depth_km": 35.0,
+      "latitude": -9.1575,
+      "longitude": -79.9235,
+      "place": "141 km W of Puerto Santa, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t29t"
+    },
+    {
+      "event_id": "us7000t1q7",
+      "event_time": "2026-07-19T02:24:35.623000Z",
+      "magnitude": 5.5,
+      "depth_km": 10.0,
+      "latitude": -12.1036,
+      "longitude": -75.3034,
+      "place": "4 km SSW of Chupaca, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1q7"
+    },
+    {
+      "event_id": "us7000t0k0",
+      "event_time": "2026-07-15T02:40:26.517000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -14.8026,
+      "longitude": -76.3818,
+      "place": "99 km SW of Santiago, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0k0"
+    },
+    {
+      "event_id": "us7000t0a3",
+      "event_time": "2026-07-14T08:21:06.499000Z",
+      "magnitude": 5.6,
+      "depth_km": 140.088,
+      "latitude": -14.5779,
+      "longitude": -71.4358,
+      "place": "11 km N of Pichigua, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0a3"
+    },
+    {
+      "event_id": "us7000sznq",
+      "event_time": "2026-07-11T07:58:27.390000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -10.7979,
+      "longitude": -78.8861,
+      "place": "113 km SW of Huarmey, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sznq"
+    },
+    {
+      "event_id": "us7000szi4",
+      "event_time": "2026-07-10T16:57:58.426000Z",
+      "magnitude": 4.1,
+      "depth_km": 203.646,
+      "latitude": -15.9379,
+      "longitude": -70.1816,
+      "place": "13 km S of Tiquillaca, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000szi4"
+    },
+    {
+      "event_id": "us6000tauz",
+      "event_time": "2026-07-08T05:00:32.411000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -10.7092,
+      "longitude": -74.7855,
+      "place": "25 km NNE of Santa Rosa, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tauz"
+    },
+    {
+      "event_id": "us6000tafp",
+      "event_time": "2026-07-06T07:29:50.733000Z",
+      "magnitude": 3.4,
+      "depth_km": 58.165,
+      "latitude": -19.6793,
+      "longitude": -70.1863,
+      "place": "55 km NW of Huara, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tafp"
+    },
+    {
+      "event_id": "us6000ta64",
+      "event_time": "2026-07-04T20:24:49.954000Z",
+      "magnitude": 4.7,
+      "depth_km": 34.694,
+      "latitude": -16.674,
+      "longitude": -73.4817,
+      "place": "53 km SSE of Atico, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ta64"
+    },
+    {
+      "event_id": "us6000t9ji",
+      "event_time": "2026-07-02T01:39:27.829000Z",
+      "magnitude": 4.8,
+      "depth_km": 87.863,
+      "latitude": -14.0634,
+      "longitude": -72.9002,
+      "place": "20 km ESE of Chapimarca, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9ji"
+    },
+    {
+      "event_id": "us6000t9bv",
+      "event_time": "2026-07-01T02:00:37.930000Z",
+      "magnitude": 4.8,
+      "depth_km": 127.021,
+      "latitude": -8.8651,
+      "longitude": -74.8878,
+      "place": "21 km WNW of Tournavista, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t9bv"
+    },
+    {
+      "event_id": "us6000t7wm",
+      "event_time": "2026-06-24T16:25:57.923000Z",
+      "magnitude": 4.7,
+      "depth_km": 151.308,
+      "latitude": -8.1659,
+      "longitude": -74.2946,
+      "place": "37 km NE of Pucallpa, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7wm"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 7,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-08-07",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-30",
+          "end": "2026-08-08",
+          "result": {
+            "status": "OK",
+            "records_received": 7,
+            "newest": "2026-08-07T23:11:23.416000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 12,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/peru/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-08-08",
+        "region_id": "peru",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.5389,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-08-08T19:02:44Z",
+  "started_at": "2026-08-08T19:02:40Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "chile_north",
+    "name": "Chile Norte",
+    "group": "Americas",
+    "bbox": [
+      -32,
+      -18,
+      -75,
+      -65
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-08-08T19:02:44Z",
+    "day": "2026-08-08",
+    "region_id": "chile_north",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.8166666666666667,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:42:17Z",
+        "last_success": "2026-08-08T04:42:17Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-08-08T19:02:43Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/chile_north/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-08-08T04:42:13Z",
+        "last_success": "2026-08-08T04:42:13Z",
+        "records": 3486,
+        "freshness_hours": 840.0,
+        "coverage": 0.5,
+        "quality": 0.44,
+        "message": "10/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:02:43Z",
+        "last_success": "2026-08-08T19:02:43Z",
+        "records": 17,
+        "freshness_hours": 0.0007400702777777778,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-08-08T19:02:40Z",
+        "last_success": "2026-08-08T19:02:40Z",
+        "records": 11,
+        "freshness_hours": 6.304997966666667,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-07-31\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-08T12:44:22.647000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:42:17Z",
+      "last_success": "2026-08-08T04:42:17Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-08-08T19:02:43Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/chile_north/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-08-08T04:42:13Z",
+      "last_success": "2026-08-08T04:42:13Z",
+      "records": 3486,
+      "freshness_hours": 840.0,
+      "coverage": 0.5,
+      "quality": 0.44,
+      "message": "10/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:02:43Z",
+      "last_success": "2026-08-08T19:02:43Z",
+      "records": 17,
+      "freshness_hours": 0.0007400702777777778,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-08-08T19:02:40Z",
+      "last_success": "2026-08-08T19:02:40Z",
+      "records": 11,
+      "freshness_hours": 6.304997966666667,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-07-31\",\"end\":\"2026-08-08\",\"newest\":\"2026-08-08T12:44:22.647000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 3600,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 11044,
+    "dtrg_r_goes_files": 1024,
+    "dtrg_r_goes_daily": 21,
+    "dtrg_r_insar_scenes": 9979,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6654,
+    "dtrg_r_scores": 1109,
+    "dtrg_r_backtests": 3
+  },
+  "latest_backtest": [
+    {
+      "run_id": "e2c8aabf-3100-4275-9152-3f099a84489f",
+      "created_at": "2026-08-02T07:11:49Z",
+      "start_day": "2023-08-03",
+      "end_day": "2026-08-02",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 586,
+      "negatives": 510,
+      "tp": 0,
+      "fp": 0,
+      "tn": 510,
+      "fn": 586,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.49067623636485314,
+      "brier": 0.46552247484717163,
+      "base_brier": 0.24879788481006618,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":586,\"negatives\":510,\"tp\":0,\"fp\":0,\"tn\":510,\"fn\":586,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.49067623636485314,\"brier\":0.46552247484717163,\"base_brier\":0.24879788481006618,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tj96",
+      "event_time": "2026-08-08T12:44:22.647000Z",
+      "magnitude": 4.6,
+      "depth_km": 163.582,
+      "latitude": -24.392,
+      "longitude": -67.0572,
+      "place": "77 km WSW of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj96"
+    },
+    {
+      "event_id": "us6000tj73",
+      "event_time": "2026-08-08T06:06:41.571000Z",
+      "magnitude": 4.4,
+      "depth_km": 190.698,
+      "latitude": -24.3551,
+      "longitude": -67.3807,
+      "place": "108 km W of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj73"
+    },
+    {
+      "event_id": "us6000tizf",
+      "event_time": "2026-08-07T15:42:24.743000Z",
+      "magnitude": 4.4,
+      "depth_km": 95.512,
+      "latitude": -18.7433,
+      "longitude": -69.6381,
+      "place": "66 km NNW of Camiña, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tizf"
+    },
+    {
+      "event_id": "us6000thva",
+      "event_time": "2026-08-03T20:47:08.226000Z",
+      "magnitude": 4.4,
+      "depth_km": 95.742,
+      "latitude": -28.746,
+      "longitude": -70.4691,
+      "place": "34 km ESE of Vallenar, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thva"
+    },
+    {
+      "event_id": "us6000thrb",
+      "event_time": "2026-08-03T10:55:35.633000Z",
+      "magnitude": 4.6,
+      "depth_km": 182.541,
+      "latitude": -24.4954,
+      "longitude": -67.1352,
+      "place": "88 km WSW of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thrb"
+    },
+    {
+      "event_id": "us6000thqm",
+      "event_time": "2026-08-03T06:56:36.145000Z",
+      "magnitude": 4.0,
+      "depth_km": 90.502,
+      "latitude": -20.2891,
+      "longitude": -69.1187,
+      "place": "56 km E of La Tirana, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thqm"
+    },
+    {
+      "event_id": "us6000thnw",
+      "event_time": "2026-08-02T22:07:05.245000Z",
+      "magnitude": 4.2,
+      "depth_km": 115.49,
+      "latitude": -31.3551,
+      "longitude": -69.2379,
+      "place": "17 km E of Calingasta, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thnw"
+    },
+    {
+      "event_id": "us6000thng",
+      "event_time": "2026-08-02T20:53:30.345000Z",
+      "magnitude": 4.3,
+      "depth_km": 139.15,
+      "latitude": -27.732,
+      "longitude": -67.6681,
+      "place": "8 km SW of Fiambalá, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thng"
+    },
+    {
+      "event_id": "us6000thl6",
+      "event_time": "2026-08-02T08:49:51.893000Z",
+      "magnitude": 4.6,
+      "depth_km": 172.527,
+      "latitude": -24.2307,
+      "longitude": -67.0412,
+      "place": "73 km W of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thl6"
+    },
+    {
+      "event_id": "us6000thf5",
+      "event_time": "2026-08-01T07:50:45.439000Z",
+      "magnitude": 4.4,
+      "depth_km": 142.886,
+      "latitude": -21.4068,
+      "longitude": -68.451,
+      "place": "28 km SW of Ollagüe, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thf5"
+    },
+    {
+      "event_id": "us6000th96",
+      "event_time": "2026-07-31T17:47:05.666000Z",
+      "magnitude": 5.0,
+      "depth_km": 11.851,
+      "latitude": -29.867,
+      "longitude": -72.1202,
+      "place": "76 km W of Coquimbo, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th96"
+    },
+    {
+      "event_id": "us6000tgwy",
+      "event_time": "2026-07-30T09:01:33.633000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -29.8063,
+      "longitude": -72.1863,
+      "place": "83 km WNW of Coquimbo, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgwy"
+    },
+    {
+      "event_id": "us6000tgw3",
+      "event_time": "2026-07-30T06:04:21.063000Z",
+      "magnitude": 4.5,
+      "depth_km": 98.375,
+      "latitude": -20.0243,
+      "longitude": -69.1469,
+      "place": "63 km ENE of La Tirana, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgw3"
+    },
+    {
+      "event_id": "us6000tglq",
+      "event_time": "2026-07-29T08:21:12.792000Z",
+      "magnitude": 4.1,
+      "depth_km": 193.528,
+      "latitude": -22.358,
+      "longitude": -67.6387,
+      "place": "84 km NE of San Pedro de Atacama, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tglq"
+    },
+    {
+      "event_id": "us6000tgcw",
+      "event_time": "2026-07-28T06:05:52.213000Z",
+      "magnitude": 3.2,
+      "depth_km": 71.76,
+      "latitude": -20.3865,
+      "longitude": -70.0661,
+      "place": "13 km SSE of La Tirana, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgcw"
+    },
+    {
+      "event_id": "us7000t3mh",
+      "event_time": "2026-07-27T10:24:53.249000Z",
+      "magnitude": 4.6,
+      "depth_km": 105.235,
+      "latitude": -20.2441,
+      "longitude": -69.0772,
+      "place": "61 km E of La Tirana, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3mh"
+    },
+    {
+      "event_id": "us7000t3m7",
+      "event_time": "2026-07-27T08:57:43.758000Z",
+      "magnitude": 5.4,
+      "depth_km": 106.991,
+      "latitude": -23.5454,
+      "longitude": -68.633,
+      "place": "82 km SSW of San Pedro de Atacama, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3m7"
+    },
+    {
+      "event_id": "us7000t3l4",
+      "event_time": "2026-07-27T03:44:04.662000Z",
+      "magnitude": 4.4,
+      "depth_km": 114.785,
+      "latitude": -28.7024,
+      "longitude": -69.5336,
+      "place": "120 km E of Vallenar, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3l4"
+    },
+    {
+      "event_id": "us7000t3ji",
+      "event_time": "2026-07-26T21:44:07.754000Z",
+      "magnitude": 4.3,
+      "depth_km": 183.747,
+      "latitude": -24.4024,
+      "longitude": -67.3754,
+      "place": "109 km W of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3ji"
+    },
+    {
+      "event_id": "us7000t3ia",
+      "event_time": "2026-07-26T17:29:13.394000Z",
+      "magnitude": 4.5,
+      "depth_km": 157.114,
+      "latitude": -28.0972,
+      "longitude": -66.7262,
+      "place": "53 km N of Arauco, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3ia"
+    },
+    {
+      "event_id": "us7000t3h2",
+      "event_time": "2026-07-26T13:36:16.071000Z",
+      "magnitude": 4.4,
+      "depth_km": 193.092,
+      "latitude": -24.0141,
+      "longitude": -66.7348,
+      "place": "47 km WNW of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3h2"
+    },
+    {
+      "event_id": "us7000t36n",
+      "event_time": "2026-07-24T19:38:42.175000Z",
+      "magnitude": 5.3,
+      "depth_km": 191.277,
+      "latitude": -23.937,
+      "longitude": -66.6321,
+      "place": "44 km NW of San Antonio de los Cobres, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t36n"
+    },
+    {
+      "event_id": "us7000t33w",
+      "event_time": "2026-07-24T15:34:32.319000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -27.2939,
+      "longitude": -67.8151,
+      "place": "46 km NNW of Fiambalá, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t33w"
+    },
+    {
+      "event_id": "us7000t2p3",
+      "event_time": "2026-07-23T12:47:55.532000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -30.7197,
+      "longitude": -72.8502,
+      "place": "158 km W of Ovalle, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2p3"
+    },
+    {
+      "event_id": "us7000t2kg",
+      "event_time": "2026-07-23T01:56:00.935000Z",
+      "magnitude": 4.7,
+      "depth_km": 95.961,
+      "latitude": -23.1101,
+      "longitude": -68.9868,
+      "place": "72 km S of Calama, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2kg"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 11,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-08-08",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-07-31",
+          "end": "2026-08-08",
+          "result": {
+            "status": "OK",
+            "records_received": 11,
+            "newest": "2026-08-08T12:44:22.647000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 0,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/chile_north/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-08-08",
+        "region_id": "chile_north",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.8167,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
