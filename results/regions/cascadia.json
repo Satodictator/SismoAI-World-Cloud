@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-08-22T18:53:12Z",
+  "started_at": "2026-08-22T18:53:08Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "cascadia",
+    "name": "Cascadia",
+    "group": "Americas",
+    "bbox": [
+      40,
+      52,
+      -132,
+      -120
+    ],
+    "min_magnitude": 2.0,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-08-22T18:53:12Z",
+    "day": "2026-08-22",
+    "region_id": "cascadia",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.7858333333333334,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.9333333333333333,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-08-22T04:17:20Z",
+        "last_success": "2026-08-22T04:17:20Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-08-22T18:53:11Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/cascadia/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-08-22T04:17:13Z",
+        "last_success": "2026-08-22T04:17:13Z",
+        "records": 9604,
+        "freshness_hours": 1176.0,
+        "coverage": 0.875,
+        "quality": 0.77,
+        "message": "21/24 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-08-22T18:53:11Z",
+        "last_success": "2026-08-22T18:53:11Z",
+        "records": 17,
+        "freshness_hours": 0.0007921055555555555,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 7 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-08-22T18:53:08Z",
+        "last_success": "2026-08-22T18:53:08Z",
+        "records": 14,
+        "freshness_hours": 5.872482212222223,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-08-14\",\"end\":\"2026-08-22\",\"newest\":\"2026-08-22T13:00:47.561000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-08-22T04:17:20Z",
+      "last_success": "2026-08-22T04:17:20Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-08-22T18:53:11Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/cascadia/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-08-22T04:17:13Z",
+      "last_success": "2026-08-22T04:17:13Z",
+      "records": 9604,
+      "freshness_hours": 1176.0,
+      "coverage": 0.875,
+      "quality": 0.77,
+      "message": "21/24 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-08-22T18:53:11Z",
+      "last_success": "2026-08-22T18:53:11Z",
+      "records": 17,
+      "freshness_hours": 0.0007921055555555555,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 7 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-08-22T18:53:08Z",
+      "last_success": "2026-08-22T18:53:08Z",
+      "records": 14,
+      "freshness_hours": 5.872482212222223,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-08-14\",\"end\":\"2026-08-22\",\"newest\":\"2026-08-22T13:00:47.561000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 5335,
+    "dtrg_r_gnss_stations": 24,
+    "dtrg_r_gnss_obs": 29706,
+    "dtrg_r_goes_files": 1765,
+    "dtrg_r_goes_daily": 35,
+    "dtrg_r_insar_scenes": 10957,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6738,
+    "dtrg_r_scores": 1123,
+    "dtrg_r_backtests": 5
+  },
+  "latest_backtest": [
+    {
+      "run_id": "a702a651-5e30-4c69-b949-79b9186d8b1c",
+      "created_at": "2026-08-16T04:57:32Z",
+      "start_day": "2023-08-17",
+      "end_day": "2026-08-16",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 162,
+      "negatives": 934,
+      "tp": 11,
+      "fp": 3,
+      "tn": 931,
+      "fn": 151,
+      "precision": 0.7857142857142857,
+      "recall": 0.06790123456790123,
+      "specificity": 0.9967880085653105,
+      "f1": 0.125,
+      "auc": 0.5358804557591138,
+      "brier": 0.1311478848255473,
+      "base_brier": 0.1259623581437488,
+      "false_alarms_per_100_days": 0.2737226277372263,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":162,\"negatives\":934,\"tp\":11,\"fp\":3,\"tn\":931,\"fn\":151,\"precision\":0.7857142857142857,\"recall\":0.06790123456790123,\"specificity\":0.9967880085653105,\"f1\":0.125,\"auc\":0.5358804557591138,\"brier\":0.1311478848255473,\"base_brier\":0.1259623581437488,\"false_alarms_per_100_days\":0.2737226277372263,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tmsn",
+      "event_time": "2026-08-22T13:00:47.561000Z",
+      "magnitude": 2.6,
+      "depth_km": 18.142,
+      "latitude": 41.8838,
+      "longitude": -126.6956,
+      "place": "195 km WSW of Pistol River, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmsn"
+    },
+    {
+      "event_id": "uw714083092",
+      "event_time": "2026-08-22T10:54:24.220000Z",
+      "magnitude": 2.42,
+      "depth_km": 3.64,
+      "latitude": 46.7611666666667,
+      "longitude": -121.9255,
+      "place": "8 km E of Ashford, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714083092"
+    },
+    {
+      "event_id": "uw714082892",
+      "event_time": "2026-08-21T23:42:56.120000Z",
+      "magnitude": 2.13322162628174,
+      "depth_km": 3.76999998092651,
+      "latitude": 45.8740005493164,
+      "longitude": -122.473503112793,
+      "place": "4 km SSW of Amboy, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714082892"
+    },
+    {
+      "event_id": "nc75422337",
+      "event_time": "2026-08-21T11:10:57Z",
+      "magnitude": 2.57,
+      "depth_km": 13.289999961853,
+      "latitude": 40.5596656799316,
+      "longitude": -124.232833862305,
+      "place": "3 km SE of Ferndale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75422337"
+    },
+    {
+      "event_id": "nc75420662",
+      "event_time": "2026-08-18T15:59:17.630000Z",
+      "magnitude": 2.61,
+      "depth_km": 28.0799999237061,
+      "latitude": 40.865665435791,
+      "longitude": -123.223831176758,
+      "place": "28 km WNW of Weaverville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75420662"
+    },
+    {
+      "event_id": "nc75420632",
+      "event_time": "2026-08-18T14:59:46.750000Z",
+      "magnitude": 2.71,
+      "depth_km": 0.699999988079071,
+      "latitude": 40.3638343811035,
+      "longitude": -124.988830566406,
+      "place": "60 km W of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75420632"
+    },
+    {
+      "event_id": "nc75420282",
+      "event_time": "2026-08-17T22:13:10.050000Z",
+      "magnitude": 3.17,
+      "depth_km": 14.6700000762939,
+      "latitude": 40.3349990844727,
+      "longitude": -124.85717010498,
+      "place": "49 km W of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75420282"
+    },
+    {
+      "event_id": "uw714080961",
+      "event_time": "2026-08-17T21:16:54.140000Z",
+      "magnitude": 2.32,
+      "depth_km": -0.36,
+      "latitude": 49.3876666666667,
+      "longitude": -120.492666666667,
+      "place": "7 km S of Princeton, Canada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714080961"
+    },
+    {
+      "event_id": "nc75419622",
+      "event_time": "2026-08-16T20:21:45.850000Z",
+      "magnitude": 2.6,
+      "depth_km": 17.1499996185303,
+      "latitude": 40.4930000305176,
+      "longitude": -124.90299987793,
+      "place": "55 km W of Ferndale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75419622"
+    },
+    {
+      "event_id": "uw714080241",
+      "event_time": "2026-08-16T16:44:26.570000Z",
+      "magnitude": 2.26,
+      "depth_km": -1.82,
+      "latitude": 46.1991666666667,
+      "longitude": -122.1915,
+      "place": "37 km NNE of Amboy, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714080241"
+    },
+    {
+      "event_id": "uw714079441",
+      "event_time": "2026-08-15T05:33:43.750000Z",
+      "magnitude": 2.33,
+      "depth_km": 22.74,
+      "latitude": 43.2741666666667,
+      "longitude": -124.525833333333,
+      "place": "19 km WSW of Barview, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714079441"
+    },
+    {
+      "event_id": "uw714079361",
+      "event_time": "2026-08-14T22:02:14.840000Z",
+      "magnitude": 2.05628895759583,
+      "depth_km": -1.39,
+      "latitude": 44.0941666666667,
+      "longitude": -121.3345,
+      "place": "4 km NNW of Bend, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714079361"
+    },
+    {
+      "event_id": "nc75418182",
+      "event_time": "2026-08-14T12:11:42.520000Z",
+      "magnitude": 2.66,
+      "depth_km": 10.3000001907349,
+      "latitude": 40.2911682128906,
+      "longitude": -124.28099822998,
+      "place": "4 km S of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75418182"
+    },
+    {
+      "event_id": "uw714078901",
+      "event_time": "2026-08-14T04:16:36.530000Z",
+      "magnitude": 2.19,
+      "depth_km": 21.24,
+      "latitude": 43.2838333333333,
+      "longitude": -124.567333333333,
+      "place": "22 km WSW of Barview, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714078901"
+    },
+    {
+      "event_id": "uw714078381",
+      "event_time": "2026-08-13T18:03:14.430000Z",
+      "magnitude": 2.03,
+      "depth_km": -1.57,
+      "latitude": 42.0293333333333,
+      "longitude": -121.680166666667,
+      "place": "6 km W of Merrill, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714078381"
+    },
+    {
+      "event_id": "nc75417387",
+      "event_time": "2026-08-13T07:35:55.110000Z",
+      "magnitude": 2.24,
+      "depth_km": 5.53999996185303,
+      "latitude": 41.3703346252441,
+      "longitude": -122.10050201416,
+      "place": "13 km NNE of McCloud, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75417387"
+    },
+    {
+      "event_id": "nc75417372",
+      "event_time": "2026-08-13T07:25:34.240000Z",
+      "magnitude": 2.33,
+      "depth_km": 5.28999996185303,
+      "latitude": 40.2428321838379,
+      "longitude": -121.174003601074,
+      "place": "3 km N of Almanor, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75417372"
+    },
+    {
+      "event_id": "nc75417167",
+      "event_time": "2026-08-12T23:27:29.210000Z",
+      "magnitude": 2.76,
+      "depth_km": 6.88000011444092,
+      "latitude": 40.0289993286133,
+      "longitude": -123.447830200195,
+      "place": "31 km NNW of Covelo, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75417167"
+    },
+    {
+      "event_id": "nc75416622",
+      "event_time": "2026-08-12T08:44:20.980000Z",
+      "magnitude": 2.49,
+      "depth_km": 5.69000005722046,
+      "latitude": 40.3400001525879,
+      "longitude": -125.073333740234,
+      "place": "67 km W of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75416622"
+    },
+    {
+      "event_id": "uw714075502",
+      "event_time": "2026-08-11T16:23:52.580000Z",
+      "magnitude": 3.09,
+      "depth_km": 11.81,
+      "latitude": 46.3901666666667,
+      "longitude": -120.609,
+      "place": "5 km WSW of Harrah, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714075502"
+    },
+    {
+      "event_id": "nc75415272",
+      "event_time": "2026-08-10T18:26:02.830000Z",
+      "magnitude": 2.62,
+      "depth_km": 7.83,
+      "latitude": 40.029,
+      "longitude": -123.456166666667,
+      "place": "32 km NW of Covelo, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75415272"
+    },
+    {
+      "event_id": "uw714074522",
+      "event_time": "2026-08-10T16:20:53.710000Z",
+      "magnitude": 2.34,
+      "depth_km": 3.65,
+      "latitude": 42.2718333333333,
+      "longitude": -124.306166666667,
+      "place": "7 km E of Pistol River, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714074522"
+    },
+    {
+      "event_id": "us6000tjjb",
+      "event_time": "2026-08-10T04:49:07.850000Z",
+      "magnitude": 2.8,
+      "depth_km": 10.0,
+      "latitude": 43.1418,
+      "longitude": -126.5441,
+      "place": "172 km W of Langlois, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjjb"
+    },
+    {
+      "event_id": "uw714074042",
+      "event_time": "2026-08-09T02:57:50.220000Z",
+      "magnitude": 2.35,
+      "depth_km": 21.87,
+      "latitude": 43.2776666666667,
+      "longitude": -124.559333333333,
+      "place": "21 km NW of Bandon, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714074042"
+    },
+    {
+      "event_id": "uw714074012",
+      "event_time": "2026-08-09T02:20:38.160000Z",
+      "magnitude": 2.51,
+      "depth_km": 46.4,
+      "latitude": 47.9711666666667,
+      "longitude": -123.1735,
+      "place": "11 km SSW of River Road, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714074012"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 14,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-08-22",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-08-14",
+          "end": "2026-08-22",
+          "result": {
+            "status": "OK",
+            "records_received": 14,
+            "newest": "2026-08-22T13:00:47.561000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 7,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/cascadia/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-08-22",
+        "region_id": "cascadia",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.7858,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.9333,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

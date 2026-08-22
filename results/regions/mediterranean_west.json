@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-08-22T18:53:19Z",
+  "started_at": "2026-08-22T18:53:17Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "mediterranean_west",
+    "name": "Mediterráneo Occidental",
+    "group": "Europa–África",
+    "bbox": [
+      30,
+      46,
+      -12,
+      20
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-08-22T18:53:19Z",
+    "day": "2026-08-22",
+    "region_id": "mediterranean_west",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.23333333333333334,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-08-22T04:18:07Z",
+        "last_success": "2026-08-22T04:18:07Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-08-22T18:53:18Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/mediterranean_west/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-08-22T04:18:04Z",
+        "last_success": "2026-08-22T04:18:04Z",
+        "records": 8896,
+        "freshness_hours": 1176.0,
+        "coverage": 0.75,
+        "quality": 0.66,
+        "message": "15/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-08-22T18:53:18Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-08-22T18:53:18Z",
+        "last_success": "2026-08-22T18:53:18Z",
+        "records": 6,
+        "freshness_hours": 104.22616963444445,
+        "coverage": 0.06666666666666667,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-08-10\",\"end\":\"2026-08-22\",\"newest\":\"2026-08-18T10:39:43.915000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-08-22T04:18:07Z",
+      "last_success": "2026-08-22T04:18:07Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-08-22T18:53:18Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/mediterranean_west/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-08-22T04:18:04Z",
+      "last_success": "2026-08-22T04:18:04Z",
+      "records": 8896,
+      "freshness_hours": 1176.0,
+      "coverage": 0.75,
+      "quality": 0.66,
+      "message": "15/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-08-22T18:53:18Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-08-22T18:53:18Z",
+      "last_success": "2026-08-22T18:53:18Z",
+      "records": 6,
+      "freshness_hours": 104.22616963444445,
+      "coverage": 0.06666666666666667,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-08-10\",\"end\":\"2026-08-22\",\"newest\":\"2026-08-18T10:39:43.915000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 440,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 24635,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 29329,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4492,
+    "dtrg_r_scores": 1123,
+    "dtrg_r_backtests": 5
+  },
+  "latest_backtest": [
+    {
+      "run_id": "353f10d0-577a-4b21-9b0a-886972d67ace",
+      "created_at": "2026-08-16T04:58:14Z",
+      "start_day": "2023-08-17",
+      "end_day": "2026-08-16",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 108,
+      "negatives": 983,
+      "tp": 1,
+      "fp": 4,
+      "tn": 979,
+      "fn": 107,
+      "precision": 0.2,
+      "recall": 0.009259259259259259,
+      "specificity": 0.9959308240081384,
+      "f1": 0.017699115044247787,
+      "auc": 0.5161966391620512,
+      "brier": 0.10568897462456477,
+      "base_brier": 0.08919238398327588,
+      "false_alarms_per_100_days": 0.36663611365719523,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1091,\"positives\":108,\"negatives\":983,\"tp\":1,\"fp\":4,\"tn\":979,\"fn\":107,\"precision\":0.2,\"recall\":0.009259259259259259,\"specificity\":0.9959308240081384,\"f1\":0.017699115044247787,\"auc\":0.5161966391620512,\"brier\":0.10568897462456477,\"base_brier\":0.08919238398327588,\"false_alarms_per_100_days\":0.36663611365719523,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tlmq",
+      "event_time": "2026-08-18T10:39:43.915000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 37.1061,
+      "longitude": -3.6598,
+      "place": "1 km WSW of Alhendín, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlmq"
+    },
+    {
+      "event_id": "us6000tlmc",
+      "event_time": "2026-08-18T09:34:37.659000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 37.0875,
+      "longitude": -3.7084,
+      "place": "5 km ENE of Escúzar, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlmc"
+    },
+    {
+      "event_id": "us6000tllu",
+      "event_time": "2026-08-18T08:37:44.898000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 37.1786,
+      "longitude": -3.6311,
+      "place": "2 km WSW of Granada, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tllu"
+    },
+    {
+      "event_id": "us6000tl58",
+      "event_time": "2026-08-16T03:49:25.874000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 44.1198,
+      "longitude": 9.9725,
+      "place": "1 km NE of Sarzana, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl58"
+    },
+    {
+      "event_id": "us6000tkv2",
+      "event_time": "2026-08-14T23:04:40.797000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 37.0789,
+      "longitude": -3.6486,
+      "place": "1 km SW of Otura, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkv2"
+    },
+    {
+      "event_id": "us6000tklb",
+      "event_time": "2026-08-13T18:53:23.004000Z",
+      "magnitude": 3.0,
+      "depth_km": 10.0,
+      "latitude": 37.3638,
+      "longitude": -2.0107,
+      "place": "3 km NE of Zurgena, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tklb"
+    },
+    {
+      "event_id": "us6000thv7",
+      "event_time": "2026-08-03T20:14:45.641000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 32.2354,
+      "longitude": -5.1362,
+      "place": "61 km SW of Midelt, Morocco",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thv7"
+    },
+    {
+      "event_id": "us6000th99",
+      "event_time": "2026-07-31T17:46:43.912000Z",
+      "magnitude": 4.5,
+      "depth_km": 5.0,
+      "latitude": 40.9056,
+      "longitude": 14.1271,
+      "place": "0 km SW of Torretta-Scalzapecora, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th99"
+    },
+    {
+      "event_id": "us6000th76",
+      "event_time": "2026-07-27T20:56:56.754000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 43.7074,
+      "longitude": -10.1745,
+      "place": "102 km NW of Mugia, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th76"
+    },
+    {
+      "event_id": "us7000t3hl",
+      "event_time": "2026-07-26T13:39:29.094000Z",
+      "magnitude": 3.1,
+      "depth_km": 10.0,
+      "latitude": 37.1636,
+      "longitude": -3.6227,
+      "place": "2 km N of Armilla, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3hl"
+    },
+    {
+      "event_id": "us7000t37m",
+      "event_time": "2026-07-24T22:08:15.532000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 41.6711,
+      "longitude": 13.9656,
+      "place": "5 km W of Pizzone, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t37m"
+    },
+    {
+      "event_id": "us7000t30x",
+      "event_time": "2026-07-24T12:05:11.994000Z",
+      "magnitude": 2.6,
+      "depth_km": 10.0,
+      "latitude": 43.0818,
+      "longitude": 13.66,
+      "place": "1 km NNW of Petritoli, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t30x"
+    },
+    {
+      "event_id": "us7000t2w2",
+      "event_time": "2026-07-23T22:55:57.959000Z",
+      "magnitude": 4.7,
+      "depth_km": 243.118,
+      "latitude": 39.0355,
+      "longitude": 15.3964,
+      "place": "57 km NW of Santa Domenica, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2w2"
+    },
+    {
+      "event_id": "us6000t8ut",
+      "event_time": "2026-06-28T18:37:12.382000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 34.8493,
+      "longitude": 3.023,
+      "place": "29 km NW of Djelfa, Algeria",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8ut"
+    },
+    {
+      "event_id": "us6000tagi",
+      "event_time": "2026-06-28T06:59:39.159000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 36.6912,
+      "longitude": -9.7757,
+      "place": "82 km WSW of Sagres, Portugal",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tagi"
+    },
+    {
+      "event_id": "us7000sulh",
+      "event_time": "2026-06-15T03:00:07.530000Z",
+      "magnitude": 4.1,
+      "depth_km": 264.851,
+      "latitude": 39.1761,
+      "longitude": 15.1668,
+      "place": "72 km NNE of Malfa, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sulh"
+    },
+    {
+      "event_id": "us7000ssq3",
+      "event_time": "2026-06-13T17:28:12.188000Z",
+      "magnitude": 4.6,
+      "depth_km": 225.43,
+      "latitude": 38.8504,
+      "longitude": 15.3414,
+      "place": "49 km WNW of Santa Domenica, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ssq3"
+    },
+    {
+      "event_id": "us7000sseh",
+      "event_time": "2026-06-12T04:42:07.984000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 40.072,
+      "longitude": 19.8758,
+      "place": "11 km ESE of Himarë, Albania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sseh"
+    },
+    {
+      "event_id": "us7000srlv",
+      "event_time": "2026-06-08T20:56:09.519000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 40.1384,
+      "longitude": 19.7815,
+      "place": "5 km NE of Himarë, Albania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000srlv"
+    },
+    {
+      "event_id": "us7000sqfs",
+      "event_time": "2026-06-03T23:16:10.764000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 35.8289,
+      "longitude": 5.8893,
+      "place": "8 km WNW of Draa Klalouche, Algeria",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sqfs"
+    },
+    {
+      "event_id": "us7000sq75",
+      "event_time": "2026-06-03T03:51:56.297000Z",
+      "magnitude": 4.1,
+      "depth_km": 285.506,
+      "latitude": 38.9088,
+      "longitude": 14.6152,
+      "place": "41 km NNW of Malfa, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sq75"
+    },
+    {
+      "event_id": "us7000sq7l",
+      "event_time": "2026-06-03T01:00:00.643000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 32.7152,
+      "longitude": 15.183,
+      "place": "38 km NNE of Mişrātah, Libya",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sq7l"
+    },
+    {
+      "event_id": "us7000spxm",
+      "event_time": "2026-06-01T22:12:36.092000Z",
+      "magnitude": 6.2,
+      "depth_km": 243.0,
+      "latitude": 39.2548,
+      "longitude": 15.7869,
+      "place": "23 km WSW of San Lucido, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000spxm"
+    },
+    {
+      "event_id": "us7000sp6l",
+      "event_time": "2026-05-28T22:00:13.750000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 42.8216,
+      "longitude": 18.2918,
+      "place": "12 km WSW of Bileća, Bosnia and Herzegovina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sp6l"
+    },
+    {
+      "event_id": "us7000sqaw",
+      "event_time": "2026-05-27T17:34:46.799000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 38.5374,
+      "longitude": 14.4027,
+      "place": "36 km W of Leni, Italy",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sqaw"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 6,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-08-18",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-08-10",
+          "end": "2026-08-22",
+          "result": {
+            "status": "OK",
+            "records_received": 6,
+            "newest": "2026-08-18T10:39:43.915000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/mediterranean_west/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-08-22",
+        "region_id": "mediterranean_west",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.2333,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
