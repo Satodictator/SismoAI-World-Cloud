@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-09-05T15:19:26Z",
+  "started_at": "2026-09-05T15:19:24Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "sumatra_java",
+    "name": "Sumatra–Java",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      -12,
+      8,
+      94,
+      116
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-09-05T15:19:26Z",
+    "day": "2026-09-05",
+    "region_id": "sumatra_java",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.55,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-09-05T07:54:33Z",
+        "last_success": "2026-09-05T07:54:33Z",
+        "records": 662,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "662 escenas/productos SAR; 162 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":162,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-09-05T15:19:24Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/sumatra_java/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-09-05T07:54:31Z",
+        "last_success": "2026-09-05T07:54:31Z",
+        "records": 7921,
+        "freshness_hours": 336.0,
+        "coverage": 0.6666666666666666,
+        "quality": 0.5866666666666667,
+        "message": "12/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-09-05T15:19:24Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-09-05T15:19:24Z",
+        "last_success": "2026-09-05T15:19:24Z",
+        "records": 5,
+        "freshness_hours": 4.335882411944445,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-08-27\",\"end\":\"2026-09-05\",\"newest\":\"2026-09-05T10:59:15.678000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-09-05T07:54:33Z",
+      "last_success": "2026-09-05T07:54:33Z",
+      "records": 662,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "662 escenas/productos SAR; 162 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":162,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-09-05T15:19:24Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/sumatra_java/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-09-05T07:54:31Z",
+      "last_success": "2026-09-05T07:54:31Z",
+      "records": 7921,
+      "freshness_hours": 336.0,
+      "coverage": 0.6666666666666666,
+      "quality": 0.5866666666666667,
+      "message": "12/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-09-05T15:19:24Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-09-05T15:19:24Z",
+      "last_success": "2026-09-05T15:19:24Z",
+      "records": 5,
+      "freshness_hours": 4.335882411944445,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-08-27\",\"end\":\"2026-09-05\",\"newest\":\"2026-09-05T10:59:15.678000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 2090,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 21096,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 17589,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4548,
+    "dtrg_r_scores": 1137,
+    "dtrg_r_backtests": 7
+  },
+  "latest_backtest": [
+    {
+      "run_id": "da187a87-3f9a-4ef6-974d-530ac80d86bf",
+      "created_at": "2026-08-30T10:03:37Z",
+      "start_day": "2023-08-31",
+      "end_day": "2026-08-30",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 139,
+      "negatives": 957,
+      "tp": 0,
+      "fp": 0,
+      "tn": 957,
+      "fn": 139,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.4747224164242274,
+      "brier": 0.1178156485896897,
+      "base_brier": 0.1107402831797097,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":139,\"negatives\":957,\"tp\":0,\"fp\":0,\"tn\":957,\"fn\":139,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.4747224164242274,\"brier\":0.1178156485896897,\"base_brier\":0.1107402831797097,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000teiy",
+      "event_time": "2026-09-05T10:59:15.678000Z",
+      "magnitude": 5.0,
+      "depth_km": 68.934,
+      "latitude": -4.4202,
+      "longitude": 102.7513,
+      "place": "70 km SW of Pagar Alam, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teiy"
+    },
+    {
+      "event_id": "us7000teim",
+      "event_time": "2026-09-05T09:14:15.563000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 3.2202,
+      "longitude": 96.1107,
+      "place": "87 km NNW of Sinabang, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teim"
+    },
+    {
+      "event_id": "us7000teck",
+      "event_time": "2026-09-04T16:24:41.107000Z",
+      "magnitude": 5.1,
+      "depth_km": 121.712,
+      "latitude": 1.3758,
+      "longitude": 99.0453,
+      "place": "25 km W of Padangsidempuan, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teck"
+    },
+    {
+      "event_id": "us7000te82",
+      "event_time": "2026-09-04T05:04:54.278000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": -7.9867,
+      "longitude": 109.0409,
+      "place": "28 km S of Cilacap, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000te82"
+    },
+    {
+      "event_id": "us7000tcxc",
+      "event_time": "2026-08-30T07:37:53.032000Z",
+      "magnitude": 4.9,
+      "depth_km": 78.208,
+      "latitude": -3.4659,
+      "longitude": 101.6611,
+      "place": "76 km WNW of Bengkulu, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tcxc"
+    },
+    {
+      "event_id": "us7000tddw",
+      "event_time": "2026-08-25T23:57:25.540000Z",
+      "magnitude": 4.0,
+      "depth_km": 151.139,
+      "latitude": 2.5836,
+      "longitude": 98.5868,
+      "place": "29 km WSW of Ambarita, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tddw"
+    },
+    {
+      "event_id": "us7000tdd3",
+      "event_time": "2026-08-25T00:27:17.774000Z",
+      "magnitude": 4.2,
+      "depth_km": 153.904,
+      "latitude": 3.0555,
+      "longitude": 98.5419,
+      "place": "7 km SE of Kabanjahe, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdd3"
+    },
+    {
+      "event_id": "us7000tclm",
+      "event_time": "2026-08-23T23:29:41.717000Z",
+      "magnitude": 4.1,
+      "depth_km": 58.265,
+      "latitude": -8.1635,
+      "longitude": 107.771,
+      "place": "97 km SSW of Singaparna, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tclm"
+    },
+    {
+      "event_id": "us6000tn0j",
+      "event_time": "2026-08-23T19:56:47.569000Z",
+      "magnitude": 4.4,
+      "depth_km": 66.151,
+      "latitude": -2.0722,
+      "longitude": 100.6649,
+      "place": "80 km W of Sungai Penuh, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn0j"
+    },
+    {
+      "event_id": "us6000tmte",
+      "event_time": "2026-08-22T17:40:09.267000Z",
+      "magnitude": 4.5,
+      "depth_km": 37.761,
+      "latitude": -2.9378,
+      "longitude": 100.862,
+      "place": "113 km SSW of Sungai Penuh, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmte"
+    },
+    {
+      "event_id": "us6000tmt7",
+      "event_time": "2026-08-22T16:33:04.780000Z",
+      "magnitude": 4.7,
+      "depth_km": 26.342,
+      "latitude": -3.2971,
+      "longitude": 100.4875,
+      "place": "170 km SW of Sungai Penuh, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmt7"
+    },
+    {
+      "event_id": "us7000tcb8",
+      "event_time": "2026-08-21T18:40:30.125000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": -7.6809,
+      "longitude": 104.5396,
+      "place": "202 km SW of Labuan, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tcb8"
+    },
+    {
+      "event_id": "us6000tmlu",
+      "event_time": "2026-08-21T17:41:44.174000Z",
+      "magnitude": 5.8,
+      "depth_km": 9.0,
+      "latitude": -7.5318,
+      "longitude": 104.5854,
+      "place": "187 km SW of Labuan, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmlu"
+    },
+    {
+      "event_id": "us6000tm44",
+      "event_time": "2026-08-20T14:31:33.928000Z",
+      "magnitude": 4.4,
+      "depth_km": 53.437,
+      "latitude": -8.0866,
+      "longitude": 107.881,
+      "place": "85 km SSW of Singaparna, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tm44"
+    },
+    {
+      "event_id": "us6000tlv2",
+      "event_time": "2026-08-19T12:19:02.358000Z",
+      "magnitude": 4.4,
+      "depth_km": 194.344,
+      "latitude": -5.9396,
+      "longitude": 106.3523,
+      "place": "21 km N of Kresek, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlv2"
+    },
+    {
+      "event_id": "us6000tlkt",
+      "event_time": "2026-08-18T06:02:20.229000Z",
+      "magnitude": 5.6,
+      "depth_km": 10.0,
+      "latitude": -0.6858,
+      "longitude": 98.416,
+      "place": "154 km SSE of Teluk Dalam, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlkt"
+    },
+    {
+      "event_id": "us6000tmkp",
+      "event_time": "2026-08-17T18:19:45.799000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 2.5086,
+      "longitude": 95.6928,
+      "place": "76 km W of Sinabang, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmkp"
+    },
+    {
+      "event_id": "us6000tkyk",
+      "event_time": "2026-08-15T10:54:51.798000Z",
+      "magnitude": 6.9,
+      "depth_km": 175.0,
+      "latitude": 2.9863,
+      "longitude": 98.9853,
+      "place": "9 km WNW of Pematangsiantar, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkyk"
+    },
+    {
+      "event_id": "us6000tkh9",
+      "event_time": "2026-08-13T14:22:53.149000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 0.8256,
+      "longitude": 96.9132,
+      "place": "93 km WSW of Gunungsitoli, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkh9"
+    },
+    {
+      "event_id": "us6000tkg4",
+      "event_time": "2026-08-13T10:23:19.536000Z",
+      "magnitude": 4.6,
+      "depth_km": 145.679,
+      "latitude": -8.4115,
+      "longitude": 114.1762,
+      "place": "3 km ESE of Gambiran Satu, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkg4"
+    },
+    {
+      "event_id": "us6000tjug",
+      "event_time": "2026-08-11T01:12:46.205000Z",
+      "magnitude": 4.7,
+      "depth_km": 61.94,
+      "latitude": -4.4801,
+      "longitude": 102.5519,
+      "place": "81 km SSE of Bengkulu, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjug"
+    },
+    {
+      "event_id": "us6000tjqj",
+      "event_time": "2026-08-10T17:08:06.212000Z",
+      "magnitude": 5.0,
+      "depth_km": 18.046,
+      "latitude": -5.9436,
+      "longitude": 102.3524,
+      "place": "234 km SSW of Pagar Alam, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjqj"
+    },
+    {
+      "event_id": "us6000tkf0",
+      "event_time": "2026-08-09T15:35:20.853000Z",
+      "magnitude": 4.3,
+      "depth_km": 39.476,
+      "latitude": -5.8153,
+      "longitude": 102.8643,
+      "place": "202 km SSW of Pagar Alam, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkf0"
+    },
+    {
+      "event_id": "us6000tjfj",
+      "event_time": "2026-08-09T15:15:03.969000Z",
+      "magnitude": 5.2,
+      "depth_km": 35.0,
+      "latitude": -5.8046,
+      "longitude": 102.8509,
+      "place": "201 km SSW of Pagar Alam, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjfj"
+    },
+    {
+      "event_id": "us6000tjcl",
+      "event_time": "2026-08-09T03:02:07.086000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 7.017,
+      "longitude": 94.1402,
+      "place": "180 km NW of Sabang, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjcl"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 5,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-09-04",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-08-27",
+          "end": "2026-09-05",
+          "result": {
+            "status": "OK",
+            "records_received": 5,
+            "newest": "2026-09-05T10:59:15.678000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/sumatra_java/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-09-05",
+        "region_id": "sumatra_java",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.55,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

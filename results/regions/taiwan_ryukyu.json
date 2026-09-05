@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-09-05T15:19:30Z",
+  "started_at": "2026-09-05T15:19:29Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "taiwan_ryukyu",
+    "name": "Taiwán–Ryukyu",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      20,
+      32,
+      120,
+      132
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-09-05T15:19:30Z",
+    "day": "2026-09-05",
+    "region_id": "taiwan_ryukyu",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.5555555555555556,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-09-05T07:53:13Z",
+        "last_success": "2026-09-05T07:53:13Z",
+        "records": 933,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "933 escenas/productos SAR; 433 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":433,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-09-05T15:19:29Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/taiwan_ryukyu/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-09-05T07:53:10Z",
+        "last_success": "2026-09-05T07:53:10Z",
+        "records": 2208,
+        "freshness_hours": 504.0,
+        "coverage": 0.2222222222222222,
+        "quality": 0.19555555555555554,
+        "message": "4/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-09-05T15:19:29Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-09-05T15:19:29Z",
+        "last_success": "2026-09-05T15:19:29Z",
+        "records": 6,
+        "freshness_hours": 30.1416239275,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-08-27\",\"end\":\"2026-09-05\",\"newest\":\"2026-09-04T09:10:59.554000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-09-05T07:53:13Z",
+      "last_success": "2026-09-05T07:53:13Z",
+      "records": 933,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "933 escenas/productos SAR; 433 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":433,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-09-05T15:19:29Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/taiwan_ryukyu/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-09-05T07:53:10Z",
+      "last_success": "2026-09-05T07:53:10Z",
+      "records": 2208,
+      "freshness_hours": 504.0,
+      "coverage": 0.2222222222222222,
+      "quality": 0.19555555555555554,
+      "message": "4/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-09-05T15:19:29Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-09-05T15:19:29Z",
+      "last_success": "2026-09-05T15:19:29Z",
+      "records": 6,
+      "freshness_hours": 30.1416239275,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-08-27\",\"end\":\"2026-09-05\",\"newest\":\"2026-09-04T09:10:59.554000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 2558,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 9583,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 9931,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4548,
+    "dtrg_r_scores": 1137,
+    "dtrg_r_backtests": 7
+  },
+  "latest_backtest": [
+    {
+      "run_id": "46ab8a4f-6e77-491e-ab35-92205e023a74",
+      "created_at": "2026-08-30T10:03:11Z",
+      "start_day": "2023-08-31",
+      "end_day": "2026-08-30",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 501,
+      "negatives": 595,
+      "tp": 20,
+      "fp": 2,
+      "tn": 593,
+      "fn": 481,
+      "precision": 0.9090909090909091,
+      "recall": 0.03992015968063872,
+      "specificity": 0.9966386554621849,
+      "f1": 0.07648183556405354,
+      "auc": 0.5931649306429159,
+      "brier": 0.3617268606546535,
+      "base_brier": 0.24816103015610796,
+      "false_alarms_per_100_days": 0.18248175182481752,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":501,\"negatives\":595,\"tp\":20,\"fp\":2,\"tn\":593,\"fn\":481,\"precision\":0.9090909090909091,\"recall\":0.03992015968063872,\"specificity\":0.9966386554621849,\"f1\":0.07648183556405354,\"auc\":0.5931649306429159,\"brier\":0.3617268606546535,\"base_brier\":0.24816103015610796,\"false_alarms_per_100_days\":0.18248175182481752,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000te98",
+      "event_time": "2026-09-04T09:10:59.554000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 22.6727,
+      "longitude": 121.6177,
+      "place": "116 km NE of Hengchun, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000te98"
+    },
+    {
+      "event_id": "us7000tdpf",
+      "event_time": "2026-09-02T17:32:46.134000Z",
+      "magnitude": 4.4,
+      "depth_km": 35.0,
+      "latitude": 21.5597,
+      "longitude": 121.3268,
+      "place": "77 km SE of Hengchun, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdpf"
+    },
+    {
+      "event_id": "us7000tdhc",
+      "event_time": "2026-09-01T23:24:38.832000Z",
+      "magnitude": 4.3,
+      "depth_km": 55.355,
+      "latitude": 31.8572,
+      "longitude": 131.6819,
+      "place": "25 km ESE of Miyazaki, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdhc"
+    },
+    {
+      "event_id": "us7000tcv5",
+      "event_time": "2026-08-29T21:00:19.499000Z",
+      "magnitude": 4.8,
+      "depth_km": 35.0,
+      "latitude": 29.9927,
+      "longitude": 131.0784,
+      "place": "58 km ESE of Koshima, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tcv5"
+    },
+    {
+      "event_id": "us7000tcit",
+      "event_time": "2026-08-28T10:11:33.232000Z",
+      "magnitude": 4.5,
+      "depth_km": 131.746,
+      "latitude": 25.8399,
+      "longitude": 125.2609,
+      "place": "114 km N of Hirara, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tcit"
+    },
+    {
+      "event_id": "us7000tcgz",
+      "event_time": "2026-08-28T02:20:55.533000Z",
+      "magnitude": 4.4,
+      "depth_km": 12.071,
+      "latitude": 22.0405,
+      "longitude": 120.3615,
+      "place": "39 km W of Hengchun, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tcgz"
+    },
+    {
+      "event_id": "us7000tc37",
+      "event_time": "2026-08-26T21:47:18.998000Z",
+      "magnitude": 4.6,
+      "depth_km": 25.305,
+      "latitude": 22.8501,
+      "longitude": 121.547,
+      "place": "115 km ESE of Yujing, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tc37"
+    },
+    {
+      "event_id": "us7000tby1",
+      "event_time": "2026-08-26T09:51:22.122000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 21.5368,
+      "longitude": 122.3274,
+      "place": "126 km NNE of Basco, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tby1"
+    },
+    {
+      "event_id": "us6000tnbm",
+      "event_time": "2026-08-25T07:00:10.853000Z",
+      "magnitude": 5.5,
+      "depth_km": 14.608,
+      "latitude": 22.6053,
+      "longitude": 121.5709,
+      "place": "108 km NE of Hengchun, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnbm"
+    },
+    {
+      "event_id": "us6000tn9r",
+      "event_time": "2026-08-24T23:26:56.073000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 23.7942,
+      "longitude": 124.9285,
+      "place": "99 km SE of Ishigaki, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn9r"
+    },
+    {
+      "event_id": "us6000tn4p",
+      "event_time": "2026-08-24T15:27:31.932000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 25.9821,
+      "longitude": 128.7039,
+      "place": "90 km SE of Taira, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn4p"
+    },
+    {
+      "event_id": "us6000tmtp",
+      "event_time": "2026-08-22T18:44:56.251000Z",
+      "magnitude": 4.4,
+      "depth_km": 83.886,
+      "latitude": 28.1729,
+      "longitude": 128.5478,
+      "place": "52 km NW of Amagi, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmtp"
+    },
+    {
+      "event_id": "us6000tmqf",
+      "event_time": "2026-08-22T03:40:14.817000Z",
+      "magnitude": 4.4,
+      "depth_km": 38.316,
+      "latitude": 24.4244,
+      "longitude": 122.0811,
+      "place": "49 km SE of Yilan, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmqf"
+    },
+    {
+      "event_id": "us6000tmm3",
+      "event_time": "2026-08-21T18:05:20.871000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 23.7035,
+      "longitude": 126.854,
+      "place": "197 km SE of Miyakojima, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmm3"
+    },
+    {
+      "event_id": "us6000tmc4",
+      "event_time": "2026-08-21T00:01:20.430000Z",
+      "magnitude": 4.7,
+      "depth_km": 44.11,
+      "latitude": 26.4848,
+      "longitude": 127.7859,
+      "place": "6 km W of Onna, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmc4"
+    },
+    {
+      "event_id": "us6000tluu",
+      "event_time": "2026-08-19T11:43:27.209000Z",
+      "magnitude": 4.4,
+      "depth_km": 227.931,
+      "latitude": 29.0998,
+      "longitude": 127.9755,
+      "place": "151 km NW of Uken, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tluu"
+    },
+    {
+      "event_id": "usd0015ebk",
+      "event_time": "2026-08-17T04:54:44.948000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 24.0829,
+      "longitude": 125.3812,
+      "place": "78 km S of Miyakojima, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/usd0015ebk"
+    },
+    {
+      "event_id": "us6000tl0a",
+      "event_time": "2026-08-15T11:30:15.229000Z",
+      "magnitude": 4.9,
+      "depth_km": 65.242,
+      "latitude": 24.486,
+      "longitude": 122.2948,
+      "place": "62 km ESE of Yilan, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tl0a"
+    },
+    {
+      "event_id": "us6000tkax",
+      "event_time": "2026-08-12T21:25:20.175000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 20.4747,
+      "longitude": 122.2673,
+      "place": "31 km E of Basco, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkax"
+    },
+    {
+      "event_id": "us6000tka7",
+      "event_time": "2026-08-12T19:54:21.437000Z",
+      "magnitude": 4.4,
+      "depth_km": 15.766,
+      "latitude": 21.9386,
+      "longitude": 120.6514,
+      "place": "11 km SW of Hengchun, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tka7"
+    },
+    {
+      "event_id": "us6000tjtz",
+      "event_time": "2026-08-10T22:59:54.432000Z",
+      "magnitude": 4.3,
+      "depth_km": 35.0,
+      "latitude": 31.027,
+      "longitude": 131.4736,
+      "place": "55 km SSE of Kushima, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjtz"
+    },
+    {
+      "event_id": "us6000tj0d",
+      "event_time": "2026-08-04T20:01:17.497000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 30.0665,
+      "longitude": 131.1461,
+      "place": "59 km SE of Koseda, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj0d"
+    },
+    {
+      "event_id": "us6000ti40",
+      "event_time": "2026-08-04T19:56:56.247000Z",
+      "magnitude": 4.8,
+      "depth_km": 28.113,
+      "latitude": 30.0951,
+      "longitude": 131.2023,
+      "place": "62 km ESE of Koseda, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ti40"
+    },
+    {
+      "event_id": "us6000tin4",
+      "event_time": "2026-08-02T10:10:36.633000Z",
+      "magnitude": 4.3,
+      "depth_km": 61.951,
+      "latitude": 27.4479,
+      "longitude": 128.5322,
+      "place": "13 km NNW of China, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tin4"
+    },
+    {
+      "event_id": "us6000th7y",
+      "event_time": "2026-07-31T12:58:40.829000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 28.2012,
+      "longitude": 128.0296,
+      "place": "95 km WNW of Amagi, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th7y"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 6,
+      "oldest_before": "2021-07-29",
+      "newest_before": "2026-09-04",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-08-27",
+          "end": "2026-09-05",
+          "result": {
+            "status": "OK",
+            "records_received": 6,
+            "newest": "2026-09-04T09:10:59.554000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/taiwan_ryukyu/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-09-05",
+        "region_id": "taiwan_ryukyu",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.5556,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
