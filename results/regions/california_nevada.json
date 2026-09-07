@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-09-06T20:28:47Z",
+  "started_at": "2026-09-06T20:28:44Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "california_nevada",
+    "name": "California–Nevada",
+    "group": "Americas",
+    "bbox": [
+      31,
+      42,
+      -125,
+      -113
+    ],
+    "min_magnitude": 2.0,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-09-06T20:28:47Z",
+    "day": "2026-09-06",
+    "region_id": "california_nevada",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.8025,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 1.0,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-09-06T08:45:45Z",
+        "last_success": "2026-09-06T08:45:45Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-09-06T20:28:45Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/california_nevada/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-09-06T08:45:29Z",
+        "last_success": "2026-09-06T08:45:29Z",
+        "records": 18707,
+        "freshness_hours": 360.0,
+        "coverage": 0.625,
+        "quality": 0.55,
+        "message": "15/24 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-09-06T20:28:45Z",
+        "last_success": "2026-09-06T20:28:45Z",
+        "records": 17,
+        "freshness_hours": 0.000328785,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-09-06T20:28:44Z",
+        "last_success": "2026-09-06T20:28:44Z",
+        "records": 45,
+        "freshness_hours": 4.917837863333333,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-08-29\",\"end\":\"2026-09-06\",\"newest\":\"2026-09-06T15:33:40.770000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-09-06T08:45:45Z",
+      "last_success": "2026-09-06T08:45:45Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-09-06T20:28:45Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/california_nevada/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-09-06T08:45:29Z",
+      "last_success": "2026-09-06T08:45:29Z",
+      "records": 18707,
+      "freshness_hours": 360.0,
+      "coverage": 0.625,
+      "quality": 0.55,
+      "message": "15/24 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-09-06T20:28:45Z",
+      "last_success": "2026-09-06T20:28:45Z",
+      "records": 17,
+      "freshness_hours": 0.000328785,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-09-06T20:28:44Z",
+      "last_success": "2026-09-06T20:28:44Z",
+      "records": 45,
+      "freshness_hours": 4.917837863333333,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-08-29\",\"end\":\"2026-09-06\",\"newest\":\"2026-09-06T15:33:40.770000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 18224,
+    "dtrg_r_gnss_stations": 24,
+    "dtrg_r_gnss_obs": 19043,
+    "dtrg_r_goes_files": 2533,
+    "dtrg_r_goes_daily": 50,
+    "dtrg_r_insar_scenes": 27151,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6828,
+    "dtrg_r_scores": 1138,
+    "dtrg_r_backtests": 8
+  },
+  "latest_backtest": [
+    {
+      "run_id": "7def409d-3ee9-4bf7-9fd6-3f06b34b84a0",
+      "created_at": "2026-09-06T08:45:49Z",
+      "start_day": "2023-09-07",
+      "end_day": "2026-09-06",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 42,
+      "negatives": 1054,
+      "tp": 0,
+      "fp": 2,
+      "tn": 1052,
+      "fn": 42,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9981024667931688,
+      "f1": null,
+      "auc": 0.4035420619860848,
+      "brier": 0.04809733236970799,
+      "base_brier": 0.036852655975278266,
+      "false_alarms_per_100_days": 0.18248175182481752,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":42,\"negatives\":1054,\"tp\":0,\"fp\":2,\"tn\":1052,\"fn\":42,\"precision\":0.0,\"recall\":0.0,\"specificity\":0.9981024667931688,\"f1\":null,\"auc\":0.4035420619860848,\"brier\":0.04809733236970799,\"base_brier\":0.036852655975278266,\"false_alarms_per_100_days\":0.18248175182481752,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "ci41542152",
+      "event_time": "2026-09-06T15:33:40.770000Z",
+      "magnitude": 3.0502761918035,
+      "depth_km": 2.61999988555908,
+      "latitude": 36.0724983215332,
+      "longitude": -117.837333679199,
+      "place": "10 km ENE of Coso Junction, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542152"
+    },
+    {
+      "event_id": "nn00924217",
+      "event_time": "2026-09-06T11:59:16.232000Z",
+      "magnitude": 2.11,
+      "depth_km": 14.6949,
+      "latitude": 39.1553,
+      "longitude": -119.0451,
+      "place": "21 km NNE of Yerington, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924217"
+    },
+    {
+      "event_id": "ci41542048",
+      "event_time": "2026-09-06T07:52:48.670000Z",
+      "magnitude": 2.09,
+      "depth_km": 4.54,
+      "latitude": 32.6193333333333,
+      "longitude": -115.566333333333,
+      "place": "5 km NNE of Progreso, B.C., MX",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542048"
+    },
+    {
+      "event_id": "ci41542024",
+      "event_time": "2026-09-06T07:13:11.410000Z",
+      "magnitude": 3.22073479851606,
+      "depth_km": 12.8100004196167,
+      "latitude": 33.8585014343262,
+      "longitude": -118.204498291016,
+      "place": "4 km SSE of Compton, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542024"
+    },
+    {
+      "event_id": "nc75430407",
+      "event_time": "2026-09-06T00:09:08.480000Z",
+      "magnitude": 2.13,
+      "depth_km": 3.65000009536743,
+      "latitude": 36.658332824707,
+      "longitude": -120.94750213623,
+      "place": "22 km NE of Pinnacles, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430407"
+    },
+    {
+      "event_id": "ci41541888",
+      "event_time": "2026-09-05T16:33:41.650000Z",
+      "magnitude": 2.16,
+      "depth_km": 2.98,
+      "latitude": 33.2406666666667,
+      "longitude": -116.069,
+      "place": "12 km NNE of Ocotillo Wells, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541888"
+    },
+    {
+      "event_id": "nc75430192",
+      "event_time": "2026-09-05T14:59:59.610000Z",
+      "magnitude": 2.19,
+      "depth_km": 4.6399998664856,
+      "latitude": 36.9558334350586,
+      "longitude": -121.624168395996,
+      "place": "7 km SW of Gilroy, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430192"
+    },
+    {
+      "event_id": "ci41541848",
+      "event_time": "2026-09-05T10:31:43.190000Z",
+      "magnitude": 2.71,
+      "depth_km": 10.41,
+      "latitude": 33.515,
+      "longitude": -117.113666666667,
+      "place": "4 km NE of Temecula, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541848"
+    },
+    {
+      "event_id": "nn00924209",
+      "event_time": "2026-09-05T09:02:37.520000Z",
+      "magnitude": 2.14,
+      "depth_km": 4.7719,
+      "latitude": 38.3491,
+      "longitude": -116.7306,
+      "place": "53 km NE of Tonopah, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924209"
+    },
+    {
+      "event_id": "nn00924206",
+      "event_time": "2026-09-05T07:23:48.548000Z",
+      "magnitude": 2.25,
+      "depth_km": 0.6102,
+      "latitude": 38.3536,
+      "longitude": -116.7434,
+      "place": "53 km NE of Tonopah, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924206"
+    },
+    {
+      "event_id": "nc75429992",
+      "event_time": "2026-09-05T03:04:21.190000Z",
+      "magnitude": 2.37,
+      "depth_km": -1.5900000333786,
+      "latitude": 40.2924995422363,
+      "longitude": -120.417999267578,
+      "place": "9 km NW of Honey Lake, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429992"
+    },
+    {
+      "event_id": "nc75429747",
+      "event_time": "2026-09-04T17:31:27.250000Z",
+      "magnitude": 2.33,
+      "depth_km": 1.9099999666214,
+      "latitude": 38.7916679382324,
+      "longitude": -122.759498596191,
+      "place": "2 km N of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429747"
+    },
+    {
+      "event_id": "nc75429682",
+      "event_time": "2026-09-04T15:27:27.400000Z",
+      "magnitude": 2.29,
+      "depth_km": -0.270000010728836,
+      "latitude": 39.4431648254395,
+      "longitude": -123.313667297363,
+      "place": "5 km NE of Willits, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429682"
+    },
+    {
+      "event_id": "ci41541656",
+      "event_time": "2026-09-04T12:04:58.220000Z",
+      "magnitude": 2.03,
+      "depth_km": 2.2,
+      "latitude": 35.3293333333333,
+      "longitude": -118.5575,
+      "place": "24 km NNW of Tehachapi, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541656"
+    },
+    {
+      "event_id": "nn00924179",
+      "event_time": "2026-09-04T00:52:09.177000Z",
+      "magnitude": 2.29,
+      "depth_km": 0.0056,
+      "latitude": 36.2857,
+      "longitude": -115.0139,
+      "place": "5 km NE of Nellis Air Force Base, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924179"
+    },
+    {
+      "event_id": "nc75429372",
+      "event_time": "2026-09-03T22:10:06.020000Z",
+      "magnitude": 2.01,
+      "depth_km": 23.2000007629395,
+      "latitude": 40.8271675109863,
+      "longitude": -123.538330078125,
+      "place": "15 km SSE of Willow Creek, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429372"
+    },
+    {
+      "event_id": "nc75429327",
+      "event_time": "2026-09-03T19:58:23.220000Z",
+      "magnitude": 2.35,
+      "depth_km": 8.19999980926514,
+      "latitude": 36.5458335876465,
+      "longitude": -121.106163024902,
+      "place": "4 km ENE of Pinnacles, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429327"
+    },
+    {
+      "event_id": "nc75429272",
+      "event_time": "2026-09-03T17:33:27.320000Z",
+      "magnitude": 3.34,
+      "depth_km": 8.84,
+      "latitude": 38.501,
+      "longitude": -122.715,
+      "place": "3 km ESE of Larkfield-Wikiup, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429272"
+    },
+    {
+      "event_id": "nc75429247",
+      "event_time": "2026-09-03T16:54:30.700000Z",
+      "magnitude": 2.78,
+      "depth_km": 11.3100004196167,
+      "latitude": 40.2241668701172,
+      "longitude": -124.175163269043,
+      "place": "15 km SE of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429247"
+    },
+    {
+      "event_id": "nc75429237",
+      "event_time": "2026-09-03T15:52:32.390000Z",
+      "magnitude": 2.31,
+      "depth_km": -0.230000004172325,
+      "latitude": 39.4186668395996,
+      "longitude": -123.297836303711,
+      "place": "5 km ENE of Willits, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429237"
+    },
+    {
+      "event_id": "nc75429222",
+      "event_time": "2026-09-03T15:05:36.610000Z",
+      "magnitude": 2.1,
+      "depth_km": 0.230000004172325,
+      "latitude": 39.4221649169922,
+      "longitude": -123.299835205078,
+      "place": "5 km ENE of Willits, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429222"
+    },
+    {
+      "event_id": "nn00924158",
+      "event_time": "2026-09-03T14:51:30.661000Z",
+      "magnitude": 2.02,
+      "depth_km": 4.1723,
+      "latitude": 37.5875,
+      "longitude": -117.7553,
+      "place": "21 km SSW of Silver Peak, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924158"
+    },
+    {
+      "event_id": "nn00924139",
+      "event_time": "2026-09-03T04:31:51.704000Z",
+      "magnitude": 2.31,
+      "depth_km": 5.9496,
+      "latitude": 37.9201,
+      "longitude": -118.1698,
+      "place": "29 km ENE of Benton, California",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924139"
+    },
+    {
+      "event_id": "ci41540904",
+      "event_time": "2026-09-02T20:22:41.190000Z",
+      "magnitude": 2.18,
+      "depth_km": 6.61,
+      "latitude": 36.605,
+      "longitude": -118.067833333333,
+      "place": "2 km N of Lone Pine, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41540904"
+    },
+    {
+      "event_id": "ci41540608",
+      "event_time": "2026-09-02T12:37:12.690000Z",
+      "magnitude": 3.2,
+      "depth_km": 6.14,
+      "latitude": 34.0145,
+      "longitude": -117.589166666667,
+      "place": "6 km SE of Ontario, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41540608"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 45,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-09-06",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-08-29",
+          "end": "2026-09-06",
+          "result": {
+            "status": "OK",
+            "records_received": 45,
+            "newest": "2026-09-06T15:33:40.770000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 0,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/california_nevada/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-09-06",
+        "region_id": "california_nevada",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.8025,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 1.0,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

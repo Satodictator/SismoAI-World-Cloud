@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-09-06T20:30:04Z",
+  "started_at": "2026-09-06T20:30:02Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "red_sea_afar",
+    "name": "Mar Rojo–Afar",
+    "group": "Europa–África",
+    "bbox": [
+      5,
+      30,
+      30,
+      45
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-09-06T20:30:04Z",
+    "day": "2026-09-06",
+    "region_id": "red_sea_afar",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.2611111111111111,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-09-06T08:49:33Z",
+        "last_success": "2026-09-06T08:49:33Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-09-06T20:30:03Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/red_sea_afar/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-09-06T08:49:30Z",
+        "last_success": "2026-09-06T08:49:30Z",
+        "records": 25666,
+        "freshness_hours": 360.0,
+        "coverage": 0.9375,
+        "quality": 0.825,
+        "message": "15/16 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-09-06T20:30:03Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-09-06T20:30:03Z",
+        "last_success": "2026-09-06T20:30:03Z",
+        "records": 2,
+        "freshness_hours": 675.3056456547223,
+        "coverage": 0.2,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-08-01\",\"end\":\"2026-09-06\",\"newest\":\"2026-08-09T17:11:43.006000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-09-06T08:49:33Z",
+      "last_success": "2026-09-06T08:49:33Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-09-06T20:30:03Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/red_sea_afar/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-09-06T08:49:30Z",
+      "last_success": "2026-09-06T08:49:30Z",
+      "records": 25666,
+      "freshness_hours": 360.0,
+      "coverage": 0.9375,
+      "quality": 0.825,
+      "message": "15/16 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-09-06T20:30:03Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-09-06T20:30:03Z",
+      "last_success": "2026-09-06T20:30:03Z",
+      "records": 2,
+      "freshness_hours": 675.3056456547223,
+      "coverage": 0.2,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-08-01\",\"end\":\"2026-09-06\",\"newest\":\"2026-08-09T17:11:43.006000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 502,
+    "dtrg_r_gnss_stations": 16,
+    "dtrg_r_gnss_obs": 26253,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 29261,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4552,
+    "dtrg_r_scores": 1138,
+    "dtrg_r_backtests": 8
+  },
+  "latest_backtest": [
+    {
+      "run_id": "4ba810ca-fad1-4c4e-a9e3-4580612fb254",
+      "created_at": "2026-09-06T08:49:40Z",
+      "start_day": "2023-09-07",
+      "end_day": "2026-09-06",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 108,
+      "negatives": 988,
+      "tp": 7,
+      "fp": 14,
+      "tn": 974,
+      "fn": 101,
+      "precision": 0.3333333333333333,
+      "recall": 0.06481481481481481,
+      "specificity": 0.9858299595141701,
+      "f1": 0.10852713178294573,
+      "auc": 0.6475296146348778,
+      "brier": 0.09300873268503673,
+      "base_brier": 0.08882998561457954,
+      "false_alarms_per_100_days": 1.2773722627737227,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":108,\"negatives\":988,\"tp\":7,\"fp\":14,\"tn\":974,\"fn\":101,\"precision\":0.3333333333333333,\"recall\":0.06481481481481481,\"specificity\":0.9858299595141701,\"f1\":0.10852713178294573,\"auc\":0.6475296146348778,\"brier\":0.09300873268503673,\"base_brier\":0.08882998561457954,\"false_alarms_per_100_days\":1.2773722627737227,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tjgf",
+      "event_time": "2026-08-09T17:11:43.006000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 8.9506,
+      "longitude": 40.03,
+      "place": "13 km ENE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjgf"
+    },
+    {
+      "event_id": "us6000thdb",
+      "event_time": "2026-08-01T01:24:09.758000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 18.9275,
+      "longitude": 39.1447,
+      "place": "159 km ENE of Tokār, Sudan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thdb"
+    },
+    {
+      "event_id": "us6000tgyh",
+      "event_time": "2026-07-25T00:50:40.200000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 11.7043,
+      "longitude": 42.7681,
+      "place": "15 km SW of Tadjourah, Djibouti",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgyh"
+    },
+    {
+      "event_id": "us7000t24y",
+      "event_time": "2026-07-21T03:01:15.350000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 9.085,
+      "longitude": 40.0891,
+      "place": "14 km NW of Āwash, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t24y"
+    },
+    {
+      "event_id": "us6000tal3",
+      "event_time": "2026-07-07T05:30:26.619000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 8.9176,
+      "longitude": 40.2395,
+      "place": "10 km SE of Āwash, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tal3"
+    },
+    {
+      "event_id": "us6000t91s",
+      "event_time": "2026-06-25T20:48:30.306000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 9.1751,
+      "longitude": 39.6535,
+      "place": "41 km NW of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t91s"
+    },
+    {
+      "event_id": "us7000su07",
+      "event_time": "2026-06-11T07:23:34.610000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 14.1488,
+      "longitude": 40.0249,
+      "place": "62 km ESE of Ādīgrat, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000su07"
+    },
+    {
+      "event_id": "us7000sp9m",
+      "event_time": "2026-05-22T01:46:10.767000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.003,
+      "latitude": 8.9593,
+      "longitude": 39.9817,
+      "place": "9 km NE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sp9m"
+    },
+    {
+      "event_id": "us6000sxka",
+      "event_time": "2026-05-14T00:14:01.123000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 5.0241,
+      "longitude": 36.8619,
+      "place": "42 km E of Turmi, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sxka"
+    },
+    {
+      "event_id": "us6000swt4",
+      "event_time": "2026-05-10T22:01:13.522000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 8.9989,
+      "longitude": 39.9319,
+      "place": "11 km N of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000swt4"
+    },
+    {
+      "event_id": "us6000srsk",
+      "event_time": "2026-04-21T07:27:57.307000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 9.4354,
+      "longitude": 39.733,
+      "place": "34 km SE of Debre Birhan, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srsk"
+    },
+    {
+      "event_id": "us6000slrz",
+      "event_time": "2026-04-01T19:46:02.334000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 9.0104,
+      "longitude": 39.9468,
+      "place": "12 km NNE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000slrz"
+    },
+    {
+      "event_id": "us6000si9g",
+      "event_time": "2026-03-21T19:14:45.583000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 8.5088,
+      "longitude": 39.9617,
+      "place": "43 km S of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000si9g"
+    },
+    {
+      "event_id": "us6000s9gv",
+      "event_time": "2026-02-15T19:39:18.106000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 9.0119,
+      "longitude": 39.7337,
+      "place": "23 km WNW of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000s9gv"
+    },
+    {
+      "event_id": "us6000sa7r",
+      "event_time": "2026-02-03T23:09:40.647000Z",
+      "magnitude": 3.7,
+      "depth_km": 10.0,
+      "latitude": 11.6554,
+      "longitude": 42.8813,
+      "place": "14 km NNE of Arta, Djibouti",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sa7r"
+    },
+    {
+      "event_id": "us6000s6pe",
+      "event_time": "2026-01-21T23:52:09.416000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 13.8063,
+      "longitude": 39.8943,
+      "place": "56 km NE of Mek'ele, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000s6pe"
+    },
+    {
+      "event_id": "us7000rr84",
+      "event_time": "2026-01-21T23:19:37.196000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 13.7641,
+      "longitude": 39.8751,
+      "place": "52 km NE of Mek'ele, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rr84"
+    },
+    {
+      "event_id": "us7000rn5i",
+      "event_time": "2026-01-07T08:09:52.719000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 7.706,
+      "longitude": 39.9009,
+      "place": "76 km N of Goba, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rn5i"
+    },
+    {
+      "event_id": "us7000rmgt",
+      "event_time": "2026-01-04T20:05:37.024000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 13.8575,
+      "longitude": 39.985,
+      "place": "68 km NE of Mek'ele, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rmgt"
+    },
+    {
+      "event_id": "us7000rkk1",
+      "event_time": "2025-12-24T03:00:19.410000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 19.3828,
+      "longitude": 39.3851,
+      "place": "204 km ENE of Tokār, Sudan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rkk1"
+    },
+    {
+      "event_id": "us7000rki8",
+      "event_time": "2025-12-24T01:55:53.268000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 19.2908,
+      "longitude": 39.2095,
+      "place": "183 km ENE of Tokār, Sudan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rki8"
+    },
+    {
+      "event_id": "us6000rq2y",
+      "event_time": "2025-11-23T12:53:53.450000Z",
+      "magnitude": 5.4,
+      "depth_km": 3.0,
+      "latitude": 13.588,
+      "longitude": 40.672,
+      "place": "116 km WSW of Edd, Eritrea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rq2y"
+    },
+    {
+      "event_id": "us6000rq2x",
+      "event_time": "2025-11-23T12:21:17.620000Z",
+      "magnitude": 5.5,
+      "depth_km": 3.0,
+      "latitude": 13.588,
+      "longitude": 40.672,
+      "place": "116 km WSW of Edd, Eritrea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rq2x"
+    },
+    {
+      "event_id": "us6000rpxq",
+      "event_time": "2025-11-23T08:55:00.341000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 13.7233,
+      "longitude": 40.5146,
+      "place": "115 km ENE of Mek'ele, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rpxq"
+    },
+    {
+      "event_id": "us6000rnui",
+      "event_time": "2025-11-17T21:59:25.873000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 8.9324,
+      "longitude": 39.9242,
+      "place": "3 km NNE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000rnui"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 2,
+      "oldest_before": "2021-10-15",
+      "newest_before": "2026-08-09",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-08-01",
+          "end": "2026-09-06",
+          "result": {
+            "status": "OK",
+            "records_received": 2,
+            "newest": "2026-08-09T17:11:43.006000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/red_sea_afar/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-09-06",
+        "region_id": "red_sea_afar",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.2611,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
