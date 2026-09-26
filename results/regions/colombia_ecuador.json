@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-09-26T16:29:00Z",
+  "started_at": "2026-09-26T16:28:57Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "colombia_ecuador",
+    "name": "Colombia–Ecuador",
+    "group": "Americas",
+    "bbox": [
+      -5,
+      13,
+      -83,
+      -69
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-09-26T16:29:00Z",
+    "day": "2026-09-26",
+    "region_id": "colombia_ecuador",
+    "iedc_raw": 23.763,
+    "iedc_provisional": 23.763,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.6580555555555555,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.4222222222222222,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [
+      {
+        "family": "seismic",
+        "feature": "seismic_count",
+        "score": 46.16,
+        "reason": "Incremento robusto de la tasa sísmica",
+        "z": 1.362
+      }
+    ],
+    "family_scores": {
+      "seismic": 26.2987,
+      "goes_lightning_control": 11.082
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-09-26T08:51:06Z",
+        "last_success": "2026-09-26T08:51:06Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-09-26T16:28:58Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/colombia_ecuador/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-09-26T08:50:57Z",
+        "last_success": "2026-09-26T08:50:57Z",
+        "records": 2477,
+        "freshness_hours": 648.0,
+        "coverage": 0.65,
+        "quality": 0.5720000000000001,
+        "message": "13/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-09-26T16:28:58Z",
+        "last_success": "2026-09-26T16:28:58Z",
+        "records": 17,
+        "freshness_hours": 0.00034347333333333333,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 405 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-09-26T16:28:57Z",
+        "last_success": "2026-09-26T16:28:57Z",
+        "records": 22,
+        "freshness_hours": 9.844140391388889,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-09-18\",\"end\":\"2026-09-26\",\"newest\":\"2026-09-26T06:38:19.029000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-09-26T08:51:06Z",
+      "last_success": "2026-09-26T08:51:06Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-09-26T16:28:58Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/colombia_ecuador/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-09-26T08:50:57Z",
+      "last_success": "2026-09-26T08:50:57Z",
+      "records": 2477,
+      "freshness_hours": 648.0,
+      "coverage": 0.65,
+      "quality": 0.5720000000000001,
+      "message": "13/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-09-26T16:28:58Z",
+      "last_success": "2026-09-26T16:28:58Z",
+      "records": 17,
+      "freshness_hours": 0.00034347333333333333,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 405 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-09-26T16:28:57Z",
+      "last_success": "2026-09-26T16:28:57Z",
+      "records": 22,
+      "freshness_hours": 9.844140391388889,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-09-18\",\"end\":\"2026-09-26\",\"newest\":\"2026-09-26T06:38:19.029000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1225,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 6455,
+    "dtrg_r_goes_files": 3573,
+    "dtrg_r_goes_daily": 70,
+    "dtrg_r_insar_scenes": 38158,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6948,
+    "dtrg_r_scores": 1158,
+    "dtrg_r_backtests": 10
+  },
+  "latest_backtest": [
+    {
+      "run_id": "3a1339cd-1431-4be1-9603-19abcd43e604",
+      "created_at": "2026-09-20T09:23:59Z",
+      "start_day": "2023-09-21",
+      "end_day": "2026-09-20",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 342,
+      "negatives": 754,
+      "tp": 0,
+      "fp": 0,
+      "tn": 754,
+      "fn": 342,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5157386724991081,
+      "brier": 0.27289773737007267,
+      "base_brier": 0.2146724652352311,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":342,\"negatives\":754,\"tp\":0,\"fp\":0,\"tn\":754,\"fn\":342,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5157386724991081,\"brier\":0.27289773737007267,\"base_brier\":0.2146724652352311,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000txrj",
+      "event_time": "2026-09-26T06:38:19.029000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 4.018,
+      "longitude": -75.8315,
+      "place": "25 km W of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txrj"
+    },
+    {
+      "event_id": "us6000txhs",
+      "event_time": "2026-09-25T00:57:07.267000Z",
+      "magnitude": 4.5,
+      "depth_km": 52.219,
+      "latitude": 4.5217,
+      "longitude": -76.9788,
+      "place": "39 km WSW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txhs"
+    },
+    {
+      "event_id": "us6000txdx",
+      "event_time": "2026-09-24T17:14:34.930000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 3.9513,
+      "longitude": -75.858,
+      "place": "28 km WSW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txdx"
+    },
+    {
+      "event_id": "us6000txdb",
+      "event_time": "2026-09-24T16:46:31.662000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 3.6948,
+      "longitude": -75.7529,
+      "place": "21 km NNW of Rioblanco, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txdb"
+    },
+    {
+      "event_id": "us6000tx60",
+      "event_time": "2026-09-23T20:09:44.688000Z",
+      "magnitude": 4.6,
+      "depth_km": 74.535,
+      "latitude": 3.8318,
+      "longitude": -75.4702,
+      "place": "9 km S of San Antonio, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx60"
+    },
+    {
+      "event_id": "us6000tx28",
+      "event_time": "2026-09-23T09:04:13.285000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 3.9146,
+      "longitude": -75.7321,
+      "place": "17 km SW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx28"
+    },
+    {
+      "event_id": "us6000tx0t",
+      "event_time": "2026-09-23T04:46:40.685000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 3.8429,
+      "longitude": -75.6673,
+      "place": "19 km SSW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx0t"
+    },
+    {
+      "event_id": "us6000tx0s",
+      "event_time": "2026-09-23T04:36:36.514000Z",
+      "magnitude": 4.4,
+      "depth_km": 9.967,
+      "latitude": 3.7019,
+      "longitude": -75.7375,
+      "place": "21 km NNW of Rioblanco, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx0s"
+    },
+    {
+      "event_id": "us6000twzi",
+      "event_time": "2026-09-22T22:12:26.733000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 3.948,
+      "longitude": -75.7814,
+      "place": "20 km WSW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000twzi"
+    },
+    {
+      "event_id": "us7000tj4x",
+      "event_time": "2026-09-22T10:38:42.183000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 3.8183,
+      "longitude": -75.7321,
+      "place": "25 km SSW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tj4x"
+    },
+    {
+      "event_id": "us7000tj1k",
+      "event_time": "2026-09-21T23:15:33.754000Z",
+      "magnitude": 4.4,
+      "depth_km": 13.28,
+      "latitude": 3.8161,
+      "longitude": -75.6817,
+      "place": "23 km SSW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tj1k"
+    },
+    {
+      "event_id": "us7000tj1f",
+      "event_time": "2026-09-21T22:58:21.971000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 4.0089,
+      "longitude": -75.5843,
+      "place": "2 km E of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tj1f"
+    },
+    {
+      "event_id": "us7000tizt",
+      "event_time": "2026-09-21T18:48:44.774000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 3.8759,
+      "longitude": -75.5116,
+      "place": "5 km SW of San Antonio, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tizt"
+    },
+    {
+      "event_id": "us7000tiz7",
+      "event_time": "2026-09-21T16:23:20.333000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 3.8585,
+      "longitude": -75.7087,
+      "place": "20 km SW of Roncesvalles, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiz7"
+    },
+    {
+      "event_id": "us7000timg",
+      "event_time": "2026-09-19T23:20:15.368000Z",
+      "magnitude": 4.2,
+      "depth_km": 80.206,
+      "latitude": 4.436,
+      "longitude": -76.628,
+      "place": "24 km S of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000timg"
+    },
+    {
+      "event_id": "us7000tijs",
+      "event_time": "2026-09-19T13:44:35.732000Z",
+      "magnitude": 4.8,
+      "depth_km": 58.204,
+      "latitude": 4.5179,
+      "longitude": -76.8729,
+      "place": "29 km WSW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tijs"
+    },
+    {
+      "event_id": "us7000tii3",
+      "event_time": "2026-09-19T07:12:27.058000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -4.0134,
+      "longitude": -77.349,
+      "place": "117 km NW of Barranca, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tii3"
+    },
+    {
+      "event_id": "us7000tihg",
+      "event_time": "2026-09-19T05:01:48.911000Z",
+      "magnitude": 4.3,
+      "depth_km": 74.036,
+      "latitude": 4.415,
+      "longitude": -76.7636,
+      "place": "29 km SSW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tihg"
+    },
+    {
+      "event_id": "us7000tij9",
+      "event_time": "2026-09-18T22:09:36.758000Z",
+      "magnitude": 3.9,
+      "depth_km": 10.0,
+      "latitude": 8.7413,
+      "longitude": -82.9935,
+      "place": "8 km W of Cañas Gordas, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tij9"
+    },
+    {
+      "event_id": "us7000tie4",
+      "event_time": "2026-09-18T18:41:23.319000Z",
+      "magnitude": 4.5,
+      "depth_km": 83.3,
+      "latitude": 4.3989,
+      "longitude": -76.6893,
+      "place": "28 km S of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tie4"
+    },
+    {
+      "event_id": "us7000ti8q",
+      "event_time": "2026-09-18T08:45:21.545000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 7.0558,
+      "longitude": -77.8028,
+      "place": "6 km SW of Juradó, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti8q"
+    },
+    {
+      "event_id": "us7000ti7x",
+      "event_time": "2026-09-18T06:17:03.598000Z",
+      "magnitude": 4.7,
+      "depth_km": 68.374,
+      "latitude": 4.3224,
+      "longitude": -76.7931,
+      "place": "40 km SSW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti7x"
+    },
+    {
+      "event_id": "us7000ti5y",
+      "event_time": "2026-09-17T21:10:25.572000Z",
+      "magnitude": 4.7,
+      "depth_km": 57.808,
+      "latitude": 4.5211,
+      "longitude": -76.8219,
+      "place": "24 km SW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti5y"
+    },
+    {
+      "event_id": "us7000thyk",
+      "event_time": "2026-09-17T01:12:49.502000Z",
+      "magnitude": 4.4,
+      "depth_km": 58.798,
+      "latitude": 4.5449,
+      "longitude": -76.7654,
+      "place": "18 km SW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000thyk"
+    },
+    {
+      "event_id": "us7000thxm",
+      "event_time": "2026-09-16T20:55:00.902000Z",
+      "magnitude": 4.7,
+      "depth_km": 51.459,
+      "latitude": 4.46,
+      "longitude": -76.8006,
+      "place": "27 km SW of Sipí, Colombia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000thxm"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 22,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-09-26",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-09-18",
+          "end": "2026-09-26",
+          "result": {
+            "status": "OK",
+            "records_received": 22,
+            "newest": "2026-09-26T06:38:19.029000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 405,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/colombia_ecuador/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-09-26",
+        "region_id": "colombia_ecuador",
+        "iedc_raw": 23.763,
+        "iedc_provisional": 23.763,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.6581,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.4222,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 26.2987,
+          "goes_lightning_control": 11.082
+        },
+        "reasons": [
+          {
+            "family": "seismic",
+            "feature": "seismic_count",
+            "score": 46.16,
+            "reason": "Incremento robusto de la tasa sísmica",
+            "z": 1.362
+          }
+        ],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
