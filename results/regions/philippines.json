@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-03T21:25:22Z",
+  "started_at": "2026-10-03T21:25:20Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "philippines",
+    "name": "Filipinas",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      4,
+      22,
+      116,
+      130
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-10-03T21:25:22Z",
+    "day": "2026-10-03",
+    "region_id": "philippines",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.85,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-03T09:31:06Z",
+        "last_success": "2026-10-03T09:31:06Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-03T21:25:21Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/philippines/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-03T09:30:59Z",
+        "last_success": "2026-10-03T09:30:59Z",
+        "records": 11080,
+        "freshness_hours": 336.0,
+        "coverage": 0.9444444444444444,
+        "quality": 0.8311111111111111,
+        "message": "17/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-03T21:25:21Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-03T21:25:21Z",
+        "last_success": "2026-10-03T21:25:21Z",
+        "records": 8,
+        "freshness_hours": 30.25044039361111,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-09-24\",\"end\":\"2026-10-03\",\"newest\":\"2026-10-02T15:10:19.729000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-03T09:31:06Z",
+      "last_success": "2026-10-03T09:31:06Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-03T21:25:21Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/philippines/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-03T09:30:59Z",
+      "last_success": "2026-10-03T09:30:59Z",
+      "records": 11080,
+      "freshness_hours": 336.0,
+      "coverage": 0.9444444444444444,
+      "quality": 0.8311111111111111,
+      "message": "17/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-03T21:25:21Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-03T21:25:21Z",
+      "last_success": "2026-10-03T21:25:21Z",
+      "records": 8,
+      "freshness_hours": 30.25044039361111,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-09-24\",\"end\":\"2026-10-03\",\"newest\":\"2026-10-02T15:10:19.729000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 4918,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 30171,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 30984,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4660,
+    "dtrg_r_scores": 1165,
+    "dtrg_r_backtests": 11
+  },
+  "latest_backtest": [
+    {
+      "run_id": "c444fdba-a643-4471-9070-5ca01fa3c487",
+      "created_at": "2026-09-27T10:12:20Z",
+      "start_day": "2023-09-28",
+      "end_day": "2026-09-27",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 318,
+      "negatives": 778,
+      "tp": 2,
+      "fp": 12,
+      "tn": 766,
+      "fn": 316,
+      "precision": 0.14285714285714285,
+      "recall": 0.006289308176100629,
+      "specificity": 0.9845758354755784,
+      "f1": 0.012048192771084338,
+      "auc": 0.5643158558471164,
+      "brier": 0.23890517643248146,
+      "base_brier": 0.205961292556877,
+      "false_alarms_per_100_days": 1.094890510948905,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":318,\"negatives\":778,\"tp\":2,\"fp\":12,\"tn\":766,\"fn\":316,\"precision\":0.14285714285714285,\"recall\":0.006289308176100629,\"specificity\":0.9845758354755784,\"f1\":0.012048192771084338,\"auc\":0.5643158558471164,\"brier\":0.23890517643248146,\"base_brier\":0.205961292556877,\"false_alarms_per_100_days\":1.094890510948905,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tz1q",
+      "event_time": "2026-10-02T15:10:19.729000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 14.571,
+      "longitude": 119.4593,
+      "place": "78 km WSW of San Nicolas, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz1q"
+    },
+    {
+      "event_id": "us6000tyq7",
+      "event_time": "2026-10-01T05:34:10.634000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 6.1116,
+      "longitude": 123.8599,
+      "place": "38 km WSW of Palimbang, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyq7"
+    },
+    {
+      "event_id": "us6000tygz",
+      "event_time": "2026-09-30T02:30:44.716000Z",
+      "magnitude": 4.5,
+      "depth_km": 156.847,
+      "latitude": 4.5021,
+      "longitude": 125.7472,
+      "place": "104 km SSE of Sarangani, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tygz"
+    },
+    {
+      "event_id": "us6000tygs",
+      "event_time": "2026-09-30T01:34:05.751000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 13.0922,
+      "longitude": 120.4734,
+      "place": "18 km SW of Tayaman, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tygs"
+    },
+    {
+      "event_id": "us6000tyf0",
+      "event_time": "2026-09-29T20:45:50.983000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 17.5267,
+      "longitude": 122.4136,
+      "place": "49 km N of Dicabisagan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyf0"
+    },
+    {
+      "event_id": "us6000ty5m",
+      "event_time": "2026-09-28T15:01:39.183000Z",
+      "magnitude": 4.9,
+      "depth_km": 78.202,
+      "latitude": 5.634,
+      "longitude": 127.0338,
+      "place": "124 km SE of Pondaguitan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ty5m"
+    },
+    {
+      "event_id": "us6000ty3w",
+      "event_time": "2026-09-28T08:16:13.363000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 9.9585,
+      "longitude": 126.6861,
+      "place": "65 km E of Pilar, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ty3w"
+    },
+    {
+      "event_id": "us6000ty1l",
+      "event_time": "2026-09-28T00:54:43.108000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 15.4374,
+      "longitude": 119.503,
+      "place": "43 km W of Palauig, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ty1l"
+    },
+    {
+      "event_id": "us6000tx3l",
+      "event_time": "2026-09-23T14:19:32.302000Z",
+      "magnitude": 4.2,
+      "depth_km": 150.252,
+      "latitude": 6.4256,
+      "longitude": 125.8221,
+      "place": "21 km ENE of Lais, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx3l"
+    },
+    {
+      "event_id": "us6000twys",
+      "event_time": "2026-09-22T20:34:43.296000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 9.6886,
+      "longitude": 126.5291,
+      "place": "46 km E of Union, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000twys"
+    },
+    {
+      "event_id": "us7000tj3v",
+      "event_time": "2026-09-22T06:48:09.705000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 11.0957,
+      "longitude": 124.2096,
+      "place": "19 km ENE of Nailong, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tj3v"
+    },
+    {
+      "event_id": "us7000tj21",
+      "event_time": "2026-09-22T00:08:04.727000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 19.2155,
+      "longitude": 121.0898,
+      "place": "67 km N of Claveria, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tj21"
+    },
+    {
+      "event_id": "us7000tj1s",
+      "event_time": "2026-09-21T23:48:13.188000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": 4.5364,
+      "longitude": 125.3444,
+      "place": "96 km S of Sarangani, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tj1s"
+    },
+    {
+      "event_id": "us6000txlj",
+      "event_time": "2026-09-21T00:08:39.895000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 4.9141,
+      "longitude": 125.3922,
+      "place": "54 km S of Sarangani, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txlj"
+    },
+    {
+      "event_id": "us6000txlb",
+      "event_time": "2026-09-20T15:37:53.357000Z",
+      "magnitude": 4.6,
+      "depth_km": 87.203,
+      "latitude": 9.0946,
+      "longitude": 126.1574,
+      "place": "2 km S of Buenavista, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txlb"
+    },
+    {
+      "event_id": "us7000thti",
+      "event_time": "2026-09-16T11:50:12.695000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 7.7513,
+      "longitude": 127.1328,
+      "place": "64 km E of Kinablangan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000thti"
+    },
+    {
+      "event_id": "us7000tiag",
+      "event_time": "2026-09-13T22:17:17.416000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 21.6583,
+      "longitude": 121.0319,
+      "place": "48 km SE of Hengchun, Taiwan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiag"
+    },
+    {
+      "event_id": "us7000th04",
+      "event_time": "2026-09-12T15:00:01.756000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 14.4051,
+      "longitude": 122.4372,
+      "place": "10 km NW of Capalonga, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000th04"
+    },
+    {
+      "event_id": "us7000ti42",
+      "event_time": "2026-09-12T12:45:06.821000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 6.0372,
+      "longitude": 126.9902,
+      "place": "96 km ESE of Pondaguitan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti42"
+    },
+    {
+      "event_id": "us7000tg06",
+      "event_time": "2026-09-09T07:07:03.319000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 4.0172,
+      "longitude": 125.3233,
+      "place": "154 km S of Sarangani, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tg06"
+    },
+    {
+      "event_id": "us7000tgp7",
+      "event_time": "2026-09-06T22:13:31.132000Z",
+      "magnitude": 4.2,
+      "depth_km": 133.971,
+      "latitude": 13.5914,
+      "longitude": 121.0995,
+      "place": "5 km SE of Ilihan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgp7"
+    },
+    {
+      "event_id": "us7000teer",
+      "event_time": "2026-09-04T20:53:29.293000Z",
+      "magnitude": 4.3,
+      "depth_km": 156.132,
+      "latitude": 14.339,
+      "longitude": 120.5979,
+      "place": "12 km S of Cabcaben, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teer"
+    },
+    {
+      "event_id": "us7000te95",
+      "event_time": "2026-09-04T08:48:04.910000Z",
+      "magnitude": 4.7,
+      "depth_km": 66.174,
+      "latitude": 15.2554,
+      "longitude": 120.0131,
+      "place": "0 km NW of Purac, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000te95"
+    },
+    {
+      "event_id": "us7000tgd0",
+      "event_time": "2026-09-04T08:11:51.174000Z",
+      "magnitude": 4.4,
+      "depth_km": 80.225,
+      "latitude": 5.7552,
+      "longitude": 125.4394,
+      "place": "7 km WNW of Kalbay, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgd0"
+    },
+    {
+      "event_id": "us7000tgc2",
+      "event_time": "2026-09-03T14:05:36.504000Z",
+      "magnitude": 4.2,
+      "depth_km": 103.552,
+      "latitude": 5.4838,
+      "longitude": 126.9428,
+      "place": "128 km SE of Pondaguitan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgc2"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 8,
+      "oldest_before": "2021-07-28",
+      "newest_before": "2026-10-02",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-09-24",
+          "end": "2026-10-03",
+          "result": {
+            "status": "OK",
+            "records_received": 8,
+            "newest": "2026-10-02T15:10:19.729000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/philippines/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-03",
+        "region_id": "philippines",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.85,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

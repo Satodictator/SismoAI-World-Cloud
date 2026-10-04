@@ -1,0 +1,548 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-03T21:25:50Z",
+  "started_at": "2026-10-03T21:25:47Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "mid_atlantic_north",
+    "name": "Dorsal Mesoatlántica Norte",
+    "group": "Océanos",
+    "bbox": [
+      0,
+      65,
+      -45,
+      -10
+    ],
+    "min_magnitude": 3.5,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-10-03T21:25:50Z",
+    "day": "2026-10-03",
+    "region_id": "mid_atlantic_north",
+    "iedc_raw": 16.468,
+    "iedc_provisional": 16.468,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.6330555555555556,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.32222222222222224,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [
+      {
+        "family": "goes_lightning_control",
+        "feature": "goes_flash_count",
+        "score": 99.64,
+        "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+        "z": 12.389
+      },
+      {
+        "family": "goes_lightning_control",
+        "feature": "goes_energy",
+        "score": 97.98,
+        "reason": "Energía óptica GLM agregada por encima de su línea base",
+        "z": 8.58
+      }
+    ],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 98.8089
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-03T21:25:49Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Catálogo InSAR desactivado para esta macroregión oceánica",
+        "details_json": "{\"reason\":\"Catálogo InSAR desactivado para esta macroregión oceánica\"}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-03T21:25:49Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/mid_atlantic_north/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-03T09:30:20Z",
+        "last_success": "2026-10-03T09:30:20Z",
+        "records": 4941,
+        "freshness_hours": 504.0,
+        "coverage": 0.8,
+        "quality": 0.7040000000000001,
+        "message": "8/10 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-10-03T21:25:49Z",
+        "last_success": "2026-10-03T21:25:49Z",
+        "records": 17,
+        "freshness_hours": 0.00033067083333333336,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 433 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-03T21:25:48Z",
+        "last_success": "2026-10-03T21:25:48Z",
+        "records": 4,
+        "freshness_hours": 59.37588524416666,
+        "coverage": 0.05555555555555555,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-09-23\",\"end\":\"2026-10-03\",\"newest\":\"2026-10-01T10:03:15.128000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-03T21:25:49Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Catálogo InSAR desactivado para esta macroregión oceánica",
+      "details_json": "{\"reason\":\"Catálogo InSAR desactivado para esta macroregión oceánica\"}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-03T21:25:49Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/mid_atlantic_north/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-03T09:30:20Z",
+      "last_success": "2026-10-03T09:30:20Z",
+      "records": 4941,
+      "freshness_hours": 504.0,
+      "coverage": 0.8,
+      "quality": 0.7040000000000001,
+      "message": "8/10 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-10-03T21:25:49Z",
+      "last_success": "2026-10-03T21:25:49Z",
+      "records": 17,
+      "freshness_hours": 0.00033067083333333336,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 433 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-03T21:25:48Z",
+      "last_success": "2026-10-03T21:25:48Z",
+      "records": 4,
+      "freshness_hours": 59.37588524416666,
+      "coverage": 0.05555555555555555,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-09-23\",\"end\":\"2026-10-03\",\"newest\":\"2026-10-01T10:03:15.128000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1558,
+    "dtrg_r_gnss_stations": 10,
+    "dtrg_r_gnss_obs": 13075,
+    "dtrg_r_goes_files": 3948,
+    "dtrg_r_goes_daily": 77,
+    "dtrg_r_insar_scenes": 0,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 6990,
+    "dtrg_r_scores": 1165,
+    "dtrg_r_backtests": 11
+  },
+  "latest_backtest": [
+    {
+      "run_id": "1b5cdcd2-78c2-4b81-b3c1-54dd7113d208",
+      "created_at": "2026-09-27T10:11:36Z",
+      "start_day": "2023-09-28",
+      "end_day": "2026-09-27",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 112,
+      "negatives": 984,
+      "tp": 2,
+      "fp": 4,
+      "tn": 980,
+      "fn": 110,
+      "precision": 0.3333333333333333,
+      "recall": 0.017857142857142856,
+      "specificity": 0.9959349593495935,
+      "f1": 0.03389830508474576,
+      "auc": 0.6543626596980255,
+      "brier": 0.09268070533886856,
+      "base_brier": 0.09174702967659673,
+      "false_alarms_per_100_days": 0.36496350364963503,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":112,\"negatives\":984,\"tp\":2,\"fp\":4,\"tn\":980,\"fn\":110,\"precision\":0.3333333333333333,\"recall\":0.017857142857142856,\"specificity\":0.9959349593495935,\"f1\":0.03389830508474576,\"auc\":0.6543626596980255,\"brier\":0.09268070533886856,\"base_brier\":0.09174702967659673,\"false_alarms_per_100_days\":0.36496350364963503,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000tysi",
+      "event_time": "2026-10-01T10:03:15.128000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 31.0444,
+      "longitude": -41.428,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tysi"
+    },
+    {
+      "event_id": "us6000tyqx",
+      "event_time": "2026-10-01T07:40:06.605000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 31.2357,
+      "longitude": -41.5851,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyqx"
+    },
+    {
+      "event_id": "us6000tynp",
+      "event_time": "2026-10-01T00:28:22.644000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 19.2756,
+      "longitude": -43.0353,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tynp"
+    },
+    {
+      "event_id": "us6000tyd7",
+      "event_time": "2026-09-23T00:30:03.268000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 30.2005,
+      "longitude": -42.0943,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyd7"
+    },
+    {
+      "event_id": "us6000txkm",
+      "event_time": "2026-09-20T01:30:22.221000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 57.2155,
+      "longitude": -33.8175,
+      "place": "Reykjanes Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txkm"
+    },
+    {
+      "event_id": "us7000timy",
+      "event_time": "2026-09-20T00:58:14.425000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": 57.1211,
+      "longitude": -33.5459,
+      "place": "Reykjanes Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000timy"
+    },
+    {
+      "event_id": "us7000tild",
+      "event_time": "2026-09-19T20:24:42.324000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": 57.1264,
+      "longitude": -33.4238,
+      "place": "Reykjanes Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tild"
+    },
+    {
+      "event_id": "us6000txdj",
+      "event_time": "2026-09-19T20:24:03.799000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 57.1583,
+      "longitude": -33.4809,
+      "place": "Reykjanes Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txdj"
+    },
+    {
+      "event_id": "us7000ti5b",
+      "event_time": "2026-09-17T19:19:06.820000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 30.1814,
+      "longitude": -42.1941,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti5b"
+    },
+    {
+      "event_id": "us7000tefw",
+      "event_time": "2026-09-04T23:38:40.750000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": 9.3835,
+      "longitude": -40.8105,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tefw"
+    },
+    {
+      "event_id": "us7000tebf",
+      "event_time": "2026-08-30T04:11:14.903000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 52.4124,
+      "longitude": -34.5625,
+      "place": "Reykjanes Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tebf"
+    },
+    {
+      "event_id": "us6000tnbf",
+      "event_time": "2026-08-25T05:46:08.085000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 63.8438,
+      "longitude": -23.2419,
+      "place": "33 km SW of Sandgerði, Iceland",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnbf"
+    },
+    {
+      "event_id": "us6000tnav",
+      "event_time": "2026-08-25T03:38:10.799000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 63.7588,
+      "longitude": -23.3799,
+      "place": "45 km SW of Sandgerði, Iceland",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnav"
+    },
+    {
+      "event_id": "us6000tmri",
+      "event_time": "2026-08-22T07:21:25.650000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 12.5728,
+      "longitude": -44.6845,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmri"
+    },
+    {
+      "event_id": "us6000tmys",
+      "event_time": "2026-08-21T13:44:07.256000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 48.0431,
+      "longitude": -27.6401,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmys"
+    },
+    {
+      "event_id": "us6000tmh3",
+      "event_time": "2026-08-16T10:07:48.216000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 39.8141,
+      "longitude": -29.686,
+      "place": "130 km ENE of Santa Cruz das Flores, Portugal",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmh3"
+    },
+    {
+      "event_id": "us6000tjbg",
+      "event_time": "2026-08-08T22:09:05.175000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": 33.7988,
+      "longitude": -38.0208,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjbg"
+    },
+    {
+      "event_id": "us6000tgaw",
+      "event_time": "2026-07-28T05:36:39.559000Z",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "latitude": 64.6849,
+      "longitude": -17.6544,
+      "place": "113 km S of Akureyri, Iceland",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgaw"
+    },
+    {
+      "event_id": "us6000th76",
+      "event_time": "2026-07-27T20:56:56.754000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 43.7074,
+      "longitude": -10.1745,
+      "place": "102 km NW of Mugia, Spain",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th76"
+    },
+    {
+      "event_id": "us6000th72",
+      "event_time": "2026-07-27T16:29:47.420000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 8.6594,
+      "longitude": -39.8428,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th72"
+    },
+    {
+      "event_id": "us7000t3in",
+      "event_time": "2026-07-26T18:19:40.494000Z",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "latitude": 29.8963,
+      "longitude": -42.7859,
+      "place": "northern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t3in"
+    },
+    {
+      "event_id": "us6000tgq0",
+      "event_time": "2026-07-24T08:41:07.542000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 8.6615,
+      "longitude": -39.4989,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgq0"
+    },
+    {
+      "event_id": "us7000t2mi",
+      "event_time": "2026-07-23T06:29:57.815000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": 8.5187,
+      "longitude": -39.3965,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2mi"
+    },
+    {
+      "event_id": "us7000t2e7",
+      "event_time": "2026-07-21T18:16:39.844000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 39.7728,
+      "longitude": -29.697,
+      "place": "127 km ENE of Santa Cruz das Flores, Portugal",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2e7"
+    },
+    {
+      "event_id": "us6000tg4b",
+      "event_time": "2026-07-21T17:33:02.048000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 40.0796,
+      "longitude": -28.3409,
+      "place": "114 km NNW of Santa Cruz da Graciosa, Portugal",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tg4b"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 4,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-01",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-09-23",
+          "end": "2026-10-03",
+          "result": {
+            "status": "OK",
+            "records_received": 4,
+            "newest": "2026-10-01T10:03:15.128000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 433,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/mid_atlantic_north/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-03",
+        "region_id": "mid_atlantic_north",
+        "iedc_raw": 16.468,
+        "iedc_provisional": 16.468,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.6331,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.3222,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 98.8089
+        },
+        "reasons": [
+          {
+            "family": "goes_lightning_control",
+            "feature": "goes_flash_count",
+            "score": 99.64,
+            "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+            "z": 12.389
+          },
+          {
+            "family": "goes_lightning_control",
+            "feature": "goes_energy",
+            "score": 97.98,
+            "reason": "Energía óptica GLM agregada por encima de su línea base",
+            "z": 8.58
+          }
+        ],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
