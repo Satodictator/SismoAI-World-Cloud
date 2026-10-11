@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-10T21:50:30Z",
+  "started_at": "2026-10-10T21:50:28Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "turkey_anatolia",
+    "name": "Turquía–Anatolia",
+    "group": "Europa–África",
+    "bbox": [
+      35,
+      43,
+      25,
+      46
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-10-10T21:50:30Z",
+    "day": "2026-10-10",
+    "region_id": "turkey_anatolia",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.28888888888888886,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-10T10:09:38Z",
+        "last_success": "2026-10-10T10:09:38Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-10T21:50:28Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/turkey_anatolia/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-10T10:09:31Z",
+        "last_success": "2026-10-10T10:09:31Z",
+        "records": 493,
+        "freshness_hours": 840.0,
+        "coverage": 0.1,
+        "quality": 0.08800000000000001,
+        "message": "2/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-10T21:50:28Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-10T21:50:28Z",
+        "last_success": "2026-10-10T21:50:28Z",
+        "records": 8,
+        "freshness_hours": 93.99779373666667,
+        "coverage": 0.06666666666666667,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-09-28\",\"end\":\"2026-10-10\",\"newest\":\"2026-10-06T23:50:36.679000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-10T10:09:38Z",
+      "last_success": "2026-10-10T10:09:38Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-10T21:50:28Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/turkey_anatolia/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-10T10:09:31Z",
+      "last_success": "2026-10-10T10:09:31Z",
+      "records": 493,
+      "freshness_hours": 840.0,
+      "coverage": 0.1,
+      "quality": 0.08800000000000001,
+      "message": "2/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-10T21:50:28Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-10T21:50:28Z",
+      "last_success": "2026-10-10T21:50:28Z",
+      "records": 8,
+      "freshness_hours": 93.99779373666667,
+      "coverage": 0.06666666666666667,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-09-28\",\"end\":\"2026-10-10\",\"newest\":\"2026-10-06T23:50:36.679000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1777,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 6208,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 49886,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4688,
+    "dtrg_r_scores": 1172,
+    "dtrg_r_backtests": 12
+  },
+  "latest_backtest": [
+    {
+      "run_id": "c39fd38b-d780-4b68-8a42-e7820dad2d40",
+      "created_at": "2026-10-04T10:42:29Z",
+      "start_day": "2023-10-05",
+      "end_day": "2026-10-04",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 216,
+      "negatives": 873,
+      "tp": 13,
+      "fp": 5,
+      "tn": 868,
+      "fn": 203,
+      "precision": 0.7222222222222222,
+      "recall": 0.06018518518518518,
+      "specificity": 0.9942726231386025,
+      "f1": 0.11111111111111109,
+      "auc": 0.5645788256756183,
+      "brier": 0.17049207510165273,
+      "base_brier": 0.1590055324089882,
+      "false_alarms_per_100_days": 0.4591368227731864,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1089,\"positives\":216,\"negatives\":873,\"tp\":13,\"fp\":5,\"tn\":868,\"fn\":203,\"precision\":0.7222222222222222,\"recall\":0.06018518518518518,\"specificity\":0.9942726231386025,\"f1\":0.11111111111111109,\"auc\":0.5645788256756183,\"brier\":0.17049207510165273,\"base_brier\":0.1590055324089882,\"false_alarms_per_100_days\":0.4591368227731864,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000u0mf",
+      "event_time": "2026-10-06T23:50:36.679000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 35.3207,
+      "longitude": 26.6477,
+      "place": "27 km WSW of Fry, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0mf"
+    },
+    {
+      "event_id": "us6000u0md",
+      "event_time": "2026-10-06T23:43:58.171000Z",
+      "magnitude": 3.9,
+      "depth_km": 10.0,
+      "latitude": 35.3596,
+      "longitude": 26.6588,
+      "place": "24 km WSW of Fry, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0md"
+    },
+    {
+      "event_id": "us6000tzl3",
+      "event_time": "2026-10-04T22:51:30.983000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 37.7784,
+      "longitude": 36.0714,
+      "place": "14 km ESE of Feke, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzl3"
+    },
+    {
+      "event_id": "us6000tzjy",
+      "event_time": "2026-10-04T17:28:13.722000Z",
+      "magnitude": 4.2,
+      "depth_km": 11.956,
+      "latitude": 37.7789,
+      "longitude": 36.1523,
+      "place": "21 km E of Feke, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzjy"
+    },
+    {
+      "event_id": "us6000tzjn",
+      "event_time": "2026-10-04T16:00:26.211000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 37.7748,
+      "longitude": 36.1388,
+      "place": "20 km ESE of Feke, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzjn"
+    },
+    {
+      "event_id": "us6000tzip",
+      "event_time": "2026-10-04T11:43:23.167000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 37.7292,
+      "longitude": 36.1272,
+      "place": "21 km ESE of Feke, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzip"
+    },
+    {
+      "event_id": "us6000tzil",
+      "event_time": "2026-10-04T11:36:26.451000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 37.7757,
+      "longitude": 36.1685,
+      "place": "22 km E of Feke, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzil"
+    },
+    {
+      "event_id": "us6000tzif",
+      "event_time": "2026-10-04T11:19:26.314000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 37.8028,
+      "longitude": 36.1749,
+      "place": "21 km SSE of Saimbeyli, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzif"
+    },
+    {
+      "event_id": "us6000tx9u",
+      "event_time": "2026-09-24T07:40:58.085000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": 37.4638,
+      "longitude": 38.7755,
+      "place": "20 km SW of Hilvan, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx9u"
+    },
+    {
+      "event_id": "us7000tiui",
+      "event_time": "2026-09-21T01:02:04.084000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 37.7931,
+      "longitude": 36.261,
+      "place": "25 km NNW of Andırın, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiui"
+    },
+    {
+      "event_id": "us7000tfrw",
+      "event_time": "2026-09-08T04:52:17.124000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.458,
+      "latitude": 41.6546,
+      "longitude": 43.5965,
+      "place": "12 km SSE of Bak’uriani, Georgia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tfrw"
+    },
+    {
+      "event_id": "us7000teva",
+      "event_time": "2026-09-07T09:25:47.595000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 35.8981,
+      "longitude": 45.9744,
+      "place": "13 km SE of Bāneh, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teva"
+    },
+    {
+      "event_id": "us7000tgc8",
+      "event_time": "2026-09-03T17:11:07.846000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 40.262,
+      "longitude": 33.5467,
+      "place": "18 km NW of Sulakyurt, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgc8"
+    },
+    {
+      "event_id": "us7000tctp",
+      "event_time": "2026-08-29T12:32:52.646000Z",
+      "magnitude": 4.5,
+      "depth_km": 14.362,
+      "latitude": 36.2205,
+      "longitude": 27.5586,
+      "place": "26 km W of Émponas, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tctp"
+    },
+    {
+      "event_id": "us7000tbta",
+      "event_time": "2026-08-25T18:43:52.910000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 38.1317,
+      "longitude": 38.365,
+      "place": "16 km NE of Çelikhan, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbta"
+    },
+    {
+      "event_id": "us6000tmct",
+      "event_time": "2026-08-21T02:06:18.654000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 41.0558,
+      "longitude": 33.5898,
+      "place": "14 km NNW of Ilgaz, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmct"
+    },
+    {
+      "event_id": "us6000tm5c",
+      "event_time": "2026-08-15T05:14:03.637000Z",
+      "magnitude": 4.1,
+      "depth_km": 28.483,
+      "latitude": 35.7424,
+      "longitude": 27.7494,
+      "place": "45 km SSW of Lárdos, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tm5c"
+    },
+    {
+      "event_id": "us6000tkd3",
+      "event_time": "2026-08-13T02:33:57.323000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 35.383,
+      "longitude": 39.8074,
+      "place": "30 km W of Deir ez-Zor, Syria",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkd3"
+    },
+    {
+      "event_id": "us6000tjc0",
+      "event_time": "2026-08-09T00:42:18.775000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 37.1701,
+      "longitude": 36.8996,
+      "place": "14 km E of Nurdağı, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjc0"
+    },
+    {
+      "event_id": "us6000tiwc",
+      "event_time": "2026-08-07T07:10:56.611000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 36.0545,
+      "longitude": 27.9936,
+      "place": "4 km SSW of Lárdos, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tiwc"
+    },
+    {
+      "event_id": "us6000tima",
+      "event_time": "2026-08-01T20:29:08.290000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 35.3201,
+      "longitude": 44.5123,
+      "place": "19 km SSE of Kirkuk, Iraq",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tima"
+    },
+    {
+      "event_id": "us6000thht",
+      "event_time": "2026-08-01T20:27:35.947000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 35.2431,
+      "longitude": 44.5765,
+      "place": "30 km SE of Kirkuk, Iraq",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000thht"
+    },
+    {
+      "event_id": "us6000th5i",
+      "event_time": "2026-07-31T04:49:37.379000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 35.4057,
+      "longitude": 44.5639,
+      "place": "17 km ESE of Kirkuk, Iraq",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000th5i"
+    },
+    {
+      "event_id": "us6000tgzc",
+      "event_time": "2026-07-30T14:58:26.282000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 35.3139,
+      "longitude": 44.5244,
+      "place": "20 km SE of Kirkuk, Iraq",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgzc"
+    },
+    {
+      "event_id": "us7000t1kn",
+      "event_time": "2026-07-18T09:04:09.589000Z",
+      "magnitude": 4.3,
+      "depth_km": 18.491,
+      "latitude": 35.5522,
+      "longitude": 25.029,
+      "place": "25 km N of Gázi, Greece",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t1kn"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 8,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-06",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-09-28",
+          "end": "2026-10-10",
+          "result": {
+            "status": "OK",
+            "records_received": 8,
+            "newest": "2026-10-06T23:50:36.679000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/turkey_anatolia/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-10",
+        "region_id": "turkey_anatolia",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.2889,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

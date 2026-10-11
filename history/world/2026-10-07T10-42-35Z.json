@@ -1,0 +1,3068 @@
+{
+  "generated_at": "2026-10-07T10:42:35Z",
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "operation_mode": "daily",
+  "private_notifications": {
+    "activation_policy": {
+      "deduplication": true,
+      "first_run_is_silent": true,
+      "github_digest": true,
+      "iedc_increase_points": 10.0,
+      "observed_event_min_magnitude": 99.0,
+      "shadow_windows": "Solo cuando notification_eligible=true",
+      "states": []
+    },
+    "channels": {
+      "github_issue": {
+        "assignee": "Satodictator",
+        "available_without_payment": true,
+        "configured": true,
+        "email_delivery": "Depende de la configuración de notificaciones de GitHub del usuario asignado",
+        "enabled": true,
+        "public_visibility": true,
+        "schedule": "En cada ejecución de SismoAI; normalmente cada 6 horas",
+        "status": "ACTIVE"
+      },
+      "telegram": {
+        "available_without_payment": true,
+        "configured": false,
+        "enabled": false,
+        "recipients_count": 0,
+        "schedule": "24 horas cuando está configurado",
+        "status": "OPTIONAL_DISABLED"
+      },
+      "voice_call": {
+        "available_without_payment": false,
+        "configured": false,
+        "enabled": false,
+        "schedule": "Horario de oficina de Caracas si en el futuro se contrata un proveedor",
+        "status": "NOT_AVAILABLE_FREE_OFFICIALLY"
+      },
+      "whatsapp": {
+        "available_without_payment": false,
+        "configured": false,
+        "enabled": false,
+        "status": "NOT_AVAILABLE_FREE_OFFICIALLY"
+      }
+    },
+    "generated_at": "2026-10-07T10:46:46Z",
+    "last_run": {
+      "candidates": 0,
+      "errors": 0,
+      "issue_urls": [],
+      "issues_created": 0,
+      "sent": 0,
+      "suppressed": 0
+    },
+    "owner_label": "Steven Josué Medina",
+    "privacy": "Los teléfonos, tokens y chat_id no se publican. Los Issues de aviso sí son públicos porque el repositorio es público.",
+    "schema_version": 2,
+    "scientific_notice": "Aviso experimental de SismoAI. No constituye una predicción sísmica, una alerta oficial ni una orden de evacuación.",
+    "status": "ACTIVE"
+  },
+  "ranking": [
+    {
+      "available_families": 3,
+      "baseline_progress": 1.0,
+      "bbox": [
+        45,
+        72,
+        -180,
+        -130
+      ],
+      "confidence": 0.8847317073170732,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.8857723577235772,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 30.3324,
+        "goes_lightning_control": 0.0,
+        "seismic": 2.4594
+      },
+      "generated_at": "2026-10-07T10:35:52Z",
+      "group": "Americas",
+      "iedc_provisional": 9.638,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 5.0,
+        "event_id": "aka2026tvuggp",
+        "event_time": "2026-10-07T06:03:51.815000Z",
+        "latitude": 54.629,
+        "longitude": -155.901,
+        "magnitude": 3.1,
+        "place": "243 km SE of Chignik, Alaska",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvuggp"
+      },
+      "public_valid": false,
+      "rank": 1,
+      "reasons": [],
+      "region_id": "alaska_aleutians",
+      "region_name": "Alaska–Aleutianas",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:50Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.8333333333333334,
+          "last_success": "2026-10-07T10:35:39Z",
+          "quality": 0.7333333333333334,
+          "records": 9809,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:43Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:35:36Z",
+          "quality": 0.95,
+          "records": 83,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 0.9111111111111111,
+      "bbox": [
+        40,
+        52,
+        -132,
+        -120
+      ],
+      "confidence": 0.865460704607046,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.895609756097561,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 50.4312,
+        "goes_lightning_control": 0.0,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:35:47Z",
+      "group": "Americas",
+      "iedc_provisional": 13.53,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 23.1,
+        "event_id": "uw714116761",
+        "event_time": "2026-10-06T14:19:40.550000Z",
+        "latitude": 47.6053333333333,
+        "longitude": -122.6215,
+        "magnitude": 2.01,
+        "place": "2 km E of Tracyton, Washington",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714116761"
+      },
+      "public_valid": false,
+      "rank": 2,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 50.43,
+          "z": 1.544
+        }
+      ],
+      "region_id": "cascadia",
+      "region_name": "Cascadia",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:46Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.875,
+          "last_success": "2026-10-07T10:35:36Z",
+          "quality": 0.77,
+          "records": 10166,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:38Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:35:31Z",
+          "quality": 0.95,
+          "records": 33,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 1.0,
+      "bbox": [
+        31,
+        42,
+        -125,
+        -113
+      ],
+      "confidence": 0.8640731707317073,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.816910569105691,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "goes_lightning_control": 0.0,
+        "seismic": 3.2578
+      },
+      "generated_at": "2026-10-07T10:35:45Z",
+      "group": "Americas",
+      "iedc_provisional": 1.986,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 8.86999988555908,
+        "event_id": "nc75445821",
+        "event_time": "2026-10-07T05:49:18.820000Z",
+        "latitude": 38.8173332214355,
+        "longitude": -122.832832336426,
+        "magnitude": 2.05,
+        "place": "8 km NW of The Geysers, CA",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75445821"
+      },
+      "public_valid": false,
+      "rank": 3,
+      "reasons": [],
+      "region_id": "california_nevada",
+      "region_name": "California–Nevada",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:43Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.5416666666666666,
+          "last_success": "2026-10-07T10:35:34Z",
+          "quality": 0.4766666666666666,
+          "records": 7471,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:36Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:35:29Z",
+          "quality": 0.95,
+          "records": 123,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 0.8722222222222222,
+      "bbox": [
+        14,
+        33,
+        -118,
+        -86
+      ],
+      "confidence": 0.8504262872628726,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.8779024390243902,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "goes_lightning_control": 0.0,
+        "seismic": 1.3786
+      },
+      "generated_at": "2026-10-07T10:38:22Z",
+      "group": "Americas",
+      "iedc_provisional": 0.841,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 61.654,
+        "event_id": "us6000u0q1",
+        "event_time": "2026-10-07T07:43:19.524000Z",
+        "latitude": 14.6207,
+        "longitude": -93.1891,
+        "magnitude": 4.9,
+        "place": "80 km SW of El Arenal, Mexico",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0q1"
+      },
+      "public_valid": false,
+      "rank": 4,
+      "reasons": [],
+      "region_id": "mexico",
+      "region_name": "México y Golfo de California",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:21Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.8,
+          "last_success": "2026-10-07T10:38:09Z",
+          "quality": 0.7040000000000001,
+          "records": 9938,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:14Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:38:08Z",
+          "quality": 0.95,
+          "records": 47,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 0.6611111111111111,
+      "bbox": [
+        5,
+        19,
+        -93,
+        -77
+      ],
+      "confidence": 0.768529810298103,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.780840108401084,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "goes_lightning_control": 0.0,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:38:43Z",
+      "group": "Americas",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 167.36,
+        "event_id": "us6000tzln",
+        "event_time": "2026-10-05T01:20:21.127000Z",
+        "latitude": 12.0958,
+        "longitude": -86.4891,
+        "magnitude": 4.4,
+        "place": "12 km N of Villa El Carmen, Nicaragua",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzln"
+      },
+      "public_valid": false,
+      "rank": 5,
+      "reasons": [],
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:42Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.3888888888888889,
+          "last_success": "2026-10-07T10:38:31Z",
+          "quality": 0.3422222222222222,
+          "records": 3870,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:35Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:38:12Z",
+          "quality": 0.95,
+          "records": 10,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 0.9777777777777777,
+      "bbox": [
+        15,
+        23,
+        -76,
+        -59
+      ],
+      "confidence": 0.8752411924119241,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.8726558265582656,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "goes_lightning_control": 0.5043,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:12Z",
+      "group": "Americas",
+      "iedc_provisional": 0.062,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 88.15,
+        "event_id": "pr71535938",
+        "event_time": "2026-10-07T00:24:31.740000Z",
+        "latitude": 18.2546666666667,
+        "longitude": -67.2011666666667,
+        "magnitude": 2.7,
+        "place": "3 km SSW of La Playa, Puerto Rico",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71535938"
+      },
+      "public_valid": false,
+      "rank": 6,
+      "reasons": [],
+      "region_id": "caribbean",
+      "region_name": "Caribe–La Española–Puerto Rico",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:10Z",
+          "quality": 0.85,
+          "records": 784,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.7777777777777778,
+          "last_success": "2026-10-07T10:35:59Z",
+          "quality": 0.6844444444444444,
+          "records": 6756,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:03Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:35:57Z",
+          "quality": 0.95,
+          "records": 51,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.3111111111111111,
+      "bbox": [
+        0,
+        15,
+        -76,
+        -57
+      ],
+      "confidence": 0.6302777777777777,
+      "coverage": 0.6000000000000001,
+      "data_quality": 0.9416666666666667,
+      "errors_count": 0,
+      "family_scores": {
+        "goes_lightning_control": 52.1572,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:06Z",
+      "group": "Americas",
+      "iedc_provisional": 8.693,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0n5",
+        "event_time": "2026-10-07T01:29:45.785000Z",
+        "latitude": 3.8692,
+        "longitude": -75.74,
+        "magnitude": 4.4,
+        "place": "21 km SW of Roncesvalles, Colombia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0n5"
+      },
+      "public_valid": false,
+      "rank": 7,
+      "reasons": [
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_energy",
+          "reason": "Energía óptica GLM agregada por encima de su línea base",
+          "score": 59.98,
+          "z": 2.015
+        },
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_flash_count",
+          "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+          "score": 44.34,
+          "z": 1.289
+        }
+      ],
+      "region_id": "venezuela_caribbean",
+      "region_name": "Venezuela–Caribe Sur",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:04Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.68,
+          "last_success": "2026-10-07T10:35:55Z",
+          "quality": 0.5984,
+          "records": 2521,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:59Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:35:50Z",
+          "quality": 0.95,
+          "records": 15,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.46111111111111114,
+      "bbox": [
+        -5,
+        13,
+        -83,
+        -69
+      ],
+      "confidence": 0.6677777777777778,
+      "coverage": 0.6000000000000001,
+      "data_quality": 0.9416666666666667,
+      "errors_count": 0,
+      "family_scores": {
+        "goes_lightning_control": 1.5553,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:02Z",
+      "group": "Americas",
+      "iedc_provisional": 0.259,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0n5",
+        "event_time": "2026-10-07T01:29:45.785000Z",
+        "latitude": 3.8692,
+        "longitude": -75.74,
+        "magnitude": 4.4,
+        "place": "21 km SW of Roncesvalles, Colombia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0n5"
+      },
+      "public_valid": false,
+      "rank": 8,
+      "reasons": [],
+      "region_id": "colombia_ecuador",
+      "region_name": "Colombia–Ecuador",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:00Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.65,
+          "last_success": "2026-10-07T10:35:53Z",
+          "quality": 0.5720000000000001,
+          "records": 2405,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:35:55Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:35:49Z",
+          "quality": 0.95,
+          "records": 19,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 0.5611111111111111,
+      "bbox": [
+        -20,
+        -3,
+        -82,
+        -68
+      ],
+      "confidence": 0.7478582655826558,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.7952682926829268,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 99.8996,
+        "goes_lightning_control": 33.3593,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:38:41Z",
+      "group": "Americas",
+      "iedc_provisional": 30.871,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 105.483,
+        "event_id": "us6000tztx",
+        "event_time": "2026-10-06T00:41:28.380000Z",
+        "latitude": -19.8042,
+        "longitude": -69.2254,
+        "magnitude": 4.4,
+        "place": "58 km SSE of Camiña, Chile",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tztx"
+      },
+      "public_valid": false,
+      "rank": 9,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 99.9,
+          "z": 15.187
+        }
+      ],
+      "region_id": "peru",
+      "region_name": "Perú",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:39Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.45,
+          "last_success": "2026-10-07T10:38:29Z",
+          "quality": 0.396,
+          "records": 5257,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:34Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:38:27Z",
+          "quality": 0.95,
+          "records": 6,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "WATCH",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.8111111111111111,
+      "bbox": [
+        -32,
+        -18,
+        -75,
+        -65
+      ],
+      "confidence": 0.7552777777777777,
+      "coverage": 0.6000000000000001,
+      "data_quality": 0.9416666666666667,
+      "errors_count": 0,
+      "family_scores": {
+        "goes_lightning_control": 0.0809,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:00Z",
+      "group": "Americas",
+      "iedc_provisional": 0.013,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 191.741,
+        "event_id": "us6000tzva",
+        "event_time": "2026-10-06T06:54:10.618000Z",
+        "latitude": -20.0088,
+        "longitude": -67.4214,
+        "magnitude": 4.5,
+        "place": "60 km WNW of Colchani, Bolivia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzva"
+      },
+      "public_valid": false,
+      "rank": 10,
+      "reasons": [],
+      "region_id": "chile_north",
+      "region_name": "Chile Norte",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:58Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.4,
+          "last_success": "2026-10-07T10:38:48Z",
+          "quality": 0.35200000000000004,
+          "records": 4047,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:53Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:38:46Z",
+          "quality": 0.95,
+          "records": 15,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.4111111111111111,
+      "bbox": [
+        -58,
+        -31,
+        -78,
+        -65
+      ],
+      "confidence": 0.6552777777777777,
+      "coverage": 0.6000000000000001,
+      "data_quality": 0.9416666666666667,
+      "errors_count": 0,
+      "family_scores": {
+        "goes_lightning_control": 68.313,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:29Z",
+      "group": "Americas",
+      "iedc_provisional": 11.386,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzee",
+        "event_time": "2026-10-03T21:15:57.294000Z",
+        "latitude": -38.3006,
+        "longitude": -75.1712,
+        "magnitude": 4.1,
+        "place": "153 km WSW of Lebu, Chile",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzee"
+      },
+      "public_valid": false,
+      "rank": 11,
+      "reasons": [
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_flash_count",
+          "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+          "score": 100.0,
+          "z": 33.949
+        }
+      ],
+      "region_id": "chile_south",
+      "region_name": "Chile Sur–Patagonia",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:28Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.2777777777777778,
+          "last_success": "2026-10-07T10:36:16Z",
+          "quality": 0.24444444444444446,
+          "records": 2634,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:20Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.10555555555555556,
+          "last_success": "2026-10-07T10:36:14Z",
+          "quality": 0.95,
+          "records": 8,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 3,
+      "baseline_progress": 0.49444444444444446,
+      "bbox": [
+        -63,
+        -48,
+        -65,
+        -15
+      ],
+      "confidence": 0.7524403794037942,
+      "coverage": 0.8200000000000001,
+      "data_quality": 0.8660975609756097,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "goes_lightning_control": 0.0,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:22Z",
+      "group": "Americas",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0pb",
+        "event_time": "2026-10-07T04:39:26.324000Z",
+        "latitude": -55.6737,
+        "longitude": -30.0294,
+        "magnitude": 4.9,
+        "place": "South Sandwich Islands region",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0pb"
+      },
+      "public_valid": false,
+      "rank": 12,
+      "reasons": [],
+      "region_id": "scotia_sandwich",
+      "region_name": "Scotia–Sandwich del Sur",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:20Z",
+          "quality": 0.85,
+          "records": 542,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.75,
+          "last_success": "2026-10-07T10:36:13Z",
+          "quality": 0.66,
+          "records": 4200,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:16Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:36:11Z",
+          "quality": 0.95,
+          "records": 12,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.28888888888888886,
+      "bbox": [
+        30,
+        46,
+        -12,
+        20
+      ],
+      "confidence": 0.6546388888888889,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8613888888888889,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 24.4983,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:36Z",
+      "group": "Europa–África",
+      "iedc_provisional": 7.486,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000txwf",
+        "event_time": "2026-09-27T03:27:20.796000Z",
+        "latitude": 31.341,
+        "longitude": 15.1559,
+        "magnitude": 4.2,
+        "place": "114 km S of Mişrātah, Libya",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txwf"
+      },
+      "public_valid": false,
+      "rank": 13,
+      "reasons": [],
+      "region_id": "mediterranean_west",
+      "region_name": "Mediterráneo Occidental",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:34Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.75,
+          "last_success": "2026-10-07T10:36:29Z",
+          "quality": 0.66,
+          "records": 9721,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.1388888888888889,
+          "last_success": "2026-10-07T10:36:06Z",
+          "quality": 0.95,
+          "records": 3,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.3,
+      "bbox": [
+        35,
+        48,
+        5,
+        21
+      ],
+      "confidence": 0.6574166666666666,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8613888888888889,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 67.8893,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:38:59Z",
+      "group": "Europa–África",
+      "iedc_provisional": 20.744,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000txrr",
+        "event_time": "2026-09-26T07:56:56.068000Z",
+        "latitude": 47.3058,
+        "longitude": 11.5616,
+        "magnitude": 3.5,
+        "place": "0 km NNW of Baumkirchen, Austria",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txrr"
+      },
+      "public_valid": false,
+      "rank": 14,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 67.89,
+          "z": 2.499
+        }
+      ],
+      "region_id": "italy_adriatic",
+      "region_name": "Italia–Adriático",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:57Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.75,
+          "last_success": "2026-10-07T10:38:47Z",
+          "quality": 0.66,
+          "records": 9592,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.14444444444444443,
+          "last_success": "2026-10-07T10:38:45Z",
+          "quality": 0.95,
+          "records": 3,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.4777777777777778,
+      "bbox": [
+        33,
+        43,
+        18,
+        31
+      ],
+      "confidence": 0.7085833333333333,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8837962962962963,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 61.8949,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:14Z",
+      "group": "Europa–África",
+      "iedc_provisional": 18.912,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0mf",
+        "event_time": "2026-10-06T23:50:36.679000Z",
+        "latitude": 35.3207,
+        "longitude": 26.6477,
+        "magnitude": 4.2,
+        "place": "27 km WSW of Fry, Greece",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0mf"
+      },
+      "public_valid": false,
+      "rank": 15,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 61.89,
+          "z": 2.123
+        }
+      ],
+      "region_id": "greece_aegean",
+      "region_name": "Grecia–Egeo",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:13Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.8333333333333334,
+          "last_success": "2026-10-07T10:39:06Z",
+          "quality": 0.7333333333333334,
+          "records": 9535,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:39:03Z",
+          "quality": 0.95,
+          "records": 6,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 1,
+      "baseline_progress": 0.3055555555555556,
+      "bbox": [
+        35,
+        43,
+        25,
+        46
+      ],
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "errors_count": 0,
+      "family_scores": {
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:45Z",
+      "group": "Europa–África",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0mf",
+        "event_time": "2026-10-06T23:50:36.679000Z",
+        "latitude": 35.3207,
+        "longitude": 26.6477,
+        "magnitude": 4.2,
+        "place": "27 km WSW of Fry, Greece",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0mf"
+      },
+      "public_valid": false,
+      "rank": 16,
+      "reasons": [],
+      "region_id": "turkey_anatolia",
+      "region_name": "Turquía–Anatolia",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:44Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.1,
+          "last_success": "2026-10-07T10:36:36Z",
+          "quality": 0.08800000000000001,
+          "records": 498,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:36:33Z",
+          "quality": 0.95,
+          "records": 10,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.4888888888888889,
+      "bbox": [
+        24,
+        41,
+        43,
+        64
+      ],
+      "confidence": 0.6755092592592593,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.76429012345679,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 12.6826,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:34Z",
+      "group": "Europa–África",
+      "iedc_provisional": 3.875,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tx02",
+        "event_time": "2026-09-23T00:44:14.951000Z",
+        "latitude": 31.5442,
+        "longitude": 50.9455,
+        "magnitude": 4.3,
+        "place": "56 km SW of Borūjen, Iran",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx02"
+      },
+      "public_valid": false,
+      "rank": 17,
+      "reasons": [],
+      "region_id": "iran_zagros",
+      "region_name": "Irán–Zagros",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:33Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.3888888888888889,
+          "last_success": "2026-10-07T10:36:28Z",
+          "quality": 0.3422222222222222,
+          "records": 3200,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.16111111111111112,
+          "last_success": "2026-10-07T10:36:23Z",
+          "quality": 0.95,
+          "records": 5,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.18333333333333332,
+      "bbox": [
+        -15,
+        16,
+        25,
+        45
+      ],
+      "confidence": 0.6260092592592592,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8539197530864197,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 22.138,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:37:12Z",
+      "group": "Europa–África",
+      "iedc_provisional": 6.764,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzry",
+        "event_time": "2026-10-05T19:47:55.779000Z",
+        "latitude": 8.9608,
+        "longitude": 40.0091,
+        "magnitude": 4.6,
+        "place": "12 km ENE of Metahāra, Ethiopia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzry"
+      },
+      "public_valid": false,
+      "rank": 18,
+      "reasons": [],
+      "region_id": "east_africa_rift",
+      "region_name": "Rift de África Oriental",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:11Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.7222222222222222,
+          "last_success": "2026-10-07T10:37:05Z",
+          "quality": 0.6355555555555555,
+          "records": 8508,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:36:43Z",
+          "quality": 0.95,
+          "records": 1,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.16111111111111112,
+      "bbox": [
+        5,
+        30,
+        30,
+        45
+      ],
+      "confidence": 0.6378194444444444,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.9118055555555555,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 55.5258,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:14Z",
+      "group": "Europa–África",
+      "iedc_provisional": 16.966,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzry",
+        "event_time": "2026-10-05T19:47:55.779000Z",
+        "latitude": 8.9608,
+        "longitude": 40.0091,
+        "magnitude": 4.6,
+        "place": "12 km ENE of Metahāra, Ethiopia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzry"
+      },
+      "public_valid": false,
+      "rank": 19,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 55.53,
+          "z": 1.783
+        }
+      ],
+      "region_id": "red_sea_afar",
+      "region_name": "Mar Rojo–Afar",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:13Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.9375,
+          "last_success": "2026-10-07T10:39:06Z",
+          "quality": 0.825,
+          "records": 9872,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:39:04Z",
+          "quality": 0.95,
+          "records": 1,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 1,
+      "baseline_progress": 0.5388888888888889,
+      "bbox": [
+        25,
+        38,
+        65,
+        82
+      ],
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "errors_count": 0,
+      "family_scores": {
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:27Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0hz",
+        "event_time": "2026-10-06T16:53:11.296000Z",
+        "latitude": 30.1171,
+        "longitude": 79.6148,
+        "magnitude": 5.1,
+        "place": "34 km NNW of Bāgeshwar, India",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0hz"
+      },
+      "public_valid": false,
+      "rank": 20,
+      "reasons": [],
+      "region_id": "himalaya_west",
+      "region_name": "Himalaya Occidental",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:26Z",
+          "quality": 0.85,
+          "records": 500,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.2222222222222222,
+          "last_success": "2026-10-07T10:39:21Z",
+          "quality": 0.19555555555555554,
+          "records": 840,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:39:19Z",
+          "quality": 0.95,
+          "records": 13,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 1,
+      "baseline_progress": 0.32222222222222224,
+      "bbox": [
+        24,
+        35,
+        80,
+        100
+      ],
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "errors_count": 0,
+      "family_scores": {
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:57Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzth",
+        "event_time": "2026-10-05T22:53:42.181000Z",
+        "latitude": 26.3539,
+        "longitude": 92.8359,
+        "magnitude": 4.6,
+        "place": "31 km S of Tezpur, India",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzth"
+      },
+      "public_valid": false,
+      "rank": 21,
+      "reasons": [],
+      "region_id": "himalaya_east",
+      "region_name": "Himalaya Oriental",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:56Z",
+          "quality": 0.85,
+          "records": 500,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.16666666666666666,
+          "last_success": "2026-10-07T10:36:51Z",
+          "quality": 0.14666666666666667,
+          "records": 1083,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:36:49Z",
+          "quality": 0.95,
+          "records": 2,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.4388888888888889,
+      "bbox": [
+        5,
+        29,
+        90,
+        102
+      ],
+      "confidence": 0.7022222222222223,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.895,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 50.9218,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:36:49Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 15.559,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzth",
+        "event_time": "2026-10-05T22:53:42.181000Z",
+        "latitude": 26.3539,
+        "longitude": 92.8359,
+        "magnitude": 4.6,
+        "place": "31 km S of Tezpur, India",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzth"
+      },
+      "public_valid": false,
+      "rank": 22,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 50.92,
+          "z": 1.566
+        }
+      ],
+      "region_id": "myanmar_andaman",
+      "region_name": "Myanmar–Andamán",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:36:47Z",
+          "quality": 0.85,
+          "records": 566,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.875,
+          "last_success": "2026-10-07T10:36:43Z",
+          "quality": 0.77,
+          "records": 9629,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:36:39Z",
+          "quality": 0.95,
+          "records": 6,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.5666666666666667,
+      "bbox": [
+        -12,
+        8,
+        94,
+        116
+      ],
+      "confidence": 0.7173611111111111,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8389814814814814,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:37:47Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 73.115,
+        "event_id": "us6000u0k2",
+        "event_time": "2026-10-06T19:01:59.145000Z",
+        "latitude": -3.6796,
+        "longitude": 101.8914,
+        "magnitude": 4.5,
+        "place": "43 km WNW of Bengkulu, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0k2"
+      },
+      "public_valid": false,
+      "rank": 23,
+      "reasons": [],
+      "region_id": "sumatra_java",
+      "region_name": "Sumatra–Java",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:45Z",
+          "quality": 0.85,
+          "records": 638,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.6666666666666666,
+          "last_success": "2026-10-07T10:37:41Z",
+          "quality": 0.5866666666666667,
+          "records": 7913,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:37:18Z",
+          "quality": 0.95,
+          "records": 8,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.9611111111111111,
+      "bbox": [
+        -12,
+        5,
+        116,
+        136
+      ],
+      "confidence": 0.8226944444444445,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8613888888888889,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 11.2425,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:27Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 3.435,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 144.45,
+        "event_id": "us6000u0km",
+        "event_time": "2026-10-06T20:15:28.171000Z",
+        "latitude": -8.4933,
+        "longitude": 116.218,
+        "magnitude": 4.6,
+        "place": "14 km NE of Mataram, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0km"
+      },
+      "public_valid": false,
+      "rank": 24,
+      "reasons": [],
+      "region_id": "banda_molucca",
+      "region_name": "Banda–Molucas",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:25Z",
+          "quality": 0.85,
+          "records": 675,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.75,
+          "last_success": "2026-10-07T10:39:20Z",
+          "quality": 0.66,
+          "records": 7545,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:39:19Z",
+          "quality": 0.95,
+          "records": 43,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.85,
+      "bbox": [
+        4,
+        22,
+        116,
+        130
+      ],
+      "confidence": 0.810601851851852,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.9136728395061728,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 62.4891,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:42Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 19.094,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzwg",
+        "event_time": "2026-10-06T13:11:22.577000Z",
+        "latitude": 4.8667,
+        "longitude": 118.8285,
+        "magnitude": 4.9,
+        "place": "48 km NNE of Semporna, Malaysia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzwg"
+      },
+      "public_valid": false,
+      "rank": 25,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 62.49,
+          "z": 2.157
+        }
+      ],
+      "region_id": "philippines",
+      "region_name": "Filipinas",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:40Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.9444444444444444,
+          "last_success": "2026-10-07T10:39:34Z",
+          "quality": 0.8311111111111111,
+          "records": 11124,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:39:29Z",
+          "quality": 0.95,
+          "records": 16,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 1,
+      "baseline_progress": 0.5444444444444444,
+      "bbox": [
+        20,
+        32,
+        120,
+        132
+      ],
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "errors_count": 0,
+      "family_scores": {
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:37:08Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 156.219,
+        "event_id": "us6000tznu",
+        "event_time": "2026-10-05T13:30:45.560000Z",
+        "latitude": 25.1037,
+        "longitude": 123.2696,
+        "magnitude": 4.7,
+        "place": "75 km NNE of Yonakuni, Japan",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tznu"
+      },
+      "public_valid": false,
+      "rank": 26,
+      "reasons": [],
+      "region_id": "taiwan_ryukyu",
+      "region_name": "Taiwán–Ryukyu",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:07Z",
+          "quality": 0.85,
+          "records": 758,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.2222222222222222,
+          "last_success": "2026-10-07T10:37:01Z",
+          "quality": 0.19555555555555554,
+          "records": 2171,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:36:59Z",
+          "quality": 0.95,
+          "records": 10,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.9111111111111111,
+      "bbox": [
+        29,
+        47,
+        128,
+        146
+      ],
+      "confidence": 0.7973611111111111,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8186111111111111,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:37:03Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 29.595,
+        "event_id": "us6000u0n8",
+        "event_time": "2026-10-07T01:31:56.120000Z",
+        "latitude": 40.4048,
+        "longitude": 142.9402,
+        "magnitude": 4.2,
+        "place": "101 km ENE of Noda, Japan",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0n8"
+      },
+      "public_valid": false,
+      "rank": 27,
+      "reasons": [],
+      "region_id": "japan",
+      "region_name": "Japón",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:01Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.5909090909090909,
+          "last_success": "2026-10-07T10:36:56Z",
+          "quality": 0.52,
+          "records": 8849,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:36:51Z",
+          "quality": 0.95,
+          "records": 22,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.95,
+      "bbox": [
+        43,
+        62,
+        145,
+        180
+      ],
+      "confidence": 0.7939880952380953,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.7749603174603175,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "seismic": 3.7627
+      },
+      "generated_at": "2026-10-07T10:37:58Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 2.613,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 108.743,
+        "event_id": "us6000u0nb",
+        "event_time": "2026-10-07T01:39:05.561000Z",
+        "latitude": 48.1853,
+        "longitude": 153.3699,
+        "magnitude": 4.6,
+        "place": "Kuril Islands",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0nb"
+      },
+      "public_valid": false,
+      "rank": 28,
+      "reasons": [],
+      "region_id": "kuril_kamchatka",
+      "region_name": "Kuriles–Kamchatka",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:57Z",
+          "quality": 0.85,
+          "records": 845,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.42857142857142855,
+          "last_success": "2026-10-07T10:37:52Z",
+          "quality": 0.3771428571428571,
+          "records": 3336,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:37:49Z",
+          "quality": 0.95,
+          "records": 44,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.7722222222222223,
+      "bbox": [
+        -12,
+        2,
+        135,
+        155
+      ],
+      "confidence": 0.7610674603174603,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8133730158730158,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 45.2071,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:38Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 13.813,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 80.203,
+        "event_id": "us6000u0le",
+        "event_time": "2026-10-06T21:56:43.985000Z",
+        "latitude": -3.9438,
+        "longitude": 139.5723,
+        "magnitude": 4.9,
+        "place": "189 km SW of Abepura, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0le"
+      },
+      "public_valid": false,
+      "rank": 29,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 45.21,
+          "z": 1.324
+        }
+      ],
+      "region_id": "papua_new_guinea",
+      "region_name": "Papúa Nueva Guinea",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:37Z",
+          "quality": 0.85,
+          "records": 524,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.5714285714285714,
+          "last_success": "2026-10-07T10:39:32Z",
+          "quality": 0.5028571428571428,
+          "records": 4819,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:39:29Z",
+          "quality": 0.95,
+          "records": 22,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 1,
+      "baseline_progress": 0.8166666666666667,
+      "bbox": [
+        -25,
+        -2,
+        155,
+        175
+      ],
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "errors_count": 0,
+      "family_scores": {
+        "seismic": 21.7968
+      },
+      "generated_at": "2026-10-07T10:39:54Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 21.797,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0ns",
+        "event_time": "2026-10-07T02:49:59.426000Z",
+        "latitude": -20.979,
+        "longitude": 169.0011,
+        "magnitude": 4.8,
+        "place": "132 km ENE of Tadine, New Caledonia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0ns"
+      },
+      "public_valid": false,
+      "rank": 30,
+      "reasons": [],
+      "region_id": "solomon_vanuatu",
+      "region_name": "Salomón–Vanuatu",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:53Z",
+          "quality": 0.85,
+          "records": 938,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.6428571428571429,
+          "last_success": "2026-10-07T10:39:47Z",
+          "quality": 0.5657142857142857,
+          "records": 4721,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:39:45Z",
+          "quality": 0.95,
+          "records": 59,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 1,
+      "baseline_progress": 0.8444444444444444,
+      "bbox": [
+        -38,
+        -10,
+        165,
+        180
+      ],
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "errors_count": 0,
+      "family_scores": {
+        "seismic": 18.7778
+      },
+      "generated_at": "2026-10-07T10:37:19Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 18.778,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0ns",
+        "event_time": "2026-10-07T02:49:59.426000Z",
+        "latitude": -20.979,
+        "longitude": 169.0011,
+        "magnitude": 4.8,
+        "place": "132 km ENE of Tadine, New Caledonia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0ns"
+      },
+      "public_valid": false,
+      "rank": 31,
+      "reasons": [],
+      "region_id": "tonga_kermadec_west",
+      "region_name": "Tonga–Kermadec Occidental",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:18Z",
+          "quality": 0.85,
+          "records": 958,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.8571428571428571,
+          "last_success": "2026-10-07T10:37:11Z",
+          "quality": 0.7542857142857142,
+          "records": 3198,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:37:10Z",
+          "quality": 0.95,
+          "records": 60,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.9611111111111111,
+      "bbox": [
+        -38,
+        -10,
+        -180,
+        -165
+      ],
+      "confidence": 0.7958055555555557,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.7717592592592593,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 0.0,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:37:14Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 0.0,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 71.248,
+        "event_id": "us6000u0ll",
+        "event_time": "2026-10-06T22:12:46.267000Z",
+        "latitude": -29.8721,
+        "longitude": -177.6188,
+        "magnitude": 4.7,
+        "place": "Kermadec Islands, New Zealand",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0ll"
+      },
+      "public_valid": false,
+      "rank": 32,
+      "reasons": [],
+      "region_id": "tonga_kermadec_east",
+      "region_name": "Tonga–Kermadec Oriental",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:37:13Z",
+          "quality": 0.85,
+          "records": 500,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.4166666666666667,
+          "last_success": "2026-10-07T10:37:09Z",
+          "quality": 0.3666666666666667,
+          "records": 2806,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.08888888888888889,
+          "last_success": "2026-10-07T10:37:07Z",
+          "quality": 0.95,
+          "records": 28,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.4,
+      "bbox": [
+        -48,
+        -33,
+        165,
+        180
+      ],
+      "confidence": 0.6824166666666667,
+      "coverage": 0.7200000000000001,
+      "data_quality": 0.8613888888888889,
+      "errors_count": 0,
+      "family_scores": {
+        "gnss": 89.4865,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:38:08Z",
+      "group": "Asia–Oceanía",
+      "iedc_provisional": 27.343,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tz1c",
+        "event_time": "2026-10-02T13:57:15.838000Z",
+        "latitude": -39.1598,
+        "longitude": 174.2598,
+        "magnitude": 5.0,
+        "place": "6 km E of Inglewood, New Zealand",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz1c"
+      },
+      "public_valid": false,
+      "rank": 33,
+      "reasons": [
+        {
+          "family": "gnss",
+          "feature": "gnss_residual_mm",
+          "reason": "Desplazamiento GNSS residual respecto de la mediana móvil",
+          "score": 89.49,
+          "z": 4.956
+        }
+      ],
+      "region_id": "new_zealand",
+      "region_name": "Nueva Zelanda",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:38:07Z",
+          "quality": 0.85,
+          "records": 1000,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.75,
+          "last_success": "2026-10-07T10:38:02Z",
+          "quality": 0.66,
+          "records": 1733,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "NOAA_GOES_GLM",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.1111111111111111,
+          "last_success": "2026-10-07T10:38:00Z",
+          "quality": 0.95,
+          "records": 6,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "WATCH",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.35,
+      "bbox": [
+        0,
+        65,
+        -45,
+        -10
+      ],
+      "confidence": 0.64,
+      "coverage": 0.6000000000000001,
+      "data_quality": 0.9416666666666667,
+      "errors_count": 0,
+      "family_scores": {
+        "goes_lightning_control": 99.7401,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:39:48Z",
+      "group": "Océanos",
+      "iedc_provisional": 16.623,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000tzpq",
+        "event_time": "2026-10-05T17:28:24.530000Z",
+        "latitude": 64.5091,
+        "longitude": -17.3115,
+        "magnitude": 4.7,
+        "place": "105 km WNW of Höfn, Iceland",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzpq"
+      },
+      "public_valid": false,
+      "rank": 34,
+      "reasons": [
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_flash_count",
+          "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+          "score": 99.77,
+          "z": 13.369
+        },
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_energy",
+          "reason": "Energía óptica GLM agregada por encima de su línea base",
+          "score": 99.71,
+          "z": 12.854
+        }
+      ],
+      "region_id": "mid_atlantic_north",
+      "region_name": "Dorsal Mesoatlántica Norte",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.8,
+          "last_success": "2026-10-07T10:39:41Z",
+          "quality": 0.7040000000000001,
+          "records": 4923,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:39:46Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.09444444444444444,
+          "last_success": "2026-10-07T10:39:40Z",
+          "quality": 0.95,
+          "records": 7,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    },
+    {
+      "available_families": 2,
+      "baseline_progress": 0.6166666666666667,
+      "bbox": [
+        -60,
+        0,
+        -35,
+        10
+      ],
+      "confidence": 0.7066666666666667,
+      "coverage": 0.6000000000000001,
+      "data_quality": 0.9416666666666667,
+      "errors_count": 0,
+      "family_scores": {
+        "goes_lightning_control": 99.9982,
+        "seismic": 0.0
+      },
+      "generated_at": "2026-10-07T10:40:04Z",
+      "group": "Océanos",
+      "iedc_provisional": 16.666,
+      "iedc_public": null,
+      "latest_event": {
+        "depth_km": 10.0,
+        "event_id": "us6000u0pb",
+        "event_time": "2026-10-07T04:39:26.324000Z",
+        "latitude": -55.6737,
+        "longitude": -30.0294,
+        "magnitude": 4.9,
+        "place": "South Sandwich Islands region",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0pb"
+      },
+      "public_valid": false,
+      "rank": 35,
+      "reasons": [
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_flash_count",
+          "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+          "score": 100.0,
+          "z": 26.845
+        },
+        {
+          "family": "goes_lightning_control",
+          "feature": "goes_energy",
+          "reason": "Energía óptica GLM agregada por encima de su línea base",
+          "score": 100.0,
+          "z": 22.808
+        }
+      ],
+      "region_id": "mid_atlantic_south",
+      "region_name": "Dorsal Mesoatlántica Sur",
+      "signal": {},
+      "source_summary": [
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "ASF_SENTINEL1_CATALOG",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "coverage": 0.0,
+          "last_success": null,
+          "quality": 0.0,
+          "records": 0,
+          "source": "LOCAL_INSAR_PRODUCTS",
+          "status": "WAITING_FOR_PRODUCTS"
+        },
+        {
+          "coverage": 0.6,
+          "last_success": "2026-10-07T10:39:58Z",
+          "quality": 0.528,
+          "records": 3407,
+          "source": "NGL_GNSS",
+          "status": "OK"
+        },
+        {
+          "coverage": 1.0,
+          "last_success": "2026-10-07T10:40:02Z",
+          "quality": 0.9,
+          "records": 31,
+          "source": "NOAA_GOES_GLM",
+          "status": "OK"
+        },
+        {
+          "coverage": 0.08333333333333333,
+          "last_success": "2026-10-07T10:39:56Z",
+          "quality": 0.95,
+          "records": 12,
+          "source": "USGS_FDSN",
+          "status": "OK"
+        }
+      ],
+      "state": "NORMAL",
+      "status": "OK"
+    }
+  ],
+  "regions_configured": 35,
+  "regions_healthy_or_degraded": 35,
+  "regions_operational": 35,
+  "regions_public_valid": 0,
+  "schema_version": 1,
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

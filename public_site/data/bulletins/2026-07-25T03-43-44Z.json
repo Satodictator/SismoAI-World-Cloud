@@ -1,0 +1,1003 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-25T03:43:44Z",
+  "previous_generated_at": "2026-07-24T23:52:19Z",
+  "classification": "STATISTICAL_ANOMALY",
+  "official_alert": false,
+  "public_gate_approved_regions": 0,
+  "regions_operational": 35,
+  "state_counts": {
+    "NORMAL": 33,
+    "WATCH": 2,
+    "ELEVATED": 0,
+    "HIGHLY_ATYPICAL": 0,
+    "NO_DATA": 0
+  },
+  "state_changes": [
+    {
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "before": "ELEVATED",
+      "after": "WATCH",
+      "iedc_before": 50.881,
+      "iedc_after": 38.964
+    }
+  ],
+  "largest_iedc_changes": [
+    {
+      "region_id": "peru",
+      "region_name": "Perú",
+      "before": 12.04,
+      "after": 0.0,
+      "delta": -12.04
+    },
+    {
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "before": 50.881,
+      "after": 38.964,
+      "delta": -11.917
+    },
+    {
+      "region_id": "tonga_kermadec_east",
+      "region_name": "Tonga–Kermadec Oriental",
+      "before": 10.945,
+      "after": 7.307,
+      "delta": -3.638
+    },
+    {
+      "region_id": "philippines",
+      "region_name": "Filipinas",
+      "before": 16.168,
+      "after": 13.629,
+      "delta": -2.539
+    },
+    {
+      "region_id": "california_nevada",
+      "region_name": "California–Nevada",
+      "before": 1.66,
+      "after": 0.0,
+      "delta": -1.66
+    },
+    {
+      "region_id": "cascadia",
+      "region_name": "Cascadia",
+      "before": 9.48,
+      "after": 8.034,
+      "delta": -1.446
+    },
+    {
+      "region_id": "alaska_aleutians",
+      "region_name": "Alaska–Aleutianas",
+      "before": 19.51,
+      "after": 19.51,
+      "delta": 0.0
+    },
+    {
+      "region_id": "mexico",
+      "region_name": "México y Golfo de California",
+      "before": 37.648,
+      "after": 37.648,
+      "delta": 0.0
+    }
+  ],
+  "notable_regions": [
+    {
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "state": "WATCH",
+      "iedc_provisional": 38.964,
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "baseline_progress": 0.5888888888888889,
+      "available_families": 1,
+      "reasons": [
+        {
+          "family": "seismic",
+          "feature": "seismic_count",
+          "score": 51.02,
+          "reason": "Incremento robusto de la tasa sísmica",
+          "z": 1.57
+        }
+      ],
+      "latest_event": {
+        "event_id": "us7000t2p7",
+        "event_time": "2026-07-23T13:14:03.195000Z",
+        "magnitude": 4.9,
+        "depth_km": 35.0,
+        "latitude": 13.876,
+        "longitude": -92.2338,
+        "place": "57 km SW of Champerico, Guatemala",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t2p7"
+      },
+      "public_valid": false,
+      "signal": {}
+    },
+    {
+      "region_id": "mexico",
+      "region_name": "México y Golfo de California",
+      "state": "WATCH",
+      "iedc_provisional": 37.648,
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "baseline_progress": 0.8555555555555555,
+      "available_families": 1,
+      "reasons": [
+        {
+          "family": "seismic",
+          "feature": "seismic_count",
+          "score": 45.84,
+          "reason": "Incremento robusto de la tasa sísmica",
+          "z": 1.349
+        }
+      ],
+      "latest_event": {
+        "event_id": "ci40660954",
+        "event_time": "2026-07-25T01:16:53.290000Z",
+        "magnitude": 3.08741568611151,
+        "depth_km": 21.6900005340576,
+        "latitude": 32.0391654968262,
+        "longitude": -116.327003479004,
+        "place": "33 km NE of Ensenada, B.C., MX",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40660954"
+      },
+      "public_valid": false,
+      "signal": {}
+    }
+  ],
+  "candidate_patterns": 30,
+  "historical_progress": 0.05598755832037325,
+  "signal_gate": {
+    "approved": false,
+    "official_alert": false,
+    "policy": "Requires public gate, complete baseline, at least three independent families, confidence >= 75%, prospective validation, calibrated probability, acceptable false-alarm rate and complete signal fields.",
+    "checks": [
+      {
+        "region_id": "alaska_aleutians",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": true,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "cascadia",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "california_nevada",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": true,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mexico",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "central_america",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "caribbean",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "venezuela_caribbean",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "colombia_ecuador",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "peru",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "chile_north",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "chile_south",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "scotia_sandwich",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mediterranean_west",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "italy_adriatic",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "greece_aegean",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "turkey_anatolia",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "iran_zagros",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "east_africa_rift",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "red_sea_afar",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "himalaya_west",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "himalaya_east",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "myanmar_andaman",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "sumatra_java",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "banda_molucca",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "philippines",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "taiwan_ryukyu",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "japan",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "kuril_kamchatka",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "papua_new_guinea",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "solomon_vanuatu",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "tonga_kermadec_west",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "tonga_kermadec_east",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "new_zealand",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mid_atlantic_north",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mid_atlantic_south",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      }
+    ]
+  },
+  "languages": [
+    {
+      "code": "es",
+      "name": "Español",
+      "voice_prefix": "es"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "voice_prefix": "en"
+    },
+    {
+      "code": "pt",
+      "name": "Português",
+      "voice_prefix": "pt"
+    },
+    {
+      "code": "fr",
+      "name": "Français",
+      "voice_prefix": "fr"
+    },
+    {
+      "code": "it",
+      "name": "Italiano",
+      "voice_prefix": "it"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch",
+      "voice_prefix": "de"
+    },
+    {
+      "code": "ja",
+      "name": "日本語",
+      "voice_prefix": "ja"
+    },
+    {
+      "code": "tr",
+      "name": "Türkçe",
+      "voice_prefix": "tr"
+    },
+    {
+      "code": "el",
+      "name": "Ελληνικά",
+      "voice_prefix": "el"
+    },
+    {
+      "code": "id",
+      "name": "Bahasa Indonesia",
+      "voice_prefix": "id"
+    }
+  ],
+  "messages": {
+    "es": {
+      "language": "es",
+      "language_name": "Español",
+      "voice_prefix": "es",
+      "headline": "Boletín SismoAI",
+      "classification": "Anomalía estadística",
+      "generated_label": "Última actualización",
+      "changes_label": "Qué cambió",
+      "situation_label": "Situación actual",
+      "limitations_label": "Alcance y limitaciones",
+      "history_label": "Memoria y patrones",
+      "listen_label": "Escuchar boletín",
+      "pause_label": "Pausar",
+      "resume_label": "Continuar",
+      "stop_label": "Detener",
+      "no_voice": "Este dispositivo no tiene una voz disponible para el idioma seleccionado.",
+      "automatic_label": "Automático",
+      "archive_label": "Archivo de boletines",
+      "official_label": "No es una alerta oficial",
+      "summary": "Resumen de estados: normal 33; observación 2; elevado 0; altamente atípico 0. Regiones operativas: 35.",
+      "changes": "Cambios de nivel desde la actualización anterior: Centroamérica pasó de elevado a en observación.",
+      "regions": [
+        "Centroamérica está en observación, con IEDC provisional 39.0 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 4.9, el 2026-07-23, en 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California está en observación, con IEDC provisional 37.6 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 3.1, el 2026-07-25, en 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "El laboratorio histórico ha procesado 5.6% desde 1973: 9,442 eventos USGS de magnitud 4.5 o superior y 30 patrones candidatos. Esos patrones son solo investigación.",
+      "limitations": "No existe una señal experimental aprobada. El gate público está cerrado y esto no es una predicción, una alerta oficial ni una orden de evacuación.",
+      "spoken": "Boletín SismoAI. Anomalía estadística. Resumen de estados: normal 33; observación 2; elevado 0; altamente atípico 0. Regiones operativas: 35. Cambios de nivel desde la actualización anterior: Centroamérica pasó de elevado a en observación. Centroamérica está en observación, con IEDC provisional 39.0 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 4.9, el 2026-07-23, en 57 km SW of Champerico, Guatemala. México y Golfo de California está en observación, con IEDC provisional 37.6 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 3.1, el 2026-07-25, en 33 km NE of Ensenada, B.C., MX. El laboratorio histórico ha procesado 5.6% desde 1973: 9,442 eventos USGS de magnitud 4.5 o superior y 30 patrones candidatos. Esos patrones son solo investigación. No existe una señal experimental aprobada. El gate público está cerrado y esto no es una predicción, una alerta oficial ni una orden de evacuación.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "en": {
+      "language": "en",
+      "language_name": "English",
+      "voice_prefix": "en",
+      "headline": "SismoAI Bulletin",
+      "classification": "Statistical anomaly",
+      "generated_label": "Latest update",
+      "changes_label": "What changed",
+      "situation_label": "Current situation",
+      "limitations_label": "Scope and limitations",
+      "history_label": "Memory and patterns",
+      "listen_label": "Listen to bulletin",
+      "pause_label": "Pause",
+      "resume_label": "Resume",
+      "stop_label": "Stop",
+      "no_voice": "This device has no available voice for the selected language.",
+      "automatic_label": "Automatic",
+      "archive_label": "Bulletin archive",
+      "official_label": "Not an official alert",
+      "summary": "State totals: normal 33; watch 2; elevated 0; highly atypical 0. Operational regions: 35.",
+      "changes": "Level changes since the previous update: Centroamérica moved from elevated to under watch.",
+      "regions": [
+        "Centroamérica is under watch, with provisional IEDC 39.0 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 4.9, on 2026-07-23, at 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California is under watch, with provisional IEDC 37.6 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 3.1, on 2026-07-25, at 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "The historical laboratory has processed 5.6% since 1973: 9,442 USGS events of magnitude 4.5 or higher and 30 candidate patterns. Those patterns are research only.",
+      "limitations": "There is no approved experimental signal. The public gate is closed, and this is not a prediction, an official alert, or an evacuation order.",
+      "spoken": "SismoAI Bulletin. Statistical anomaly. State totals: normal 33; watch 2; elevated 0; highly atypical 0. Operational regions: 35. Level changes since the previous update: Centroamérica moved from elevated to under watch. Centroamérica is under watch, with provisional IEDC 39.0 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 4.9, on 2026-07-23, at 57 km SW of Champerico, Guatemala. México y Golfo de California is under watch, with provisional IEDC 37.6 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 3.1, on 2026-07-25, at 33 km NE of Ensenada, B.C., MX. The historical laboratory has processed 5.6% since 1973: 9,442 USGS events of magnitude 4.5 or higher and 30 candidate patterns. Those patterns are research only. There is no approved experimental signal. The public gate is closed, and this is not a prediction, an official alert, or an evacuation order.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "pt": {
+      "language": "pt",
+      "language_name": "Português",
+      "voice_prefix": "pt",
+      "headline": "Boletim SismoAI",
+      "classification": "Anomalia estatística",
+      "generated_label": "Última atualização",
+      "changes_label": "O que mudou",
+      "situation_label": "Situação atual",
+      "limitations_label": "Escopo e limitações",
+      "history_label": "Memória e padrões",
+      "listen_label": "Ouvir boletim",
+      "pause_label": "Pausar",
+      "resume_label": "Continuar",
+      "stop_label": "Parar",
+      "no_voice": "Este dispositivo não possui voz para o idioma selecionado.",
+      "automatic_label": "Automático",
+      "archive_label": "Arquivo de boletins",
+      "official_label": "Não é um alerta oficial",
+      "summary": "Resumo dos estados: normal 33; observação 2; elevado 0; altamente atípico 0. Regiões operacionais: 35.",
+      "changes": "Mudanças de nível desde a atualização anterior: Centroamérica passou de elevado para em observação.",
+      "regions": [
+        "Centroamérica está em observação, com IEDC provisório 39.0 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 4.9, em 2026-07-23, em 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California está em observação, com IEDC provisório 37.6 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 3.1, em 2026-07-25, em 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "O laboratório histórico processou 5.6% desde 1973: 9,442 eventos USGS de magnitude 4.5 ou superior e 30 padrões candidatos. Esses padrões são apenas pesquisa.",
+      "limitations": "Não existe sinal experimental aprovado. O gate público está fechado e isto não é uma previsão, alerta oficial ou ordem de evacuação.",
+      "spoken": "Boletim SismoAI. Anomalia estatística. Resumo dos estados: normal 33; observação 2; elevado 0; altamente atípico 0. Regiões operacionais: 35. Mudanças de nível desde a atualização anterior: Centroamérica passou de elevado para em observação. Centroamérica está em observação, com IEDC provisório 39.0 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 4.9, em 2026-07-23, em 57 km SW of Champerico, Guatemala. México y Golfo de California está em observação, com IEDC provisório 37.6 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 3.1, em 2026-07-25, em 33 km NE of Ensenada, B.C., MX. O laboratório histórico processou 5.6% desde 1973: 9,442 eventos USGS de magnitude 4.5 ou superior e 30 padrões candidatos. Esses padrões são apenas pesquisa. Não existe sinal experimental aprovado. O gate público está fechado e isto não é uma previsão, alerta oficial ou ordem de evacuação.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "fr": {
+      "language": "fr",
+      "language_name": "Français",
+      "voice_prefix": "fr",
+      "headline": "Bulletin SismoAI",
+      "classification": "Anomalie statistique",
+      "generated_label": "Dernière mise à jour",
+      "changes_label": "Ce qui a changé",
+      "situation_label": "Situation actuelle",
+      "limitations_label": "Portée et limites",
+      "history_label": "Mémoire et motifs",
+      "listen_label": "Écouter le bulletin",
+      "pause_label": "Pause",
+      "resume_label": "Reprendre",
+      "stop_label": "Arrêter",
+      "no_voice": "Cet appareil ne dispose pas de voix pour la langue sélectionnée.",
+      "automatic_label": "Automatique",
+      "archive_label": "Archives des bulletins",
+      "official_label": "Pas une alerte officielle",
+      "summary": "Totaux par état : normal 33 ; surveillance 2 ; élevé 0 ; très atypique 0. Régions opérationnelles : 35.",
+      "changes": "Changements de niveau depuis la mise à jour précédente : Centroamérica est passée de élevé à sous surveillance.",
+      "regions": [
+        "Centroamérica est sous surveillance, avec un IEDC provisoire de 39.0 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 4.9, le 2026-07-23, à 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California est sous surveillance, avec un IEDC provisoire de 37.6 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 3.1, le 2026-07-25, à 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "Le laboratoire historique a traité 5.6% depuis 1973 : 9,442 événements USGS de magnitude 4,5 ou plus et 30 motifs candidats. Ces motifs sont réservés à la recherche.",
+      "limitations": "Il n’existe aucun signal expérimental approuvé. Le gate public est fermé et ceci n’est ni une prédiction, ni une alerte officielle, ni un ordre d’évacuation.",
+      "spoken": "Bulletin SismoAI. Anomalie statistique. Totaux par état : normal 33 ; surveillance 2 ; élevé 0 ; très atypique 0. Régions opérationnelles : 35. Changements de niveau depuis la mise à jour précédente : Centroamérica est passée de élevé à sous surveillance. Centroamérica est sous surveillance, avec un IEDC provisoire de 39.0 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 4.9, le 2026-07-23, à 57 km SW of Champerico, Guatemala. México y Golfo de California est sous surveillance, avec un IEDC provisoire de 37.6 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 3.1, le 2026-07-25, à 33 km NE of Ensenada, B.C., MX. Le laboratoire historique a traité 5.6% depuis 1973 : 9,442 événements USGS de magnitude 4,5 ou plus et 30 motifs candidats. Ces motifs sont réservés à la recherche. Il n’existe aucun signal expérimental approuvé. Le gate public est fermé et ceci n’est ni une prédiction, ni une alerte officielle, ni un ordre d’évacuation.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "it": {
+      "language": "it",
+      "language_name": "Italiano",
+      "voice_prefix": "it",
+      "headline": "Bollettino SismoAI",
+      "classification": "Anomalia statistica",
+      "generated_label": "Ultimo aggiornamento",
+      "changes_label": "Cosa è cambiato",
+      "situation_label": "Situazione attuale",
+      "limitations_label": "Ambito e limiti",
+      "history_label": "Memoria e schemi",
+      "listen_label": "Ascolta il bollettino",
+      "pause_label": "Pausa",
+      "resume_label": "Riprendi",
+      "stop_label": "Ferma",
+      "no_voice": "Questo dispositivo non dispone di una voce per la lingua selezionata.",
+      "automatic_label": "Automatico",
+      "archive_label": "Archivio bollettini",
+      "official_label": "Non è un’allerta ufficiale",
+      "summary": "Totali per stato: normale 33; osservazione 2; elevato 0; altamente atipico 0. Regioni operative: 35.",
+      "changes": "Cambi di livello rispetto all’aggiornamento precedente: Centroamérica è passata da elevato a sotto osservazione.",
+      "regions": [
+        "Centroamérica è sotto osservazione, con IEDC provvisorio 39.0 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 4.9, il 2026-07-23, a 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California è sotto osservazione, con IEDC provvisorio 37.6 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 3.1, il 2026-07-25, a 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "Il laboratorio storico ha elaborato il 5.6% dal 1973: 9,442 eventi USGS di magnitudo 4,5 o superiore e 30 schemi candidati. Questi schemi sono solo ricerca.",
+      "limitations": "Non esiste alcun segnale sperimentale approvato. Il gate pubblico è chiuso e questa non è una previsione, un’allerta ufficiale o un ordine di evacuazione.",
+      "spoken": "Bollettino SismoAI. Anomalia statistica. Totali per stato: normale 33; osservazione 2; elevato 0; altamente atipico 0. Regioni operative: 35. Cambi di livello rispetto all’aggiornamento precedente: Centroamérica è passata da elevato a sotto osservazione. Centroamérica è sotto osservazione, con IEDC provvisorio 39.0 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 4.9, il 2026-07-23, a 57 km SW of Champerico, Guatemala. México y Golfo de California è sotto osservazione, con IEDC provvisorio 37.6 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 3.1, il 2026-07-25, a 33 km NE of Ensenada, B.C., MX. Il laboratorio storico ha elaborato il 5.6% dal 1973: 9,442 eventi USGS di magnitudo 4,5 o superiore e 30 schemi candidati. Questi schemi sono solo ricerca. Non esiste alcun segnale sperimentale approvato. Il gate pubblico è chiuso e questa non è una previsione, un’allerta ufficiale o un ordine di evacuazione.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "de": {
+      "language": "de",
+      "language_name": "Deutsch",
+      "voice_prefix": "de",
+      "headline": "SismoAI-Bericht",
+      "classification": "Statistische Anomalie",
+      "generated_label": "Letztes Update",
+      "changes_label": "Was sich geändert hat",
+      "situation_label": "Aktuelle Lage",
+      "limitations_label": "Umfang und Grenzen",
+      "history_label": "Gedächtnis und Muster",
+      "listen_label": "Bericht anhören",
+      "pause_label": "Pause",
+      "resume_label": "Fortsetzen",
+      "stop_label": "Stoppen",
+      "no_voice": "Auf diesem Gerät ist keine Stimme für die gewählte Sprache verfügbar.",
+      "automatic_label": "Automatisch",
+      "archive_label": "Berichtsarchiv",
+      "official_label": "Keine offizielle Warnung",
+      "summary": "Statussummen: normal 33; Beobachtung 2; erhöht 0; stark atypisch 0. Betriebsbereite Regionen: 35.",
+      "changes": "Stufenänderungen seit dem vorherigen Update: Centroamérica wechselte von erhöht zu unter Beobachtung.",
+      "regions": [
+        "Centroamérica ist unter Beobachtung, mit vorläufigem IEDC 39.0 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 4.9, am 2026-07-23, bei 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California ist unter Beobachtung, mit vorläufigem IEDC 37.6 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 3.1, am 2026-07-25, bei 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "Das historische Labor hat seit 1973 5.6% verarbeitet: 9,442 USGS-Ereignisse ab Magnitude 4,5 und 30 Kandidatenmuster. Diese Muster dienen nur der Forschung.",
+      "limitations": "Es gibt kein genehmigtes experimentelles Signal. Das öffentliche Gate ist geschlossen; dies ist keine Vorhersage, offizielle Warnung oder Evakuierungsanordnung.",
+      "spoken": "SismoAI-Bericht. Statistische Anomalie. Statussummen: normal 33; Beobachtung 2; erhöht 0; stark atypisch 0. Betriebsbereite Regionen: 35. Stufenänderungen seit dem vorherigen Update: Centroamérica wechselte von erhöht zu unter Beobachtung. Centroamérica ist unter Beobachtung, mit vorläufigem IEDC 39.0 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 4.9, am 2026-07-23, bei 57 km SW of Champerico, Guatemala. México y Golfo de California ist unter Beobachtung, mit vorläufigem IEDC 37.6 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 3.1, am 2026-07-25, bei 33 km NE of Ensenada, B.C., MX. Das historische Labor hat seit 1973 5.6% verarbeitet: 9,442 USGS-Ereignisse ab Magnitude 4,5 und 30 Kandidatenmuster. Diese Muster dienen nur der Forschung. Es gibt kein genehmigtes experimentelles Signal. Das öffentliche Gate ist geschlossen; dies ist keine Vorhersage, offizielle Warnung oder Evakuierungsanordnung.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "ja": {
+      "language": "ja",
+      "language_name": "日本語",
+      "voice_prefix": "ja",
+      "headline": "SismoAI速報",
+      "classification": "統計的異常",
+      "generated_label": "最終更新",
+      "changes_label": "変更点",
+      "situation_label": "現在の状況",
+      "limitations_label": "範囲と制限",
+      "history_label": "履歴とパターン",
+      "listen_label": "速報を聞く",
+      "pause_label": "一時停止",
+      "resume_label": "再開",
+      "stop_label": "停止",
+      "no_voice": "選択した言語の音声がこの端末にありません。",
+      "automatic_label": "自動",
+      "archive_label": "速報アーカイブ",
+      "official_label": "公式警報ではありません",
+      "summary": "状態集計：通常33、監視2、上昇0、非常に異常0。稼働地域は35です。",
+      "changes": "前回の更新からのレベル変更：Centroaméricaは上昇から監視に変更。",
+      "regions": [
+        "Centroaméricaは監視で、暫定IEDCは39.0、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-23、57 km SW of Champerico, Guatemalaで、マグニチュード4.9です。",
+        "México y Golfo de Californiaは監視で、暫定IEDCは37.6、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-25、33 km NE of Ensenada, B.C., MXで、マグニチュード3.1です。"
+      ],
+      "historical": "履歴研究は1973年以降の5.6%を処理済みで、マグニチュード4.5以上のUSGSイベント9,442件と候補パターン30件があります。候補は研究専用です。",
+      "limitations": "承認された実験シグナルはありません。公開ゲートは閉じており、これは予測、公式警報、避難命令ではありません。",
+      "spoken": "SismoAI速報. 統計的異常. 状態集計：通常33、監視2、上昇0、非常に異常0。稼働地域は35です。 前回の更新からのレベル変更：Centroaméricaは上昇から監視に変更。 Centroaméricaは監視で、暫定IEDCは39.0、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-23、57 km SW of Champerico, Guatemalaで、マグニチュード4.9です。 México y Golfo de Californiaは監視で、暫定IEDCは37.6、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-25、33 km NE of Ensenada, B.C., MXで、マグニチュード3.1です。 履歴研究は1973年以降の5.6%を処理済みで、マグニチュード4.5以上のUSGSイベント9,442件と候補パターン30件があります。候補は研究専用です。 承認された実験シグナルはありません。公開ゲートは閉じており、これは予測、公式警報、避難命令ではありません。",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "tr": {
+      "language": "tr",
+      "language_name": "Türkçe",
+      "voice_prefix": "tr",
+      "headline": "SismoAI Bülteni",
+      "classification": "İstatistiksel anomali",
+      "generated_label": "Son güncelleme",
+      "changes_label": "Ne değişti",
+      "situation_label": "Mevcut durum",
+      "limitations_label": "Kapsam ve sınırlamalar",
+      "history_label": "Hafıza ve örüntüler",
+      "listen_label": "Bülteni dinle",
+      "pause_label": "Duraklat",
+      "resume_label": "Devam et",
+      "stop_label": "Durdur",
+      "no_voice": "Bu cihazda seçilen dil için ses bulunmuyor.",
+      "automatic_label": "Otomatik",
+      "archive_label": "Bülten arşivi",
+      "official_label": "Resmi uyarı değildir",
+      "summary": "Durum toplamları: normal 33; izlemede 2; yüksek 0; çok sıra dışı 0. Çalışan bölge: 35.",
+      "changes": "Önceki güncellemeden bu yana seviye değişiklikleri: Centroamérica, yüksek seviyesinden izlemede seviyesine geçti.",
+      "regions": [
+        "Centroamérica izlemede; geçici IEDC 39.0, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-23 tarihinde 57 km SW of Champerico, Guatemala konumunda, 4.9 büyüklüğündedir.",
+        "México y Golfo de California izlemede; geçici IEDC 37.6, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-25 tarihinde 33 km NE of Ensenada, B.C., MX konumunda, 3.1 büyüklüğündedir."
+      ],
+      "historical": "Tarihsel laboratuvar 1973'ten bu yana 5.6% işledi: 4,5 ve üzeri 9,442 USGS olayı ve 30 aday örüntü. Bu örüntüler yalnızca araştırma içindir.",
+      "limitations": "Onaylanmış deneysel sinyal yoktur. Kamu kapısı kapalıdır; bu bir tahmin, resmi uyarı veya tahliye emri değildir.",
+      "spoken": "SismoAI Bülteni. İstatistiksel anomali. Durum toplamları: normal 33; izlemede 2; yüksek 0; çok sıra dışı 0. Çalışan bölge: 35. Önceki güncellemeden bu yana seviye değişiklikleri: Centroamérica, yüksek seviyesinden izlemede seviyesine geçti. Centroamérica izlemede; geçici IEDC 39.0, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-23 tarihinde 57 km SW of Champerico, Guatemala konumunda, 4.9 büyüklüğündedir. México y Golfo de California izlemede; geçici IEDC 37.6, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-25 tarihinde 33 km NE of Ensenada, B.C., MX konumunda, 3.1 büyüklüğündedir. Tarihsel laboratuvar 1973'ten bu yana 5.6% işledi: 4,5 ve üzeri 9,442 USGS olayı ve 30 aday örüntü. Bu örüntüler yalnızca araştırma içindir. Onaylanmış deneysel sinyal yoktur. Kamu kapısı kapalıdır; bu bir tahmin, resmi uyarı veya tahliye emri değildir.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "el": {
+      "language": "el",
+      "language_name": "Ελληνικά",
+      "voice_prefix": "el",
+      "headline": "Δελτίο SismoAI",
+      "classification": "Στατιστική ανωμαλία",
+      "generated_label": "Τελευταία ενημέρωση",
+      "changes_label": "Τι άλλαξε",
+      "situation_label": "Τρέχουσα κατάσταση",
+      "limitations_label": "Εύρος και περιορισμοί",
+      "history_label": "Μνήμη και μοτίβα",
+      "listen_label": "Ακρόαση δελτίου",
+      "pause_label": "Παύση",
+      "resume_label": "Συνέχεια",
+      "stop_label": "Διακοπή",
+      "no_voice": "Η συσκευή δεν διαθέτει φωνή για την επιλεγμένη γλώσσα.",
+      "automatic_label": "Αυτόματα",
+      "archive_label": "Αρχείο δελτίων",
+      "official_label": "Δεν είναι επίσημη προειδοποίηση",
+      "summary": "Σύνολα κατάστασης: κανονική 33, παρακολούθηση 2, αυξημένη 0, πολύ ασυνήθιστη 0. Ενεργές περιοχές: 35.",
+      "changes": "Αλλαγές επιπέδου από την προηγούμενη ενημέρωση: Η περιοχή Centroamérica άλλαξε από αυξημένη σε υπό παρακολούθηση.",
+      "regions": [
+        "Η περιοχή Centroamérica είναι υπό παρακολούθηση, με προσωρινό IEDC 39.0 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 4.9, στις 2026-07-23, στην περιοχή 57 km SW of Champerico, Guatemala.",
+        "Η περιοχή México y Golfo de California είναι υπό παρακολούθηση, με προσωρινό IEDC 37.6 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 3.1, στις 2026-07-25, στην περιοχή 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "Το ιστορικό εργαστήριο έχει επεξεργαστεί 5.6% από το 1973: 9,442 συμβάντα USGS μεγέθους 4,5 ή μεγαλύτερα και 30 υποψήφια μοτίβα. Τα μοτίβα είναι μόνο για έρευνα.",
+      "limitations": "Δεν υπάρχει εγκεκριμένο πειραματικό σήμα. Η δημόσια πύλη είναι κλειστή και αυτό δεν είναι πρόβλεψη, επίσημη προειδοποίηση ή εντολή εκκένωσης.",
+      "spoken": "Δελτίο SismoAI. Στατιστική ανωμαλία. Σύνολα κατάστασης: κανονική 33, παρακολούθηση 2, αυξημένη 0, πολύ ασυνήθιστη 0. Ενεργές περιοχές: 35. Αλλαγές επιπέδου από την προηγούμενη ενημέρωση: Η περιοχή Centroamérica άλλαξε από αυξημένη σε υπό παρακολούθηση. Η περιοχή Centroamérica είναι υπό παρακολούθηση, με προσωρινό IEDC 39.0 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 4.9, στις 2026-07-23, στην περιοχή 57 km SW of Champerico, Guatemala. Η περιοχή México y Golfo de California είναι υπό παρακολούθηση, με προσωρινό IEDC 37.6 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 3.1, στις 2026-07-25, στην περιοχή 33 km NE of Ensenada, B.C., MX. Το ιστορικό εργαστήριο έχει επεξεργαστεί 5.6% από το 1973: 9,442 συμβάντα USGS μεγέθους 4,5 ή μεγαλύτερα και 30 υποψήφια μοτίβα. Τα μοτίβα είναι μόνο για έρευνα. Δεν υπάρχει εγκεκριμένο πειραματικό σήμα. Η δημόσια πύλη είναι κλειστή και αυτό δεν είναι πρόβλεψη, επίσημη προειδοποίηση ή εντολή εκκένωσης.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    },
+    "id": {
+      "language": "id",
+      "language_name": "Bahasa Indonesia",
+      "voice_prefix": "id",
+      "headline": "Buletin SismoAI",
+      "classification": "Anomali statistik",
+      "generated_label": "Pembaruan terakhir",
+      "changes_label": "Apa yang berubah",
+      "situation_label": "Situasi saat ini",
+      "limitations_label": "Cakupan dan batasan",
+      "history_label": "Memori dan pola",
+      "listen_label": "Dengarkan buletin",
+      "pause_label": "Jeda",
+      "resume_label": "Lanjutkan",
+      "stop_label": "Hentikan",
+      "no_voice": "Perangkat ini tidak memiliki suara untuk bahasa yang dipilih.",
+      "automatic_label": "Otomatis",
+      "archive_label": "Arsip buletin",
+      "official_label": "Bukan peringatan resmi",
+      "summary": "Jumlah status: normal 33; pengamatan 2; meningkat 0; sangat tidak biasa 0. Wilayah operasional: 35.",
+      "changes": "Perubahan tingkat sejak pembaruan sebelumnya: Centroamérica berubah dari meningkat menjadi dalam pengamatan.",
+      "regions": [
+        "Centroamérica berada pada dalam pengamatan, dengan IEDC sementara 39.0 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 4.9, pada 2026-07-23, di 57 km SW of Champerico, Guatemala.",
+        "México y Golfo de California berada pada dalam pengamatan, dengan IEDC sementara 37.6 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 3.1, pada 2026-07-25, di 33 km NE of Ensenada, B.C., MX."
+      ],
+      "historical": "Laboratorium historis telah memproses 5.6% sejak 1973: 9,442 peristiwa USGS bermagnitudo 4,5 atau lebih dan 30 pola kandidat. Pola tersebut hanya untuk penelitian.",
+      "limitations": "Tidak ada sinyal eksperimental yang disetujui. Gerbang publik tertutup dan ini bukan prediksi, peringatan resmi, atau perintah evakuasi.",
+      "spoken": "Buletin SismoAI. Anomali statistik. Jumlah status: normal 33; pengamatan 2; meningkat 0; sangat tidak biasa 0. Wilayah operasional: 35. Perubahan tingkat sejak pembaruan sebelumnya: Centroamérica berubah dari meningkat menjadi dalam pengamatan. Centroamérica berada pada dalam pengamatan, dengan IEDC sementara 39.0 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 4.9, pada 2026-07-23, di 57 km SW of Champerico, Guatemala. México y Golfo de California berada pada dalam pengamatan, dengan IEDC sementara 37.6 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 3.1, pada 2026-07-25, di 33 km NE of Ensenada, B.C., MX. Laboratorium historis telah memproses 5.6% sejak 1973: 9,442 peristiwa USGS bermagnitudo 4,5 atau lebih dan 30 pola kandidat. Pola tersebut hanya untuk penelitian. Tidak ada sinyal eksperimental yang disetujui. Gerbang publik tertutup dan ini bukan prediksi, peringatan resmi, atau perintah evakuasi.",
+      "generated_at": "2026-07-25T03:43:44Z"
+    }
+  }
+}
