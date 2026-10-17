@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-17T15:42:49Z",
+  "started_at": "2026-10-17T15:42:43Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "mexico",
+    "name": "México y Golfo de California",
+    "group": "Americas",
+    "bbox": [
+      14,
+      33,
+      -118,
+      -86
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-10-17T15:42:49Z",
+    "day": "2026-10-17",
+    "region_id": "mexico",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.7705555555555555,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.8722222222222222,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-17T08:05:37Z",
+        "last_success": "2026-10-17T08:05:37Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-17T15:42:46Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/mexico/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-17T08:05:26Z",
+        "last_success": "2026-10-17T08:05:26Z",
+        "records": 9937,
+        "freshness_hours": 336.0,
+        "coverage": 0.8,
+        "quality": 0.7040000000000001,
+        "message": "16/20 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-10-17T15:42:46Z",
+        "last_success": "2026-10-17T15:42:46Z",
+        "records": 17,
+        "freshness_hours": 0.0009257694444444445,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 101 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-17T15:42:44Z",
+        "last_success": "2026-10-17T15:42:44Z",
+        "records": 22,
+        "freshness_hours": 1.7194150030555557,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-09\",\"end\":\"2026-10-17\",\"newest\":\"2026-10-17T13:59:34.575000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-17T08:05:37Z",
+      "last_success": "2026-10-17T08:05:37Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-17T15:42:46Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/mexico/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-17T08:05:26Z",
+      "last_success": "2026-10-17T08:05:26Z",
+      "records": 9937,
+      "freshness_hours": 336.0,
+      "coverage": 0.8,
+      "quality": 0.7040000000000001,
+      "message": "16/20 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-10-17T15:42:46Z",
+      "last_success": "2026-10-17T15:42:46Z",
+      "records": 17,
+      "freshness_hours": 0.0009257694444444445,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 101 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-17T15:42:44Z",
+      "last_success": "2026-10-17T15:42:44Z",
+      "records": 22,
+      "freshness_hours": 1.7194150030555557,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-09\",\"end\":\"2026-10-17\",\"newest\":\"2026-10-17T13:59:34.575000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 6083,
+    "dtrg_r_gnss_stations": 20,
+    "dtrg_r_gnss_obs": 25455,
+    "dtrg_r_goes_files": 4635,
+    "dtrg_r_goes_daily": 91,
+    "dtrg_r_insar_scenes": 60692,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 7074,
+    "dtrg_r_scores": 1179,
+    "dtrg_r_backtests": 13
+  },
+  "latest_backtest": [
+    {
+      "run_id": "f8b6acb9-831f-4b8f-b96d-05c04568ca33",
+      "created_at": "2026-10-11T10:59:18Z",
+      "start_day": "2023-10-12",
+      "end_day": "2026-10-11",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 478,
+      "negatives": 618,
+      "tp": 0,
+      "fp": 0,
+      "tn": 618,
+      "fn": 478,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5207884795060325,
+      "brier": 0.3771241540879556,
+      "base_brier": 0.24592080025573904,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":478,\"negatives\":618,\"tp\":0,\"fp\":0,\"tn\":618,\"fn\":478,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5207884795060325,\"brier\":0.3771241540879556,\"base_brier\":0.24592080025573904,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000u309",
+      "event_time": "2026-10-17T13:59:34.575000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 14.0469,
+      "longitude": -92.8552,
+      "place": "86 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u309"
+    },
+    {
+      "event_id": "tx2026ulnsow",
+      "event_time": "2026-10-17T13:30:16.104000Z",
+      "magnitude": 3.5,
+      "depth_km": 6.0303,
+      "latitude": 28.633,
+      "longitude": -100.083,
+      "place": "24 km WNW of Carrizo Springs, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026ulnsow"
+    },
+    {
+      "event_id": "tx2026ulazjd",
+      "event_time": "2026-10-17T07:05:54.449000Z",
+      "magnitude": 3.0,
+      "depth_km": 8.4326,
+      "latitude": 31.547,
+      "longitude": -104.135,
+      "place": "41 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026ulazjd"
+    },
+    {
+      "event_id": "us6000u2x7",
+      "event_time": "2026-10-17T01:03:00.020000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 14.0576,
+      "longitude": -93.2479,
+      "place": "115 km SW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2x7"
+    },
+    {
+      "event_id": "us6000u2x1",
+      "event_time": "2026-10-17T00:23:41.073000Z",
+      "magnitude": 2.7,
+      "depth_km": 4.209,
+      "latitude": 32.3538,
+      "longitude": -104.462,
+      "place": "21 km NNW of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2x1"
+    },
+    {
+      "event_id": "us6000u2wr",
+      "event_time": "2026-10-16T23:35:03.465000Z",
+      "magnitude": 2.5,
+      "depth_km": 5.767,
+      "latitude": 32.381,
+      "longitude": -104.4685,
+      "place": "22 km W of Carlsbad, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2wr"
+    },
+    {
+      "event_id": "us6000u2wk",
+      "event_time": "2026-10-16T22:29:29.181000Z",
+      "magnitude": 2.5,
+      "depth_km": 3.72,
+      "latitude": 32.5198,
+      "longitude": -104.6518,
+      "place": "33 km SSE of Hope, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2wk"
+    },
+    {
+      "event_id": "tx2026ukhkit",
+      "event_time": "2026-10-16T21:15:11.342000Z",
+      "magnitude": 2.9,
+      "depth_km": 6.3562,
+      "latitude": 31.646,
+      "longitude": -104.429,
+      "place": "58 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026ukhkit"
+    },
+    {
+      "event_id": "us6000u2ph",
+      "event_time": "2026-10-16T11:39:44.878000Z",
+      "magnitude": 4.8,
+      "depth_km": 108.908,
+      "latitude": 15.2777,
+      "longitude": -92.7881,
+      "place": "7 km WSW of Soconusco, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ph"
+    },
+    {
+      "event_id": "tx2026uikywj",
+      "event_time": "2026-10-15T20:56:11.004000Z",
+      "magnitude": 2.5,
+      "depth_km": 6.3947,
+      "latitude": 31.612,
+      "longitude": -104.094,
+      "place": "43 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026uikywj"
+    },
+    {
+      "event_id": "ci41347847",
+      "event_time": "2026-10-15T14:09:56.550000Z",
+      "magnitude": 2.72,
+      "depth_km": 15.34,
+      "latitude": 32.3676666666667,
+      "longitude": -115.407666666667,
+      "place": "20 km W of Delta, B.C., MX",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41347847"
+    },
+    {
+      "event_id": "us6000u2cy",
+      "event_time": "2026-10-14T22:55:19.298000Z",
+      "magnitude": 3.6,
+      "depth_km": 9.465,
+      "latitude": 32.3282,
+      "longitude": -104.4459,
+      "place": "18 km NNW of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2cy"
+    },
+    {
+      "event_id": "us6000u28d",
+      "event_time": "2026-10-14T09:00:27.870000Z",
+      "magnitude": 3.1,
+      "depth_km": 8.189,
+      "latitude": 32.3496,
+      "longitude": -104.4747,
+      "place": "21 km NNW of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u28d"
+    },
+    {
+      "event_id": "tx2026ueznej",
+      "event_time": "2026-10-13T23:54:43.577000Z",
+      "magnitude": 2.6,
+      "depth_km": 6.6638,
+      "latitude": 31.722,
+      "longitude": -104.3,
+      "place": "50 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026ueznej"
+    },
+    {
+      "event_id": "us6000u268",
+      "event_time": "2026-10-13T23:54:43.556000Z",
+      "magnitude": 2.6,
+      "depth_km": 8.98,
+      "latitude": 31.716,
+      "longitude": -104.2952,
+      "place": "51 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u268"
+    },
+    {
+      "event_id": "us6000u25y",
+      "event_time": "2026-10-13T22:39:00.232000Z",
+      "magnitude": 3.6,
+      "depth_km": 10.0,
+      "latitude": 32.3762,
+      "longitude": -104.478,
+      "place": "23 km WSW of Carlsbad, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u25y"
+    },
+    {
+      "event_id": "tx2026ubyylo",
+      "event_time": "2026-10-12T08:24:13.261000Z",
+      "magnitude": 2.5,
+      "depth_km": 5.8948,
+      "latitude": 31.664,
+      "longitude": -104.421,
+      "place": "56 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026ubyylo"
+    },
+    {
+      "event_id": "us6000u1jz",
+      "event_time": "2026-10-11T10:57:35.893000Z",
+      "magnitude": 2.6,
+      "depth_km": 7.724,
+      "latitude": 28.8909,
+      "longitude": -99.0224,
+      "place": "7 km E of Pearsall, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1jz"
+    },
+    {
+      "event_id": "tx2026uaihsw",
+      "event_time": "2026-10-11T10:57:32.813000Z",
+      "magnitude": 2.6,
+      "depth_km": 6.3989,
+      "latitude": 28.833,
+      "longitude": -98.966,
+      "place": "14 km ESE of Pearsall, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026uaihsw"
+    },
+    {
+      "event_id": "us6000u1jd",
+      "event_time": "2026-10-11T08:27:13.940000Z",
+      "magnitude": 2.6,
+      "depth_km": 8.818,
+      "latitude": 31.6385,
+      "longitude": -104.4562,
+      "place": "60 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1jd"
+    },
+    {
+      "event_id": "tx2026uacwco",
+      "event_time": "2026-10-11T08:12:53.330000Z",
+      "magnitude": 2.5,
+      "depth_km": 6.3562,
+      "latitude": 31.669,
+      "longitude": -104.449,
+      "place": "56 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026uacwco"
+    },
+    {
+      "event_id": "tx2026uacqao",
+      "event_time": "2026-10-11T08:06:02.701000Z",
+      "magnitude": 2.9,
+      "depth_km": 8.6633,
+      "latitude": 31.627,
+      "longitude": -104.454,
+      "place": "61 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026uacqao"
+    },
+    {
+      "event_id": "tx2026uacobs",
+      "event_time": "2026-10-11T08:04:54.794000Z",
+      "magnitude": 4.0,
+      "depth_km": 5.946,
+      "latitude": 31.666,
+      "longitude": -104.427,
+      "place": "56 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026uacobs"
+    },
+    {
+      "event_id": "us6000u1dh",
+      "event_time": "2026-10-10T07:47:00.391000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 17.8191,
+      "longitude": -92.7794,
+      "place": "4 km W of Aquiles Serdán 1ra. Sección, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1dh"
+    },
+    {
+      "event_id": "ci41345287",
+      "event_time": "2026-10-09T01:01:32.900000Z",
+      "magnitude": 3.14,
+      "depth_km": 9.97,
+      "latitude": 31.542,
+      "longitude": -114.520666666667,
+      "place": "86 km SSE of Estacion Coahuila, B.C., MX",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41345287"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 22,
+      "oldest_before": "2021-07-28",
+      "newest_before": "2026-10-17",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-09",
+          "end": "2026-10-17",
+          "result": {
+            "status": "OK",
+            "records_received": 22,
+            "newest": "2026-10-17T13:59:34.575000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 101,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/mexico/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-17",
+        "region_id": "mexico",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.7706,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.8722,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

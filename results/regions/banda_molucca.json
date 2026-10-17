@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-17T15:43:20Z",
+  "started_at": "2026-10-17T15:43:18Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "banda_molucca",
+    "name": "Banda–Molucas",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      -12,
+      5,
+      116,
+      136
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-10-17T15:43:20Z",
+    "day": "2026-10-17",
+    "region_id": "banda_molucca",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.9611111111111111,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-17T08:07:05Z",
+        "last_success": "2026-10-17T08:07:05Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-17T15:43:19Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/banda_molucca/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-17T08:07:00Z",
+        "last_success": "2026-10-17T08:07:00Z",
+        "records": 7520,
+        "freshness_hours": 336.0,
+        "coverage": 0.75,
+        "quality": 0.66,
+        "message": "12/16 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-17T15:43:19Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-17T15:43:19Z",
+        "last_success": "2026-10-17T15:43:19Z",
+        "records": 14,
+        "freshness_hours": 6.594056989444445,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-09\",\"end\":\"2026-10-17\",\"newest\":\"2026-10-17T09:07:40.745000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-17T08:07:05Z",
+      "last_success": "2026-10-17T08:07:05Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-17T15:43:19Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/banda_molucca/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-17T08:07:00Z",
+      "last_success": "2026-10-17T08:07:00Z",
+      "records": 7520,
+      "freshness_hours": 336.0,
+      "coverage": 0.75,
+      "quality": 0.66,
+      "message": "12/16 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-17T15:43:19Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-17T15:43:19Z",
+      "last_success": "2026-10-17T15:43:19Z",
+      "records": 14,
+      "freshness_hours": 6.594056989444445,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-09\",\"end\":\"2026-10-17\",\"newest\":\"2026-10-17T09:07:40.745000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 7891,
+    "dtrg_r_gnss_stations": 16,
+    "dtrg_r_gnss_obs": 20958,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 38477,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4716,
+    "dtrg_r_scores": 1179,
+    "dtrg_r_backtests": 13
+  },
+  "latest_backtest": [
+    {
+      "run_id": "72eca24f-23b0-4b12-b8f5-56cadc87ce56",
+      "created_at": "2026-10-11T11:00:43Z",
+      "start_day": "2023-10-12",
+      "end_day": "2026-10-11",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 449,
+      "negatives": 647,
+      "tp": 9,
+      "fp": 0,
+      "tn": 647,
+      "fn": 440,
+      "precision": 1.0,
+      "recall": 0.0200445434298441,
+      "specificity": 1.0,
+      "f1": 0.039301310043668124,
+      "auc": 0.5344626389400454,
+      "brier": 0.33962128052180646,
+      "base_brier": 0.24184076802173668,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":449,\"negatives\":647,\"tp\":9,\"fp\":0,\"tn\":647,\"fn\":440,\"precision\":1.0,\"recall\":0.0200445434298441,\"specificity\":1.0,\"f1\":0.039301310043668124,\"auc\":0.5344626389400454,\"brier\":0.33962128052180646,\"base_brier\":0.24184076802173668,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000u2zb",
+      "event_time": "2026-10-17T09:07:40.745000Z",
+      "magnitude": 4.6,
+      "depth_km": 90.844,
+      "latitude": -8.7339,
+      "longitude": 124.3423,
+      "place": "51 km N of Pante Makasar, Timor Leste",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2zb"
+    },
+    {
+      "event_id": "us6000u2yw",
+      "event_time": "2026-10-17T07:20:48.242000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -8.1086,
+      "longitude": 120.2824,
+      "place": "59 km NNW of Ruteng, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2yw"
+    },
+    {
+      "event_id": "us6000u2rv",
+      "event_time": "2026-10-16T16:26:02.635000Z",
+      "magnitude": 4.4,
+      "depth_km": 71.844,
+      "latitude": 1.2121,
+      "longitude": 126.1072,
+      "place": "111 km ESE of Bitung, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2rv"
+    },
+    {
+      "event_id": "us6000u20i",
+      "event_time": "2026-10-13T09:48:28.205000Z",
+      "magnitude": 4.5,
+      "depth_km": 35.0,
+      "latitude": -9.9266,
+      "longitude": 118.8246,
+      "place": "71 km SW of Tambolaka, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u20i"
+    },
+    {
+      "event_id": "us6000u1x0",
+      "event_time": "2026-10-12T23:43:52.181000Z",
+      "magnitude": 4.1,
+      "depth_km": 130.231,
+      "latitude": -6.3101,
+      "longitude": 130.3681,
+      "place": "274 km WSW of Tual, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1x0"
+    },
+    {
+      "event_id": "us6000u1sx",
+      "event_time": "2026-10-12T16:12:25.209000Z",
+      "magnitude": 4.2,
+      "depth_km": 98.413,
+      "latitude": -8.795,
+      "longitude": 122.8849,
+      "place": "76 km ESE of Maumere, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1sx"
+    },
+    {
+      "event_id": "us6000u1r3",
+      "event_time": "2026-10-12T08:59:14.629000Z",
+      "magnitude": 4.6,
+      "depth_km": 49.217,
+      "latitude": 0.6834,
+      "longitude": 125.9293,
+      "place": "122 km SE of Bitung, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1r3"
+    },
+    {
+      "event_id": "us6000u1qy",
+      "event_time": "2026-10-12T08:30:08.695000Z",
+      "magnitude": 4.7,
+      "depth_km": 22.434,
+      "latitude": -8.237,
+      "longitude": 128.9661,
+      "place": "219 km E of Lospalos, Timor Leste",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1qy"
+    },
+    {
+      "event_id": "us6000u1mj",
+      "event_time": "2026-10-11T21:34:53.947000Z",
+      "magnitude": 5.2,
+      "depth_km": 111.257,
+      "latitude": 0.5235,
+      "longitude": 121.697,
+      "place": "152 km W of Gorontalo, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1mj"
+    },
+    {
+      "event_id": "us6000u1ls",
+      "event_time": "2026-10-11T18:47:57.197000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -3.1323,
+      "longitude": 130.6537,
+      "place": "184 km W of Fakfak, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1ls"
+    },
+    {
+      "event_id": "us6000u1cv",
+      "event_time": "2026-10-10T05:32:01.552000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 1.6248,
+      "longitude": 126.3886,
+      "place": "141 km E of Bitung, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1cv"
+    },
+    {
+      "event_id": "us6000u1cl",
+      "event_time": "2026-10-10T04:45:03.982000Z",
+      "magnitude": 4.4,
+      "depth_km": 67.684,
+      "latitude": -8.8422,
+      "longitude": 124.0625,
+      "place": "53 km NW of Pante Makasar, Timor Leste",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1cl"
+    },
+    {
+      "event_id": "us6000u1bs",
+      "event_time": "2026-10-10T02:00:42.634000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": 1.416,
+      "longitude": 126.3601,
+      "place": "133 km WNW of Ternate, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1bs"
+    },
+    {
+      "event_id": "us6000u13v",
+      "event_time": "2026-10-09T05:11:04.200000Z",
+      "magnitude": 5.2,
+      "depth_km": 40.049,
+      "latitude": 0.7587,
+      "longitude": 125.9365,
+      "place": "117 km SE of Bitung, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u13v"
+    },
+    {
+      "event_id": "us6000u10n",
+      "event_time": "2026-10-08T18:06:00.577000Z",
+      "magnitude": 4.8,
+      "depth_km": 91.156,
+      "latitude": -9.2392,
+      "longitude": 120.3127,
+      "place": "46 km N of Waingapu, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u10n"
+    },
+    {
+      "event_id": "us6000u0yr",
+      "event_time": "2026-10-08T14:11:49.678000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -10.0202,
+      "longitude": 122.2936,
+      "place": "113 km NW of Baa, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0yr"
+    },
+    {
+      "event_id": "us6000u0wb",
+      "event_time": "2026-10-08T05:06:52.046000Z",
+      "magnitude": 4.7,
+      "depth_km": 65.279,
+      "latitude": -9.421,
+      "longitude": 118.8068,
+      "place": "47 km W of Tambolaka, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0wb"
+    },
+    {
+      "event_id": "us6000u0wa",
+      "event_time": "2026-10-08T04:48:59.943000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -7.7761,
+      "longitude": 120.5395,
+      "place": "92 km N of Ruteng, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0wa"
+    },
+    {
+      "event_id": "us6000u0vw",
+      "event_time": "2026-10-08T03:00:01.461000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -7.8993,
+      "longitude": 121.0443,
+      "place": "101 km NE of Ruteng, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0vw"
+    },
+    {
+      "event_id": "us6000u2jj",
+      "event_time": "2026-10-07T22:15:04.560000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 0.6799,
+      "longitude": 128.1226,
+      "place": "18 km W of Maba, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2jj"
+    },
+    {
+      "event_id": "us6000u2jd",
+      "event_time": "2026-10-07T15:34:52.475000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -7.9534,
+      "longitude": 120.9661,
+      "place": "91 km NE of Ruteng, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2jd"
+    },
+    {
+      "event_id": "us6000u0qw",
+      "event_time": "2026-10-07T10:57:34.247000Z",
+      "magnitude": 4.7,
+      "depth_km": 139.831,
+      "latitude": 1.5798,
+      "longitude": 124.6702,
+      "place": "22 km WNW of Manado, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0qw"
+    },
+    {
+      "event_id": "us6000u2ip",
+      "event_time": "2026-10-07T00:39:12.863000Z",
+      "magnitude": 4.2,
+      "depth_km": 35.0,
+      "latitude": 4.7748,
+      "longitude": 127.6824,
+      "place": "242 km SE of Pondaguitan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ip"
+    },
+    {
+      "event_id": "us6000u0km",
+      "event_time": "2026-10-06T20:15:28.163000Z",
+      "magnitude": 4.6,
+      "depth_km": 144.082,
+      "latitude": -8.4893,
+      "longitude": 116.1796,
+      "place": "12 km NNE of Mataram, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0km"
+    },
+    {
+      "event_id": "us6000u0kh",
+      "event_time": "2026-10-06T19:59:14.366000Z",
+      "magnitude": 4.2,
+      "depth_km": 551.182,
+      "latitude": 3.5135,
+      "longitude": 122.7333,
+      "place": "293 km SSE of Tabiauan, Philippines",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0kh"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 14,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-17",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-09",
+          "end": "2026-10-17",
+          "result": {
+            "status": "OK",
+            "records_received": 14,
+            "newest": "2026-10-17T09:07:40.745000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/banda_molucca/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-17",
+        "region_id": "banda_molucca",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.9611,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
