@@ -1,0 +1,548 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-24T16:04:48Z",
+  "started_at": "2026-10-24T16:04:44Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "mid_atlantic_south",
+    "name": "Dorsal Mesoatlántica Sur",
+    "group": "Océanos",
+    "bbox": [
+      -60,
+      0,
+      -35,
+      10
+    ],
+    "min_magnitude": 3.5,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-10-24T16:04:48Z",
+    "day": "2026-10-24",
+    "region_id": "mid_atlantic_south",
+    "iedc_raw": 16.095,
+    "iedc_provisional": 16.095,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.7080555555555555,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.6222222222222222,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [
+      {
+        "family": "goes_lightning_control",
+        "feature": "goes_flash_count",
+        "score": 99.74,
+        "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+        "z": 13.085
+      },
+      {
+        "family": "goes_lightning_control",
+        "feature": "goes_energy",
+        "score": 93.4,
+        "reason": "Energía óptica GLM agregada por encima de su línea base",
+        "z": 5.98
+      }
+    ],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 96.5703
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-24T16:04:46Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Catálogo InSAR desactivado para esta macroregión oceánica",
+        "details_json": "{\"reason\":\"Catálogo InSAR desactivado para esta macroregión oceánica\"}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-24T16:04:46Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/mid_atlantic_south/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:30:15Z",
+        "last_success": "2026-10-24T08:30:15Z",
+        "records": 3367,
+        "freshness_hours": 672.0,
+        "coverage": 0.6,
+        "quality": 0.528,
+        "message": "6/10 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-10-24T16:04:46Z",
+        "last_success": "2026-10-24T16:04:46Z",
+        "records": 17,
+        "freshness_hours": 0.0004913002777777777,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 71 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-24T16:04:45Z",
+        "last_success": "2026-10-24T16:04:45Z",
+        "records": 5,
+        "freshness_hours": 0.6736935280555556,
+        "coverage": 0.05555555555555555,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-14\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-24T15:24:19.882000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-24T16:04:46Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Catálogo InSAR desactivado para esta macroregión oceánica",
+      "details_json": "{\"reason\":\"Catálogo InSAR desactivado para esta macroregión oceánica\"}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-24T16:04:46Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/mid_atlantic_south/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:30:15Z",
+      "last_success": "2026-10-24T08:30:15Z",
+      "records": 3367,
+      "freshness_hours": 672.0,
+      "coverage": 0.6,
+      "quality": 0.528,
+      "message": "6/10 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-10-24T16:04:46Z",
+      "last_success": "2026-10-24T16:04:46Z",
+      "records": 17,
+      "freshness_hours": 0.0004913002777777777,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 71 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-24T16:04:45Z",
+      "last_success": "2026-10-24T16:04:45Z",
+      "records": 5,
+      "freshness_hours": 0.6736935280555556,
+      "coverage": 0.05555555555555555,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-14\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-24T15:24:19.882000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 3587,
+    "dtrg_r_gnss_stations": 10,
+    "dtrg_r_gnss_obs": 8977,
+    "dtrg_r_goes_files": 5010,
+    "dtrg_r_goes_daily": 98,
+    "dtrg_r_insar_scenes": 0,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 7116,
+    "dtrg_r_scores": 1186,
+    "dtrg_r_backtests": 14
+  },
+  "latest_backtest": [
+    {
+      "run_id": "fe4a05d1-c182-46ad-96ee-41cb71a0377c",
+      "created_at": "2026-10-18T09:04:19Z",
+      "start_day": "2023-10-19",
+      "end_day": "2026-10-18",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 321,
+      "negatives": 775,
+      "tp": 0,
+      "fp": 0,
+      "tn": 775,
+      "fn": 321,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.4739001105416541,
+      "brier": 0.25575677728531043,
+      "base_brier": 0.20710263599552498,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":321,\"negatives\":775,\"tp\":0,\"fp\":0,\"tn\":775,\"fn\":321,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.4739001105416541,\"brier\":0.25575677728531043,\"base_brier\":0.20710263599552498,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000u4mn",
+      "event_time": "2026-10-24T15:24:19.882000Z",
+      "magnitude": 5.8,
+      "depth_km": 12.486,
+      "latitude": -54.0304,
+      "longitude": 7.0149,
+      "place": "Bouvet Island region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4mn"
+    },
+    {
+      "event_id": "us6000u3zp",
+      "event_time": "2026-10-22T00:25:38.898000Z",
+      "magnitude": 5.0,
+      "depth_km": 60.915,
+      "latitude": -55.9673,
+      "longitude": -27.0602,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3zp"
+    },
+    {
+      "event_id": "us6000u4bp",
+      "event_time": "2026-10-21T11:24:16.732000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -6.8385,
+      "longitude": -11.3498,
+      "place": "Ascension Island region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4bp"
+    },
+    {
+      "event_id": "us6000u3ft",
+      "event_time": "2026-10-19T17:45:50.479000Z",
+      "magnitude": 5.1,
+      "depth_km": 101.462,
+      "latitude": -56.3542,
+      "longitude": -27.0851,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ft"
+    },
+    {
+      "event_id": "us6000u2gk",
+      "event_time": "2026-10-14T14:17:21.408000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -0.343,
+      "longitude": -19.2064,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2gk"
+    },
+    {
+      "event_id": "us6000u214",
+      "event_time": "2026-10-13T12:23:07.248000Z",
+      "magnitude": 6.8,
+      "depth_km": 10.0,
+      "latitude": -0.4085,
+      "longitude": -19.4308,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u214"
+    },
+    {
+      "event_id": "us6000u207",
+      "event_time": "2026-10-13T08:38:28.325000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": -28.556,
+      "longitude": -12.5205,
+      "place": "southern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u207"
+    },
+    {
+      "event_id": "us6000u1xy",
+      "event_time": "2026-10-13T02:16:57.992000Z",
+      "magnitude": 4.5,
+      "depth_km": 139.58,
+      "latitude": -58.1423,
+      "longitude": -26.2058,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1xy"
+    },
+    {
+      "event_id": "us6000u43n",
+      "event_time": "2026-10-13T00:01:22.370000Z",
+      "magnitude": 4.5,
+      "depth_km": 110.323,
+      "latitude": -56.0013,
+      "longitude": -27.617,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u43n"
+    },
+    {
+      "event_id": "us6000u1jt",
+      "event_time": "2026-10-10T19:15:54.315000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -35.2765,
+      "longitude": -17.1143,
+      "place": "southern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1jt"
+    },
+    {
+      "event_id": "us6000u2qy",
+      "event_time": "2026-10-08T05:42:57.035000Z",
+      "magnitude": 4.4,
+      "depth_km": 38.327,
+      "latitude": -55.5036,
+      "longitude": -27.9637,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2qy"
+    },
+    {
+      "event_id": "us6000u0pb",
+      "event_time": "2026-10-07T04:39:25.867000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -55.7058,
+      "longitude": -29.9571,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0pb"
+    },
+    {
+      "event_id": "us6000u0y9",
+      "event_time": "2026-10-05T10:03:06.087000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -33.7038,
+      "longitude": -14.5263,
+      "place": "southern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0y9"
+    },
+    {
+      "event_id": "us6000tzlp",
+      "event_time": "2026-10-05T01:18:50.392000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": -0.4325,
+      "longitude": -19.965,
+      "place": "central Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzlp"
+    },
+    {
+      "event_id": "us6000tzg0",
+      "event_time": "2026-10-04T01:47:52.072000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -58.12,
+      "longitude": -23.564,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzg0"
+    },
+    {
+      "event_id": "us6000tyck",
+      "event_time": "2026-09-29T15:17:18.167000Z",
+      "magnitude": 4.8,
+      "depth_km": 114.229,
+      "latitude": -58.7473,
+      "longitude": -25.9552,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyck"
+    },
+    {
+      "event_id": "us6000tyc3",
+      "event_time": "2026-09-29T13:06:09.941000Z",
+      "magnitude": 5.5,
+      "depth_km": 10.0,
+      "latitude": -35.2758,
+      "longitude": -16.0771,
+      "place": "southern Mid-Atlantic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyc3"
+    },
+    {
+      "event_id": "us6000tyat",
+      "event_time": "2026-09-29T06:38:49.006000Z",
+      "magnitude": 4.8,
+      "depth_km": 35.0,
+      "latitude": -55.2555,
+      "longitude": -28.4628,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyat"
+    },
+    {
+      "event_id": "us6000tyab",
+      "event_time": "2026-09-29T04:16:27.199000Z",
+      "magnitude": 4.8,
+      "depth_km": 35.08,
+      "latitude": -55.3157,
+      "longitude": -28.2098,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyab"
+    },
+    {
+      "event_id": "us6000tzqv",
+      "event_time": "2026-09-28T15:02:57.323000Z",
+      "magnitude": 4.8,
+      "depth_km": 92.854,
+      "latitude": -55.9712,
+      "longitude": -27.8921,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzqv"
+    },
+    {
+      "event_id": "us6000ty2y",
+      "event_time": "2026-09-28T04:41:33.467000Z",
+      "magnitude": 4.9,
+      "depth_km": 35.0,
+      "latitude": -57.6502,
+      "longitude": -25.347,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ty2y"
+    },
+    {
+      "event_id": "us6000ty2e",
+      "event_time": "2026-09-28T03:43:44.035000Z",
+      "magnitude": 5.2,
+      "depth_km": 35.0,
+      "latitude": -57.7209,
+      "longitude": -25.2234,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ty2e"
+    },
+    {
+      "event_id": "us6000ty0j",
+      "event_time": "2026-09-27T21:13:35.077000Z",
+      "magnitude": 5.0,
+      "depth_km": 117.745,
+      "latitude": -59.1168,
+      "longitude": -25.9907,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ty0j"
+    },
+    {
+      "event_id": "us6000tydg",
+      "event_time": "2026-09-23T10:58:12.445000Z",
+      "magnitude": 4.5,
+      "depth_km": 155.209,
+      "latitude": -58.4079,
+      "longitude": -26.306,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tydg"
+    },
+    {
+      "event_id": "us6000tyda",
+      "event_time": "2026-09-23T03:52:06.685000Z",
+      "magnitude": 4.6,
+      "depth_km": 29.227,
+      "latitude": -57.7093,
+      "longitude": -25.5725,
+      "place": "South Sandwich Islands region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tyda"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 5,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-22",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-14",
+          "end": "2026-10-24",
+          "result": {
+            "status": "OK",
+            "records_received": 5,
+            "newest": "2026-10-24T15:24:19.882000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 71,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/mid_atlantic_south/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-24",
+        "region_id": "mid_atlantic_south",
+        "iedc_raw": 16.095,
+        "iedc_provisional": 16.095,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.7081,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.6222,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 96.5703
+        },
+        "reasons": [
+          {
+            "family": "goes_lightning_control",
+            "feature": "goes_flash_count",
+            "score": 99.74,
+            "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+            "z": 13.085
+          },
+          {
+            "family": "goes_lightning_control",
+            "feature": "goes_energy",
+            "score": 93.4,
+            "reason": "Energía óptica GLM agregada por encima de su línea base",
+            "z": 5.98
+          }
+        ],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

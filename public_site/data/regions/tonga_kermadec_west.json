@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-24T16:03:36Z",
+  "started_at": "2026-10-24T16:03:35Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "tonga_kermadec_west",
+    "name": "Tonga–Kermadec Occidental",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      -38,
+      -10,
+      165,
+      180
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-10-24T16:03:36Z",
+    "day": "2026-10-24",
+    "region_id": "tonga_kermadec_west",
+    "iedc_raw": 23.917,
+    "iedc_provisional": 23.917,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.8166666666666667,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 23.917
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:27:32Z",
+        "last_success": "2026-10-24T08:27:32Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-24T16:03:35Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/tonga_kermadec_west/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:27:27Z",
+        "last_success": "2026-10-24T08:27:27Z",
+        "records": 3138,
+        "freshness_hours": 672.0,
+        "coverage": 0.8571428571428571,
+        "quality": 0.7542857142857142,
+        "message": "6/7 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-24T16:03:35Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-24T16:03:35Z",
+        "last_success": "2026-10-24T16:03:35Z",
+        "records": 65,
+        "freshness_hours": 0.7362527672222222,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-16\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-24T15:19:25.185000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:27:32Z",
+      "last_success": "2026-10-24T08:27:32Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-24T16:03:35Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/tonga_kermadec_west/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:27:27Z",
+      "last_success": "2026-10-24T08:27:27Z",
+      "records": 3138,
+      "freshness_hours": 672.0,
+      "coverage": 0.8571428571428571,
+      "quality": 0.7542857142857142,
+      "message": "6/7 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-24T16:03:35Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-24T16:03:35Z",
+      "last_success": "2026-10-24T16:03:35Z",
+      "records": 65,
+      "freshness_hours": 0.7362527672222222,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-16\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-24T15:19:25.185000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 4634,
+    "dtrg_r_gnss_stations": 7,
+    "dtrg_r_gnss_obs": 9221,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 23108,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4744,
+    "dtrg_r_scores": 1186,
+    "dtrg_r_backtests": 14
+  },
+  "latest_backtest": [
+    {
+      "run_id": "20e9f231-ef21-4aa1-b7e8-16bb34d8bbac",
+      "created_at": "2026-10-18T09:00:33Z",
+      "start_day": "2023-10-19",
+      "end_day": "2026-10-18",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 448,
+      "negatives": 648,
+      "tp": 0,
+      "fp": 0,
+      "tn": 648,
+      "fn": 448,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5671106839726632,
+      "brier": 0.34756461789689813,
+      "base_brier": 0.24167510256273605,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":448,\"negatives\":648,\"tp\":0,\"fp\":0,\"tn\":648,\"fn\":448,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5671106839726632,\"brier\":0.34756461789689813,\"base_brier\":0.24167510256273605,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000u4mm",
+      "event_time": "2026-10-24T15:19:25.185000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -13.8535,
+      "longitude": 165.4608,
+      "place": "217 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4mm"
+    },
+    {
+      "event_id": "us6000u4mi",
+      "event_time": "2026-10-24T13:53:00.775000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -13.7777,
+      "longitude": 165.5398,
+      "place": "216 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4mi"
+    },
+    {
+      "event_id": "us6000u4m5",
+      "event_time": "2026-10-24T11:14:00.121000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -13.8212,
+      "longitude": 165.7345,
+      "place": "196 km W of Sola, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4m5"
+    },
+    {
+      "event_id": "us6000u4lr",
+      "event_time": "2026-10-24T09:38:49.138000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -14.1348,
+      "longitude": 165.8048,
+      "place": "169 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4lr"
+    },
+    {
+      "event_id": "us6000u4lp",
+      "event_time": "2026-10-24T09:07:00.782000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -14.1064,
+      "longitude": 165.2758,
+      "place": "219 km WNW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4lp"
+    },
+    {
+      "event_id": "us6000u4lm",
+      "event_time": "2026-10-24T08:56:28.815000Z",
+      "magnitude": 5.9,
+      "depth_km": 10.0,
+      "latitude": -13.9418,
+      "longitude": 165.6471,
+      "place": "196 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4lm"
+    },
+    {
+      "event_id": "us6000u4ll",
+      "event_time": "2026-10-24T08:45:55.500000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -13.9869,
+      "longitude": 165.7108,
+      "place": "187 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ll"
+    },
+    {
+      "event_id": "us6000u4lc",
+      "event_time": "2026-10-24T08:28:02.029000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -13.7972,
+      "longitude": 165.6088,
+      "place": "209 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4lc"
+    },
+    {
+      "event_id": "us6000u4l9",
+      "event_time": "2026-10-24T08:22:46.296000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -13.833,
+      "longitude": 165.4664,
+      "place": "218 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4l9"
+    },
+    {
+      "event_id": "us6000u4l8",
+      "event_time": "2026-10-24T08:20:01.035000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -13.805,
+      "longitude": 165.4469,
+      "place": "222 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4l8"
+    },
+    {
+      "event_id": "us6000u4kw",
+      "event_time": "2026-10-24T06:58:03.586000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -13.8532,
+      "longitude": 165.7268,
+      "place": "195 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kw"
+    },
+    {
+      "event_id": "us6000u4ku",
+      "event_time": "2026-10-24T06:52:04.142000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -13.8777,
+      "longitude": 165.4237,
+      "place": "219 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ku"
+    },
+    {
+      "event_id": "us6000u4kq",
+      "event_time": "2026-10-24T06:43:09.602000Z",
+      "magnitude": 5.5,
+      "depth_km": 194.632,
+      "latitude": -14.5918,
+      "longitude": 167.3063,
+      "place": "55 km NNE of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kq"
+    },
+    {
+      "event_id": "us6000u4kt",
+      "event_time": "2026-10-24T06:20:56.869000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -13.8228,
+      "longitude": 165.6213,
+      "place": "206 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kt"
+    },
+    {
+      "event_id": "us6000u4kj",
+      "event_time": "2026-10-24T06:04:16.367000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": -14.1278,
+      "longitude": 165.7535,
+      "place": "174 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kj"
+    },
+    {
+      "event_id": "us6000u4kh",
+      "event_time": "2026-10-24T05:37:46.052000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -14.051,
+      "longitude": 165.8047,
+      "place": "175 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kh"
+    },
+    {
+      "event_id": "us6000u4ke",
+      "event_time": "2026-10-24T05:35:54.921000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -13.9786,
+      "longitude": 165.7483,
+      "place": "184 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ke"
+    },
+    {
+      "event_id": "us6000u4k6",
+      "event_time": "2026-10-24T05:23:40.747000Z",
+      "magnitude": 5.8,
+      "depth_km": 10.0,
+      "latitude": -14.0833,
+      "longitude": 165.6982,
+      "place": "182 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4k6"
+    },
+    {
+      "event_id": "us6000u4k5",
+      "event_time": "2026-10-24T05:10:34.753000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -14.0054,
+      "longitude": 165.3365,
+      "place": "219 km WNW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4k5"
+    },
+    {
+      "event_id": "us6000u4k1",
+      "event_time": "2026-10-24T04:49:21.707000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -13.8521,
+      "longitude": 165.4673,
+      "place": "217 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4k1"
+    },
+    {
+      "event_id": "us6000u4k2",
+      "event_time": "2026-10-24T04:44:45.324000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -14.165,
+      "longitude": 165.8739,
+      "place": "161 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4k2"
+    },
+    {
+      "event_id": "us6000u4jy",
+      "event_time": "2026-10-24T04:19:38.628000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": -13.7325,
+      "longitude": 165.551,
+      "place": "216 km W of Sola, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jy"
+    },
+    {
+      "event_id": "us6000u4jw",
+      "event_time": "2026-10-24T04:12:05.337000Z",
+      "magnitude": 5.8,
+      "depth_km": 10.0,
+      "latitude": -13.9017,
+      "longitude": 165.5967,
+      "place": "203 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jw"
+    },
+    {
+      "event_id": "us6000u4ju",
+      "event_time": "2026-10-24T04:05:36.800000Z",
+      "magnitude": 5.7,
+      "depth_km": 10.0,
+      "latitude": -13.9084,
+      "longitude": 165.5627,
+      "place": "205 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ju"
+    },
+    {
+      "event_id": "us6000u4jr",
+      "event_time": "2026-10-24T03:51:35.267000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -14.1222,
+      "longitude": 165.625,
+      "place": "186 km WNW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jr"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 65,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-24",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-16",
+          "end": "2026-10-24",
+          "result": {
+            "status": "OK",
+            "records_received": 65,
+            "newest": "2026-10-24T15:19:25.185000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/tonga_kermadec_west/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-24",
+        "region_id": "tonga_kermadec_west",
+        "iedc_raw": 23.917,
+        "iedc_provisional": 23.917,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.8167,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 23.917
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

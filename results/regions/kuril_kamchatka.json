@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-24T16:03:18Z",
+  "started_at": "2026-10-24T16:03:17Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "kuril_kamchatka",
+    "name": "Kuriles–Kamchatka",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      43,
+      62,
+      145,
+      180
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-10-24T16:03:18Z",
+    "day": "2026-10-24",
+    "region_id": "kuril_kamchatka",
+    "iedc_raw": 6.483,
+    "iedc_provisional": 6.483,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.9555555555555556,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 6.483
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:27:35Z",
+        "last_success": "2026-10-24T08:27:35Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-24T16:03:17Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/kuril_kamchatka/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:27:30Z",
+        "last_success": "2026-10-24T08:27:30Z",
+        "records": 3323,
+        "freshness_hours": 504.0,
+        "coverage": 0.42857142857142855,
+        "quality": 0.3771428571428571,
+        "message": "6/14 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-24T16:03:17Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-24T16:03:17Z",
+        "last_success": "2026-10-24T16:03:17Z",
+        "records": 17,
+        "freshness_hours": 42.88849688416667,
+        "coverage": 0.05555555555555555,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-14\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-22T21:09:59.090000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:27:35Z",
+      "last_success": "2026-10-24T08:27:35Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-24T16:03:17Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/kuril_kamchatka/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:27:30Z",
+      "last_success": "2026-10-24T08:27:30Z",
+      "records": 3323,
+      "freshness_hours": 504.0,
+      "coverage": 0.42857142857142855,
+      "quality": 0.3771428571428571,
+      "message": "6/14 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-24T16:03:17Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-24T16:03:17Z",
+      "last_success": "2026-10-24T16:03:17Z",
+      "records": 17,
+      "freshness_hours": 42.88849688416667,
+      "coverage": 0.05555555555555555,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-14\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-22T21:09:59.090000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 8521,
+    "dtrg_r_gnss_stations": 14,
+    "dtrg_r_gnss_obs": 7155,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 36035,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4744,
+    "dtrg_r_scores": 1186,
+    "dtrg_r_backtests": 14
+  },
+  "latest_backtest": [
+    {
+      "run_id": "ff5e318f-5fee-412e-946c-d95af55e2566",
+      "created_at": "2026-10-18T09:01:45Z",
+      "start_day": "2023-10-19",
+      "end_day": "2026-10-18",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 392,
+      "negatives": 704,
+      "tp": 23,
+      "fp": 0,
+      "tn": 704,
+      "fn": 369,
+      "precision": 1.0,
+      "recall": 0.058673469387755105,
+      "specificity": 1.0,
+      "f1": 0.11084337349397591,
+      "auc": 0.5939583574907236,
+      "brier": 0.2839215040227186,
+      "base_brier": 0.22974052959668018,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":392,\"negatives\":704,\"tp\":23,\"fp\":0,\"tn\":704,\"fn\":369,\"precision\":1.0,\"recall\":0.058673469387755105,\"specificity\":1.0,\"f1\":0.11084337349397591,\"auc\":0.5939583574907236,\"brier\":0.2839215040227186,\"base_brier\":0.22974052959668018,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000u47l",
+      "event_time": "2026-10-22T21:09:59.090000Z",
+      "magnitude": 4.8,
+      "depth_km": 50.389,
+      "latitude": 48.3802,
+      "longitude": 154.9209,
+      "place": "269 km SSW of Severo-Kuril’sk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u47l"
+    },
+    {
+      "event_id": "us6000u45f",
+      "event_time": "2026-10-22T17:21:26.780000Z",
+      "magnitude": 4.8,
+      "depth_km": 76.309,
+      "latitude": 44.035,
+      "longitude": 147.0825,
+      "place": "39 km NE of Shikotan, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u45f"
+    },
+    {
+      "event_id": "us6000u423",
+      "event_time": "2026-10-22T08:34:18.537000Z",
+      "magnitude": 4.5,
+      "depth_km": 61.06,
+      "latitude": 53.7958,
+      "longitude": 160.2671,
+      "place": "136 km NE of Petropavlovsk-Kamchatsky, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u423"
+    },
+    {
+      "event_id": "us6000u3w6",
+      "event_time": "2026-10-21T17:19:33.362000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 49.2528,
+      "longitude": 158.0282,
+      "place": "208 km SE of Severo-Kuril’sk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3w6"
+    },
+    {
+      "event_id": "aka2026uwgjcy",
+      "event_time": "2026-10-21T13:57:46.057000Z",
+      "magnitude": 3.3,
+      "depth_km": 5.0,
+      "latitude": 51.268,
+      "longitude": 175.515,
+      "place": "237 km SE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uwgjcy"
+    },
+    {
+      "event_id": "us6000u3pm",
+      "event_time": "2026-10-20T19:53:59.721000Z",
+      "magnitude": 4.7,
+      "depth_km": 28.746,
+      "latitude": 46.2196,
+      "longitude": 152.9149,
+      "place": "Kuril Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3pm"
+    },
+    {
+      "event_id": "us6000u3i2",
+      "event_time": "2026-10-19T21:43:36.577000Z",
+      "magnitude": 4.5,
+      "depth_km": 102.09,
+      "latitude": 48.4485,
+      "longitude": 153.6468,
+      "place": "Kuril Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3i2"
+    },
+    {
+      "event_id": "us6000u3de",
+      "event_time": "2026-10-19T16:27:45.503000Z",
+      "magnitude": 4.2,
+      "depth_km": 52.174,
+      "latitude": 51.5183,
+      "longitude": 178.3686,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3de"
+    },
+    {
+      "event_id": "us6000u347",
+      "event_time": "2026-10-18T07:20:25.909000Z",
+      "magnitude": 4.3,
+      "depth_km": 78.318,
+      "latitude": 53.1714,
+      "longitude": 159.6209,
+      "place": "67 km E of Petropavlovsk-Kamchatsky, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u347"
+    },
+    {
+      "event_id": "aka2026uoobru",
+      "event_time": "2026-10-17T09:52:05.633000Z",
+      "magnitude": 4.0,
+      "depth_km": 87.1,
+      "latitude": 51.626,
+      "longitude": 178.578,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uoobru"
+    },
+    {
+      "event_id": "us6000u30j",
+      "event_time": "2026-10-17T09:52:05.043000Z",
+      "magnitude": 4.1,
+      "depth_km": 94.702,
+      "latitude": 51.7144,
+      "longitude": 178.5888,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u30j"
+    },
+    {
+      "event_id": "us6000u2qf",
+      "event_time": "2026-10-16T15:08:47.560000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 51.2717,
+      "longitude": 159.2572,
+      "place": "193 km E of Ozernovskiy, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2qf"
+    },
+    {
+      "event_id": "us6000u2mq",
+      "event_time": "2026-10-16T03:35:31.925000Z",
+      "magnitude": 6.9,
+      "depth_km": 135.0,
+      "latitude": 51.9848,
+      "longitude": 157.2701,
+      "place": "76 km NE of Ozernovskiy, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq"
+    },
+    {
+      "event_id": "us6000u2i2",
+      "event_time": "2026-10-15T14:59:53.275000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 51.4099,
+      "longitude": 159.6809,
+      "place": "190 km SSE of Vilyuchinsk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2i2"
+    },
+    {
+      "event_id": "aka2026ukxnhi",
+      "event_time": "2026-10-15T10:39:15.413000Z",
+      "magnitude": 3.1,
+      "depth_km": 1.9,
+      "latitude": 50.203,
+      "longitude": 178.861,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukxnhi"
+    },
+    {
+      "event_id": "us6000u2d6",
+      "event_time": "2026-10-14T23:20:59.714000Z",
+      "magnitude": 4.5,
+      "depth_km": 183.497,
+      "latitude": 54.0004,
+      "longitude": 158.1848,
+      "place": "82 km SSW of Mil’kovo, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2d6"
+    },
+    {
+      "event_id": "aka2026ujcyxy",
+      "event_time": "2026-10-14T11:20:55.346000Z",
+      "magnitude": 3.8,
+      "depth_km": 2.0,
+      "latitude": 51.418,
+      "longitude": 177.029,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ujcyxy"
+    },
+    {
+      "event_id": "us6000u2ah",
+      "event_time": "2026-10-14T11:20:54.323000Z",
+      "magnitude": 3.9,
+      "depth_km": 7.962,
+      "latitude": 51.503,
+      "longitude": 176.9027,
+      "place": "294 km ESE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ah"
+    },
+    {
+      "event_id": "us6000u45n",
+      "event_time": "2026-10-14T00:03:26.203000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 51.2766,
+      "longitude": 159.9807,
+      "place": "213 km SSE of Vilyuchinsk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u45n"
+    },
+    {
+      "event_id": "us6000u20z",
+      "event_time": "2026-10-13T12:05:41.519000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 51.6162,
+      "longitude": 159.9496,
+      "place": "180 km SE of Vilyuchinsk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u20z"
+    },
+    {
+      "event_id": "us6000u1z2",
+      "event_time": "2026-10-12T22:26:21.879000Z",
+      "magnitude": 3.4,
+      "depth_km": 26.909,
+      "latitude": 51.0989,
+      "longitude": 178.3765,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1z2"
+    },
+    {
+      "event_id": "aka2026ughcph",
+      "event_time": "2026-10-12T22:26:20.226000Z",
+      "magnitude": 3.6,
+      "depth_km": 13.5,
+      "latitude": 51.009,
+      "longitude": 178.42,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ughcph"
+    },
+    {
+      "event_id": "aka2026ufubsq",
+      "event_time": "2026-10-12T15:55:18.476000Z",
+      "magnitude": 3.1,
+      "depth_km": 17.3,
+      "latitude": 51.003,
+      "longitude": 178.437,
+      "place": "Rat Islands, Aleutian Islands, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ufubsq"
+    },
+    {
+      "event_id": "us6000u1sn",
+      "event_time": "2026-10-12T15:44:33.908000Z",
+      "magnitude": 4.9,
+      "depth_km": 35.0,
+      "latitude": 48.297,
+      "longitude": 154.9229,
+      "place": "278 km SSW of Severo-Kuril’sk, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1sn"
+    },
+    {
+      "event_id": "us6000u1s8",
+      "event_time": "2026-10-12T14:29:53.312000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 51.4264,
+      "longitude": 174.8342,
+      "place": "194 km SE of Attu Station, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1s8"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 17,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-22",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-14",
+          "end": "2026-10-24",
+          "result": {
+            "status": "OK",
+            "records_received": 17,
+            "newest": "2026-10-22T21:09:59.090000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/kuril_kamchatka/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-24",
+        "region_id": "kuril_kamchatka",
+        "iedc_raw": 6.483,
+        "iedc_provisional": 6.483,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.9556,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 6.483
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

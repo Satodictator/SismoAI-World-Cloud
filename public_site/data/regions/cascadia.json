@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-24T16:02:12Z",
+  "started_at": "2026-10-24T16:02:09Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "cascadia",
+    "name": "Cascadia",
+    "group": "Americas",
+    "bbox": [
+      40,
+      52,
+      -132,
+      -120
+    ],
+    "min_magnitude": 2.0,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-10-24T16:02:12Z",
+    "day": "2026-10-24",
+    "region_id": "cascadia",
+    "iedc_raw": 10.206,
+    "iedc_provisional": 10.206,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.7747222222222222,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.8888888888888888,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 12.2477,
+      "goes_lightning_control": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:26:36Z",
+        "last_success": "2026-10-24T08:26:36Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-24T16:02:10Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/cascadia/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-24T08:26:27Z",
+        "last_success": "2026-10-24T08:26:27Z",
+        "records": 10069,
+        "freshness_hours": 504.0,
+        "coverage": 0.875,
+        "quality": 0.77,
+        "message": "21/24 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-10-24T16:02:10Z",
+        "last_success": "2026-10-24T16:02:10Z",
+        "records": 17,
+        "freshness_hours": 0.00036042944444444446,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-24T16:02:09Z",
+        "last_success": "2026-10-24T16:02:09Z",
+        "records": 15,
+        "freshness_hours": 8.126224726111111,
+        "coverage": 0.044444444444444446,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-16\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-24T07:54:35.400000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:26:36Z",
+      "last_success": "2026-10-24T08:26:36Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-24T16:02:10Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/cascadia/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-24T08:26:27Z",
+      "last_success": "2026-10-24T08:26:27Z",
+      "records": 10069,
+      "freshness_hours": 504.0,
+      "coverage": 0.875,
+      "quality": 0.77,
+      "message": "21/24 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-10-24T16:02:10Z",
+      "last_success": "2026-10-24T16:02:10Z",
+      "records": 17,
+      "freshness_hours": 0.00036042944444444446,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 0 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-24T16:02:09Z",
+      "last_success": "2026-10-24T16:02:09Z",
+      "records": 15,
+      "freshness_hours": 8.126224726111111,
+      "coverage": 0.044444444444444446,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-16\",\"end\":\"2026-10-24\",\"newest\":\"2026-10-24T07:54:35.400000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 5492,
+    "dtrg_r_gnss_stations": 24,
+    "dtrg_r_gnss_obs": 31072,
+    "dtrg_r_goes_files": 5004,
+    "dtrg_r_goes_daily": 98,
+    "dtrg_r_insar_scenes": 28462,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 7116,
+    "dtrg_r_scores": 1186,
+    "dtrg_r_backtests": 14
+  },
+  "latest_backtest": [
+    {
+      "run_id": "3182d809-c1db-4ceb-ab88-1dc2139fd9dc",
+      "created_at": "2026-10-18T08:58:34Z",
+      "start_day": "2023-10-19",
+      "end_day": "2026-10-18",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 169,
+      "negatives": 927,
+      "tp": 11,
+      "fp": 3,
+      "tn": 924,
+      "fn": 158,
+      "precision": 0.7857142857142857,
+      "recall": 0.0650887573964497,
+      "specificity": 0.9967637540453075,
+      "f1": 0.12021857923497267,
+      "auc": 0.5415796965460894,
+      "brier": 0.13654788623366773,
+      "base_brier": 0.13042034072140027,
+      "false_alarms_per_100_days": 0.2737226277372263,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":169,\"negatives\":927,\"tp\":11,\"fp\":3,\"tn\":924,\"fn\":158,\"precision\":0.7857142857142857,\"recall\":0.0650887573964497,\"specificity\":0.9967637540453075,\"f1\":0.12021857923497267,\"auc\":0.5415796965460894,\"brier\":0.13654788623366773,\"base_brier\":0.13042034072140027,\"false_alarms_per_100_days\":0.2737226277372263,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "nc75454161",
+      "event_time": "2026-10-24T07:54:35.400000Z",
+      "magnitude": 2.26,
+      "depth_km": 13.2299995422363,
+      "latitude": 40.4576683044434,
+      "longitude": -124.365333557129,
+      "place": "16 km SSW of Ferndale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75454161"
+    },
+    {
+      "event_id": "nc75453736",
+      "event_time": "2026-10-23T05:38:19.230000Z",
+      "magnitude": 3.37,
+      "depth_km": 10.3599996566772,
+      "latitude": 40.6178321838379,
+      "longitude": -125.09383392334,
+      "place": "70 km W of Ferndale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75453736"
+    },
+    {
+      "event_id": "uw714124012",
+      "event_time": "2026-10-22T14:25:19.300000Z",
+      "magnitude": 3.02,
+      "depth_km": 24.01,
+      "latitude": 45.8861666666667,
+      "longitude": -122.856833333333,
+      "place": "3 km W of Columbia City, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714124012"
+    },
+    {
+      "event_id": "nc75453371",
+      "event_time": "2026-10-22T12:59:10.270000Z",
+      "magnitude": 2.1,
+      "depth_km": 16.7000007629395,
+      "latitude": 40.2594985961914,
+      "longitude": -124.622329711914,
+      "place": "30 km WSW of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75453371"
+    },
+    {
+      "event_id": "nc75453186",
+      "event_time": "2026-10-22T01:43:10.400000Z",
+      "magnitude": 3.25,
+      "depth_km": 10.9899997711182,
+      "latitude": 40.2345008850098,
+      "longitude": -124.170829772949,
+      "place": "14 km SE of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75453186"
+    },
+    {
+      "event_id": "nc75453176",
+      "event_time": "2026-10-22T01:31:49.910000Z",
+      "magnitude": 2.33,
+      "depth_km": 7.84999990463257,
+      "latitude": 40.0206680297852,
+      "longitude": -123.445167541504,
+      "place": "30 km NNW of Covelo, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75453176"
+    },
+    {
+      "event_id": "nc75452891",
+      "event_time": "2026-10-21T15:55:24.610000Z",
+      "magnitude": 3.13,
+      "depth_km": 6.23000001907349,
+      "latitude": 40.8834991455078,
+      "longitude": -120.606163024902,
+      "place": "39 km SSW of Likely, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452891"
+    },
+    {
+      "event_id": "uw714122932",
+      "event_time": "2026-10-21T08:53:36.560000Z",
+      "magnitude": 2.11999989,
+      "depth_km": 48.9300003051758,
+      "latitude": 47.9516677856445,
+      "longitude": -122.354835510254,
+      "place": "2 km S of Clinton, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714122932"
+    },
+    {
+      "event_id": "uw714122812",
+      "event_time": "2026-10-20T23:30:38Z",
+      "magnitude": 2.32350897789001,
+      "depth_km": -0.119999997317791,
+      "latitude": 47.4473342895508,
+      "longitude": -122.71900177002,
+      "place": "7 km WNW of Burley, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714122812"
+    },
+    {
+      "event_id": "nc75452406",
+      "event_time": "2026-10-20T07:39:03.400000Z",
+      "magnitude": 3.1,
+      "depth_km": 4.63000011444092,
+      "latitude": 40.8810005187988,
+      "longitude": -125.130165100098,
+      "place": "80 km WNW of Ferndale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452406"
+    },
+    {
+      "event_id": "uw714121812",
+      "event_time": "2026-10-19T01:28:55.260000Z",
+      "magnitude": 2.03,
+      "depth_km": -0.51,
+      "latitude": 49.3493333333333,
+      "longitude": -120.481,
+      "place": "12 km S of Princeton, Canada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714121812"
+    },
+    {
+      "event_id": "nc75451211",
+      "event_time": "2026-10-17T21:43:02.290000Z",
+      "magnitude": 2.59,
+      "depth_km": 7.34999990463257,
+      "latitude": 40.2726669311523,
+      "longitude": -124.488334655762,
+      "place": "18 km WSW of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451211"
+    },
+    {
+      "event_id": "uw714121312",
+      "event_time": "2026-10-17T17:02:52.480000Z",
+      "magnitude": 2.18,
+      "depth_km": -0.36,
+      "latitude": 49.333,
+      "longitude": -120.485333333333,
+      "place": "14 km S of Princeton, Canada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714121312"
+    },
+    {
+      "event_id": "uw714121302",
+      "event_time": "2026-10-17T16:41:25.930000Z",
+      "magnitude": 2.34,
+      "depth_km": 11.82,
+      "latitude": 48.1541666666667,
+      "longitude": -121.337,
+      "place": "22 km ESE of Darrington, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714121302"
+    },
+    {
+      "event_id": "us6000u30g",
+      "event_time": "2026-10-17T15:18:25.939000Z",
+      "magnitude": 2.6,
+      "depth_km": 10.0,
+      "latitude": 42.3511,
+      "longitude": -126.6787,
+      "place": "184 km WSW of Port Orford, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u30g"
+    },
+    {
+      "event_id": "nc75450901",
+      "event_time": "2026-10-17T08:48:25.020000Z",
+      "magnitude": 2.11,
+      "depth_km": 0.579999983310699,
+      "latitude": 40.1858329772949,
+      "longitude": -121.074333190918,
+      "place": "2 km N of Canyondam, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75450901"
+    },
+    {
+      "event_id": "uw714121212",
+      "event_time": "2026-10-17T03:37:39.040000Z",
+      "magnitude": 3.07,
+      "depth_km": 40.07,
+      "latitude": 47.9156666666667,
+      "longitude": -124.138166666667,
+      "place": "18 km ESE of Forks, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714121212"
+    },
+    {
+      "event_id": "nc75449946",
+      "event_time": "2026-10-15T17:25:32.720000Z",
+      "magnitude": 2.88,
+      "depth_km": 18.75,
+      "latitude": 40.3385,
+      "longitude": -124.4235,
+      "place": "12 km W of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449946"
+    },
+    {
+      "event_id": "nc75449796",
+      "event_time": "2026-10-15T10:37:56.790000Z",
+      "magnitude": 2.87,
+      "depth_km": 3.98,
+      "latitude": 40.3713333333333,
+      "longitude": -125.166166666667,
+      "place": "75 km W of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449796"
+    },
+    {
+      "event_id": "uw714120202",
+      "event_time": "2026-10-15T01:09:22.690000Z",
+      "magnitude": 2.64,
+      "depth_km": 19.43,
+      "latitude": 47.4165,
+      "longitude": -121.826833333333,
+      "place": "5 km SW of Wilderness Rim, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714120202"
+    },
+    {
+      "event_id": "nc75449266",
+      "event_time": "2026-10-14T13:56:12.420000Z",
+      "magnitude": 2.98,
+      "depth_km": 4.85,
+      "latitude": 40.6786666666667,
+      "longitude": -123.890666666667,
+      "place": "23 km NE of Hydesville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449266"
+    },
+    {
+      "event_id": "uw714119552",
+      "event_time": "2026-10-14T09:00:04.270000Z",
+      "magnitude": 2.65,
+      "depth_km": 19.08,
+      "latitude": 47.4221666666667,
+      "longitude": -121.825,
+      "place": "5 km WSW of Wilderness Rim, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714119552"
+    },
+    {
+      "event_id": "uw714119472",
+      "event_time": "2026-10-13T23:47:35.090000Z",
+      "magnitude": 2.26,
+      "depth_km": -1.49,
+      "latitude": 42.3388333333333,
+      "longitude": -122.810666666667,
+      "place": "5 km ENE of Medford, Oregon",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714119472"
+    },
+    {
+      "event_id": "nc75448816",
+      "event_time": "2026-10-13T13:11:33.220000Z",
+      "magnitude": 2.3,
+      "depth_km": 9.74,
+      "latitude": 40.0898333333333,
+      "longitude": -121.274,
+      "place": "9 km N of Belden, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75448816"
+    },
+    {
+      "event_id": "nc75448751",
+      "event_time": "2026-10-13T10:15:47.500000Z",
+      "magnitude": 2.69,
+      "depth_km": 9.14,
+      "latitude": 40.295,
+      "longitude": -124.545333333333,
+      "place": "22 km W of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75448751"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 15,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-10-24",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-16",
+          "end": "2026-10-24",
+          "result": {
+            "status": "OK",
+            "records_received": 15,
+            "newest": "2026-10-24T07:54:35.400000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 0,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/cascadia/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-24",
+        "region_id": "cascadia",
+        "iedc_raw": 10.206,
+        "iedc_provisional": 10.206,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.7747,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.8889,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 12.2477,
+          "goes_lightning_control": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
