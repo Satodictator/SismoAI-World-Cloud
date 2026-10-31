@@ -1,0 +1,1059 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-29T06:27:19Z",
+  "previous_generated_at": "2026-07-29T03:46:45Z",
+  "classification": "STATISTICAL_ANOMALY",
+  "official_alert": false,
+  "public_gate_approved_regions": 0,
+  "regions_operational": 35,
+  "state_counts": {
+    "NORMAL": 32,
+    "WATCH": 3,
+    "ELEVATED": 0,
+    "HIGHLY_ATYPICAL": 0,
+    "NO_DATA": 0
+  },
+  "state_changes": [
+    {
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "before": "ELEVATED",
+      "after": "WATCH",
+      "iedc_before": 50.9,
+      "iedc_after": 41.241
+    }
+  ],
+  "largest_iedc_changes": [
+    {
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "before": 50.9,
+      "after": 41.241,
+      "delta": -9.659
+    },
+    {
+      "region_id": "mid_atlantic_south",
+      "region_name": "Dorsal Mesoatlántica Sur",
+      "before": 12.626,
+      "after": 6.825,
+      "delta": -5.801
+    },
+    {
+      "region_id": "tonga_kermadec_west",
+      "region_name": "Tonga–Kermadec Occidental",
+      "before": 13.734,
+      "after": 8.445,
+      "delta": -5.289
+    },
+    {
+      "region_id": "solomon_vanuatu",
+      "region_name": "Salomón–Vanuatu",
+      "before": 8.336,
+      "after": 3.986,
+      "delta": -4.35
+    },
+    {
+      "region_id": "chile_north",
+      "region_name": "Chile Norte",
+      "before": 5.768,
+      "after": 1.934,
+      "delta": -3.834
+    },
+    {
+      "region_id": "papua_new_guinea",
+      "region_name": "Papúa Nueva Guinea",
+      "before": 6.847,
+      "after": 3.847,
+      "delta": -3.0
+    },
+    {
+      "region_id": "alaska_aleutians",
+      "region_name": "Alaska–Aleutianas",
+      "before": 35.255,
+      "after": 37.209,
+      "delta": 1.954
+    },
+    {
+      "region_id": "cascadia",
+      "region_name": "Cascadia",
+      "before": 0.0,
+      "after": 0.0,
+      "delta": 0.0
+    }
+  ],
+  "notable_regions": [
+    {
+      "region_id": "mexico",
+      "region_name": "México y Golfo de California",
+      "state": "WATCH",
+      "iedc_provisional": 42.249,
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "baseline_progress": 0.8555555555555555,
+      "available_families": 1,
+      "reasons": [
+        {
+          "family": "seismic",
+          "feature": "seismic_count",
+          "score": 53.53,
+          "reason": "Incremento robusto de la tasa sísmica",
+          "z": 1.686
+        }
+      ],
+      "latest_event": {
+        "event_id": "us6000tgjb",
+        "event_time": "2026-07-29T00:40:13.011000Z",
+        "magnitude": 4.4,
+        "depth_km": 35.0,
+        "latitude": 14.2852,
+        "longitude": -92.9054,
+        "place": "71 km SW of Puerto Madero, Mexico",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgjb"
+      },
+      "public_valid": false,
+      "signal": {}
+    },
+    {
+      "region_id": "central_america",
+      "region_name": "Centroamérica",
+      "state": "WATCH",
+      "iedc_provisional": 41.241,
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "baseline_progress": 0.5944444444444444,
+      "available_families": 1,
+      "reasons": [
+        {
+          "family": "seismic",
+          "feature": "seismic_count",
+          "score": 50.98,
+          "reason": "Incremento robusto de la tasa sísmica",
+          "z": 1.568
+        },
+        {
+          "family": "seismic",
+          "feature": "seismic_max_mag",
+          "score": 41.52,
+          "reason": "Magnitud máxima atípica en la ventana",
+          "z": 1.18
+        }
+      ],
+      "latest_event": {
+        "event_id": "us6000tgjb",
+        "event_time": "2026-07-29T00:40:13.011000Z",
+        "magnitude": 4.4,
+        "depth_km": 35.0,
+        "latitude": 14.2852,
+        "longitude": -92.9054,
+        "place": "71 km SW of Puerto Madero, Mexico",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgjb"
+      },
+      "public_valid": false,
+      "signal": {}
+    },
+    {
+      "region_id": "alaska_aleutians",
+      "region_name": "Alaska–Aleutianas",
+      "state": "WATCH",
+      "iedc_provisional": 37.209,
+      "confidence": 0.45,
+      "coverage": 0.5000000000000001,
+      "data_quality": 0.95,
+      "baseline_progress": 1.0,
+      "available_families": 1,
+      "reasons": [
+        {
+          "family": "seismic",
+          "feature": "seismic_energy_log10",
+          "score": 43.7,
+          "reason": "Incremento de energía sísmica agregada",
+          "z": 1.264
+        },
+        {
+          "family": "seismic",
+          "feature": "seismic_max_mag",
+          "score": 41.52,
+          "reason": "Magnitud máxima atípica en la ventana",
+          "z": 1.18
+        }
+      ],
+      "latest_event": {
+        "event_id": "aka2026owhghp",
+        "event_time": "2026-07-29T03:20:09.698000Z",
+        "magnitude": 3.0,
+        "depth_km": 9.3,
+        "latitude": 51.686,
+        "longitude": -179.048,
+        "place": "167 km W of Adak, Alaska",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026owhghp"
+      },
+      "public_valid": false,
+      "signal": {}
+    }
+  ],
+  "candidate_patterns": 90,
+  "historical_progress": 0.895800933125972,
+  "signal_gate": {
+    "approved": false,
+    "official_alert": false,
+    "policy": "Requires public gate, complete baseline, at least three independent families, confidence >= 75%, prospective validation, calibrated probability, acceptable false-alarm rate and complete signal fields.",
+    "checks": [
+      {
+        "region_id": "alaska_aleutians",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": true,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "cascadia",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "california_nevada",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": true,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mexico",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "central_america",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "caribbean",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "venezuela_caribbean",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "colombia_ecuador",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "peru",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "chile_north",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "chile_south",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "scotia_sandwich",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mediterranean_west",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "italy_adriatic",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "greece_aegean",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "turkey_anatolia",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "iran_zagros",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "east_africa_rift",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "red_sea_afar",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "himalaya_west",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "himalaya_east",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "myanmar_andaman",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "sumatra_java",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "banda_molucca",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "philippines",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "taiwan_ryukyu",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "japan",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "kuril_kamchatka",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "papua_new_guinea",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "solomon_vanuatu",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "tonga_kermadec_west",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "tonga_kermadec_east",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "new_zealand",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mid_atlantic_north",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      },
+      {
+        "region_id": "mid_atlantic_south",
+        "approved": false,
+        "requirements": {
+          "public_gate": false,
+          "baseline_complete": false,
+          "three_independent_families": false,
+          "confidence_75": false,
+          "prospective_validation": false,
+          "probability_calibrated": false,
+          "acceptable_false_alarm_rate": false,
+          "complete_message_fields": false
+        }
+      }
+    ]
+  },
+  "languages": [
+    {
+      "code": "es",
+      "name": "Español",
+      "voice_prefix": "es"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "voice_prefix": "en"
+    },
+    {
+      "code": "pt",
+      "name": "Português",
+      "voice_prefix": "pt"
+    },
+    {
+      "code": "fr",
+      "name": "Français",
+      "voice_prefix": "fr"
+    },
+    {
+      "code": "it",
+      "name": "Italiano",
+      "voice_prefix": "it"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch",
+      "voice_prefix": "de"
+    },
+    {
+      "code": "ja",
+      "name": "日本語",
+      "voice_prefix": "ja"
+    },
+    {
+      "code": "tr",
+      "name": "Türkçe",
+      "voice_prefix": "tr"
+    },
+    {
+      "code": "el",
+      "name": "Ελληνικά",
+      "voice_prefix": "el"
+    },
+    {
+      "code": "id",
+      "name": "Bahasa Indonesia",
+      "voice_prefix": "id"
+    }
+  ],
+  "messages": {
+    "es": {
+      "language": "es",
+      "language_name": "Español",
+      "voice_prefix": "es",
+      "headline": "Boletín SismoAI",
+      "classification": "Anomalía estadística",
+      "generated_label": "Última actualización",
+      "changes_label": "Qué cambió",
+      "situation_label": "Situación actual",
+      "limitations_label": "Alcance y limitaciones",
+      "history_label": "Memoria y patrones",
+      "listen_label": "Escuchar boletín",
+      "pause_label": "Pausar",
+      "resume_label": "Continuar",
+      "stop_label": "Detener",
+      "no_voice": "Este dispositivo no tiene una voz disponible para el idioma seleccionado.",
+      "automatic_label": "Automático",
+      "archive_label": "Archivo de boletines",
+      "official_label": "No es una alerta oficial",
+      "summary": "Resumen de estados: normal 32; observación 3; elevado 0; altamente atípico 0. Regiones operativas: 35.",
+      "changes": "Cambios de nivel desde la actualización anterior: Centroamérica pasó de elevado a en observación.",
+      "regions": [
+        "México y Golfo de California está en observación, con IEDC provisional 42.2 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 4.4, el 2026-07-29, en 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica está en observación, con IEDC provisional 41.2 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 4.4, el 2026-07-29, en 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas está en observación, con IEDC provisional 37.2 y confianza 45%. La magnitud máxima reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 3.0, el 2026-07-29, en 167 km W of Adak, Alaska."
+      ],
+      "historical": "El laboratorio histórico ha procesado 89.6% desde 1973: 248,621 eventos USGS de magnitud 4.5 o superior y 90 patrones candidatos. Esos patrones son solo investigación.",
+      "limitations": "No existe una señal experimental aprobada. El gate público está cerrado y esto no es una predicción, una alerta oficial ni una orden de evacuación.",
+      "spoken": "Boletín SismoAI. Anomalía estadística. Resumen de estados: normal 32; observación 3; elevado 0; altamente atípico 0. Regiones operativas: 35. Cambios de nivel desde la actualización anterior: Centroamérica pasó de elevado a en observación. México y Golfo de California está en observación, con IEDC provisional 42.2 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 4.4, el 2026-07-29, en 71 km SW of Puerto Madero, Mexico. Centroamérica está en observación, con IEDC provisional 41.2 y confianza 45%. La tasa sísmica reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 4.4, el 2026-07-29, en 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas está en observación, con IEDC provisional 37.2 y confianza 45%. La magnitud máxima reciente se apartó de su referencia regional. El evento más reciente listado es de magnitud 3.0, el 2026-07-29, en 167 km W of Adak, Alaska. El laboratorio histórico ha procesado 89.6% desde 1973: 248,621 eventos USGS de magnitud 4.5 o superior y 90 patrones candidatos. Esos patrones son solo investigación. No existe una señal experimental aprobada. El gate público está cerrado y esto no es una predicción, una alerta oficial ni una orden de evacuación.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "en": {
+      "language": "en",
+      "language_name": "English",
+      "voice_prefix": "en",
+      "headline": "SismoAI Bulletin",
+      "classification": "Statistical anomaly",
+      "generated_label": "Latest update",
+      "changes_label": "What changed",
+      "situation_label": "Current situation",
+      "limitations_label": "Scope and limitations",
+      "history_label": "Memory and patterns",
+      "listen_label": "Listen to bulletin",
+      "pause_label": "Pause",
+      "resume_label": "Resume",
+      "stop_label": "Stop",
+      "no_voice": "This device has no available voice for the selected language.",
+      "automatic_label": "Automatic",
+      "archive_label": "Bulletin archive",
+      "official_label": "Not an official alert",
+      "summary": "State totals: normal 32; watch 3; elevated 0; highly atypical 0. Operational regions: 35.",
+      "changes": "Level changes since the previous update: Centroamérica moved from elevated to under watch.",
+      "regions": [
+        "México y Golfo de California is under watch, with provisional IEDC 42.2 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 4.4, on 2026-07-29, at 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica is under watch, with provisional IEDC 41.2 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 4.4, on 2026-07-29, at 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas is under watch, with provisional IEDC 37.2 and 45% confidence. The recent maximum magnitude moved away from its regional baseline. The latest listed event is magnitude 3.0, on 2026-07-29, at 167 km W of Adak, Alaska."
+      ],
+      "historical": "The historical laboratory has processed 89.6% since 1973: 248,621 USGS events of magnitude 4.5 or higher and 90 candidate patterns. Those patterns are research only.",
+      "limitations": "There is no approved experimental signal. The public gate is closed, and this is not a prediction, an official alert, or an evacuation order.",
+      "spoken": "SismoAI Bulletin. Statistical anomaly. State totals: normal 32; watch 3; elevated 0; highly atypical 0. Operational regions: 35. Level changes since the previous update: Centroamérica moved from elevated to under watch. México y Golfo de California is under watch, with provisional IEDC 42.2 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 4.4, on 2026-07-29, at 71 km SW of Puerto Madero, Mexico. Centroamérica is under watch, with provisional IEDC 41.2 and 45% confidence. The recent seismic rate moved away from its regional baseline. The latest listed event is magnitude 4.4, on 2026-07-29, at 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas is under watch, with provisional IEDC 37.2 and 45% confidence. The recent maximum magnitude moved away from its regional baseline. The latest listed event is magnitude 3.0, on 2026-07-29, at 167 km W of Adak, Alaska. The historical laboratory has processed 89.6% since 1973: 248,621 USGS events of magnitude 4.5 or higher and 90 candidate patterns. Those patterns are research only. There is no approved experimental signal. The public gate is closed, and this is not a prediction, an official alert, or an evacuation order.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "pt": {
+      "language": "pt",
+      "language_name": "Português",
+      "voice_prefix": "pt",
+      "headline": "Boletim SismoAI",
+      "classification": "Anomalia estatística",
+      "generated_label": "Última atualização",
+      "changes_label": "O que mudou",
+      "situation_label": "Situação atual",
+      "limitations_label": "Escopo e limitações",
+      "history_label": "Memória e padrões",
+      "listen_label": "Ouvir boletim",
+      "pause_label": "Pausar",
+      "resume_label": "Continuar",
+      "stop_label": "Parar",
+      "no_voice": "Este dispositivo não possui voz para o idioma selecionado.",
+      "automatic_label": "Automático",
+      "archive_label": "Arquivo de boletins",
+      "official_label": "Não é um alerta oficial",
+      "summary": "Resumo dos estados: normal 32; observação 3; elevado 0; altamente atípico 0. Regiões operacionais: 35.",
+      "changes": "Mudanças de nível desde a atualização anterior: Centroamérica passou de elevado para em observação.",
+      "regions": [
+        "México y Golfo de California está em observação, com IEDC provisório 42.2 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 4.4, em 2026-07-29, em 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica está em observação, com IEDC provisório 41.2 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 4.4, em 2026-07-29, em 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas está em observação, com IEDC provisório 37.2 e confiança 45%. A magnitude máxima recente se afastou da referência regional. O evento mais recente listado é de magnitude 3.0, em 2026-07-29, em 167 km W of Adak, Alaska."
+      ],
+      "historical": "O laboratório histórico processou 89.6% desde 1973: 248,621 eventos USGS de magnitude 4.5 ou superior e 90 padrões candidatos. Esses padrões são apenas pesquisa.",
+      "limitations": "Não existe sinal experimental aprovado. O gate público está fechado e isto não é uma previsão, alerta oficial ou ordem de evacuação.",
+      "spoken": "Boletim SismoAI. Anomalia estatística. Resumo dos estados: normal 32; observação 3; elevado 0; altamente atípico 0. Regiões operacionais: 35. Mudanças de nível desde a atualização anterior: Centroamérica passou de elevado para em observação. México y Golfo de California está em observação, com IEDC provisório 42.2 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 4.4, em 2026-07-29, em 71 km SW of Puerto Madero, Mexico. Centroamérica está em observação, com IEDC provisório 41.2 e confiança 45%. A taxa sísmica recente se afastou da referência regional. O evento mais recente listado é de magnitude 4.4, em 2026-07-29, em 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas está em observação, com IEDC provisório 37.2 e confiança 45%. A magnitude máxima recente se afastou da referência regional. O evento mais recente listado é de magnitude 3.0, em 2026-07-29, em 167 km W of Adak, Alaska. O laboratório histórico processou 89.6% desde 1973: 248,621 eventos USGS de magnitude 4.5 ou superior e 90 padrões candidatos. Esses padrões são apenas pesquisa. Não existe sinal experimental aprovado. O gate público está fechado e isto não é uma previsão, alerta oficial ou ordem de evacuação.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "fr": {
+      "language": "fr",
+      "language_name": "Français",
+      "voice_prefix": "fr",
+      "headline": "Bulletin SismoAI",
+      "classification": "Anomalie statistique",
+      "generated_label": "Dernière mise à jour",
+      "changes_label": "Ce qui a changé",
+      "situation_label": "Situation actuelle",
+      "limitations_label": "Portée et limites",
+      "history_label": "Mémoire et motifs",
+      "listen_label": "Écouter le bulletin",
+      "pause_label": "Pause",
+      "resume_label": "Reprendre",
+      "stop_label": "Arrêter",
+      "no_voice": "Cet appareil ne dispose pas de voix pour la langue sélectionnée.",
+      "automatic_label": "Automatique",
+      "archive_label": "Archives des bulletins",
+      "official_label": "Pas une alerte officielle",
+      "summary": "Totaux par état : normal 32 ; surveillance 3 ; élevé 0 ; très atypique 0. Régions opérationnelles : 35.",
+      "changes": "Changements de niveau depuis la mise à jour précédente : Centroamérica est passée de élevé à sous surveillance.",
+      "regions": [
+        "México y Golfo de California est sous surveillance, avec un IEDC provisoire de 42.2 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 4.4, le 2026-07-29, à 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica est sous surveillance, avec un IEDC provisoire de 41.2 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 4.4, le 2026-07-29, à 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas est sous surveillance, avec un IEDC provisoire de 37.2 et une confiance de 45%. La magnitude maximale récente s’est écartée de sa référence régionale. Le dernier événement répertorié est de magnitude 3.0, le 2026-07-29, à 167 km W of Adak, Alaska."
+      ],
+      "historical": "Le laboratoire historique a traité 89.6% depuis 1973 : 248,621 événements USGS de magnitude 4,5 ou plus et 90 motifs candidats. Ces motifs sont réservés à la recherche.",
+      "limitations": "Il n’existe aucun signal expérimental approuvé. Le gate public est fermé et ceci n’est ni une prédiction, ni une alerte officielle, ni un ordre d’évacuation.",
+      "spoken": "Bulletin SismoAI. Anomalie statistique. Totaux par état : normal 32 ; surveillance 3 ; élevé 0 ; très atypique 0. Régions opérationnelles : 35. Changements de niveau depuis la mise à jour précédente : Centroamérica est passée de élevé à sous surveillance. México y Golfo de California est sous surveillance, avec un IEDC provisoire de 42.2 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 4.4, le 2026-07-29, à 71 km SW of Puerto Madero, Mexico. Centroamérica est sous surveillance, avec un IEDC provisoire de 41.2 et une confiance de 45%. Le taux sismique récent s’est écarté de sa référence régionale. Le dernier événement répertorié est de magnitude 4.4, le 2026-07-29, à 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas est sous surveillance, avec un IEDC provisoire de 37.2 et une confiance de 45%. La magnitude maximale récente s’est écartée de sa référence régionale. Le dernier événement répertorié est de magnitude 3.0, le 2026-07-29, à 167 km W of Adak, Alaska. Le laboratoire historique a traité 89.6% depuis 1973 : 248,621 événements USGS de magnitude 4,5 ou plus et 90 motifs candidats. Ces motifs sont réservés à la recherche. Il n’existe aucun signal expérimental approuvé. Le gate public est fermé et ceci n’est ni une prédiction, ni une alerte officielle, ni un ordre d’évacuation.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "it": {
+      "language": "it",
+      "language_name": "Italiano",
+      "voice_prefix": "it",
+      "headline": "Bollettino SismoAI",
+      "classification": "Anomalia statistica",
+      "generated_label": "Ultimo aggiornamento",
+      "changes_label": "Cosa è cambiato",
+      "situation_label": "Situazione attuale",
+      "limitations_label": "Ambito e limiti",
+      "history_label": "Memoria e schemi",
+      "listen_label": "Ascolta il bollettino",
+      "pause_label": "Pausa",
+      "resume_label": "Riprendi",
+      "stop_label": "Ferma",
+      "no_voice": "Questo dispositivo non dispone di una voce per la lingua selezionata.",
+      "automatic_label": "Automatico",
+      "archive_label": "Archivio bollettini",
+      "official_label": "Non è un’allerta ufficiale",
+      "summary": "Totali per stato: normale 32; osservazione 3; elevato 0; altamente atipico 0. Regioni operative: 35.",
+      "changes": "Cambi di livello rispetto all’aggiornamento precedente: Centroamérica è passata da elevato a sotto osservazione.",
+      "regions": [
+        "México y Golfo de California è sotto osservazione, con IEDC provvisorio 42.2 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 4.4, il 2026-07-29, a 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica è sotto osservazione, con IEDC provvisorio 41.2 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 4.4, il 2026-07-29, a 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas è sotto osservazione, con IEDC provvisorio 37.2 e confidenza 45%. La magnitudo massima recente si è discostata dal riferimento regionale. L’ultimo evento elencato è di magnitudo 3.0, il 2026-07-29, a 167 km W of Adak, Alaska."
+      ],
+      "historical": "Il laboratorio storico ha elaborato il 89.6% dal 1973: 248,621 eventi USGS di magnitudo 4,5 o superiore e 90 schemi candidati. Questi schemi sono solo ricerca.",
+      "limitations": "Non esiste alcun segnale sperimentale approvato. Il gate pubblico è chiuso e questa non è una previsione, un’allerta ufficiale o un ordine di evacuazione.",
+      "spoken": "Bollettino SismoAI. Anomalia statistica. Totali per stato: normale 32; osservazione 3; elevato 0; altamente atipico 0. Regioni operative: 35. Cambi di livello rispetto all’aggiornamento precedente: Centroamérica è passata da elevato a sotto osservazione. México y Golfo de California è sotto osservazione, con IEDC provvisorio 42.2 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 4.4, il 2026-07-29, a 71 km SW of Puerto Madero, Mexico. Centroamérica è sotto osservazione, con IEDC provvisorio 41.2 e confidenza 45%. Il tasso sismico recente si è discostato dal riferimento regionale. L’ultimo evento elencato è di magnitudo 4.4, il 2026-07-29, a 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas è sotto osservazione, con IEDC provvisorio 37.2 e confidenza 45%. La magnitudo massima recente si è discostata dal riferimento regionale. L’ultimo evento elencato è di magnitudo 3.0, il 2026-07-29, a 167 km W of Adak, Alaska. Il laboratorio storico ha elaborato il 89.6% dal 1973: 248,621 eventi USGS di magnitudo 4,5 o superiore e 90 schemi candidati. Questi schemi sono solo ricerca. Non esiste alcun segnale sperimentale approvato. Il gate pubblico è chiuso e questa non è una previsione, un’allerta ufficiale o un ordine di evacuazione.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "de": {
+      "language": "de",
+      "language_name": "Deutsch",
+      "voice_prefix": "de",
+      "headline": "SismoAI-Bericht",
+      "classification": "Statistische Anomalie",
+      "generated_label": "Letztes Update",
+      "changes_label": "Was sich geändert hat",
+      "situation_label": "Aktuelle Lage",
+      "limitations_label": "Umfang und Grenzen",
+      "history_label": "Gedächtnis und Muster",
+      "listen_label": "Bericht anhören",
+      "pause_label": "Pause",
+      "resume_label": "Fortsetzen",
+      "stop_label": "Stoppen",
+      "no_voice": "Auf diesem Gerät ist keine Stimme für die gewählte Sprache verfügbar.",
+      "automatic_label": "Automatisch",
+      "archive_label": "Berichtsarchiv",
+      "official_label": "Keine offizielle Warnung",
+      "summary": "Statussummen: normal 32; Beobachtung 3; erhöht 0; stark atypisch 0. Betriebsbereite Regionen: 35.",
+      "changes": "Stufenänderungen seit dem vorherigen Update: Centroamérica wechselte von erhöht zu unter Beobachtung.",
+      "regions": [
+        "México y Golfo de California ist unter Beobachtung, mit vorläufigem IEDC 42.2 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 4.4, am 2026-07-29, bei 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica ist unter Beobachtung, mit vorläufigem IEDC 41.2 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 4.4, am 2026-07-29, bei 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas ist unter Beobachtung, mit vorläufigem IEDC 37.2 und 45% Konfidenz. Die jüngste maximale Magnitude wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 3.0, am 2026-07-29, bei 167 km W of Adak, Alaska."
+      ],
+      "historical": "Das historische Labor hat seit 1973 89.6% verarbeitet: 248,621 USGS-Ereignisse ab Magnitude 4,5 und 90 Kandidatenmuster. Diese Muster dienen nur der Forschung.",
+      "limitations": "Es gibt kein genehmigtes experimentelles Signal. Das öffentliche Gate ist geschlossen; dies ist keine Vorhersage, offizielle Warnung oder Evakuierungsanordnung.",
+      "spoken": "SismoAI-Bericht. Statistische Anomalie. Statussummen: normal 32; Beobachtung 3; erhöht 0; stark atypisch 0. Betriebsbereite Regionen: 35. Stufenänderungen seit dem vorherigen Update: Centroamérica wechselte von erhöht zu unter Beobachtung. México y Golfo de California ist unter Beobachtung, mit vorläufigem IEDC 42.2 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 4.4, am 2026-07-29, bei 71 km SW of Puerto Madero, Mexico. Centroamérica ist unter Beobachtung, mit vorläufigem IEDC 41.2 und 45% Konfidenz. Die jüngste seismische Rate wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 4.4, am 2026-07-29, bei 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas ist unter Beobachtung, mit vorläufigem IEDC 37.2 und 45% Konfidenz. Die jüngste maximale Magnitude wich vom regionalen Referenzwert ab. Das jüngste gelistete Ereignis hatte Magnitude 3.0, am 2026-07-29, bei 167 km W of Adak, Alaska. Das historische Labor hat seit 1973 89.6% verarbeitet: 248,621 USGS-Ereignisse ab Magnitude 4,5 und 90 Kandidatenmuster. Diese Muster dienen nur der Forschung. Es gibt kein genehmigtes experimentelles Signal. Das öffentliche Gate ist geschlossen; dies ist keine Vorhersage, offizielle Warnung oder Evakuierungsanordnung.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "ja": {
+      "language": "ja",
+      "language_name": "日本語",
+      "voice_prefix": "ja",
+      "headline": "SismoAI速報",
+      "classification": "統計的異常",
+      "generated_label": "最終更新",
+      "changes_label": "変更点",
+      "situation_label": "現在の状況",
+      "limitations_label": "範囲と制限",
+      "history_label": "履歴とパターン",
+      "listen_label": "速報を聞く",
+      "pause_label": "一時停止",
+      "resume_label": "再開",
+      "stop_label": "停止",
+      "no_voice": "選択した言語の音声がこの端末にありません。",
+      "automatic_label": "自動",
+      "archive_label": "速報アーカイブ",
+      "official_label": "公式警報ではありません",
+      "summary": "状態集計：通常32、監視3、上昇0、非常に異常0。稼働地域は35です。",
+      "changes": "前回の更新からのレベル変更：Centroaméricaは上昇から監視に変更。",
+      "regions": [
+        "México y Golfo de Californiaは監視で、暫定IEDCは42.2、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-29、71 km SW of Puerto Madero, Mexicoで、マグニチュード4.4です。",
+        "Centroaméricaは監視で、暫定IEDCは41.2、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-29、71 km SW of Puerto Madero, Mexicoで、マグニチュード4.4です。",
+        "Alaska–Aleutianasは監視で、暫定IEDCは37.2、信頼度は45%です。最近の最大マグニチュードが地域基準から外れました。 最新の掲載イベントは2026-07-29、167 km W of Adak, Alaskaで、マグニチュード3.0です。"
+      ],
+      "historical": "履歴研究は1973年以降の89.6%を処理済みで、マグニチュード4.5以上のUSGSイベント248,621件と候補パターン90件があります。候補は研究専用です。",
+      "limitations": "承認された実験シグナルはありません。公開ゲートは閉じており、これは予測、公式警報、避難命令ではありません。",
+      "spoken": "SismoAI速報. 統計的異常. 状態集計：通常32、監視3、上昇0、非常に異常0。稼働地域は35です。 前回の更新からのレベル変更：Centroaméricaは上昇から監視に変更。 México y Golfo de Californiaは監視で、暫定IEDCは42.2、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-29、71 km SW of Puerto Madero, Mexicoで、マグニチュード4.4です。 Centroaméricaは監視で、暫定IEDCは41.2、信頼度は45%です。最近の地震発生率が地域基準から外れました。 最新の掲載イベントは2026-07-29、71 km SW of Puerto Madero, Mexicoで、マグニチュード4.4です。 Alaska–Aleutianasは監視で、暫定IEDCは37.2、信頼度は45%です。最近の最大マグニチュードが地域基準から外れました。 最新の掲載イベントは2026-07-29、167 km W of Adak, Alaskaで、マグニチュード3.0です。 履歴研究は1973年以降の89.6%を処理済みで、マグニチュード4.5以上のUSGSイベント248,621件と候補パターン90件があります。候補は研究専用です。 承認された実験シグナルはありません。公開ゲートは閉じており、これは予測、公式警報、避難命令ではありません。",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "tr": {
+      "language": "tr",
+      "language_name": "Türkçe",
+      "voice_prefix": "tr",
+      "headline": "SismoAI Bülteni",
+      "classification": "İstatistiksel anomali",
+      "generated_label": "Son güncelleme",
+      "changes_label": "Ne değişti",
+      "situation_label": "Mevcut durum",
+      "limitations_label": "Kapsam ve sınırlamalar",
+      "history_label": "Hafıza ve örüntüler",
+      "listen_label": "Bülteni dinle",
+      "pause_label": "Duraklat",
+      "resume_label": "Devam et",
+      "stop_label": "Durdur",
+      "no_voice": "Bu cihazda seçilen dil için ses bulunmuyor.",
+      "automatic_label": "Otomatik",
+      "archive_label": "Bülten arşivi",
+      "official_label": "Resmi uyarı değildir",
+      "summary": "Durum toplamları: normal 32; izlemede 3; yüksek 0; çok sıra dışı 0. Çalışan bölge: 35.",
+      "changes": "Önceki güncellemeden bu yana seviye değişiklikleri: Centroamérica, yüksek seviyesinden izlemede seviyesine geçti.",
+      "regions": [
+        "México y Golfo de California izlemede; geçici IEDC 42.2, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-29 tarihinde 71 km SW of Puerto Madero, Mexico konumunda, 4.4 büyüklüğündedir.",
+        "Centroamérica izlemede; geçici IEDC 41.2, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-29 tarihinde 71 km SW of Puerto Madero, Mexico konumunda, 4.4 büyüklüğündedir.",
+        "Alaska–Aleutianas izlemede; geçici IEDC 37.2, güven 45%. Son en yüksek büyüklük bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-29 tarihinde 167 km W of Adak, Alaska konumunda, 3.0 büyüklüğündedir."
+      ],
+      "historical": "Tarihsel laboratuvar 1973'ten bu yana 89.6% işledi: 4,5 ve üzeri 248,621 USGS olayı ve 90 aday örüntü. Bu örüntüler yalnızca araştırma içindir.",
+      "limitations": "Onaylanmış deneysel sinyal yoktur. Kamu kapısı kapalıdır; bu bir tahmin, resmi uyarı veya tahliye emri değildir.",
+      "spoken": "SismoAI Bülteni. İstatistiksel anomali. Durum toplamları: normal 32; izlemede 3; yüksek 0; çok sıra dışı 0. Çalışan bölge: 35. Önceki güncellemeden bu yana seviye değişiklikleri: Centroamérica, yüksek seviyesinden izlemede seviyesine geçti. México y Golfo de California izlemede; geçici IEDC 42.2, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-29 tarihinde 71 km SW of Puerto Madero, Mexico konumunda, 4.4 büyüklüğündedir. Centroamérica izlemede; geçici IEDC 41.2, güven 45%. Son sismik oran bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-29 tarihinde 71 km SW of Puerto Madero, Mexico konumunda, 4.4 büyüklüğündedir. Alaska–Aleutianas izlemede; geçici IEDC 37.2, güven 45%. Son en yüksek büyüklük bölgesel referanstan uzaklaştı. Listelenen en son olay 2026-07-29 tarihinde 167 km W of Adak, Alaska konumunda, 3.0 büyüklüğündedir. Tarihsel laboratuvar 1973'ten bu yana 89.6% işledi: 4,5 ve üzeri 248,621 USGS olayı ve 90 aday örüntü. Bu örüntüler yalnızca araştırma içindir. Onaylanmış deneysel sinyal yoktur. Kamu kapısı kapalıdır; bu bir tahmin, resmi uyarı veya tahliye emri değildir.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "el": {
+      "language": "el",
+      "language_name": "Ελληνικά",
+      "voice_prefix": "el",
+      "headline": "Δελτίο SismoAI",
+      "classification": "Στατιστική ανωμαλία",
+      "generated_label": "Τελευταία ενημέρωση",
+      "changes_label": "Τι άλλαξε",
+      "situation_label": "Τρέχουσα κατάσταση",
+      "limitations_label": "Εύρος και περιορισμοί",
+      "history_label": "Μνήμη και μοτίβα",
+      "listen_label": "Ακρόαση δελτίου",
+      "pause_label": "Παύση",
+      "resume_label": "Συνέχεια",
+      "stop_label": "Διακοπή",
+      "no_voice": "Η συσκευή δεν διαθέτει φωνή για την επιλεγμένη γλώσσα.",
+      "automatic_label": "Αυτόματα",
+      "archive_label": "Αρχείο δελτίων",
+      "official_label": "Δεν είναι επίσημη προειδοποίηση",
+      "summary": "Σύνολα κατάστασης: κανονική 32, παρακολούθηση 3, αυξημένη 0, πολύ ασυνήθιστη 0. Ενεργές περιοχές: 35.",
+      "changes": "Αλλαγές επιπέδου από την προηγούμενη ενημέρωση: Η περιοχή Centroamérica άλλαξε από αυξημένη σε υπό παρακολούθηση.",
+      "regions": [
+        "Η περιοχή México y Golfo de California είναι υπό παρακολούθηση, με προσωρινό IEDC 42.2 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 4.4, στις 2026-07-29, στην περιοχή 71 km SW of Puerto Madero, Mexico.",
+        "Η περιοχή Centroamérica είναι υπό παρακολούθηση, με προσωρινό IEDC 41.2 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 4.4, στις 2026-07-29, στην περιοχή 71 km SW of Puerto Madero, Mexico.",
+        "Η περιοχή Alaska–Aleutianas είναι υπό παρακολούθηση, με προσωρινό IEDC 37.2 και εμπιστοσύνη 45%. Το πρόσφατο μέγιστο μέγεθος αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 3.0, στις 2026-07-29, στην περιοχή 167 km W of Adak, Alaska."
+      ],
+      "historical": "Το ιστορικό εργαστήριο έχει επεξεργαστεί 89.6% από το 1973: 248,621 συμβάντα USGS μεγέθους 4,5 ή μεγαλύτερα και 90 υποψήφια μοτίβα. Τα μοτίβα είναι μόνο για έρευνα.",
+      "limitations": "Δεν υπάρχει εγκεκριμένο πειραματικό σήμα. Η δημόσια πύλη είναι κλειστή και αυτό δεν είναι πρόβλεψη, επίσημη προειδοποίηση ή εντολή εκκένωσης.",
+      "spoken": "Δελτίο SismoAI. Στατιστική ανωμαλία. Σύνολα κατάστασης: κανονική 32, παρακολούθηση 3, αυξημένη 0, πολύ ασυνήθιστη 0. Ενεργές περιοχές: 35. Αλλαγές επιπέδου από την προηγούμενη ενημέρωση: Η περιοχή Centroamérica άλλαξε από αυξημένη σε υπό παρακολούθηση. Η περιοχή México y Golfo de California είναι υπό παρακολούθηση, με προσωρινό IEDC 42.2 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 4.4, στις 2026-07-29, στην περιοχή 71 km SW of Puerto Madero, Mexico. Η περιοχή Centroamérica είναι υπό παρακολούθηση, με προσωρινό IEDC 41.2 και εμπιστοσύνη 45%. Ο πρόσφατος σεισμικός ρυθμός αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 4.4, στις 2026-07-29, στην περιοχή 71 km SW of Puerto Madero, Mexico. Η περιοχή Alaska–Aleutianas είναι υπό παρακολούθηση, με προσωρινό IEDC 37.2 και εμπιστοσύνη 45%. Το πρόσφατο μέγιστο μέγεθος αποκλίνει από την περιφερειακή αναφορά. Το πιο πρόσφατο συμβάν είναι μεγέθους 3.0, στις 2026-07-29, στην περιοχή 167 km W of Adak, Alaska. Το ιστορικό εργαστήριο έχει επεξεργαστεί 89.6% από το 1973: 248,621 συμβάντα USGS μεγέθους 4,5 ή μεγαλύτερα και 90 υποψήφια μοτίβα. Τα μοτίβα είναι μόνο για έρευνα. Δεν υπάρχει εγκεκριμένο πειραματικό σήμα. Η δημόσια πύλη είναι κλειστή και αυτό δεν είναι πρόβλεψη, επίσημη προειδοποίηση ή εντολή εκκένωσης.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    },
+    "id": {
+      "language": "id",
+      "language_name": "Bahasa Indonesia",
+      "voice_prefix": "id",
+      "headline": "Buletin SismoAI",
+      "classification": "Anomali statistik",
+      "generated_label": "Pembaruan terakhir",
+      "changes_label": "Apa yang berubah",
+      "situation_label": "Situasi saat ini",
+      "limitations_label": "Cakupan dan batasan",
+      "history_label": "Memori dan pola",
+      "listen_label": "Dengarkan buletin",
+      "pause_label": "Jeda",
+      "resume_label": "Lanjutkan",
+      "stop_label": "Hentikan",
+      "no_voice": "Perangkat ini tidak memiliki suara untuk bahasa yang dipilih.",
+      "automatic_label": "Otomatis",
+      "archive_label": "Arsip buletin",
+      "official_label": "Bukan peringatan resmi",
+      "summary": "Jumlah status: normal 32; pengamatan 3; meningkat 0; sangat tidak biasa 0. Wilayah operasional: 35.",
+      "changes": "Perubahan tingkat sejak pembaruan sebelumnya: Centroamérica berubah dari meningkat menjadi dalam pengamatan.",
+      "regions": [
+        "México y Golfo de California berada pada dalam pengamatan, dengan IEDC sementara 42.2 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 4.4, pada 2026-07-29, di 71 km SW of Puerto Madero, Mexico.",
+        "Centroamérica berada pada dalam pengamatan, dengan IEDC sementara 41.2 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 4.4, pada 2026-07-29, di 71 km SW of Puerto Madero, Mexico.",
+        "Alaska–Aleutianas berada pada dalam pengamatan, dengan IEDC sementara 37.2 dan keyakinan 45%. Magnitudo maksimum terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 3.0, pada 2026-07-29, di 167 km W of Adak, Alaska."
+      ],
+      "historical": "Laboratorium historis telah memproses 89.6% sejak 1973: 248,621 peristiwa USGS bermagnitudo 4,5 atau lebih dan 90 pola kandidat. Pola tersebut hanya untuk penelitian.",
+      "limitations": "Tidak ada sinyal eksperimental yang disetujui. Gerbang publik tertutup dan ini bukan prediksi, peringatan resmi, atau perintah evakuasi.",
+      "spoken": "Buletin SismoAI. Anomali statistik. Jumlah status: normal 32; pengamatan 3; meningkat 0; sangat tidak biasa 0. Wilayah operasional: 35. Perubahan tingkat sejak pembaruan sebelumnya: Centroamérica berubah dari meningkat menjadi dalam pengamatan. México y Golfo de California berada pada dalam pengamatan, dengan IEDC sementara 42.2 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 4.4, pada 2026-07-29, di 71 km SW of Puerto Madero, Mexico. Centroamérica berada pada dalam pengamatan, dengan IEDC sementara 41.2 dan keyakinan 45%. Laju seismik terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 4.4, pada 2026-07-29, di 71 km SW of Puerto Madero, Mexico. Alaska–Aleutianas berada pada dalam pengamatan, dengan IEDC sementara 37.2 dan keyakinan 45%. Magnitudo maksimum terbaru menyimpang dari acuan regional. Peristiwa terbaru yang tercantum bermagnitudo 3.0, pada 2026-07-29, di 167 km W of Adak, Alaska. Laboratorium historis telah memproses 89.6% sejak 1973: 248,621 peristiwa USGS bermagnitudo 4,5 atau lebih dan 90 pola kandidat. Pola tersebut hanya untuk penelitian. Tidak ada sinyal eksperimental yang disetujui. Gerbang publik tertutup dan ini bukan prediksi, peringatan resmi, atau perintah evakuasi.",
+      "generated_at": "2026-07-29T06:27:19Z"
+    }
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-10-31T21:42:09Z",
+  "started_at": "2026-10-31T21:42:08Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "iran_zagros",
+    "name": "Irán–Zagros",
+    "group": "Europa–África",
+    "bbox": [
+      24,
+      41,
+      43,
+      64
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-10-31T21:42:09Z",
+    "day": "2026-10-31",
+    "region_id": "iran_zagros",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.4,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-10-31T09:58:47Z",
+        "last_success": "2026-10-31T09:58:47Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-10-31T21:42:08Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/iran_zagros/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-10-31T09:58:42Z",
+        "last_success": "2026-10-31T09:58:42Z",
+        "records": 3387,
+        "freshness_hours": 672.0,
+        "coverage": 0.3888888888888889,
+        "quality": 0.3422222222222222,
+        "message": "7/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-10-31T21:42:08Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-10-31T21:42:08Z",
+        "last_success": "2026-10-31T21:42:08Z",
+        "records": 3,
+        "freshness_hours": 0.3581642436111111,
+        "coverage": 0.06111111111111111,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-20\",\"end\":\"2026-10-31\",\"newest\":\"2026-10-31T21:20:39.173000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-10-31T09:58:47Z",
+      "last_success": "2026-10-31T09:58:47Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-10-31T21:42:08Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/iran_zagros/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-10-31T09:58:42Z",
+      "last_success": "2026-10-31T09:58:42Z",
+      "records": 3387,
+      "freshness_hours": 672.0,
+      "coverage": 0.3888888888888889,
+      "quality": 0.3422222222222222,
+      "message": "7/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-10-31T21:42:08Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-10-31T21:42:08Z",
+      "last_success": "2026-10-31T21:42:08Z",
+      "records": 3,
+      "freshness_hours": 0.3581642436111111,
+      "coverage": 0.06111111111111111,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-20\",\"end\":\"2026-10-31\",\"newest\":\"2026-10-31T21:20:39.173000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1123,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 7104,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 6862,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4408,
+    "dtrg_r_scores": 1102,
+    "dtrg_r_backtests": 1
+  },
+  "latest_backtest": [
+    {
+      "run_id": "bf5d6f51-588c-4c74-84c5-40110c3adb20",
+      "created_at": "2026-10-25T09:17:21Z",
+      "start_day": "2023-10-26",
+      "end_day": "2026-10-25",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 157,
+      "negatives": 939,
+      "tp": 0,
+      "fp": 0,
+      "tn": 939,
+      "fn": 157,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5730991771975879,
+      "brier": 0.13114728686104005,
+      "base_brier": 0.12272813548937087,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":157,\"negatives\":939,\"tp\":0,\"fp\":0,\"tn\":939,\"fn\":157,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5730991771975879,\"brier\":0.13114728686104005,\"base_brier\":0.12272813548937087,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000tukm",
+      "event_time": "2026-10-31T21:20:39.173000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 28.114,
+      "longitude": 51.5076,
+      "place": "115 km SE of Bushehr, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tukm"
+    },
+    {
+      "event_id": "us7000tujw",
+      "event_time": "2026-10-31T17:16:16.500000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 27.6403,
+      "longitude": 53.5875,
+      "place": "54 km W of Gerāsh, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tujw"
+    },
+    {
+      "event_id": "us7000ttl5",
+      "event_time": "2026-10-28T00:51:28.682000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 28.1699,
+      "longitude": 52.3309,
+      "place": "78 km SSW of Fīrūzābād, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttl5"
+    },
+    {
+      "event_id": "us6000u2w9",
+      "event_time": "2026-10-16T21:30:26.101000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 27.7264,
+      "longitude": 57.3327,
+      "place": "70 km NNE of Mīnāb, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2w9"
+    },
+    {
+      "event_id": "us6000u2qj",
+      "event_time": "2026-10-16T15:41:31.677000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 27.3739,
+      "longitude": 52.5844,
+      "place": "35 km SW of Mohr, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2qj"
+    },
+    {
+      "event_id": "us6000u4e9",
+      "event_time": "2026-10-16T08:59:30.109000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 27.6863,
+      "longitude": 57.3424,
+      "place": "66 km NNE of Mīnāb, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4e9"
+    },
+    {
+      "event_id": "us6000u2nw",
+      "event_time": "2026-10-16T08:55:33.291000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 27.6891,
+      "longitude": 57.2959,
+      "place": "65 km NNE of Mīnāb, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2nw"
+    },
+    {
+      "event_id": "us6000u46g",
+      "event_time": "2026-10-14T21:34:06.920000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 28.5707,
+      "longitude": 52.1081,
+      "place": "54 km SW of Fīrūzābād, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u46g"
+    },
+    {
+      "event_id": "us6000u3em",
+      "event_time": "2026-10-10T09:48:31.169000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 27.669,
+      "longitude": 53.7361,
+      "place": "39 km W of Gerāsh, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3em"
+    },
+    {
+      "event_id": "us6000tx02",
+      "event_time": "2026-09-23T00:44:14.951000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 31.5442,
+      "longitude": 50.9455,
+      "place": "56 km SW of Borūjen, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tx02"
+    },
+    {
+      "event_id": "us7000ths7",
+      "event_time": "2026-09-16T05:27:17.950000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 29.1514,
+      "longitude": 51.1947,
+      "place": "13 km S of Borāzjān, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ths7"
+    },
+    {
+      "event_id": "us7000th9l",
+      "event_time": "2026-09-14T01:38:51.010000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 35.632,
+      "longitude": 58.7029,
+      "place": "48 km NNE of Kāshmar, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000th9l"
+    },
+    {
+      "event_id": "us7000thup",
+      "event_time": "2026-09-09T20:17:34.974000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 35.5336,
+      "longitude": 58.0239,
+      "place": "30 km N of Bardaskan, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000thup"
+    },
+    {
+      "event_id": "us7000tg53",
+      "event_time": "2026-09-09T19:26:22.523000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 28.1035,
+      "longitude": 51.5562,
+      "place": "118 km SE of Bushehr, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tg53"
+    },
+    {
+      "event_id": "us7000thml",
+      "event_time": "2026-09-08T16:36:35.617000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 30.7916,
+      "longitude": 51.4191,
+      "place": "21 km NW of Yasuj, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000thml"
+    },
+    {
+      "event_id": "us7000teva",
+      "event_time": "2026-09-07T09:25:47.595000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 35.8981,
+      "longitude": 45.9744,
+      "place": "13 km SE of Bāneh, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teva"
+    },
+    {
+      "event_id": "us7000tdhf",
+      "event_time": "2026-09-01T23:39:01.070000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 40.786,
+      "longitude": 48.6287,
+      "place": "17 km N of Shamakhi, Azerbaijan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdhf"
+    },
+    {
+      "event_id": "us7000tfvy",
+      "event_time": "2026-09-01T06:36:52.747000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 30.6527,
+      "longitude": 51.436,
+      "place": "14 km W of Yasuj, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tfvy"
+    },
+    {
+      "event_id": "us7000tda7",
+      "event_time": "2026-09-01T06:15:13.683000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 30.7676,
+      "longitude": 51.5713,
+      "place": "11 km N of Yasuj, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tda7"
+    },
+    {
+      "event_id": "us7000td4r",
+      "event_time": "2026-08-31T15:21:59.688000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 30.714,
+      "longitude": 51.4419,
+      "place": "14 km WNW of Yasuj, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000td4r"
+    },
+    {
+      "event_id": "us7000teag",
+      "event_time": "2026-08-29T07:15:02.251000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 34.4025,
+      "longitude": 45.4481,
+      "place": "38 km W of Sarpol-e Z̄ahāb, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teag"
+    },
+    {
+      "event_id": "us6000tnbh",
+      "event_time": "2026-08-25T06:19:53.057000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 33.1611,
+      "longitude": 47.3784,
+      "place": "1 km N of Darreh Shahr, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnbh"
+    },
+    {
+      "event_id": "us6000tlym",
+      "event_time": "2026-08-19T17:36:13.870000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 34.1608,
+      "longitude": 46.269,
+      "place": "50 km SE of Sarpol-e Z̄ahāb, Iran",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlym"
+    },
+    {
+      "event_id": "us6000tlqf",
+      "event_time": "2026-08-18T18:51:08.916000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 34.5476,
+      "longitude": 62.0831,
+      "place": "24 km NNW of Herāt, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlqf"
+    },
+    {
+      "event_id": "us6000tkwa",
+      "event_time": "2026-08-15T04:01:56.595000Z",
+      "magnitude": 4.3,
+      "depth_km": 67.443,
+      "latitude": 28.3581,
+      "longitude": 63.6131,
+      "place": "97 km SW of Dalbandin, Pakistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkwa"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 3,
+      "oldest_before": "2021-10-31",
+      "newest_before": "2026-10-28",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-20",
+          "end": "2026-10-31",
+          "result": {
+            "status": "OK",
+            "records_received": 3,
+            "newest": "2026-10-31T21:20:39.173000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/iran_zagros/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-10-31",
+        "region_id": "iran_zagros",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.4,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
