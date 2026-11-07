@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-07T13:15:06Z",
+  "started_at": "2026-11-07T13:15:00Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "central_america",
+    "name": "Centroamérica",
+    "group": "Americas",
+    "bbox": [
+      5,
+      19,
+      -93,
+      -77
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-11-07T13:15:06Z",
+    "day": "2026-11-07",
+    "region_id": "central_america",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.7219444444444445,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.6777777777777778,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-07T10:45:37Z",
+        "last_success": "2026-11-07T10:45:37Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-07T13:15:04Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/central_america/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-07T10:45:27Z",
+        "last_success": "2026-11-07T10:45:27Z",
+        "records": 3908,
+        "freshness_hours": 336.0,
+        "coverage": 0.3888888888888889,
+        "quality": 0.3422222222222222,
+        "message": "7/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-11-07T13:15:04Z",
+        "last_success": "2026-11-07T13:15:04Z",
+        "records": 17,
+        "freshness_hours": 0.000945845,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "17/17 archivos GLM procesados; 34 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-07T13:15:01Z",
+        "last_success": "2026-11-07T13:15:01Z",
+        "records": 6,
+        "freshness_hours": 18.135256528055553,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-29\",\"end\":\"2026-11-07\",\"newest\":\"2026-11-06T19:06:54.642000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-07T10:45:37Z",
+      "last_success": "2026-11-07T10:45:37Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-07T13:15:04Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/central_america/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-07T10:45:27Z",
+      "last_success": "2026-11-07T10:45:27Z",
+      "records": 3908,
+      "freshness_hours": 336.0,
+      "coverage": 0.3888888888888889,
+      "quality": 0.3422222222222222,
+      "message": "7/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-11-07T13:15:04Z",
+      "last_success": "2026-11-07T13:15:04Z",
+      "records": 17,
+      "freshness_hours": 0.000945845,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "17/17 archivos GLM procesados; 34 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":30}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-07T13:15:01Z",
+      "last_success": "2026-11-07T13:15:01Z",
+      "records": 6,
+      "freshness_hours": 18.135256528055553,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-29\",\"end\":\"2026-11-07\",\"newest\":\"2026-11-06T19:06:54.642000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 2136,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 9116,
+    "dtrg_r_goes_files": 5675,
+    "dtrg_r_goes_daily": 112,
+    "dtrg_r_insar_scenes": 43831,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 7200,
+    "dtrg_r_scores": 1200,
+    "dtrg_r_backtests": 16
+  },
+  "latest_backtest": [
+    {
+      "run_id": "4d230290-db3f-40c8-85c8-3eac79a774e7",
+      "created_at": "2026-11-01T11:28:19Z",
+      "start_day": "2023-11-02",
+      "end_day": "2026-11-01",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 554,
+      "negatives": 542,
+      "tp": 0,
+      "fp": 0,
+      "tn": 542,
+      "fn": 554,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.557173924627333,
+      "brier": 0.41738139290237175,
+      "base_brier": 0.24997003036922597,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":554,\"negatives\":542,\"tp\":0,\"fp\":0,\"tn\":542,\"fn\":554,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.557173924627333,\"brier\":0.41738139290237175,\"base_brier\":0.24997003036922597,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000twmq",
+      "event_time": "2026-11-06T19:06:54.642000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 7.5079,
+      "longitude": -79.9371,
+      "place": "10 km ESE of Pedasí, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twmq"
+    },
+    {
+      "event_id": "us7000tw3k",
+      "event_time": "2026-11-04T19:55:26.313000Z",
+      "magnitude": 4.5,
+      "depth_km": 159.022,
+      "latitude": 12.6311,
+      "longitude": -87.1544,
+      "place": "2 km W of Chinandega, Nicaragua",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw3k"
+    },
+    {
+      "event_id": "us7000tur6",
+      "event_time": "2026-11-01T19:50:03.569000Z",
+      "magnitude": 4.2,
+      "depth_km": 57.604,
+      "latitude": 14.5919,
+      "longitude": -92.6768,
+      "place": "30 km WSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tur6"
+    },
+    {
+      "event_id": "us7000tujf",
+      "event_time": "2026-10-31T15:50:18.750000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 7.565,
+      "longitude": -80.291,
+      "place": "4 km E of La Miel, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tujf"
+    },
+    {
+      "event_id": "us7000ttyw",
+      "event_time": "2026-10-29T13:42:57.953000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 7.5923,
+      "longitude": -80.6309,
+      "place": "6 km SE of Pitaloza Arriba, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttyw"
+    },
+    {
+      "event_id": "us7000ttx6",
+      "event_time": "2026-10-29T05:26:06.777000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 10.4677,
+      "longitude": -88.5954,
+      "place": "270 km WSW of Masachapa, Nicaragua",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttx6"
+    },
+    {
+      "event_id": "us7000ttgm",
+      "event_time": "2026-10-27T15:26:03.024000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 7.684,
+      "longitude": -81.6012,
+      "place": "29 km W of Río Grande, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttgm"
+    },
+    {
+      "event_id": "us6000u4kz",
+      "event_time": "2026-10-24T07:31:24.597000Z",
+      "magnitude": 4.4,
+      "depth_km": 35.0,
+      "latitude": 14.1588,
+      "longitude": -92.7995,
+      "place": "74 km SSW of Puerto Madero, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4kz"
+    },
+    {
+      "event_id": "us6000u491",
+      "event_time": "2026-10-23T01:19:47.892000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 7.5941,
+      "longitude": -80.3524,
+      "place": "2 km S of Valle Rico, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u491"
+    },
+    {
+      "event_id": "us6000u42v",
+      "event_time": "2026-10-22T11:38:51.862000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 8.9907,
+      "longitude": -82.3194,
+      "place": "8 km W of Miramar, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u42v"
+    },
+    {
+      "event_id": "us6000u426",
+      "event_time": "2026-10-22T09:16:46.860000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 9.0993,
+      "longitude": -82.1712,
+      "place": "6 km SW of Punta Laurel, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u426"
+    },
+    {
+      "event_id": "us6000u41s",
+      "event_time": "2026-10-22T07:28:09.864000Z",
+      "magnitude": 4.2,
+      "depth_km": 181.735,
+      "latitude": 14.9543,
+      "longitude": -91.2451,
+      "place": "4 km WSW of Patzité, Guatemala",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u41s"
+    },
+    {
+      "event_id": "us6000u40p",
+      "event_time": "2026-10-22T03:24:07.495000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 7.4475,
+      "longitude": -80.6336,
+      "place": "2 km N of El Cortezo, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u40p"
+    },
+    {
+      "event_id": "us6000u3qu",
+      "event_time": "2026-10-20T22:51:44.340000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 7.5632,
+      "longitude": -80.6085,
+      "place": "10 km S of La Mesa, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3qu"
+    },
+    {
+      "event_id": "us6000u3nn",
+      "event_time": "2026-10-20T17:18:36.745000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 6.0964,
+      "longitude": -82.6544,
+      "place": "215 km S of Burica, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3nn"
+    },
+    {
+      "event_id": "us6000u3nl",
+      "event_time": "2026-10-20T17:05:47.182000Z",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "latitude": 6.1629,
+      "longitude": -82.522,
+      "place": "210 km S of Burica, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3nl"
+    },
+    {
+      "event_id": "us6000u3cu",
+      "event_time": "2026-10-19T14:47:44.128000Z",
+      "magnitude": 4.6,
+      "depth_km": 98.837,
+      "latitude": 14.4605,
+      "longitude": -91.3771,
+      "place": "4 km ENE of San José El Ídolo, Guatemala",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3cu"
+    },
+    {
+      "event_id": "us6000u3a8",
+      "event_time": "2026-10-19T05:18:36.003000Z",
+      "magnitude": 4.9,
+      "depth_km": 44.017,
+      "latitude": 11.1229,
+      "longitude": -86.4815,
+      "place": "68 km WSW of San Juan del Sur, Nicaragua",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3a8"
+    },
+    {
+      "event_id": "us7000ttqg",
+      "event_time": "2026-10-18T21:50:46.812000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 10.9,
+      "longitude": -86.8693,
+      "place": "105 km SSW of Masachapa, Nicaragua",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttqg"
+    },
+    {
+      "event_id": "us6000u36m",
+      "event_time": "2026-10-18T16:12:54.857000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 7.6979,
+      "longitude": -81.3308,
+      "place": "2 km S of Río Grande, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u36m"
+    },
+    {
+      "event_id": "us7000ttq7",
+      "event_time": "2026-10-18T13:01:51.117000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 13.823,
+      "longitude": -92.9846,
+      "place": "113 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttq7"
+    },
+    {
+      "event_id": "us6000u33l",
+      "event_time": "2026-10-18T06:15:47.215000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 7.746,
+      "longitude": -81.1182,
+      "place": "0 km SSW of Leones Arriba, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u33l"
+    },
+    {
+      "event_id": "us6000u33d",
+      "event_time": "2026-10-18T05:00:12.865000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 7.3758,
+      "longitude": -80.1527,
+      "place": "14 km ESE of Cañas, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u33d"
+    },
+    {
+      "event_id": "us6000u30p",
+      "event_time": "2026-10-17T16:24:16.531000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 7.5057,
+      "longitude": -80.3846,
+      "place": "3 km NE of Flores, Panama",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u30p"
+    },
+    {
+      "event_id": "us6000u309",
+      "event_time": "2026-10-17T13:59:34.575000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": 14.0469,
+      "longitude": -92.8552,
+      "place": "86 km SW of Brisas Barra de Suchiate, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u309"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 6,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-11-06",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-29",
+          "end": "2026-11-07",
+          "result": {
+            "status": "OK",
+            "records_received": 6,
+            "newest": "2026-11-06T19:06:54.642000Z"
+          }
+        }
+      ]
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 17,
+      "processed_files": 17,
+      "region_flashes": 34,
+      "errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/central_america/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-11-07",
+        "region_id": "central_america",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.7219,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.6778,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

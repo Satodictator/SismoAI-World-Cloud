@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-07T13:13:49Z",
+  "started_at": "2026-11-07T13:13:47Z",
+  "mode": "fast",
+  "status": "OK",
+  "region": {
+    "id": "japan",
+    "name": "Japón",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      29,
+      47,
+      128,
+      146
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-11-07T13:13:49Z",
+    "day": "2026-11-07",
+    "region_id": "japan",
+    "iedc_raw": 1.172,
+    "iedc_provisional": 1.172,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.8944444444444445,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 1.1721
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-07T10:44:07Z",
+        "last_success": "2026-11-07T10:44:07Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-07T13:13:47Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/japan/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-07T10:44:02Z",
+        "last_success": "2026-11-07T10:44:02Z",
+        "records": 8860,
+        "freshness_hours": 336.0,
+        "coverage": 0.5909090909090909,
+        "quality": 0.52,
+        "message": "13/22 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-11-07T13:13:47Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-07T13:13:47Z",
+        "last_success": "2026-11-07T13:13:47Z",
+        "records": 18,
+        "freshness_hours": 2.1012259758333336,
+        "coverage": 0.05,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-10-29\",\"end\":\"2026-11-07\",\"newest\":\"2026-11-07T11:07:43.355000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-07T10:44:07Z",
+      "last_success": "2026-11-07T10:44:07Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-07T13:13:47Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/japan/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-07T10:44:02Z",
+      "last_success": "2026-11-07T10:44:02Z",
+      "records": 8860,
+      "freshness_hours": 336.0,
+      "coverage": 0.5909090909090909,
+      "quality": 0.52,
+      "message": "13/22 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-11-07T13:13:47Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-07T13:13:47Z",
+      "last_success": "2026-11-07T13:13:47Z",
+      "records": 18,
+      "freshness_hours": 2.1012259758333336,
+      "coverage": 0.05,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-10-29\",\"end\":\"2026-11-07\",\"newest\":\"2026-11-07T11:07:43.355000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 4738,
+    "dtrg_r_gnss_stations": 22,
+    "dtrg_r_gnss_obs": 21489,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 7985,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4436,
+    "dtrg_r_scores": 1109,
+    "dtrg_r_backtests": 2
+  },
+  "latest_backtest": [
+    {
+      "run_id": "c63c02f3-e5bf-4f39-b3b2-3fa51ebb9e55",
+      "created_at": "2026-11-01T11:26:30Z",
+      "start_day": "2023-11-02",
+      "end_day": "2026-11-01",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 753,
+      "negatives": 343,
+      "tp": 0,
+      "fp": 0,
+      "tn": 343,
+      "fn": 753,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5570565164028047,
+      "brier": 0.5765063984488138,
+      "base_brier": 0.21501461851990536,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":753,\"negatives\":343,\"tp\":0,\"fp\":0,\"tn\":343,\"fn\":753,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5570565164028047,\"brier\":0.5765063984488138,\"base_brier\":0.21501461851990536,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us7000twrq",
+      "event_time": "2026-11-07T11:07:43.355000Z",
+      "magnitude": 5.5,
+      "depth_km": 31.748,
+      "latitude": 36.1884,
+      "longitude": 141.4404,
+      "place": "74 km NE of Hasaki, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twrq"
+    },
+    {
+      "event_id": "us7000twg9",
+      "event_time": "2026-11-06T10:39:27.869000Z",
+      "magnitude": 6.1,
+      "depth_km": 29.0,
+      "latitude": 34.9677,
+      "longitude": 142.1175,
+      "place": "144 km SE of Hasaki, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twg9"
+    },
+    {
+      "event_id": "us7000twaq",
+      "event_time": "2026-11-05T18:05:43.367000Z",
+      "magnitude": 4.6,
+      "depth_km": 87.44,
+      "latitude": 37.9934,
+      "longitude": 141.2636,
+      "place": "36 km E of Watari, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twaq"
+    },
+    {
+      "event_id": "us7000tv3q",
+      "event_time": "2026-11-03T05:40:18.064000Z",
+      "magnitude": 4.8,
+      "depth_km": 52.267,
+      "latitude": 35.6591,
+      "longitude": 140.648,
+      "place": "6 km S of Asahi, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tv3q"
+    },
+    {
+      "event_id": "us7000tuy2",
+      "event_time": "2026-11-02T16:58:25.889000Z",
+      "magnitude": 4.0,
+      "depth_km": 399.286,
+      "latitude": 29.962,
+      "longitude": 139.1534,
+      "place": "Izu Islands, Japan region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuy2"
+    },
+    {
+      "event_id": "us7000tuxt",
+      "event_time": "2026-11-02T16:33:20.679000Z",
+      "magnitude": 4.0,
+      "depth_km": 329.961,
+      "latitude": 45.7897,
+      "longitude": 142.4784,
+      "place": "69 km NE of Makubetsu, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuxt"
+    },
+    {
+      "event_id": "us7000tuxf",
+      "event_time": "2026-11-02T15:21:22.444000Z",
+      "magnitude": 4.4,
+      "depth_km": 147.202,
+      "latitude": 30.9321,
+      "longitude": 130.2288,
+      "place": "38 km SSW of Makurazaki, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuxf"
+    },
+    {
+      "event_id": "us7000tuta",
+      "event_time": "2026-11-02T01:54:55.186000Z",
+      "magnitude": 4.5,
+      "depth_km": 510.072,
+      "latitude": 30.8406,
+      "longitude": 135.1987,
+      "place": "288 km SSE of Muroto-misakicho, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuta"
+    },
+    {
+      "event_id": "us7000tup9",
+      "event_time": "2026-11-01T10:44:23.842000Z",
+      "magnitude": 4.3,
+      "depth_km": 120.367,
+      "latitude": 39.8432,
+      "longitude": 140.7837,
+      "place": "15 km NNE of Semboku, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tup9"
+    },
+    {
+      "event_id": "us7000tup4",
+      "event_time": "2026-11-01T10:19:00.745000Z",
+      "magnitude": 4.2,
+      "depth_km": 39.028,
+      "latitude": 39.8128,
+      "longitude": 143.3008,
+      "place": "118 km E of Miyako, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tup4"
+    },
+    {
+      "event_id": "us7000tuku",
+      "event_time": "2026-10-31T22:15:02.901000Z",
+      "magnitude": 6.0,
+      "depth_km": 352.449,
+      "latitude": 33.822,
+      "longitude": 136.9854,
+      "place": "58 km SSE of Shima, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuku"
+    },
+    {
+      "event_id": "us7000tugv",
+      "event_time": "2026-10-31T03:14:13.580000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 30.9098,
+      "longitude": 142.5186,
+      "place": "Izu Islands, Japan region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tugv"
+    },
+    {
+      "event_id": "us7000tugf",
+      "event_time": "2026-10-31T00:32:46.687000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 33.5548,
+      "longitude": 141.8118,
+      "place": "223 km SE of Katsuura, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tugf"
+    },
+    {
+      "event_id": "us7000tuey",
+      "event_time": "2026-10-30T21:15:19.819000Z",
+      "magnitude": 4.4,
+      "depth_km": 35.0,
+      "latitude": 30.3348,
+      "longitude": 131.0205,
+      "place": "36 km E of Koseda, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuey"
+    },
+    {
+      "event_id": "us7000tuej",
+      "event_time": "2026-10-30T20:26:46.635000Z",
+      "magnitude": 4.4,
+      "depth_km": 48.533,
+      "latitude": 30.3973,
+      "longitude": 131.0637,
+      "place": "37 km S of Nishinoomote, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuej"
+    },
+    {
+      "event_id": "us7000tu83",
+      "event_time": "2026-10-30T13:18:19.151000Z",
+      "magnitude": 4.5,
+      "depth_km": 42.816,
+      "latitude": 40.4803,
+      "longitude": 142.4748,
+      "place": "68 km ENE of Kuji, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tu83"
+    },
+    {
+      "event_id": "us7000tu6f",
+      "event_time": "2026-10-30T04:58:31.595000Z",
+      "magnitude": 4.6,
+      "depth_km": 56.598,
+      "latitude": 40.3108,
+      "longitude": 142.3621,
+      "place": "51 km ENE of Noda, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tu6f"
+    },
+    {
+      "event_id": "us7000tu2j",
+      "event_time": "2026-10-29T17:37:01.805000Z",
+      "magnitude": 4.5,
+      "depth_km": 35.0,
+      "latitude": 39.8625,
+      "longitude": 143.5623,
+      "place": "141 km E of Miyako, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tu2j"
+    },
+    {
+      "event_id": "us7000ttv1",
+      "event_time": "2026-10-28T23:13:50.764000Z",
+      "magnitude": 4.6,
+      "depth_km": 130.142,
+      "latitude": 43.1303,
+      "longitude": 144.3697,
+      "place": "17 km N of Kushiro, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttv1"
+    },
+    {
+      "event_id": "us7000ttts",
+      "event_time": "2026-10-28T20:22:30.306000Z",
+      "magnitude": 4.3,
+      "depth_km": 26.025,
+      "latitude": 35.6474,
+      "longitude": 140.885,
+      "place": "10 km SSE of Hasaki, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttts"
+    },
+    {
+      "event_id": "us7000ttt2",
+      "event_time": "2026-10-28T18:32:23.536000Z",
+      "magnitude": 4.7,
+      "depth_km": 41.486,
+      "latitude": 35.7763,
+      "longitude": 140.6463,
+      "place": "6 km N of Asahi, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttt2"
+    },
+    {
+      "event_id": "us7000ttpe",
+      "event_time": "2026-10-28T15:07:52.050000Z",
+      "magnitude": 5.5,
+      "depth_km": 41.356,
+      "latitude": 35.7015,
+      "longitude": 140.7059,
+      "place": "5 km ESE of Asahi, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttpe"
+    },
+    {
+      "event_id": "us7000tte0",
+      "event_time": "2026-10-27T01:17:53.898000Z",
+      "magnitude": 4.6,
+      "depth_km": 66.715,
+      "latitude": 33.2845,
+      "longitude": 140.7128,
+      "place": "203 km SSE of Tateyama, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tte0"
+    },
+    {
+      "event_id": "us7000ttdt",
+      "event_time": "2026-10-27T00:25:13.057000Z",
+      "magnitude": 4.7,
+      "depth_km": 89.153,
+      "latitude": 37.4458,
+      "longitude": 141.4538,
+      "place": "40 km E of Namie, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttdt"
+    },
+    {
+      "event_id": "us7000tw2c",
+      "event_time": "2026-10-26T23:02:12.176000Z",
+      "magnitude": 4.5,
+      "depth_km": 95.865,
+      "latitude": 42.2126,
+      "longitude": 142.2406,
+      "place": "16 km SSW of Niikappu, Japan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw2c"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 18,
+      "oldest_before": "2021-10-26",
+      "newest_before": "2026-11-06",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-10-29",
+          "end": "2026-11-07",
+          "result": {
+            "status": "OK",
+            "records_received": 18,
+            "newest": "2026-11-07T11:07:43.355000Z"
+          }
+        }
+      ]
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/japan/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 401,
+      "current": {
+        "day": "2026-11-07",
+        "region_id": "japan",
+        "iedc_raw": 1.172,
+        "iedc_provisional": 1.172,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.8944,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 1.1721
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
