@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-21T11:52:42Z",
+  "started_at": "2026-11-21T11:52:32Z",
+  "mode": "daily",
+  "status": "OK",
+  "region": {
+    "id": "himalaya_west",
+    "name": "Himalaya Occidental",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      25,
+      38,
+      65,
+      82
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-11-21T11:52:42Z",
+    "day": "2026-11-21",
+    "region_id": "himalaya_west",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.5888888888888889,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:52:41Z",
+        "last_success": "2026-11-21T11:52:41Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-21T11:52:41Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/himalaya_west/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:52:34Z",
+        "last_success": "2026-11-21T11:52:34Z",
+        "records": 850,
+        "freshness_hours": 504.0,
+        "coverage": 0.2222222222222222,
+        "quality": 0.19555555555555554,
+        "message": "4/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-11-21T11:52:34Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:52:32Z",
+        "last_success": "2026-11-21T11:52:32Z",
+        "records": 12,
+        "freshness_hours": 1.7005228002777777,
+        "coverage": 0.10555555555555556,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-11-02\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-21T10:10:31.043000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:52:41Z",
+      "last_success": "2026-11-21T11:52:41Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-21T11:52:41Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/himalaya_west/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:52:34Z",
+      "last_success": "2026-11-21T11:52:34Z",
+      "records": 850,
+      "freshness_hours": 504.0,
+      "coverage": 0.2222222222222222,
+      "quality": 0.19555555555555554,
+      "message": "4/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-11-21T11:52:34Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:52:32Z",
+      "last_success": "2026-11-21T11:52:32Z",
+      "records": 12,
+      "freshness_hours": 1.7005228002777777,
+      "coverage": 0.10555555555555556,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-11-02\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-21T10:10:31.043000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1624,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 3036,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 54949,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4856,
+    "dtrg_r_scores": 1214,
+    "dtrg_r_backtests": 18
+  },
+  "latest_backtest": [
+    {
+      "run_id": "48adbecb-0297-4e6d-bf4d-b5611dc539f7",
+      "created_at": "2026-11-15T12:11:50Z",
+      "start_day": "2023-11-16",
+      "end_day": "2026-11-15",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 351,
+      "negatives": 745,
+      "tp": 0,
+      "fp": 8,
+      "tn": 737,
+      "fn": 351,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9892617449664429,
+      "f1": null,
+      "auc": 0.49288705328973786,
+      "brier": 0.286430441264051,
+      "base_brier": 0.21769190553572135,
+      "false_alarms_per_100_days": 0.7299270072992701,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":351,\"negatives\":745,\"tp\":0,\"fp\":8,\"tn\":737,\"fn\":351,\"precision\":0.0,\"recall\":0.0,\"specificity\":0.9892617449664429,\"f1\":null,\"auc\":0.49288705328973786,\"brier\":0.286430441264051,\"base_brier\":0.21769190553572135,\"false_alarms_per_100_days\":0.7299270072992701,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000uckx",
+      "event_time": "2026-11-21T10:10:31.043000Z",
+      "magnitude": 4.4,
+      "depth_km": 154.104,
+      "latitude": 36.5599,
+      "longitude": 70.9787,
+      "place": "36 km SSE of Jurm, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uckx"
+    },
+    {
+      "event_id": "us7000tyss",
+      "event_time": "2026-11-17T14:59:09.523000Z",
+      "magnitude": 4.4,
+      "depth_km": 131.901,
+      "latitude": 37.4353,
+      "longitude": 71.7849,
+      "place": "21 km ESE of Khorugh, Tajikistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyss"
+    },
+    {
+      "event_id": "us7000tykx",
+      "event_time": "2026-11-16T18:02:25.427000Z",
+      "magnitude": 4.1,
+      "depth_km": 202.737,
+      "latitude": 36.4773,
+      "longitude": 70.7503,
+      "place": "43 km S of Jurm, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tykx"
+    },
+    {
+      "event_id": "us7000tyga",
+      "event_time": "2026-11-15T21:37:21.082000Z",
+      "magnitude": 4.9,
+      "depth_km": 191.363,
+      "latitude": 36.4657,
+      "longitude": 70.9205,
+      "place": "44 km S of Jurm, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyga"
+    },
+    {
+      "event_id": "us7000tyfh",
+      "event_time": "2026-11-15T17:48:36.959000Z",
+      "magnitude": 5.0,
+      "depth_km": 100.728,
+      "latitude": 36.0947,
+      "longitude": 70.9503,
+      "place": "74 km N of Pārūn, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyfh"
+    },
+    {
+      "event_id": "us7000ty72",
+      "event_time": "2026-11-14T04:59:27.508000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 34.3601,
+      "longitude": 76.392,
+      "place": "32 km SE of Kargil, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty72"
+    },
+    {
+      "event_id": "us7000txz7",
+      "event_time": "2026-11-13T10:17:19.293000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 36.2047,
+      "longitude": 68.3878,
+      "place": "29 km WNW of Baghlān, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txz7"
+    },
+    {
+      "event_id": "us7000txz5",
+      "event_time": "2026-11-13T10:07:36.127000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 36.0578,
+      "longitude": 70.2408,
+      "place": "66 km SSE of Farkhār, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txz5"
+    },
+    {
+      "event_id": "us7000tx7n",
+      "event_time": "2026-11-09T23:15:04.191000Z",
+      "magnitude": 4.0,
+      "depth_km": 138.715,
+      "latitude": 37.4777,
+      "longitude": 71.7181,
+      "place": "14 km E of Khorugh, Tajikistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx7n"
+    },
+    {
+      "event_id": "us7000tw8p",
+      "event_time": "2026-11-05T16:56:26.175000Z",
+      "magnitude": 5.0,
+      "depth_km": 85.287,
+      "latitude": 35.6054,
+      "longitude": 78.0343,
+      "place": "135 km ENE of Thang, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw8p"
+    },
+    {
+      "event_id": "us7000tw2x",
+      "event_time": "2026-11-04T18:54:49.398000Z",
+      "magnitude": 4.2,
+      "depth_km": 199.264,
+      "latitude": 36.446,
+      "longitude": 70.7177,
+      "place": "47 km SSW of Jurm, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw2x"
+    },
+    {
+      "event_id": "us7000tv3p",
+      "event_time": "2026-11-03T05:35:36.192000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 37.72,
+      "longitude": 72.8741,
+      "place": "98 km NNE of Khandūd, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tv3p"
+    },
+    {
+      "event_id": "us7000tuqq",
+      "event_time": "2026-11-01T17:57:44.661000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 37.336,
+      "longitude": 75.054,
+      "place": "117 km NNE of Barishal, Pakistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuqq"
+    },
+    {
+      "event_id": "us7000tupb",
+      "event_time": "2026-11-01T11:03:45.352000Z",
+      "magnitude": 4.3,
+      "depth_km": 124.153,
+      "latitude": 36.244,
+      "longitude": 70.0367,
+      "place": "39 km SSE of Farkhār, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tupb"
+    },
+    {
+      "event_id": "us7000ttnr",
+      "event_time": "2026-10-28T12:33:30.731000Z",
+      "magnitude": 4.2,
+      "depth_km": 213.504,
+      "latitude": 36.5429,
+      "longitude": 71.2151,
+      "place": "32 km WSW of Ashkāsham, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttnr"
+    },
+    {
+      "event_id": "us7000ttgz",
+      "event_time": "2026-10-27T15:57:02.376000Z",
+      "magnitude": 4.4,
+      "depth_km": 123.853,
+      "latitude": 36.4496,
+      "longitude": 71.318,
+      "place": "32 km SW of Ashkāsham, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttgz"
+    },
+    {
+      "event_id": "us7000ttgc",
+      "event_time": "2026-10-27T14:09:06.874000Z",
+      "magnitude": 4.6,
+      "depth_km": 115.076,
+      "latitude": 36.2043,
+      "longitude": 69.9044,
+      "place": "41 km S of Farkhār, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttgc"
+    },
+    {
+      "event_id": "us6000u4y8",
+      "event_time": "2026-10-26T05:45:31.202000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 25.8377,
+      "longitude": 67.9886,
+      "place": "26 km SSW of Sann, Pakistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4y8"
+    },
+    {
+      "event_id": "us6000u4va",
+      "event_time": "2026-10-25T17:44:24.344000Z",
+      "magnitude": 5.2,
+      "depth_km": 118.444,
+      "latitude": 36.2899,
+      "longitude": 71.1332,
+      "place": "56 km SW of Ashkāsham, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4va"
+    },
+    {
+      "event_id": "us7000tvzm",
+      "event_time": "2026-10-25T07:21:37.857000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 29.6017,
+      "longitude": 80.8002,
+      "place": "35 km SE of Dārchulā, Nepal",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tvzm"
+    },
+    {
+      "event_id": "us6000u4qc",
+      "event_time": "2026-10-24T23:08:09.114000Z",
+      "magnitude": 4.3,
+      "depth_km": 106.594,
+      "latitude": 36.3699,
+      "longitude": 71.287,
+      "place": "41 km SSW of Ashkāsham, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4qc"
+    },
+    {
+      "event_id": "us6000u4h9",
+      "event_time": "2026-10-23T22:09:55.831000Z",
+      "magnitude": 4.1,
+      "depth_km": 213.07,
+      "latitude": 36.489,
+      "longitude": 70.5703,
+      "place": "47 km SSW of Jurm, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4h9"
+    },
+    {
+      "event_id": "us6000u42e",
+      "event_time": "2026-10-22T10:07:41.749000Z",
+      "magnitude": 4.6,
+      "depth_km": 174.513,
+      "latitude": 36.677,
+      "longitude": 71.3996,
+      "place": "11 km W of Ashkāsham, Afghanistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u42e"
+    },
+    {
+      "event_id": "us6000u3r1",
+      "event_time": "2026-10-20T23:16:44.524000Z",
+      "magnitude": 4.6,
+      "depth_km": 68.917,
+      "latitude": 37.3112,
+      "longitude": 75.0164,
+      "place": "113 km NNE of Barishal, Pakistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3r1"
+    },
+    {
+      "event_id": "us6000u3d2",
+      "event_time": "2026-10-19T15:35:37.049000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": 37.8644,
+      "longitude": 73.1916,
+      "place": "76 km WSW of Murghob, Tajikistan",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3d2"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 12,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-11-17",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-11-02",
+          "end": "2026-11-21",
+          "result": {
+            "status": "OK",
+            "records_received": 12,
+            "newest": "2026-11-21T10:10:31.043000Z"
+          }
+        }
+      ]
+    },
+    "gnss": {
+      "status": "OK",
+      "stations_discovered": 18,
+      "stations_ok": 4,
+      "observations": 850,
+      "last_observation": "2026-10-31"
+    },
+    "insar_catalog": {
+      "status": "OK",
+      "scenes": 1000,
+      "opera_products": 500,
+      "disp_candidates": 0,
+      "downloaded": 0,
+      "notice": "ASF catalog search; displacement analysis requires downloaded/local InSAR products.",
+      "download_errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/himalaya_west/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 451,
+      "current": {
+        "day": "2026-11-21",
+        "region_id": "himalaya_west",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.5889,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-21T11:52:18Z",
+  "started_at": "2026-11-21T11:52:07Z",
+  "mode": "daily",
+  "status": "OK",
+  "region": {
+    "id": "papua_new_guinea",
+    "name": "Papúa Nueva Guinea",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      -12,
+      2,
+      135,
+      155
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-11-21T11:52:18Z",
+    "day": "2026-11-21",
+    "region_id": "papua_new_guinea",
+    "iedc_raw": 12.438,
+    "iedc_provisional": 12.438,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.7388888888888889,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 12.438
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:52:16Z",
+        "last_success": "2026-11-21T11:52:16Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-21T11:52:17Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/papua_new_guinea/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:52:11Z",
+        "last_success": "2026-11-21T11:52:11Z",
+        "records": 4798,
+        "freshness_hours": 336.0,
+        "coverage": 0.5714285714285714,
+        "quality": 0.5028571428571428,
+        "message": "8/14 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-11-21T11:52:11Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:52:08Z",
+        "last_success": "2026-11-21T11:52:08Z",
+        "records": 19,
+        "freshness_hours": 30.573138574999998,
+        "coverage": 0.08888888888888889,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-11-05\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-20T05:17:45.106000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:52:16Z",
+      "last_success": "2026-11-21T11:52:16Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-21T11:52:17Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/papua_new_guinea/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:52:11Z",
+      "last_success": "2026-11-21T11:52:11Z",
+      "records": 4798,
+      "freshness_hours": 336.0,
+      "coverage": 0.5714285714285714,
+      "quality": 0.5028571428571428,
+      "message": "8/14 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-11-21T11:52:11Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:52:08Z",
+      "last_success": "2026-11-21T11:52:08Z",
+      "records": 19,
+      "freshness_hours": 30.573138574999998,
+      "coverage": 0.08888888888888889,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-11-05\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-20T05:17:45.106000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 3983,
+    "dtrg_r_gnss_stations": 14,
+    "dtrg_r_gnss_obs": 14014,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 49850,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4856,
+    "dtrg_r_scores": 1214,
+    "dtrg_r_backtests": 18
+  },
+  "latest_backtest": [
+    {
+      "run_id": "723b33fa-ff21-4e76-b621-016313e7e9e3",
+      "created_at": "2026-11-15T12:11:11Z",
+      "start_day": "2023-11-16",
+      "end_day": "2026-11-15",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 355,
+      "negatives": 741,
+      "tp": 0,
+      "fp": 0,
+      "tn": 741,
+      "fn": 355,
+      "precision": null,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": null,
+      "auc": 0.5122769002680048,
+      "brier": 0.27863591664379544,
+      "base_brier": 0.21899058953593975,
+      "false_alarms_per_100_days": 0.0,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":355,\"negatives\":741,\"tp\":0,\"fp\":0,\"tn\":741,\"fn\":355,\"precision\":null,\"recall\":0.0,\"specificity\":1.0,\"f1\":null,\"auc\":0.5122769002680048,\"brier\":0.27863591664379544,\"base_brier\":0.21899058953593975,\"false_alarms_per_100_days\":0.0,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000uc6c",
+      "event_time": "2026-11-20T05:17:45.106000Z",
+      "magnitude": 4.9,
+      "depth_km": 97.583,
+      "latitude": -5.219,
+      "longitude": 145.2974,
+      "place": "54 km W of Madang, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc6c"
+    },
+    {
+      "event_id": "us6000uc0h",
+      "event_time": "2026-11-19T15:38:20.197000Z",
+      "magnitude": 4.3,
+      "depth_km": 113.181,
+      "latitude": -5.4474,
+      "longitude": 154.2159,
+      "place": "170 km NW of Panguna, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc0h"
+    },
+    {
+      "event_id": "us6000ubz1",
+      "event_time": "2026-11-19T10:53:07.767000Z",
+      "magnitude": 5.0,
+      "depth_km": 194.803,
+      "latitude": -4.2965,
+      "longitude": 151.8945,
+      "place": "31 km WSW of Rabaul, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubz1"
+    },
+    {
+      "event_id": "us6000ubvu",
+      "event_time": "2026-11-18T20:38:39.129000Z",
+      "magnitude": 4.7,
+      "depth_km": 16.856,
+      "latitude": -2.9421,
+      "longitude": 146.4693,
+      "place": "134 km SW of Lorengau, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubvu"
+    },
+    {
+      "event_id": "us7000tyx2",
+      "event_time": "2026-11-18T03:42:34.269000Z",
+      "magnitude": 5.8,
+      "depth_km": 52.291,
+      "latitude": -5.7009,
+      "longitude": 146.5479,
+      "place": "99 km ESE of Madang, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyx2"
+    },
+    {
+      "event_id": "us7000tywx",
+      "event_time": "2026-11-18T03:23:58.023000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -2.9907,
+      "longitude": 136.6576,
+      "place": "134 km ENE of Nabire, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tywx"
+    },
+    {
+      "event_id": "us7000tyt9",
+      "event_time": "2026-11-17T16:35:58.497000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -1.6653,
+      "longitude": 149.8973,
+      "place": "141 km NW of Kavieng, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyt9"
+    },
+    {
+      "event_id": "us7000tysa",
+      "event_time": "2026-11-17T12:26:16.641000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -10.2678,
+      "longitude": 149.5845,
+      "place": "95 km W of Alotau, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tysa"
+    },
+    {
+      "event_id": "us7000tymc",
+      "event_time": "2026-11-16T19:33:00.666000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -1.7205,
+      "longitude": 149.8061,
+      "place": "144 km NW of Kavieng, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tymc"
+    },
+    {
+      "event_id": "us7000ty56",
+      "event_time": "2026-11-13T23:30:38.320000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -1.5038,
+      "longitude": 149.92,
+      "place": "153 km NW of Kavieng, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty56"
+    },
+    {
+      "event_id": "us7000ty43",
+      "event_time": "2026-11-13T19:49:21.768000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -1.4671,
+      "longitude": 149.9613,
+      "place": "153 km NW of Kavieng, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty43"
+    },
+    {
+      "event_id": "us7000txwp",
+      "event_time": "2026-11-12T22:04:06.729000Z",
+      "magnitude": 5.8,
+      "depth_km": 10.0,
+      "latitude": -1.5882,
+      "longitude": 149.8877,
+      "place": "148 km NW of Kavieng, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txwp"
+    },
+    {
+      "event_id": "us7000txm8",
+      "event_time": "2026-11-11T17:38:24.225000Z",
+      "magnitude": 5.1,
+      "depth_km": 74.384,
+      "latitude": -6.3292,
+      "longitude": 154.7513,
+      "place": "81 km W of Panguna, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txm8"
+    },
+    {
+      "event_id": "us7000txc0",
+      "event_time": "2026-11-10T17:36:49.391000Z",
+      "magnitude": 5.2,
+      "depth_km": 124.245,
+      "latitude": -8.7206,
+      "longitude": 148.0429,
+      "place": "21 km WNW of Popondetta, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txc0"
+    },
+    {
+      "event_id": "us7000txa7",
+      "event_time": "2026-11-10T00:11:22.956000Z",
+      "magnitude": 4.5,
+      "depth_km": 35.0,
+      "latitude": -2.3778,
+      "longitude": 138.8149,
+      "place": "203 km W of Abepura, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txa7"
+    },
+    {
+      "event_id": "us7000twzn",
+      "event_time": "2026-11-08T22:30:10.471000Z",
+      "magnitude": 4.7,
+      "depth_km": 122.994,
+      "latitude": -5.1157,
+      "longitude": 151.5084,
+      "place": "120 km SW of Kokopo, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twzn"
+    },
+    {
+      "event_id": "us7000ty2h",
+      "event_time": "2026-11-07T09:22:42.204000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -5.4363,
+      "longitude": 152.7886,
+      "place": "133 km SSE of Kokopo, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty2h"
+    },
+    {
+      "event_id": "us7000twdd",
+      "event_time": "2026-11-06T00:02:25.016000Z",
+      "magnitude": 4.6,
+      "depth_km": 97.804,
+      "latitude": -5.9168,
+      "longitude": 146.6624,
+      "place": "96 km NNW of Lae, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twdd"
+    },
+    {
+      "event_id": "us7000txzm",
+      "event_time": "2026-11-05T05:22:12.773000Z",
+      "magnitude": 4.3,
+      "depth_km": 101.523,
+      "latitude": -6.1076,
+      "longitude": 148.5759,
+      "place": "94 km ENE of Finschhafen, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txzm"
+    },
+    {
+      "event_id": "us7000tvxj",
+      "event_time": "2026-11-04T12:14:45.921000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -5.4706,
+      "longitude": 152.0301,
+      "place": "127 km SSW of Kokopo, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tvxj"
+    },
+    {
+      "event_id": "us7000tv4c",
+      "event_time": "2026-11-03T07:43:53.115000Z",
+      "magnitude": 4.5,
+      "depth_km": 67.39,
+      "latitude": -6.1411,
+      "longitude": 147.5576,
+      "place": "56 km NW of Finschhafen, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tv4c"
+    },
+    {
+      "event_id": "us7000tuu0",
+      "event_time": "2026-11-02T05:19:50.104000Z",
+      "magnitude": 4.9,
+      "depth_km": 87.891,
+      "latitude": -5.5626,
+      "longitude": 154.088,
+      "place": "175 km WNW of Panguna, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuu0"
+    },
+    {
+      "event_id": "us7000tute",
+      "event_time": "2026-11-02T02:24:03.097000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -2.9446,
+      "longitude": 146.4573,
+      "place": "135 km SW of Lorengau, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tute"
+    },
+    {
+      "event_id": "us7000txdg",
+      "event_time": "2026-11-01T21:58:41.209000Z",
+      "magnitude": 4.4,
+      "depth_km": 69.865,
+      "latitude": -4.7449,
+      "longitude": 152.8575,
+      "place": "79 km SE of Kokopo, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txdg"
+    },
+    {
+      "event_id": "us7000txcu",
+      "event_time": "2026-11-01T12:34:58.378000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": -6.8024,
+      "longitude": 154.9056,
+      "place": "83 km SW of Panguna, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txcu"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 19,
+      "oldest_before": "2021-07-29",
+      "newest_before": "2026-11-20",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-11-05",
+          "end": "2026-11-21",
+          "result": {
+            "status": "OK",
+            "records_received": 19,
+            "newest": "2026-11-20T05:17:45.106000Z"
+          }
+        }
+      ]
+    },
+    "gnss": {
+      "status": "OK",
+      "stations_discovered": 14,
+      "stations_ok": 8,
+      "observations": 4798,
+      "last_observation": "2026-11-07"
+    },
+    "insar_catalog": {
+      "status": "OK",
+      "scenes": 1000,
+      "opera_products": 500,
+      "disp_candidates": 0,
+      "downloaded": 0,
+      "notice": "ASF catalog search; displacement analysis requires downloaded/local InSAR products.",
+      "download_errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/papua_new_guinea/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 451,
+      "current": {
+        "day": "2026-11-21",
+        "region_id": "papua_new_guinea",
+        "iedc_raw": 12.438,
+        "iedc_provisional": 12.438,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.7389,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 12.438
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

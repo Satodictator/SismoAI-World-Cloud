@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-21T11:50:16Z",
+  "started_at": "2026-11-21T11:49:46Z",
+  "mode": "daily",
+  "status": "OK",
+  "region": {
+    "id": "east_africa_rift",
+    "name": "Rift de África Oriental",
+    "group": "Europa–África",
+    "bbox": [
+      -15,
+      16,
+      25,
+      45
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-11-21T11:50:16Z",
+    "day": "2026-11-21",
+    "region_id": "east_africa_rift",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.17222222222222222,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:50:15Z",
+        "last_success": "2026-11-21T11:50:15Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-21T11:50:15Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/east_africa_rift/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:50:10Z",
+        "last_success": "2026-11-21T11:50:10Z",
+        "records": 8475,
+        "freshness_hours": 336.0,
+        "coverage": 0.7222222222222222,
+        "quality": 0.6355555555555555,
+        "message": "13/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-11-21T11:50:10Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:49:47Z",
+        "last_success": "2026-11-21T11:49:47Z",
+        "records": 8,
+        "freshness_hours": 53.65583704027778,
+        "coverage": 0.09444444444444444,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-11-04\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-19T06:10:26.169000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:50:15Z",
+      "last_success": "2026-11-21T11:50:15Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-21T11:50:15Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/east_africa_rift/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:50:10Z",
+      "last_success": "2026-11-21T11:50:10Z",
+      "records": 8475,
+      "freshness_hours": 336.0,
+      "coverage": 0.7222222222222222,
+      "quality": 0.6355555555555555,
+      "message": "13/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-11-21T11:50:10Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:49:47Z",
+      "last_success": "2026-11-21T11:49:47Z",
+      "records": 8,
+      "freshness_hours": 53.65583704027778,
+      "coverage": 0.09444444444444444,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-11-04\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-19T06:10:26.169000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 668,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 23742,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 93922,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4856,
+    "dtrg_r_scores": 1214,
+    "dtrg_r_backtests": 18
+  },
+  "latest_backtest": [
+    {
+      "run_id": "40087229-4209-4c09-a495-1e0be6ac1568",
+      "created_at": "2026-11-15T12:08:57Z",
+      "start_day": "2023-11-16",
+      "end_day": "2026-11-15",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 137,
+      "negatives": 959,
+      "tp": 14,
+      "fp": 10,
+      "tn": 949,
+      "fn": 123,
+      "precision": 0.5833333333333334,
+      "recall": 0.10218978102189781,
+      "specificity": 0.9895724713242962,
+      "f1": 0.17391304347826086,
+      "auc": 0.5311151366615163,
+      "brier": 0.11820360481751811,
+      "base_brier": 0.109375,
+      "false_alarms_per_100_days": 0.9124087591240876,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":137,\"negatives\":959,\"tp\":14,\"fp\":10,\"tn\":949,\"fn\":123,\"precision\":0.5833333333333334,\"recall\":0.10218978102189781,\"specificity\":0.9895724713242962,\"f1\":0.17391304347826086,\"auc\":0.5311151366615163,\"brier\":0.11820360481751811,\"base_brier\":0.109375,\"false_alarms_per_100_days\":0.9124087591240876,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000uchl",
+      "event_time": "2026-11-19T06:10:26.169000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -5.3254,
+      "longitude": 34.8174,
+      "place": "21 km SSE of Ikungi, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uchl"
+    },
+    {
+      "event_id": "us6000ubxg",
+      "event_time": "2026-11-19T02:11:23.115000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -5.5431,
+      "longitude": 35.0812,
+      "place": "36 km NNE of Kilimatinde, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubxg"
+    },
+    {
+      "event_id": "us6000ubxa",
+      "event_time": "2026-11-19T01:29:33.145000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -5.5109,
+      "longitude": 35.0903,
+      "place": "40 km NNE of Kilimatinde, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubxa"
+    },
+    {
+      "event_id": "us7000tz2w",
+      "event_time": "2026-11-18T18:08:01.097000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -5.4134,
+      "longitude": 35.082,
+      "place": "46 km SE of Ikungi, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz2w"
+    },
+    {
+      "event_id": "us7000tz32",
+      "event_time": "2026-11-18T18:07:31.356000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -5.4699,
+      "longitude": 35.0796,
+      "place": "44 km NNE of Kilimatinde, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz32"
+    },
+    {
+      "event_id": "us7000tyyp",
+      "event_time": "2026-11-17T22:52:05.954000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 8.868,
+      "longitude": 40.0032,
+      "place": "10 km ESE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyyp"
+    },
+    {
+      "event_id": "us7000tx42",
+      "event_time": "2026-11-08T22:07:19.580000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": -3.6055,
+      "longitude": 32.3057,
+      "place": "13 km ENE of Masumbwe, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx42"
+    },
+    {
+      "event_id": "us7000tw76",
+      "event_time": "2026-11-05T09:22:32.714000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -3.4641,
+      "longitude": 32.149,
+      "place": "19 km NNW of Masumbwe, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw76"
+    },
+    {
+      "event_id": "us7000ttp7",
+      "event_time": "2026-10-28T13:31:54.233000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 8.906,
+      "longitude": 40.0437,
+      "place": "13 km E of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttp7"
+    },
+    {
+      "event_id": "us6000u2qn",
+      "event_time": "2026-10-16T16:17:25.979000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -5.4619,
+      "longitude": 35.0134,
+      "place": "43 km N of Kilimatinde, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2qn"
+    },
+    {
+      "event_id": "us6000u2ew",
+      "event_time": "2026-10-15T04:41:13.659000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 9.0444,
+      "longitude": 39.9519,
+      "place": "16 km NNE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ew"
+    },
+    {
+      "event_id": "us6000u28e",
+      "event_time": "2026-10-14T09:16:18.828000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -5.4767,
+      "longitude": 35.0428,
+      "place": "42 km NNE of Kilimatinde, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u28e"
+    },
+    {
+      "event_id": "us6000u3mv",
+      "event_time": "2026-10-11T17:08:25.476000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -4.562,
+      "longitude": 35.0117,
+      "place": "17 km E of Mtinko, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3mv"
+    },
+    {
+      "event_id": "us6000u3n8",
+      "event_time": "2026-10-11T16:48:02.052000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -4.4024,
+      "longitude": 34.5941,
+      "place": "18 km NNW of Igugunu, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3n8"
+    },
+    {
+      "event_id": "us6000u3mt",
+      "event_time": "2026-10-11T16:47:45.972000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -4.714,
+      "longitude": 35.2899,
+      "place": "23 km SSW of Katesh, Tanzania",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3mt"
+    },
+    {
+      "event_id": "us6000tzry",
+      "event_time": "2026-10-05T19:47:56.119000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 9.0124,
+      "longitude": 39.9766,
+      "place": "14 km NNE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzry"
+    },
+    {
+      "event_id": "us7000thts",
+      "event_time": "2026-09-16T12:33:23.511000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 9.0153,
+      "longitude": 40.0911,
+      "place": "9 km WNW of Āwash, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000thts"
+    },
+    {
+      "event_id": "us6000tjgf",
+      "event_time": "2026-08-09T17:11:43.006000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 8.9506,
+      "longitude": 40.03,
+      "place": "13 km ENE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjgf"
+    },
+    {
+      "event_id": "us6000tgyh",
+      "event_time": "2026-07-25T00:50:40.200000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 11.7043,
+      "longitude": 42.7681,
+      "place": "15 km SW of Tadjourah, Djibouti",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgyh"
+    },
+    {
+      "event_id": "us7000t24y",
+      "event_time": "2026-07-21T03:01:15.350000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 9.085,
+      "longitude": 40.0891,
+      "place": "14 km NW of Āwash, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t24y"
+    },
+    {
+      "event_id": "us6000tal3",
+      "event_time": "2026-07-07T05:30:26.619000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 8.9176,
+      "longitude": 40.2395,
+      "place": "10 km SE of Āwash, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tal3"
+    },
+    {
+      "event_id": "us6000t91s",
+      "event_time": "2026-06-25T20:48:30.306000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 9.1751,
+      "longitude": 39.6535,
+      "place": "41 km NW of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t91s"
+    },
+    {
+      "event_id": "us7000su07",
+      "event_time": "2026-06-11T07:23:34.610000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 14.1488,
+      "longitude": 40.0249,
+      "place": "62 km ESE of Ādīgrat, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000su07"
+    },
+    {
+      "event_id": "us7000sppn",
+      "event_time": "2026-05-31T18:19:09.263000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 1.5529,
+      "longitude": 32.4735,
+      "place": "27 km N of Nakasongola, Uganda",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sppn"
+    },
+    {
+      "event_id": "us7000sp9m",
+      "event_time": "2026-05-22T01:46:10.767000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.003,
+      "latitude": 8.9593,
+      "longitude": 39.9817,
+      "place": "9 km NE of Metahāra, Ethiopia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sp9m"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 8,
+      "oldest_before": "2021-08-31",
+      "newest_before": "2026-11-19",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-11-04",
+          "end": "2026-11-21",
+          "result": {
+            "status": "OK",
+            "records_received": 8,
+            "newest": "2026-11-19T06:10:26.169000Z"
+          }
+        }
+      ]
+    },
+    "gnss": {
+      "status": "OK",
+      "stations_discovered": 18,
+      "stations_ok": 13,
+      "observations": 8475,
+      "last_observation": "2026-11-07"
+    },
+    "insar_catalog": {
+      "status": "OK",
+      "scenes": 1000,
+      "opera_products": 500,
+      "disp_candidates": 0,
+      "downloaded": 0,
+      "notice": "ASF catalog search; displacement analysis requires downloaded/local InSAR products.",
+      "download_errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/east_africa_rift/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 451,
+      "current": {
+        "day": "2026-11-21",
+        "region_id": "east_africa_rift",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.1722,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

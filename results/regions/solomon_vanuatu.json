@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-21T11:53:09Z",
+  "started_at": "2026-11-21T11:53:00Z",
+  "mode": "daily",
+  "status": "OK",
+  "region": {
+    "id": "solomon_vanuatu",
+    "name": "Salomón–Vanuatu",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      -25,
+      -2,
+      155,
+      175
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-11-21T11:53:09Z",
+    "day": "2026-11-21",
+    "region_id": "solomon_vanuatu",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.7888888888888889,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:53:08Z",
+        "last_success": "2026-11-21T11:53:08Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-21T11:53:08Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/solomon_vanuatu/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:53:01Z",
+        "last_success": "2026-11-21T11:53:01Z",
+        "records": 4896,
+        "freshness_hours": 504.0,
+        "coverage": 0.6428571428571429,
+        "quality": 0.5657142857142857,
+        "message": "9/14 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-11-21T11:53:01Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-21T11:53:00Z",
+        "last_success": "2026-11-21T11:53:00Z",
+        "records": 25,
+        "freshness_hours": 4.537966984444444,
+        "coverage": 0.08888888888888889,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-11-05\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-21T07:20:44.218000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:53:08Z",
+      "last_success": "2026-11-21T11:53:08Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-21T11:53:08Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/solomon_vanuatu/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:53:01Z",
+      "last_success": "2026-11-21T11:53:01Z",
+      "records": 4896,
+      "freshness_hours": 504.0,
+      "coverage": 0.6428571428571429,
+      "quality": 0.5657142857142857,
+      "message": "9/14 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-11-21T11:53:01Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-21T11:53:00Z",
+      "last_success": "2026-11-21T11:53:00Z",
+      "records": 25,
+      "freshness_hours": 4.537966984444444,
+      "coverage": 0.08888888888888889,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-11-05\",\"end\":\"2026-11-21\",\"newest\":\"2026-11-21T07:20:44.218000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 4590,
+    "dtrg_r_gnss_stations": 14,
+    "dtrg_r_gnss_obs": 13939,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 28610,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4856,
+    "dtrg_r_scores": 1214,
+    "dtrg_r_backtests": 18
+  },
+  "latest_backtest": [
+    {
+      "run_id": "eec42770-fe47-44d3-8aa6-86d66a68f133",
+      "created_at": "2026-11-15T12:12:25Z",
+      "start_day": "2023-11-16",
+      "end_day": "2026-11-15",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 435,
+      "negatives": 661,
+      "tp": 1,
+      "fp": 1,
+      "tn": 660,
+      "fn": 434,
+      "precision": 0.5,
+      "recall": 0.0022988505747126436,
+      "specificity": 0.9984871406959153,
+      "f1": 0.004576659038901601,
+      "auc": 0.5850922496391744,
+      "brier": 0.329926066576916,
+      "base_brier": 0.2393699384623571,
+      "false_alarms_per_100_days": 0.09124087591240876,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":435,\"negatives\":661,\"tp\":1,\"fp\":1,\"tn\":660,\"fn\":434,\"precision\":0.5,\"recall\":0.0022988505747126436,\"specificity\":0.9984871406959153,\"f1\":0.004576659038901601,\"auc\":0.5850922496391744,\"brier\":0.329926066576916,\"base_brier\":0.2393699384623571,\"false_alarms_per_100_days\":0.09124087591240876,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000uci2",
+      "event_time": "2026-11-21T07:20:44.218000Z",
+      "magnitude": 4.9,
+      "depth_km": 43.228,
+      "latitude": -17.1789,
+      "longitude": 168.0998,
+      "place": "65 km NNW of Port-Vila, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uci2"
+    },
+    {
+      "event_id": "us6000ucd6",
+      "event_time": "2026-11-20T17:53:15.442000Z",
+      "magnitude": 5.1,
+      "depth_km": 94.53,
+      "latitude": -14.835,
+      "longitude": 167.29,
+      "place": "32 km NE of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucd6"
+    },
+    {
+      "event_id": "us6000uc8k",
+      "event_time": "2026-11-20T10:48:44.362000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -24.6606,
+      "longitude": 171.1906,
+      "place": "southeast of the Loyalty Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc8k"
+    },
+    {
+      "event_id": "us6000uc8g",
+      "event_time": "2026-11-20T10:30:01.069000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -24.7463,
+      "longitude": 171.4327,
+      "place": "southeast of the Loyalty Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc8g"
+    },
+    {
+      "event_id": "us6000uc4v",
+      "event_time": "2026-11-20T00:49:14.102000Z",
+      "magnitude": 5.6,
+      "depth_km": 10.0,
+      "latitude": -24.6996,
+      "longitude": 171.2326,
+      "place": "southeast of the Loyalty Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc4v"
+    },
+    {
+      "event_id": "us7000tytz",
+      "event_time": "2026-11-17T18:15:19.134000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": -17.5637,
+      "longitude": 168.1379,
+      "place": "26 km NW of Port-Vila, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tytz"
+    },
+    {
+      "event_id": "us7000tyqi",
+      "event_time": "2026-11-17T03:52:32.360000Z",
+      "magnitude": 4.9,
+      "depth_km": 126.959,
+      "latitude": -15.005,
+      "longitude": 167.3139,
+      "place": "26 km E of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyqi"
+    },
+    {
+      "event_id": "us7000tyq5",
+      "event_time": "2026-11-17T02:00:17.654000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": -11.5293,
+      "longitude": 162.5497,
+      "place": "137 km SSE of Kirakira, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyq5"
+    },
+    {
+      "event_id": "us7000tyns",
+      "event_time": "2026-11-16T21:55:58.036000Z",
+      "magnitude": 4.7,
+      "depth_km": 114.74,
+      "latitude": -20.8029,
+      "longitude": 169.9015,
+      "place": "153 km SSE of Isangel, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyns"
+    },
+    {
+      "event_id": "us7000txz3",
+      "event_time": "2026-11-13T09:55:45.053000Z",
+      "magnitude": 4.9,
+      "depth_km": 10.0,
+      "latitude": -22.3729,
+      "longitude": 173.4492,
+      "place": "southeast of the Loyalty Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txz3"
+    },
+    {
+      "event_id": "us7000txiz",
+      "event_time": "2026-11-11T12:45:06.171000Z",
+      "magnitude": 4.5,
+      "depth_km": 149.444,
+      "latitude": -14.5029,
+      "longitude": 167.2586,
+      "place": "62 km NNE of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txiz"
+    },
+    {
+      "event_id": "us7000txil",
+      "event_time": "2026-11-11T10:57:37.101000Z",
+      "magnitude": 4.6,
+      "depth_km": 42.696,
+      "latitude": -17.2615,
+      "longitude": 167.9671,
+      "place": "64 km NW of Port-Vila, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txil"
+    },
+    {
+      "event_id": "us7000txea",
+      "event_time": "2026-11-10T19:54:18.279000Z",
+      "magnitude": 4.9,
+      "depth_km": 11.705,
+      "latitude": -13.9345,
+      "longitude": 165.5166,
+      "place": "207 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txea"
+    },
+    {
+      "event_id": "us7000txbj",
+      "event_time": "2026-11-10T15:52:55.256000Z",
+      "magnitude": 4.8,
+      "depth_km": 48.333,
+      "latitude": -10.8979,
+      "longitude": 165.7366,
+      "place": "20 km SSW of Lata, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txbj"
+    },
+    {
+      "event_id": "us7000tz1x",
+      "event_time": "2026-11-10T05:43:42.955000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": -10.7674,
+      "longitude": 165.8126,
+      "place": "4 km SSE of Lata, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz1x"
+    },
+    {
+      "event_id": "us7000tx8z",
+      "event_time": "2026-11-10T04:30:17.109000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -11.1105,
+      "longitude": 165.3377,
+      "place": "65 km SW of Lata, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx8z"
+    },
+    {
+      "event_id": "us7000tx8s",
+      "event_time": "2026-11-10T03:37:46.152000Z",
+      "magnitude": 5.2,
+      "depth_km": 10.0,
+      "latitude": -10.7818,
+      "longitude": 165.6239,
+      "place": "19 km WSW of Lata, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx8s"
+    },
+    {
+      "event_id": "us7000tx6m",
+      "event_time": "2026-11-09T19:27:54.236000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -14.2428,
+      "longitude": 165.9539,
+      "place": "149 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx6m"
+    },
+    {
+      "event_id": "us7000tx6j",
+      "event_time": "2026-11-09T18:51:45.515000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -10.5301,
+      "longitude": 163.8048,
+      "place": "206 km E of Kirakira, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx6j"
+    },
+    {
+      "event_id": "us7000tx1p",
+      "event_time": "2026-11-09T05:16:56.823000Z",
+      "magnitude": 4.8,
+      "depth_km": 10.0,
+      "latitude": -10.912,
+      "longitude": 165.6396,
+      "place": "26 km SW of Lata, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx1p"
+    },
+    {
+      "event_id": "us7000tx16",
+      "event_time": "2026-11-09T03:34:59.466000Z",
+      "magnitude": 6.4,
+      "depth_km": 17.0,
+      "latitude": -10.8669,
+      "longitude": 165.5616,
+      "place": "30 km WSW of Lata, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx16"
+    },
+    {
+      "event_id": "us7000twsz",
+      "event_time": "2026-11-07T15:55:00.079000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": -22.5556,
+      "longitude": 170.0629,
+      "place": "251 km ESE of Tadine, New Caledonia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twsz"
+    },
+    {
+      "event_id": "us7000twfu",
+      "event_time": "2026-11-06T08:14:07.284000Z",
+      "magnitude": 4.4,
+      "depth_km": 240.017,
+      "latitude": -18.6911,
+      "longitude": 169.328,
+      "place": "94 km N of Isangel, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twfu"
+    },
+    {
+      "event_id": "us7000tweb",
+      "event_time": "2026-11-06T01:37:39.847000Z",
+      "magnitude": 4.6,
+      "depth_km": 83.271,
+      "latitude": -19.3647,
+      "longitude": 168.7529,
+      "place": "58 km WNW of Isangel, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tweb"
+    },
+    {
+      "event_id": "us7000ty06",
+      "event_time": "2026-11-05T17:30:55.666000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -13.9187,
+      "longitude": 165.5873,
+      "place": "202 km NW of Port-Olry, Vanuatu",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty06"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 25,
+      "oldest_before": "2021-07-27",
+      "newest_before": "2026-11-20",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-11-05",
+          "end": "2026-11-21",
+          "result": {
+            "status": "OK",
+            "records_received": 25,
+            "newest": "2026-11-21T07:20:44.218000Z"
+          }
+        }
+      ]
+    },
+    "gnss": {
+      "status": "OK",
+      "stations_discovered": 14,
+      "stations_ok": 9,
+      "observations": 4896,
+      "last_observation": "2026-10-31"
+    },
+    "insar_catalog": {
+      "status": "OK",
+      "scenes": 1000,
+      "opera_products": 500,
+      "disp_candidates": 0,
+      "downloaded": 0,
+      "notice": "ASF catalog search; displacement analysis requires downloaded/local InSAR products.",
+      "download_errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/solomon_vanuatu/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 451,
+      "current": {
+        "day": "2026-11-21",
+        "region_id": "solomon_vanuatu",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.7889,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
