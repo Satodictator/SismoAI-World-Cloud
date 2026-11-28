@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-28T12:24:44Z",
+  "started_at": "2026-11-28T12:24:16Z",
+  "mode": "daily",
+  "status": "OK",
+  "region": {
+    "id": "chile_south",
+    "name": "Chile Sur–Patagonia",
+    "group": "Americas",
+    "bbox": [
+      -58,
+      -31,
+      -78,
+      -65
+    ],
+    "min_magnitude": 3.0,
+    "backtest_event_magnitude": 5.5
+  },
+  "current": {
+    "calculated_at": "2026-11-28T12:24:44Z",
+    "day": "2026-11-28",
+    "region_id": "chile_south",
+    "iedc_raw": 15.941,
+    "iedc_provisional": 15.941,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.6511111111111111,
+    "coverage": 0.6000000000000001,
+    "data_quality": 0.9416666666666667,
+    "baseline_progress": 0.39444444444444443,
+    "available_families": 2,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [
+      {
+        "family": "goes_lightning_control",
+        "feature": "goes_flash_count",
+        "score": 99.98,
+        "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+        "z": 19.181
+      },
+      {
+        "family": "goes_lightning_control",
+        "feature": "goes_energy",
+        "score": 91.31,
+        "reason": "Energía óptica GLM agregada por encima de su línea base",
+        "z": 5.375
+      }
+    ],
+    "family_scores": {
+      "seismic": 0.0,
+      "goes_lightning_control": 95.6483
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "OK",
+        "last_attempt": "2026-11-28T12:24:42Z",
+        "last_success": "2026-11-28T12:24:42Z",
+        "records": 1000,
+        "freshness_hours": null,
+        "coverage": 1.0,
+        "quality": 0.85,
+        "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-28T12:24:42Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/chile_south/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-28T12:24:36Z",
+        "last_success": "2026-11-28T12:24:36Z",
+        "records": 2509,
+        "freshness_hours": 432.0,
+        "coverage": 0.2777777777777778,
+        "quality": 0.24444444444444446,
+        "message": "5/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "OK",
+        "last_attempt": "2026-11-28T12:24:38Z",
+        "last_success": "2026-11-28T12:24:38Z",
+        "records": 31,
+        "freshness_hours": 0.005685756666666667,
+        "coverage": 1.0,
+        "quality": 0.9,
+        "message": "31/31 archivos GLM procesados; 24 flashes regionales",
+        "details_json": "{\"errors\":[],\"sampling_minutes\":60}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-28T12:24:17Z",
+        "last_success": "2026-11-28T12:24:17Z",
+        "records": 11,
+        "freshness_hours": 180.77894004944443,
+        "coverage": 0.12777777777777777,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-11-05\",\"end\":\"2026-11-28\",\"newest\":\"2026-11-20T23:37:33.534000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "OK",
+      "last_attempt": "2026-11-28T12:24:42Z",
+      "last_success": "2026-11-28T12:24:42Z",
+      "records": 1000,
+      "freshness_hours": null,
+      "coverage": 1.0,
+      "quality": 0.85,
+      "message": "1000 escenas/productos SAR; 500 OPERA-S1",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\",\"opera_products\":500,\"opera_error\":null,\"disp_candidates\":0,\"downloaded_with_earthdata_token\":0,\"download_errors\":[]}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-28T12:24:42Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/chile_south/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-28T12:24:36Z",
+      "last_success": "2026-11-28T12:24:36Z",
+      "records": 2509,
+      "freshness_hours": 432.0,
+      "coverage": 0.2777777777777778,
+      "quality": 0.24444444444444446,
+      "message": "5/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/llh.out\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "OK",
+      "last_attempt": "2026-11-28T12:24:38Z",
+      "last_success": "2026-11-28T12:24:38Z",
+      "records": 31,
+      "freshness_hours": 0.005685756666666667,
+      "coverage": 1.0,
+      "quality": 0.9,
+      "message": "31/31 archivos GLM procesados; 24 flashes regionales",
+      "details_json": "{\"errors\":[],\"sampling_minutes\":60}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-28T12:24:17Z",
+      "last_success": "2026-11-28T12:24:17Z",
+      "records": 11,
+      "freshness_hours": 180.77894004944443,
+      "coverage": 0.12777777777777777,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-11-05\",\"end\":\"2026-11-28\",\"newest\":\"2026-11-20T23:37:33.534000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 1170,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 12275,
+    "dtrg_r_goes_files": 6595,
+    "dtrg_r_goes_daily": 133,
+    "dtrg_r_insar_scenes": 66451,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 7326,
+    "dtrg_r_scores": 1221,
+    "dtrg_r_backtests": 19
+  },
+  "latest_backtest": [
+    {
+      "run_id": "8a01f2a5-76d7-4b97-b328-5ca9d1cb805e",
+      "created_at": "2026-11-22T12:45:59Z",
+      "start_day": "2023-11-23",
+      "end_day": "2026-11-22",
+      "horizon_days": 7,
+      "event_magnitude": 5.5,
+      "threshold": 50.0,
+      "positives": 72,
+      "negatives": 1024,
+      "tp": 0,
+      "fp": 13,
+      "tn": 1011,
+      "fn": 72,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9873046875,
+      "f1": null,
+      "auc": 0.5825737847222222,
+      "brier": 0.06993027092791979,
+      "base_brier": 0.06137780382545606,
+      "false_alarms_per_100_days": 1.186131386861314,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1096,\"positives\":72,\"negatives\":1024,\"tp\":0,\"fp\":13,\"tn\":1011,\"fn\":72,\"precision\":0.0,\"recall\":0.0,\"specificity\":0.9873046875,\"f1\":null,\"auc\":0.5825737847222222,\"brier\":0.06993027092791979,\"base_brier\":0.06137780382545606,\"false_alarms_per_100_days\":1.186131386861314,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000ucfa",
+      "event_time": "2026-11-20T23:37:33.534000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": -31.7122,
+      "longitude": -72.3842,
+      "place": "115 km W of Illapel, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfa"
+    },
+    {
+      "event_id": "us6000uc9c",
+      "event_time": "2026-11-20T14:16:15.225000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": -31.7842,
+      "longitude": -72.1485,
+      "place": "94 km W of Illapel, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc9c"
+    },
+    {
+      "event_id": "us6000uc5s",
+      "event_time": "2026-11-20T02:57:18.070000Z",
+      "magnitude": 4.8,
+      "depth_km": 113.86,
+      "latitude": -31.4302,
+      "longitude": -69.1883,
+      "place": "24 km ESE of Calingasta, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc5s"
+    },
+    {
+      "event_id": "us6000uc1x",
+      "event_time": "2026-11-19T18:09:46.530000Z",
+      "magnitude": 5.1,
+      "depth_km": 10.0,
+      "latitude": -31.8465,
+      "longitude": -72.1843,
+      "place": "99 km WSW of Illapel, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc1x"
+    },
+    {
+      "event_id": "us7000tymg",
+      "event_time": "2026-11-16T19:51:55.895000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": -33.0095,
+      "longitude": -72.1955,
+      "place": "52 km W of Valparaíso, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tymg"
+    },
+    {
+      "event_id": "us7000tydr",
+      "event_time": "2026-11-15T10:29:11.658000Z",
+      "magnitude": 4.1,
+      "depth_km": 17.502,
+      "latitude": -33.0266,
+      "longitude": -72.2107,
+      "place": "54 km W of Valparaíso, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tydr"
+    },
+    {
+      "event_id": "us7000tybx",
+      "event_time": "2026-11-15T03:59:59.578000Z",
+      "magnitude": 4.6,
+      "depth_km": 107.474,
+      "latitude": -31.2811,
+      "longitude": -68.6644,
+      "place": "21 km NW of Albardón, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tybx"
+    },
+    {
+      "event_id": "us7000ty59",
+      "event_time": "2026-11-13T23:55:15.232000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": -37.922,
+      "longitude": -74.7229,
+      "place": "100 km WSW of Lebu, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ty59"
+    },
+    {
+      "event_id": "us7000txmq",
+      "event_time": "2026-11-11T19:21:15.400000Z",
+      "magnitude": 4.9,
+      "depth_km": 18.804,
+      "latitude": -41.5454,
+      "longitude": -74.2133,
+      "place": "48 km NW of Ancud, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmq"
+    },
+    {
+      "event_id": "us7000txjc",
+      "event_time": "2026-11-11T14:46:56.105000Z",
+      "magnitude": 4.6,
+      "depth_km": 116.771,
+      "latitude": -31.3986,
+      "longitude": -69.4747,
+      "place": "8 km SW of Calingasta, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txjc"
+    },
+    {
+      "event_id": "us7000txhn",
+      "event_time": "2026-11-11T06:57:29.738000Z",
+      "magnitude": 4.2,
+      "depth_km": 26.346,
+      "latitude": -33.2527,
+      "longitude": -72.2667,
+      "place": "64 km WSW of Valparaíso, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txhn"
+    },
+    {
+      "event_id": "us7000ttsn",
+      "event_time": "2026-10-28T17:38:43.019000Z",
+      "magnitude": 4.1,
+      "depth_km": 32.006,
+      "latitude": -38.8719,
+      "longitude": -73.7251,
+      "place": "52 km WSW of Carahue, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttsn"
+    },
+    {
+      "event_id": "us7000ttny",
+      "event_time": "2026-10-28T12:52:12.567000Z",
+      "magnitude": 4.3,
+      "depth_km": 49.786,
+      "latitude": -33.9445,
+      "longitude": -71.3172,
+      "place": "29 km SSW of Melipilla, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttny"
+    },
+    {
+      "event_id": "us7000ttkf",
+      "event_time": "2026-10-27T23:23:57.335000Z",
+      "magnitude": 4.3,
+      "depth_km": 119.626,
+      "latitude": -31.5445,
+      "longitude": -69.3165,
+      "place": "25 km SSE of Calingasta, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttkf"
+    },
+    {
+      "event_id": "us7000ttfm",
+      "event_time": "2026-10-27T11:19:39.073000Z",
+      "magnitude": 4.5,
+      "depth_km": 112.772,
+      "latitude": -31.7949,
+      "longitude": -69.5043,
+      "place": "51 km S of Calingasta, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttfm"
+    },
+    {
+      "event_id": "us7000ttc8",
+      "event_time": "2026-10-26T20:52:11.506000Z",
+      "magnitude": 4.6,
+      "depth_km": 47.788,
+      "latitude": -32.2869,
+      "longitude": -71.272,
+      "place": "18 km NNW of La Ligua, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttc8"
+    },
+    {
+      "event_id": "us6000u4y6",
+      "event_time": "2026-10-26T05:26:03.750000Z",
+      "magnitude": 4.4,
+      "depth_km": 107.672,
+      "latitude": -31.6742,
+      "longitude": -68.1852,
+      "place": "9 km ESE of Caucete, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4y6"
+    },
+    {
+      "event_id": "us6000u4x2",
+      "event_time": "2026-10-26T00:55:58.124000Z",
+      "magnitude": 4.2,
+      "depth_km": 22.373,
+      "latitude": -33.0707,
+      "longitude": -72.0629,
+      "place": "40 km W of Valparaíso, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4x2"
+    },
+    {
+      "event_id": "us6000u3zu",
+      "event_time": "2026-10-22T01:08:03.006000Z",
+      "magnitude": 4.4,
+      "depth_km": 103.228,
+      "latitude": -31.2167,
+      "longitude": -68.7255,
+      "place": "30 km NW of Albardón, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3zu"
+    },
+    {
+      "event_id": "us6000u1xk",
+      "event_time": "2026-10-13T01:44:26.268000Z",
+      "magnitude": 4.1,
+      "depth_km": 31.701,
+      "latitude": -36.2479,
+      "longitude": -73.0964,
+      "place": "42 km NNW of Tomé, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1xk"
+    },
+    {
+      "event_id": "us6000u1uq",
+      "event_time": "2026-10-12T18:17:18.891000Z",
+      "magnitude": 4.3,
+      "depth_km": 34.644,
+      "latitude": -33.7418,
+      "longitude": -71.7939,
+      "place": "23 km SW of San Antonio, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1uq"
+    },
+    {
+      "event_id": "us6000u1r8",
+      "event_time": "2026-10-12T10:29:00.847000Z",
+      "magnitude": 4.3,
+      "depth_km": 109.203,
+      "latitude": -33.6952,
+      "longitude": -70.2734,
+      "place": "29 km ESE of Puente Alto, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1r8"
+    },
+    {
+      "event_id": "us6000u154",
+      "event_time": "2026-10-09T10:38:10.026000Z",
+      "magnitude": 4.3,
+      "depth_km": 39.156,
+      "latitude": -31.6323,
+      "longitude": -71.4955,
+      "place": "30 km W of Illapel, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u154"
+    },
+    {
+      "event_id": "us6000tzee",
+      "event_time": "2026-10-03T21:15:57.294000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": -38.3006,
+      "longitude": -75.1712,
+      "place": "153 km WSW of Lebu, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tzee"
+    },
+    {
+      "event_id": "us6000tz75",
+      "event_time": "2026-10-02T17:28:18.566000Z",
+      "magnitude": 4.3,
+      "depth_km": 31.319,
+      "latitude": -32.759,
+      "longitude": -71.7298,
+      "place": "32 km NNW of Valparaíso, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz75"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 11,
+      "oldest_before": "2021-07-31",
+      "newest_before": "2026-11-20",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-11-05",
+          "end": "2026-11-28",
+          "result": {
+            "status": "OK",
+            "records_received": 11,
+            "newest": "2026-11-20T23:37:33.534000Z"
+          }
+        }
+      ]
+    },
+    "gnss": {
+      "status": "OK",
+      "stations_discovered": 18,
+      "stations_ok": 5,
+      "observations": 2509,
+      "last_observation": "2026-11-10"
+    },
+    "goes": {
+      "status": "OK",
+      "selected_files": 31,
+      "processed_files": 31,
+      "region_flashes": 24,
+      "errors": []
+    },
+    "insar_catalog": {
+      "status": "OK",
+      "scenes": 1000,
+      "opera_products": 500,
+      "disp_candidates": 0,
+      "downloaded": 0,
+      "notice": "ASF catalog search; displacement analysis requires downloaded/local InSAR products.",
+      "download_errors": []
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/chile_south/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 451,
+      "current": {
+        "day": "2026-11-28",
+        "region_id": "chile_south",
+        "iedc_raw": 15.941,
+        "iedc_provisional": 15.941,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.6511,
+        "coverage": 0.6,
+        "data_quality": 0.9417,
+        "baseline_progress": 0.3944,
+        "available_families": 2,
+        "family_scores": {
+          "seismic": 0.0,
+          "goes_lightning_control": 95.6483
+        },
+        "reasons": [
+          {
+            "family": "goes_lightning_control",
+            "feature": "goes_flash_count",
+            "score": 99.98,
+            "reason": "Actividad de rayos GLM por encima de su línea base atmosférica",
+            "z": 19.181
+          },
+          {
+            "family": "goes_lightning_control",
+            "feature": "goes_energy",
+            "score": 91.31,
+            "reason": "Energía óptica GLM agregada por encima de su línea base",
+            "z": 5.375
+          }
+        ],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}

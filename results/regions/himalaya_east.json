@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "model_version": "SismoAI-World-Cloud-1.0.0",
+  "generated_at": "2026-11-28T12:25:46Z",
+  "started_at": "2026-11-28T12:25:25Z",
+  "mode": "daily",
+  "status": "OK",
+  "region": {
+    "id": "himalaya_east",
+    "name": "Himalaya Oriental",
+    "group": "Asia–Oceanía",
+    "bbox": [
+      24,
+      35,
+      80,
+      100
+    ],
+    "min_magnitude": 2.5,
+    "backtest_event_magnitude": 5.0
+  },
+  "current": {
+    "calculated_at": "2026-11-28T12:25:46Z",
+    "day": "2026-11-28",
+    "region_id": "himalaya_east",
+    "iedc_raw": 0.0,
+    "iedc_provisional": 0.0,
+    "iedc_public": null,
+    "public_valid": false,
+    "state": "NORMAL",
+    "confidence": 0.45,
+    "coverage": 0.5000000000000001,
+    "data_quality": 0.95,
+    "baseline_progress": 0.3388888888888889,
+    "available_families": 1,
+    "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+    "reasons": [],
+    "family_scores": {
+      "seismic": 0.0
+    },
+    "source_status": [
+      {
+        "source": "ASF_SENTINEL1_CATALOG",
+        "status": "ERROR",
+        "last_attempt": "2026-11-28T12:25:45Z",
+        "last_success": "2026-11-27T13:10:47Z",
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "'NoneType' object is not iterable",
+        "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\"}"
+      },
+      {
+        "source": "LOCAL_INSAR_PRODUCTS",
+        "status": "WAITING_FOR_PRODUCTS",
+        "last_attempt": "2026-11-28T12:25:45Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "0/0 productos locales analizados",
+        "details_json": "{\"folder\":\"runtime/regions/himalaya_east/data/insar\",\"errors\":[]}"
+      },
+      {
+        "source": "NGL_GNSS",
+        "status": "OK",
+        "last_attempt": "2026-11-28T12:25:43Z",
+        "last_success": "2026-11-28T12:25:43Z",
+        "records": 1226,
+        "freshness_hours": 504.0,
+        "coverage": 0.16666666666666666,
+        "quality": 0.14666666666666667,
+        "message": "3/18 estaciones con series",
+        "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+      },
+      {
+        "source": "NOAA_GOES_GLM",
+        "status": "NOT_APPLICABLE",
+        "last_attempt": "2026-11-28T12:25:43Z",
+        "last_success": null,
+        "records": 0,
+        "freshness_hours": null,
+        "coverage": 0.0,
+        "quality": 0.0,
+        "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+        "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+      },
+      {
+        "source": "USGS_FDSN",
+        "status": "OK",
+        "last_attempt": "2026-11-28T12:25:26Z",
+        "last_success": "2026-11-28T12:25:26Z",
+        "records": 4,
+        "freshness_hours": 106.87888329388889,
+        "coverage": 0.10555555555555556,
+        "quality": 0.95,
+        "message": "Catálogo sísmico real actualizado",
+        "details_json": "{\"start\":\"2026-11-09\",\"end\":\"2026-11-28\",\"newest\":\"2026-11-24T01:32:42.417000Z\"}"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "ASF_SENTINEL1_CATALOG",
+      "status": "ERROR",
+      "last_attempt": "2026-11-28T12:25:45Z",
+      "last_success": "2026-11-27T13:10:47Z",
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "'NoneType' object is not iterable",
+      "details_json": "{\"notice\":\"ASF catalog search; displacement analysis requires downloaded/local InSAR products.\"}"
+    },
+    {
+      "source": "LOCAL_INSAR_PRODUCTS",
+      "status": "WAITING_FOR_PRODUCTS",
+      "last_attempt": "2026-11-28T12:25:45Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "0/0 productos locales analizados",
+      "details_json": "{\"folder\":\"runtime/regions/himalaya_east/data/insar\",\"errors\":[]}"
+    },
+    {
+      "source": "NGL_GNSS",
+      "status": "OK",
+      "last_attempt": "2026-11-28T12:25:43Z",
+      "last_success": "2026-11-28T12:25:43Z",
+      "records": 1226,
+      "freshness_hours": 504.0,
+      "coverage": 0.16666666666666666,
+      "quality": 0.14666666666666667,
+      "message": "3/18 estaciones con series",
+      "details_json": "{\"coordinate_source\":\"https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt\",\"errors\":[]}"
+    },
+    {
+      "source": "NOAA_GOES_GLM",
+      "status": "NOT_APPLICABLE",
+      "last_attempt": "2026-11-28T12:25:43Z",
+      "last_success": null,
+      "records": 0,
+      "freshness_hours": null,
+      "coverage": 0.0,
+      "quality": 0.0,
+      "message": "Fuera de la cobertura regional configurada para GOES-GLM",
+      "details_json": "{\"reason\":\"Fuera de la cobertura regional configurada para GOES-GLM\"}"
+    },
+    {
+      "source": "USGS_FDSN",
+      "status": "OK",
+      "last_attempt": "2026-11-28T12:25:26Z",
+      "last_success": "2026-11-28T12:25:26Z",
+      "records": 4,
+      "freshness_hours": 106.87888329388889,
+      "coverage": 0.10555555555555556,
+      "quality": 0.95,
+      "message": "Catálogo sísmico real actualizado",
+      "details_json": "{\"start\":\"2026-11-09\",\"end\":\"2026-11-28\",\"newest\":\"2026-11-24T01:32:42.417000Z\"}"
+    }
+  ],
+  "counts": {
+    "dtrg_r_events": 867,
+    "dtrg_r_gnss_stations": 18,
+    "dtrg_r_gnss_obs": 1805,
+    "dtrg_r_goes_files": 0,
+    "dtrg_r_goes_daily": 0,
+    "dtrg_r_insar_scenes": 61573,
+    "dtrg_r_insar_obs": 0,
+    "dtrg_r_features": 4884,
+    "dtrg_r_scores": 1221,
+    "dtrg_r_backtests": 19
+  },
+  "latest_backtest": [
+    {
+      "run_id": "d18e693c-f02f-41ce-aa8b-041503ae0d38",
+      "created_at": "2026-11-22T12:46:36Z",
+      "start_day": "2023-11-23",
+      "end_day": "2026-11-22",
+      "horizon_days": 7,
+      "event_magnitude": 5.0,
+      "threshold": 50.0,
+      "positives": 227,
+      "negatives": 866,
+      "tp": 16,
+      "fp": 3,
+      "tn": 863,
+      "fn": 211,
+      "precision": 0.8421052631578947,
+      "recall": 0.07048458149779736,
+      "specificity": 0.9965357967667436,
+      "f1": 0.13008130081300814,
+      "auc": 0.5123332756813951,
+      "brier": 0.18642173766596554,
+      "base_brier": 0.1645520985661912,
+      "false_alarms_per_100_days": 0.2744739249771272,
+      "public_gate_pass": 0,
+      "metrics_json": "{\"samples\":1093,\"positives\":227,\"negatives\":866,\"tp\":16,\"fp\":3,\"tn\":863,\"fn\":211,\"precision\":0.8421052631578947,\"recall\":0.07048458149779736,\"specificity\":0.9965357967667436,\"f1\":0.13008130081300814,\"auc\":0.5123332756813951,\"brier\":0.18642173766596554,\"base_brier\":0.1645520985661912,\"false_alarms_per_100_days\":0.2744739249771272,\"public_gate_pass\":false,\"interpretation\":\"Backtest exploratorio; no demuestra capacidad predictiva fuera de muestra.\"}"
+    }
+  ],
+  "latest_events": [
+    {
+      "event_id": "us6000ud3i",
+      "event_time": "2026-11-24T01:32:42.417000Z",
+      "magnitude": 5.3,
+      "depth_km": 10.0,
+      "latitude": 27.8328,
+      "longitude": 87.9467,
+      "place": "67 km WNW of Mangan, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud3i"
+    },
+    {
+      "event_id": "us7000txpk",
+      "event_time": "2026-11-11T23:00:22.438000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 27.9579,
+      "longitude": 87.8629,
+      "place": "81 km NW of Mangan, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpk"
+    },
+    {
+      "event_id": "us7000txi2",
+      "event_time": "2026-11-11T08:47:52.006000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 34.149,
+      "longitude": 86.5462,
+      "place": "western Xizang",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txi2"
+    },
+    {
+      "event_id": "us7000tx2y",
+      "event_time": "2026-11-09T09:11:16.115000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 33.7546,
+      "longitude": 86.1193,
+      "place": "western Xizang",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx2y"
+    },
+    {
+      "event_id": "us7000tw53",
+      "event_time": "2026-11-05T00:49:15.589000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 32.5065,
+      "longitude": 94.1224,
+      "place": "226 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw53"
+    },
+    {
+      "event_id": "us7000tv1v",
+      "event_time": "2026-11-03T00:27:08.534000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 32.2766,
+      "longitude": 93.5975,
+      "place": "170 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tv1v"
+    },
+    {
+      "event_id": "us7000tuzz",
+      "event_time": "2026-11-02T20:54:53.815000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 32.2931,
+      "longitude": 93.8297,
+      "place": "190 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuzz"
+    },
+    {
+      "event_id": "us7000tuyi",
+      "event_time": "2026-11-02T18:33:09.854000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 32.4201,
+      "longitude": 93.9204,
+      "place": "204 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuyi"
+    },
+    {
+      "event_id": "us7000tuxi",
+      "event_time": "2026-11-02T15:35:12.247000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 32.3247,
+      "longitude": 93.7691,
+      "place": "187 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuxi"
+    },
+    {
+      "event_id": "us7000tuj2",
+      "event_time": "2026-10-31T13:38:39.154000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 33.1525,
+      "longitude": 91.6138,
+      "place": "190 km NNW of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuj2"
+    },
+    {
+      "event_id": "us7000tuh8",
+      "event_time": "2026-10-31T05:52:03.319000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 32.5136,
+      "longitude": 94.0512,
+      "place": "220 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuh8"
+    },
+    {
+      "event_id": "us7000twlg",
+      "event_time": "2026-10-28T21:46:36.398000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 32.6364,
+      "longitude": 94.1481,
+      "place": "235 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000twlg"
+    },
+    {
+      "event_id": "us7000ttu9",
+      "event_time": "2026-10-28T21:46:15.958000Z",
+      "magnitude": 4.2,
+      "depth_km": 10.0,
+      "latitude": 32.4007,
+      "longitude": 93.8788,
+      "place": "200 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttu9"
+    },
+    {
+      "event_id": "us7000ttsq",
+      "event_time": "2026-10-28T17:48:17.863000Z",
+      "magnitude": 4.0,
+      "depth_km": 10.0,
+      "latitude": 32.7781,
+      "longitude": 94.2161,
+      "place": "249 km NE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttsq"
+    },
+    {
+      "event_id": "us7000ttis",
+      "event_time": "2026-10-27T18:57:52.912000Z",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "latitude": 32.4692,
+      "longitude": 93.9084,
+      "place": "206 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttis"
+    },
+    {
+      "event_id": "us7000tw0s",
+      "event_time": "2026-10-25T23:51:41.268000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 32.1806,
+      "longitude": 93.9258,
+      "place": "193 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw0s"
+    },
+    {
+      "event_id": "us7000tw0r",
+      "event_time": "2026-10-25T23:37:33.625000Z",
+      "magnitude": 4.1,
+      "depth_km": 92.091,
+      "latitude": 24.8255,
+      "longitude": 94.7994,
+      "place": "77 km ENE of Yairipok, India",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw0r"
+    },
+    {
+      "event_id": "us6000u4wc",
+      "event_time": "2026-10-25T22:01:35.878000Z",
+      "magnitude": 4.7,
+      "depth_km": 10.0,
+      "latitude": 32.2464,
+      "longitude": 93.6649,
+      "place": "174 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4wc"
+    },
+    {
+      "event_id": "us6000u4ux",
+      "event_time": "2026-10-25T16:46:48.343000Z",
+      "magnitude": 4.5,
+      "depth_km": 10.0,
+      "latitude": 32.4861,
+      "longitude": 93.8301,
+      "place": "201 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ux"
+    },
+    {
+      "event_id": "us6000u4u4",
+      "event_time": "2026-10-25T11:55:16.227000Z",
+      "magnitude": 4.4,
+      "depth_km": 10.0,
+      "latitude": 32.715,
+      "longitude": 93.875,
+      "place": "219 km NE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4u4"
+    },
+    {
+      "event_id": "us6000u4ty",
+      "event_time": "2026-10-25T11:25:57.039000Z",
+      "magnitude": 5.9,
+      "depth_km": 7.0,
+      "latitude": 32.4675,
+      "longitude": 94.0105,
+      "place": "214 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4ty"
+    },
+    {
+      "event_id": "us6000u4tx",
+      "event_time": "2026-10-25T11:24:13.959000Z",
+      "magnitude": 5.0,
+      "depth_km": 10.0,
+      "latitude": 32.3733,
+      "longitude": 93.863,
+      "place": "197 km ENE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4tx"
+    },
+    {
+      "event_id": "us7000tvzm",
+      "event_time": "2026-10-25T07:21:37.857000Z",
+      "magnitude": 4.1,
+      "depth_km": 10.0,
+      "latitude": 29.6017,
+      "longitude": 80.8002,
+      "place": "35 km SE of Dārchulā, Nepal",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tvzm"
+    },
+    {
+      "event_id": "us6000u4p1",
+      "event_time": "2026-10-24T19:34:13.347000Z",
+      "magnitude": 4.3,
+      "depth_km": 10.0,
+      "latitude": 28.7608,
+      "longitude": 88.411,
+      "place": "71 km SW of Rikaze, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4p1"
+    },
+    {
+      "event_id": "us6000u4mg",
+      "event_time": "2026-10-24T13:26:34.262000Z",
+      "magnitude": 4.6,
+      "depth_km": 10.0,
+      "latitude": 32.572,
+      "longitude": 93.711,
+      "place": "197 km NE of Nagqu, China",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4mg"
+    }
+  ],
+  "operation_results": {
+    "usgs": {
+      "status": "OK",
+      "records_received": 4,
+      "oldest_before": "2021-07-28",
+      "newest_before": "2026-11-24",
+      "operations": [
+        {
+          "kind": "recent_incremental",
+          "start": "2026-11-09",
+          "end": "2026-11-28",
+          "result": {
+            "status": "OK",
+            "records_received": 4,
+            "newest": "2026-11-24T01:32:42.417000Z"
+          }
+        }
+      ]
+    },
+    "gnss": {
+      "status": "OK",
+      "stations_discovered": 18,
+      "stations_ok": 3,
+      "observations": 1226,
+      "last_observation": "2026-11-07"
+    },
+    "insar_catalog": {
+      "status": "ERROR",
+      "error": "'NoneType' object is not iterable",
+      "scenes": 0,
+      "notice": "ASF catalog search; displacement analysis requires downloaded/local InSAR products."
+    },
+    "insar_local": {
+      "status": "WAITING_FOR_PRODUCTS",
+      "files_found": 0,
+      "processed": 0,
+      "errors": [],
+      "folder": "runtime/regions/himalaya_east/data/insar"
+    },
+    "calculation": {
+      "status": "OK",
+      "days_calculated": 451,
+      "current": {
+        "day": "2026-11-28",
+        "region_id": "himalaya_east",
+        "iedc_raw": 0.0,
+        "iedc_provisional": 0.0,
+        "iedc_public": null,
+        "public_valid": false,
+        "state": "NORMAL",
+        "confidence": 0.45,
+        "coverage": 0.5,
+        "data_quality": 0.95,
+        "baseline_progress": 0.3389,
+        "available_families": 1,
+        "family_scores": {
+          "seismic": 0.0
+        },
+        "reasons": [],
+        "scientific_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+      }
+    }
+  },
+  "errors": [],
+  "scientific_notice": "Sistema experimental mundial para investigación de actividad sísmica, deformación y señales multifuente. Los valores son provisionales y no constituyen predicción sísmica confirmada, alerta oficial ni orden de evacuación.",
+  "regional_notice": "Sistema experimental de investigación para estudiar actividad sísmica, deformación y señales multifuente. No constituye predicción sísmica confirmada, alerta oficial ni orden de evacuación."
+}
